@@ -22,7 +22,7 @@ test('just compile', async () => {
     `);
 
     await withTempDir('target', async target => {
-      await srcmak(source, target, { modules: [] });
+      await srcmak(source, target);
     });
   });
 });
@@ -33,7 +33,7 @@ test('compilation error fails and includes error message', async () => {
 
     await withTempDir('target', async target => {
       let error;
-      try { await srcmak(source, target, { modules: [] }); }
+      try { await srcmak(source, target); }
       catch (e) { error = e; }
 
       expect(error).toBeDefined();
@@ -65,7 +65,6 @@ test('python + different entrypoint + submodule', async () => {
       await srcmak(source, target, {
         entrypoint: 'different/entry.ts',
         pythonName: 'my_python_module.submodule',
-        modules: [],
       });
 
       const dir = await snapshotDirectory(target, [ 'generated@0.0.0.jsii.tgz' ]);
@@ -88,10 +87,28 @@ test('compile against a local jsii dependency', async () => {
 
     await withTempDir('target', async target => {
       await srcmak(source, target, {
-        modules: [
-          'constructs', // <<---- this is the magic
+        moduleDirs: [
+          path.dirname(require.resolve('constructs/package.json')), // <<---- this is the magic
         ],
       });
     });
   });
+});
+
+test('outputJsii can be used to look at the jsii file', async () => {
+  await withTempDir('source', async source => {
+    await fs.writeFile('index.ts', `
+    export class Foo {
+      public static hello() { return "world"; }
+    }
+    `);
+
+    await withTempDir('target', async target => {
+      await srcmak(source, target, {
+        outputJsii: '.jsii',
+      });
+
+      expect(await fs.readJson('.jsii')).toMatchSnapshot();
+    });
+  })
 });

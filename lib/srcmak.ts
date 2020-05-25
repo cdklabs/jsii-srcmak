@@ -6,9 +6,11 @@ import { Options } from './options';
 
 const pacmakModule = require.resolve('jsii-pacmak/bin/jsii-pacmak');
 
-export async function srcmak(srcdir: string, targetdir: string, options: Options) {
+export async function srcmak(srcdir: string, targetdir: string, options: Options = { }) {
   srcdir = path.resolve(srcdir);
   targetdir = path.resolve(targetdir);
+
+  const outputJsii = options.outputJsii ? path.resolve(options.outputJsii) : undefined;
 
   await withTempDir('jsii-codemak', async () => {
     // copy sources to temp directory
@@ -19,6 +21,10 @@ export async function srcmak(srcdir: string, targetdir: string, options: Options
 
     // run pacmak to generate code
     await exec(pacmakModule, [ '--code-only' ]);
+
+    if (outputJsii) {
+      await fs.copy('.jsii', outputJsii);
+    }
 
     // extract code based on selected languages
     if (options.pythonName) {

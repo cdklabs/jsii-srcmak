@@ -1,5 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`outputJsii can be used to look at the jsii file 1`] = `
+Object {
+  "author": Object {
+    "name": "generated@generated.com",
+    "roles": Array [
+      "author",
+    ],
+  },
+  "description": "generated",
+  "fingerprint": "mDN1As+e+zwuytAHqC8o+7gwTrnrzC2d65pSGEUAe1I=",
+  "homepage": "http://generated",
+  "jsiiVersion": "1.5.0 (build 46538f8)",
+  "license": "Apache-2.0",
+  "name": "generated",
+  "repository": Object {
+    "type": "git",
+    "url": "http://generated",
+  },
+  "schema": "jsii/0.10.0",
+  "targets": Object {
+    "js": Object {
+      "npm": "generated",
+    },
+  },
+  "types": Object {
+    "generated.Foo": Object {
+      "assembly": "generated",
+      "fqn": "generated.Foo",
+      "initializer": Object {},
+      "kind": "class",
+      "locationInModule": Object {
+        "filename": "index.ts",
+        "line": 2,
+      },
+      "methods": Array [
+        Object {
+          "locationInModule": Object {
+            "filename": "index.ts",
+            "line": 3,
+          },
+          "name": "hello",
+          "returns": Object {
+            "type": Object {
+              "primitive": "string",
+            },
+          },
+          "static": true,
+        },
+      ],
+      "name": "Foo",
+    },
+  },
+  "version": "0.0.0",
+}
+`;
+
 exports[`python + different entrypoint + submodule 1`] = `
 Object {
   "my_python_module/submodule/__init__.py": "import abc
@@ -12,7 +68,7 @@ import jsii
 import jsii.compat
 import publication
 
-__jsii_assembly__ = jsii.JSIIAssembly.load(\\"generated\\", \\"0.0.0\\", __name__, \\"generated@0.0.0.jsii.tgz\\")
+from ._jsii import *
 
 
 class Hello(metaclass=jsii.JSIIMeta, jsii_type=\\"generated.Hello\\"):
@@ -32,7 +88,7 @@ class Hello(metaclass=jsii.JSIIMeta, jsii_type=\\"generated.Hello\\"):
 
 @jsii.data_type(jsii_type=\\"generated.Operands\\", jsii_struct_bases=[], name_mapping={'lhs': 'lhs', 'rhs': 'rhs'})
 class Operands():
-    def __init__(self, *, lhs: jsii.Number, rhs: jsii.Number):
+    def __init__(self, *, lhs: jsii.Number, rhs: jsii.Number) -> None:
         \\"\\"\\"
         :param lhs: -
         :param rhs: -
@@ -60,7 +116,10 @@ class Operands():
         return 'Operands(%s)' % ', '.join(k + '=' + repr(v) for k, v in self._values.items())
 
 
-__all__ = [\\"Hello\\", \\"Operands\\", \\"__jsii_assembly__\\"]
+__all__ = [
+    \\"Hello\\",
+    \\"Operands\\",
+]
 
 publication.publish()
 ",
@@ -73,7 +132,12 @@ import typing
 import jsii
 import jsii.compat
 import publication
-__all__ = []
+
+__jsii_assembly__ = jsii.JSIIAssembly.load(\\"generated\\", \\"0.0.0\\", __name__[0:-6], \\"generated@0.0.0.jsii.tgz\\")
+
+__all__ = [
+    \\"__jsii_assembly__\\",
+]
 
 publication.publish()
 ",

@@ -20,18 +20,28 @@ export async function compile(workdir: string, options: Options) {
   const basepath = path.join(path.dirname(entrypoint), path.basename(entrypoint, '.ts'));
 
   // jsii modules to include
-  const modules = options.modules ?? [];
+  const moduleDirs = options.moduleDirs ?? [];
 
   const targets: Record<string, any> = { };
 
   const deps: Record<string, string> = { };
-  for (const mod of modules) {
-    if (mod.startsWith('@types/')) {
-      continue;
-    }
 
-    deps[mod] = '*';
+  for (const dir of moduleDirs) {
+    // read module metadata
+    const metadata = await fs.readJson(path.join(dir, 'package.json'));
+    const moduleName: string = metadata.name;
+    const moduleVersion: string = metadata.version;
+
+    const targetdir = path.join(path.join(workdir, 'node_modules'), moduleName);
+    await fs.mkdirp(path.dirname(targetdir));
+    await fs.ensureSymlink(dir, targetdir);
+
+    // add to "deps" and "peer deps"
+    if (!moduleName.startsWith('@types/')) {
+      deps[moduleName] = moduleVersion;
+    }
   }
+
 
   const pkg = {
     name: 'generated',
@@ -56,11 +66,6 @@ export async function compile(workdir: string, options: Options) {
     };
   }
 
-  for (const mod of modules) {
-    const sourcedir = path.dirname(require.resolve(`${mod}/package.json`));
-    await fs.mkdirp(path.join(workdir, path.join('node_modules', path.dirname(mod))));
-    await fs.ensureSymlink(sourcedir, path.join(workdir, 'node_modules', mod));
-  }
 
   await fs.writeFile(path.join(workdir, 'package.json'), JSON.stringify(pkg, undefined, 2));
 
