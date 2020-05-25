@@ -46,6 +46,8 @@ jspm_packages/
 # exclude typescript compiler outputs
 *.d.ts
 *.js
+# synthesized by projen
+/.eslintrc.json
 !# synthesized by projen, but committed to git
 !/LICENSE
 !/.projenrc.js

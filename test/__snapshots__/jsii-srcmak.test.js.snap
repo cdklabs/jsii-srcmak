@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`python + different entrypoint + submodule 1`] = `
+Object {
+  "my_python_module/submodule/__init__.py": "import abc
+import builtins
+import datetime
+import enum
+import typing
+
+import jsii
+import jsii.compat
+import publication
+
+__jsii_assembly__ = jsii.JSIIAssembly.load(\\"generated\\", \\"0.0.0\\", __name__, \\"generated@0.0.0.jsii.tgz\\")
+
+
+class Hello(metaclass=jsii.JSIIMeta, jsii_type=\\"generated.Hello\\"):
+    def __init__(self) -> None:
+        jsii.create(Hello, self, [])
+
+    @jsii.member(jsii_name=\\"add\\")
+    def add(self, *, lhs: jsii.Number, rhs: jsii.Number) -> jsii.Number:
+        \\"\\"\\"
+        :param lhs: -
+        :param rhs: -
+        \\"\\"\\"
+        ops = Operands(lhs=lhs, rhs=rhs)
+
+        return jsii.invoke(self, \\"add\\", [ops])
+
+
+@jsii.data_type(jsii_type=\\"generated.Operands\\", jsii_struct_bases=[], name_mapping={'lhs': 'lhs', 'rhs': 'rhs'})
+class Operands():
+    def __init__(self, *, lhs: jsii.Number, rhs: jsii.Number):
+        \\"\\"\\"
+        :param lhs: -
+        :param rhs: -
+        \\"\\"\\"
+        self._values = {
+            'lhs': lhs,
+            'rhs': rhs,
+        }
+
+    @builtins.property
+    def lhs(self) -> jsii.Number:
+        return self._values.get('lhs')
+
+    @builtins.property
+    def rhs(self) -> jsii.Number:
+        return self._values.get('rhs')
+
+    def __eq__(self, rhs) -> bool:
+        return isinstance(rhs, self.__class__) and rhs._values == self._values
+
+    def __ne__(self, rhs) -> bool:
+        return not (rhs == self)
+
+    def __repr__(self) -> str:
+        return 'Operands(%s)' % ', '.join(k + '=' + repr(v) for k, v in self._values.items())
+
+
+__all__ = [\\"Hello\\", \\"Operands\\", \\"__jsii_assembly__\\"]
+
+publication.publish()
+",
+  "my_python_module/submodule/_jsii/__init__.py": "import abc
+import builtins
+import datetime
+import enum
+import typing
+
+import jsii
+import jsii.compat
+import publication
+__all__ = []
+
+publication.publish()
+",
+  "my_python_module/submodule/py.typed": "
+",
+}
+`;

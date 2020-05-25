@@ -1,4 +1,4 @@
-const { TypeScriptLibraryProject, Semver } = require('projen');
+const { TypeScriptLibraryProject, Semver, Jest, Eslint } = require('projen');
 
 const project = new TypeScriptLibraryProject({
   name: 'jsii-srcmak',
@@ -9,13 +9,18 @@ const project = new TypeScriptLibraryProject({
   authorEmail: 'benisrae@amazon.com',
   stability: 'experimental',
   devDependencies: {
-    '@types/node': Semver.caret('10.0.0')
+    '@types/node': Semver.caret('13.9.8'),
+    '@types/fs-extra': Semver.caret('9.0.1'),
   },
   dependencies: {
     'jsii': Semver.pinned('1.1.0'),
     'jsii-pacmak': Semver.pinned('1.1.0'),
+    'fs-extra': Semver.caret('9.0.0')
   },
   releaseToNpm: true
 });
+
+new Jest(project);
+new Eslint(project);
 
 project.synth();
