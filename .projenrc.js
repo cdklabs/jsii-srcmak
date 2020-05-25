@@ -13,8 +13,8 @@ const project = new TypeScriptLibraryProject({
     '@types/fs-extra': Semver.caret('9.0.1'),
   },
   dependencies: {
-    'jsii': Semver.pinned('1.1.0'),
-    'jsii-pacmak': Semver.pinned('1.1.0'),
+    'jsii': Semver.caret('1.5.0'),
+    'jsii-pacmak': Semver.caret('1.5.0'),
     'fs-extra': Semver.caret('9.0.0')
   },
   releaseToNpm: true
