@@ -14,7 +14,8 @@ const project = new TypeScriptLibraryProject({
   dependencies: {
     'jsii': Semver.pinned('1.1.0'),
     'jsii-pacmak': Semver.pinned('1.1.0'),
-  }
+  },
+  releaseToNpm: true
 });
 
 project.synth();
