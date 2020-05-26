@@ -8,6 +8,9 @@ const project = new TypeScriptLibraryProject({
   authorName: 'Elad Ben-Israel',
   authorEmail: 'benisrae@amazon.com',
   stability: 'experimental',
+  bin: {
+    'jsii-srcmak': 'bin/jsii-srcmak'
+  },
   devDependencies: {
     '@types/node': Semver.caret('13.9.8'),
     '@types/fs-extra': Semver.caret('9.0.1'),

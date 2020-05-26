@@ -16,11 +16,15 @@ export async function compile(workdir: string, options: Options) {
     throw new Error(`jsii entrypoint must be a .ts file: ${entrypoint}`);
   }
 
+  if (!(await fs.pathExists(path.join(workdir, entrypoint)))) {
+    throw new Error(`unable to find typescript entrypoint: ${path.join(workdir, entrypoint)}`);
+  }
+
   // path to entrypoint without extension
   const basepath = path.join(path.dirname(entrypoint), path.basename(entrypoint, '.ts'));
 
   // jsii modules to include
-  const moduleDirs = options.moduleDirs ?? [];
+  const moduleDirs = options.deps ?? [];
 
   const targets: Record<string, any> = { };
 
@@ -59,13 +63,12 @@ export async function compile(workdir: string, options: Options) {
     peerDependencies: deps,
   };
 
-  if (options.pythonName) {
+  if (options.python) {
     targets.python = {
       distName: 'generated',
-      module: options.pythonName,
+      module: options.python.moduleName,
     };
   }
-
 
   await fs.writeFile(path.join(workdir, 'package.json'), JSON.stringify(pkg, undefined, 2));
 

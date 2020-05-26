@@ -1,13 +1,14 @@
-import { withTempDir } from '../lib/util'
+
 import * as fs from 'fs-extra';
 import * as path from 'path';
 import { snapshotDirectory } from './util';
 import { srcmak } from '../lib';
+import { mkdtemp } from '../lib/util';
 
 jest.setTimeout(60_000); // 1min
 
 test('just compile', async () => {
-  await withTempDir('source', async source => {
+  await mkdtemp(async source => {
     await fs.writeFile(path.join(source, 'index.ts'), `
     export interface Operands {
       readonly lhs: number;
@@ -21,30 +22,26 @@ test('just compile', async () => {
     }
     `);
 
-    await withTempDir('target', async target => {
-      await srcmak(source, target);
-    });
+    await srcmak(source);
   });
 });
 
 test('compilation error fails and includes error message', async () => {
-  await withTempDir('source', async source => {
+  await mkdtemp(async source => {
     await fs.writeFile(path.join(source, 'index.ts'), 'I DO NOT COMPUTE');
 
-    await withTempDir('target', async target => {
-      let error;
-      try { await srcmak(source, target); }
-      catch (e) { error = e; }
+    let error;
+    try { await srcmak(source); }
+    catch (e) { error = e; }
 
-      expect(error).toBeDefined();
-      expect(error.message).toMatch(/Cannot find name 'COMPUTE'/);
-      expect(error.message).toMatch(/Compilation errors prevented the JSII assembly/);
-    });
+    expect(error).toBeDefined();
+    expect(error.message).toMatch(/Cannot find name 'COMPUTE'/);
+    expect(error.message).toMatch(/Compilation errors prevented the JSII assembly/);
   });
 });
 
 test('python + different entrypoint + submodule', async () => {
-  await withTempDir('source', async source => {
+  await mkdtemp(async source => {
     const entry = 'different/entry.ts';
     const ep = path.join(source, entry);
     await fs.mkdirp(path.dirname(ep));
@@ -61,10 +58,13 @@ test('python + different entrypoint + submodule', async () => {
     }
     `);
 
-    await withTempDir('target', async target => {
-      await srcmak(source, target, {
+    await mkdtemp(async target => {
+      await srcmak(source, {
         entrypoint: 'different/entry.ts',
-        pythonName: 'my_python_module.submodule',
+        python: {
+          outdir: target,
+          moduleName: 'my_python_module.submodule',
+        },
       });
 
       const dir = await snapshotDirectory(target, [ 'generated@0.0.0.jsii.tgz' ]);
@@ -73,8 +73,8 @@ test('python + different entrypoint + submodule', async () => {
   });
 });
 
-test('compile against a local jsii dependency', async () => {
-  await withTempDir('source', async source => {
+test('deps: compile against a local jsii dependency', async () => {
+  await mkdtemp(async source => {
     await fs.writeFile(path.join(source, 'index.ts'), `
     import { Construct } from 'constructs';
 
@@ -85,30 +85,26 @@ test('compile against a local jsii dependency', async () => {
     }
     `);
 
-    await withTempDir('target', async target => {
-      await srcmak(source, target, {
-        moduleDirs: [
-          path.dirname(require.resolve('constructs/package.json')), // <<---- this is the magic
-        ],
-      });
+    await srcmak(source, {
+      deps: [
+        path.dirname(require.resolve('constructs/package.json')), // <<---- this is the magic
+      ],
     });
   });
 });
 
 test('outputJsii can be used to look at the jsii file', async () => {
-  await withTempDir('source', async source => {
-    await fs.writeFile('index.ts', `
+  await mkdtemp(async source => {
+    await fs.writeFile(path.join(source, 'index.ts'), `
     export class Foo {
       public static hello() { return "world"; }
     }
     `);
 
-    await withTempDir('target', async target => {
-      await srcmak(source, target, {
-        outputJsii: '.jsii',
-      });
-
-      expect(await fs.readJson('.jsii')).toMatchSnapshot();
+    await mkdtemp(async target => {
+      const outputPath = path.join(target, '.jsii');
+      await srcmak(source, { jsii: { path: outputPath } });
+      expect(await fs.readJson(outputPath)).toMatchSnapshot();
     });
   })
 });

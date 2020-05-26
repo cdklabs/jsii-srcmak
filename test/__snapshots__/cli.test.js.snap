@@ -1,0 +1,288 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jsii output 1`] = `
+Object {
+  "author": Object {
+    "name": "generated@generated.com",
+    "roles": Array [
+      "author",
+    ],
+  },
+  "description": "generated",
+  "fingerprint": "YzbxW50rbVtKyO3xyXOGChedDt8pdGdCRYTETM1PW7k=",
+  "homepage": "http://generated",
+  "jsiiVersion": "1.5.0 (build 46538f8)",
+  "license": "Apache-2.0",
+  "name": "generated",
+  "repository": Object {
+    "type": "git",
+    "url": "http://generated",
+  },
+  "schema": "jsii/0.10.0",
+  "targets": Object {
+    "js": Object {
+      "npm": "generated",
+    },
+  },
+  "types": Object {
+    "generated.Calculator": Object {
+      "assembly": "generated",
+      "docs": Object {
+        "summary": "A sophisticaed multi-language calculator.",
+      },
+      "fqn": "generated.Calculator",
+      "initializer": Object {},
+      "kind": "class",
+      "locationInModule": Object {
+        "filename": "lib/main.ts",
+        "line": 19,
+      },
+      "methods": Array [
+        Object {
+          "docs": Object {
+            "summary": "Adds the two operands.",
+          },
+          "locationInModule": Object {
+            "filename": "lib/main.ts",
+            "line": 24,
+          },
+          "name": "add",
+          "parameters": Array [
+            Object {
+              "docs": Object {
+                "summary": "operands.",
+              },
+              "name": "ops",
+              "type": Object {
+                "fqn": "generated.Operands",
+              },
+            },
+          ],
+          "returns": Object {
+            "type": Object {
+              "primitive": "number",
+            },
+          },
+        },
+        Object {
+          "docs": Object {
+            "summary": "Multiplies the two operands.",
+          },
+          "locationInModule": Object {
+            "filename": "lib/main.ts",
+            "line": 40,
+          },
+          "name": "mul",
+          "parameters": Array [
+            Object {
+              "docs": Object {
+                "summary": "operands.",
+              },
+              "name": "ops",
+              "type": Object {
+                "fqn": "generated.Operands",
+              },
+            },
+          ],
+          "returns": Object {
+            "type": Object {
+              "primitive": "number",
+            },
+          },
+        },
+        Object {
+          "docs": Object {
+            "summary": "Subtracts the two operands.",
+          },
+          "locationInModule": Object {
+            "filename": "lib/main.ts",
+            "line": 32,
+          },
+          "name": "sub",
+          "parameters": Array [
+            Object {
+              "docs": Object {
+                "summary": "operands.",
+              },
+              "name": "ops",
+              "type": Object {
+                "fqn": "generated.Operands",
+              },
+            },
+          ],
+          "returns": Object {
+            "type": Object {
+              "primitive": "number",
+            },
+          },
+        },
+      ],
+      "name": "Calculator",
+    },
+    "generated.Operands": Object {
+      "assembly": "generated",
+      "datatype": true,
+      "docs": Object {
+        "summary": "Math operands.",
+      },
+      "fqn": "generated.Operands",
+      "kind": "interface",
+      "locationInModule": Object {
+        "filename": "lib/main.ts",
+        "line": 4,
+      },
+      "name": "Operands",
+      "properties": Array [
+        Object {
+          "abstract": true,
+          "docs": Object {
+            "summary": "Left-hand side operand.",
+          },
+          "immutable": true,
+          "locationInModule": Object {
+            "filename": "lib/main.ts",
+            "line": 8,
+          },
+          "name": "lhs",
+          "type": Object {
+            "primitive": "number",
+          },
+        },
+        Object {
+          "abstract": true,
+          "docs": Object {
+            "summary": "Right-hand side operand.",
+          },
+          "immutable": true,
+          "locationInModule": Object {
+            "filename": "lib/main.ts",
+            "line": 13,
+          },
+          "name": "rhs",
+          "type": Object {
+            "primitive": "number",
+          },
+        },
+      ],
+    },
+  },
+  "version": "0.0.0",
+}
+`;
+
+exports[`python output 1`] = `
+Object {
+  "my/python/module/__init__.py": "import abc
+import builtins
+import datetime
+import enum
+import typing
+
+import jsii
+import jsii.compat
+import publication
+
+from ._jsii import *
+
+
+class Calculator(metaclass=jsii.JSIIMeta, jsii_type=\\"generated.Calculator\\"):
+    \\"\\"\\"A sophisticaed multi-language calculator.\\"\\"\\"
+    def __init__(self) -> None:
+        jsii.create(Calculator, self, [])
+
+    @jsii.member(jsii_name=\\"add\\")
+    def add(self, *, lhs: jsii.Number, rhs: jsii.Number) -> jsii.Number:
+        \\"\\"\\"Adds the two operands.
+
+        :param lhs: Left-hand side operand.
+        :param rhs: Right-hand side operand.
+        \\"\\"\\"
+        ops = Operands(lhs=lhs, rhs=rhs)
+
+        return jsii.invoke(self, \\"add\\", [ops])
+
+    @jsii.member(jsii_name=\\"mul\\")
+    def mul(self, *, lhs: jsii.Number, rhs: jsii.Number) -> jsii.Number:
+        \\"\\"\\"Multiplies the two operands.
+
+        :param lhs: Left-hand side operand.
+        :param rhs: Right-hand side operand.
+        \\"\\"\\"
+        ops = Operands(lhs=lhs, rhs=rhs)
+
+        return jsii.invoke(self, \\"mul\\", [ops])
+
+    @jsii.member(jsii_name=\\"sub\\")
+    def sub(self, *, lhs: jsii.Number, rhs: jsii.Number) -> jsii.Number:
+        \\"\\"\\"Subtracts the two operands.
+
+        :param lhs: Left-hand side operand.
+        :param rhs: Right-hand side operand.
+        \\"\\"\\"
+        ops = Operands(lhs=lhs, rhs=rhs)
+
+        return jsii.invoke(self, \\"sub\\", [ops])
+
+
+@jsii.data_type(jsii_type=\\"generated.Operands\\", jsii_struct_bases=[], name_mapping={'lhs': 'lhs', 'rhs': 'rhs'})
+class Operands():
+    def __init__(self, *, lhs: jsii.Number, rhs: jsii.Number) -> None:
+        \\"\\"\\"Math operands.
+
+        :param lhs: Left-hand side operand.
+        :param rhs: Right-hand side operand.
+        \\"\\"\\"
+        self._values = {
+            'lhs': lhs,
+            'rhs': rhs,
+        }
+
+    @builtins.property
+    def lhs(self) -> jsii.Number:
+        \\"\\"\\"Left-hand side operand.\\"\\"\\"
+        return self._values.get('lhs')
+
+    @builtins.property
+    def rhs(self) -> jsii.Number:
+        \\"\\"\\"Right-hand side operand.\\"\\"\\"
+        return self._values.get('rhs')
+
+    def __eq__(self, rhs) -> bool:
+        return isinstance(rhs, self.__class__) and rhs._values == self._values
+
+    def __ne__(self, rhs) -> bool:
+        return not (rhs == self)
+
+    def __repr__(self) -> str:
+        return 'Operands(%s)' % ', '.join(k + '=' + repr(v) for k, v in self._values.items())
+
+
+__all__ = [
+    \\"Calculator\\",
+    \\"Operands\\",
+]
+
+publication.publish()
+",
+  "my/python/module/_jsii/__init__.py": "import abc
+import builtins
+import datetime
+import enum
+import typing
+
+import jsii
+import jsii.compat
+import publication
+
+__jsii_assembly__ = jsii.JSIIAssembly.load(\\"generated\\", \\"0.0.0\\", __name__[0:-6], \\"generated@0.0.0.jsii.tgz\\")
+
+__all__ = [
+    \\"__jsii_assembly__\\",
+]
+
+publication.publish()
+",
+  "my/python/module/py.typed": "
+",
+}
+`;

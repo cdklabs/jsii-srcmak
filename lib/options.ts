@@ -1,4 +1,4 @@
-export interface CommonOptions {
+export interface Options {
   /**
    * The relative path of the .ts entrypoint within the source directory.
    * @default "index.ts"
@@ -10,20 +10,36 @@ export interface CommonOptions {
    * package. For example, if your generated code references some library, you
    * should include it's module directory in here.
    */
-  moduleDirs?: string[];
+  deps?: string[];
 
   /**
-   * Path to output the .jsii file output.
-   * @default - jsii file is not emitted.
+   * Save .jsii file to an output location.
+   * @default - jsii manifest is omitted.
    */
-  outputJsii?: string;
-}
+  jsii?: JsiiOutputOptions;
 
-export interface PythonOptions extends CommonOptions {
   /**
-   * The name of the the python module to generate. If omitted python will not be generated.
+   * Produce python code.
+   * @default - python is not generated
    */
-  pythonName?: string;
+  python?: PythonOutputOptions;
 }
 
-export type Options = PythonOptions; /* | JavaOptions | DotNetOptions */
+export interface JsiiOutputOptions {
+  /**
+   * Path to save the .jsii output to.
+   */
+  path: string;
+}
+
+export interface PythonOutputOptions {
+  /**
+   * Base root directory.
+   */
+  outdir: string;
+
+  /**
+   * The name of the the python module to generate.
+   */
+  moduleName: string;
+}

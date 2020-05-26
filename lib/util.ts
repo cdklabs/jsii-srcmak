@@ -3,25 +3,19 @@ import * as path from 'path';
 import * as os from 'os';
 import { spawn, SpawnOptions } from 'child_process';
 
-export async function withTempDir(dirname: string, closure: (dir: string) => Promise<void>) {
-  const prevdir = process.cwd();
-  const parent = await fs.mkdtemp(path.join(os.tmpdir(), 'cdk8s.'));
-  const workdir = path.join(parent, dirname);
-  await fs.mkdirp(workdir);
+export async function mkdtemp(closure: (dir: string) => Promise<void>) {
+  const workdir = await fs.mkdtemp(path.join(os.tmpdir(), 'temp-'));
   try {
-    process.chdir(workdir);
     await closure(workdir);
 
-    if (!process.env.WITH_TEMP_DIR_RETAIN) {
-      await fs.remove(parent);
+    if (!process.env.RETAIN_TMP) {
+      await fs.remove(workdir);
     } else {
-      console.error(`retained temp dir: ${parent}`);
+      console.error(`NOTE: Temp directory retained (RETAIN_TMP=1): ${workdir}`);
     }
   } catch(e) {
-    console.error(`retained temp dir due to an error: ${parent}`);
+    console.error(`NOTE: Temp directory retained due to an error: ${workdir}`);
     throw e;
-  } finally {
-    process.chdir(prevdir);
   }
 }
 
@@ -40,11 +34,11 @@ export async function exec(moduleName: string, args: string[] = [], options: Spa
 
     const newError = (message: string) => new Error([
       message,
-      `COMMAND: ${moduleName} ${args.join(' ')}`,
-      `WORKDIR: ${path.resolve(options.cwd ?? '.')}`,
-      '------------------------------------------------------------------------------------',
-      Buffer.concat(data).toString('utf-8'),
-      '------------------------------------------------------------------------------------',
+      '  | ' + Buffer.concat(data).toString('utf-8').split('\n').filter(x => x).join('\n  | '),
+      '  +----------------------------------------------------------------------------------',
+      `  | Command: ${moduleName} ${args.join(' ')}`,
+      `  | Workdir: ${path.resolve(options.cwd ?? '.')}`,
+      '  +----------------------------------------------------------------------------------',
     ].join('\n'));
 
     child.once('error', err => {
