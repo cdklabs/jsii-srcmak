@@ -7,6 +7,8 @@ import { snapshotDirectory } from './util';
 const program = require.resolve('../bin/jsii-srcmak');
 const srcdir = path.join(__dirname, '..', 'example');
 
+jest.setTimeout(60_000); // 1min
+
 test('no arguments - fails with help', () => {
   expect(() => srcmakcli()).toThrow(/Invalid number of arguments. expecting a single positional argument./);
 });
@@ -22,15 +24,17 @@ test('compile only', () => {
   );
 });
 
-test('jsii output', () => {
-  const path = '/tmp/my-jsii-output.json';
+test('jsii output', async () => {
+  await mkdtemp(async dir => {
+    const jsiiPath = path.join(dir, 'my.jsii');
 
-  srcmakcli(srcdir,
-    '--entrypoint lib/main.ts',
-    '--jsii-path ${path}',
-  );
+    srcmakcli(srcdir,
+      '--entrypoint lib/main.ts',
+      `--jsii-path ${jsiiPath}`,
+    );
 
-  expect(JSON.parse(fs.readFileSync(path, 'utf-8'))).toMatchSnapshot();
+    expect(JSON.parse(fs.readFileSync(jsiiPath, 'utf-8'))).toMatchSnapshot();
+  });
 });
 
 test('fails if only one python option is given', () => {
