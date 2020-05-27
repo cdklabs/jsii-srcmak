@@ -33,5 +33,12 @@ export async function srcmak(srcdir: string, options: Options = { }) {
       const target = path.join(options.python.outdir, reldir);
       await fs.move(source, target, { overwrite: true });
     }
+    
+    if (options.java) {
+      const reldir = options.java.package.replace(/\./g, '/');
+      const source = path.resolve(path.join(workdir, 'dist/java/src/main/java', reldir));
+      const target = path.join(options.java.outdir, 'src/main' , reldir);
+      await fs.move(source, target, { overwrite: true });
+    }
   });
 }

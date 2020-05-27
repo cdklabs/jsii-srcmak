@@ -23,6 +23,12 @@ export interface Options {
    * @default - python is not generated
    */
   python?: PythonOutputOptions;
+
+  /**
+   * Produce java code.
+   * @default - java is not generated
+   */
+  java?: JavaOutputOptions;
 }
 
 export interface JsiiOutputOptions {
@@ -32,7 +38,7 @@ export interface JsiiOutputOptions {
   path: string;
 }
 
-export interface PythonOutputOptions {
+export interface PythonOutputOptions { 
   /**
    * Base root directory.
    */
@@ -42,4 +48,32 @@ export interface PythonOutputOptions {
    * The name of the the python module to generate.
    */
   moduleName: string;
+}
+
+export interface JavaOutputOptions {
+  /**
+   * Base root directory.
+   */
+  outdir: string;
+
+  /**
+   * The name of the java package to generate
+   */
+  package: string;
+
+  /**
+   * The maven info for this package
+   */
+  maven: {
+
+    /**
+     * The maven group id
+     */
+    groupId: string;
+
+    /**
+     * The maven artifact id
+     */
+    artifactId?: string;
+  };
 }

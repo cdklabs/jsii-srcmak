@@ -1,5 +1,226 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`java + different entrypoint 1`] = `
+Object {
+  "src/main/hello/world/$Module.java": "package hello.world;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.io.Reader;
+import java.io.UncheckedIOException;
+
+import java.nio.charset.StandardCharsets;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import software.amazon.jsii.JsiiModule;
+
+public final class $Module extends JsiiModule {
+    private static final Map<String, String> MODULE_TYPES = load();
+
+    private static Map<String, String> load() {
+        final Map<String, String> result = new HashMap<>();
+        final ClassLoader cl = $Module.class.getClassLoader();
+        try (final InputStream is = cl.getResourceAsStream(\\"hello/world/$Module.txt\\");
+             final Reader rd = new InputStreamReader(is, StandardCharsets.UTF_8);
+             final BufferedReader br = new BufferedReader(rd)) {
+            br.lines()
+              .filter(line -> !line.trim().isEmpty())
+              .forEach(line ->  {
+                final String[] parts = line.split(\\"=\\", 2);
+                final String fqn = parts[0];
+                final String className = parts[1];
+                result.put(fqn, className);
+            });
+        }
+        catch (final IOException exception) {
+            throw new UncheckedIOException(exception);
+        }
+        return result;
+    }
+
+    private final Map<String, Class<?>> cache = new HashMap<>();
+
+    public $Module() {
+        super(\\"generated\\", \\"0.0.0\\", $Module.class, \\"generated@0.0.0.jsii.tgz\\");
+    }
+
+    @Override
+    protected Class<?> resolveClass(final String fqn) throws ClassNotFoundException {
+        if (!MODULE_TYPES.containsKey(fqn)) {
+            throw new ClassNotFoundException(\\"Unknown JSII type: \\" + fqn);
+        }
+        return this.cache.computeIfAbsent(MODULE_TYPES.get(fqn), this::findClass);
+    }
+
+    private Class<?> findClass(final String binaryName) {
+        try {
+            return Class.forName(binaryName);
+        }
+        catch (final ClassNotFoundException exception) {
+            throw new RuntimeException(exception);
+        }
+    }
+}
+",
+  "src/main/hello/world/Hello.java": "package hello.world;
+
+@javax.annotation.Generated(value = \\"jsii-pacmak/1.5.0 (build 46538f8)\\", date = \\"2020-05-27T04:36:59.445Z\\")
+@software.amazon.jsii.Jsii(module = hello.world.$Module.class, fqn = \\"generated.Hello\\")
+public class Hello extends software.amazon.jsii.JsiiObject {
+
+    protected Hello(final software.amazon.jsii.JsiiObjectRef objRef) {
+        super(objRef);
+    }
+
+    protected Hello(final software.amazon.jsii.JsiiObject.InitializationMode initializationMode) {
+        super(initializationMode);
+    }
+
+    public Hello() {
+        super(software.amazon.jsii.JsiiObject.InitializationMode.JSII);
+        software.amazon.jsii.JsiiEngine.getInstance().createNewObject(this);
+    }
+
+    public @org.jetbrains.annotations.NotNull java.lang.Number add(final @org.jetbrains.annotations.NotNull hello.world.Operands ops) {
+        return this.jsiiCall(\\"add\\", java.lang.Number.class, new Object[] { java.util.Objects.requireNonNull(ops, \\"ops is required\\") });
+    }
+}
+",
+  "src/main/hello/world/Operands.java": "package hello.world;
+
+@javax.annotation.Generated(value = \\"jsii-pacmak/1.5.0 (build 46538f8)\\", date = \\"2020-05-27T04:36:59.447Z\\")
+@software.amazon.jsii.Jsii(module = hello.world.$Module.class, fqn = \\"generated.Operands\\")
+@software.amazon.jsii.Jsii.Proxy(Operands.Jsii$Proxy.class)
+public interface Operands extends software.amazon.jsii.JsiiSerializable {
+
+    @org.jetbrains.annotations.NotNull java.lang.Number getLhs();
+
+    @org.jetbrains.annotations.NotNull java.lang.Number getRhs();
+
+    /**
+     * @return a {@link Builder} of {@link Operands}
+     */
+    static Builder builder() {
+        return new Builder();
+    }
+    /**
+     * A builder for {@link Operands}
+     */
+    public static final class Builder {
+        private java.lang.Number lhs;
+        private java.lang.Number rhs;
+
+        /**
+         * Sets the value of {@link Operands#getLhs}
+         * @param lhs the value to be set. This parameter is required.
+         * @return {@code this}
+         */
+        public Builder lhs(java.lang.Number lhs) {
+            this.lhs = lhs;
+            return this;
+        }
+
+        /**
+         * Sets the value of {@link Operands#getRhs}
+         * @param rhs the value to be set. This parameter is required.
+         * @return {@code this}
+         */
+        public Builder rhs(java.lang.Number rhs) {
+            this.rhs = rhs;
+            return this;
+        }
+
+        /**
+         * Builds the configured instance.
+         * @return a new instance of {@link Operands}
+         * @throws NullPointerException if any required attribute was not provided
+         */
+        public Operands build() {
+            return new Jsii$Proxy(lhs, rhs);
+        }
+    }
+
+    /**
+     * An implementation for {@link Operands}
+     */
+    final class Jsii$Proxy extends software.amazon.jsii.JsiiObject implements Operands {
+        private final java.lang.Number lhs;
+        private final java.lang.Number rhs;
+
+        /**
+         * Constructor that initializes the object based on values retrieved from the JsiiObject.
+         * @param objRef Reference to the JSII managed object.
+         */
+        protected Jsii$Proxy(final software.amazon.jsii.JsiiObjectRef objRef) {
+            super(objRef);
+            this.lhs = this.jsiiGet(\\"lhs\\", java.lang.Number.class);
+            this.rhs = this.jsiiGet(\\"rhs\\", java.lang.Number.class);
+        }
+
+        /**
+         * Constructor that initializes the object based on literal property values passed by the {@link Builder}.
+         */
+        private Jsii$Proxy(final java.lang.Number lhs, final java.lang.Number rhs) {
+            super(software.amazon.jsii.JsiiObject.InitializationMode.JSII);
+            this.lhs = java.util.Objects.requireNonNull(lhs, \\"lhs is required\\");
+            this.rhs = java.util.Objects.requireNonNull(rhs, \\"rhs is required\\");
+        }
+
+        @Override
+        public java.lang.Number getLhs() {
+            return this.lhs;
+        }
+
+        @Override
+        public java.lang.Number getRhs() {
+            return this.rhs;
+        }
+
+        @Override
+        public com.fasterxml.jackson.databind.JsonNode $jsii$toJson() {
+            final com.fasterxml.jackson.databind.ObjectMapper om = software.amazon.jsii.JsiiObjectMapper.INSTANCE;
+            final com.fasterxml.jackson.databind.node.ObjectNode data = com.fasterxml.jackson.databind.node.JsonNodeFactory.instance.objectNode();
+
+            data.set(\\"lhs\\", om.valueToTree(this.getLhs()));
+            data.set(\\"rhs\\", om.valueToTree(this.getRhs()));
+
+            final com.fasterxml.jackson.databind.node.ObjectNode struct = com.fasterxml.jackson.databind.node.JsonNodeFactory.instance.objectNode();
+            struct.set(\\"fqn\\", om.valueToTree(\\"generated.Operands\\"));
+            struct.set(\\"data\\", data);
+
+            final com.fasterxml.jackson.databind.node.ObjectNode obj = com.fasterxml.jackson.databind.node.JsonNodeFactory.instance.objectNode();
+            obj.set(\\"$jsii.struct\\", struct);
+
+            return obj;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+
+            Operands.Jsii$Proxy that = (Operands.Jsii$Proxy) o;
+
+            if (!lhs.equals(that.lhs)) return false;
+            return this.rhs.equals(that.rhs);
+        }
+
+        @Override
+        public int hashCode() {
+            int result = this.lhs.hashCode();
+            result = 31 * result + (this.rhs.hashCode());
+            return result;
+        }
+    }
+}
+",
+}
+`;
+
 exports[`outputJsii can be used to look at the jsii file 1`] = `
 Object {
   "author": Object {

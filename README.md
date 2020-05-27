@@ -67,7 +67,39 @@ The output directory will include a python module that corresponds to the
 original module. This code depends on the following python modules:
 
 - [jsii](https://pypi.org/project/jsii/)
-- [publication](https://pypi.org/project/publication/)
+
+### Java Output
+
+To produce a Java module from your source, use the `java` option:
+
+```ts
+await srcmak('srcdir', {
+  java: {
+    outdir: '/path/to/project/root',
+    package: 'hello.world',
+    maven: {
+      groupId: 'hello',
+      artifactId: 'world',
+    },
+  }
+});
+```
+
+Or the `--java-*` switches in the CLI:
+
+```bash
+$ jsii-srcmak /src/dir --java-outdir=dir --java-package-name=hello.world --java-maven-group-id hello --java-maven-artifact-id world
+```
+
+* The `outdir`/`--java-outdir` option points to the root directory of your Java project.
+* The `packageName`/`--java-package-name` option is the java package name.
+* The `maven { groupId }`/`--java-maven-group-id` option is the maven group id.
+* The `maven { artifactId }`/`--java-maven-artifact-id` option is the maven artifact id.
+
+The output directory will include a java module that corresponds to the
+original module. This code depends on the following java modules:
+
+- [jsii](https://mvnrepository.com/artifact/software.amazon.jsii)
 
 ### Entrypoint
 

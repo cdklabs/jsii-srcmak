@@ -49,12 +49,44 @@ test('fails if only one python option is given', () => {
   )).toThrow(/--python-module-name is required if --python-outdir is specified/);
 });
 
+test('fails if only one java option is given', () => {
+  expect(() => srcmakcli(srcdir,
+    '--entrypoint lib/main.ts',
+    '--java-package-name package',
+  )).toThrow(/--java-outdir is required/);
+
+  expect(() => srcmakcli(srcdir,
+    '--entrypoint lib/main.ts',
+    '--java-outdir dir',
+  )).toThrow(/--java-package-name is required/);
+
+  expect(() => srcmakcli(srcdir,
+    '--entrypoint lib/main.ts',
+    '--java-outdir dir',
+    '--java-package-name package',
+  )).toThrow(/--java-maven-group-id is required/);
+});
+
 test('python output', async () => {
   await mkdtemp(async outdir => {
     srcmakcli(srcdir,
       '--entrypoint lib/main.ts',
       `--python-outdir ${outdir}`,
       '--python-module-name my.python.module',
+    );
+
+    expect(await snapshotDirectory(outdir, [ 'generated@0.0.0.jsii.tgz' ])).toMatchSnapshot();
+  });
+});
+
+test('java output', async () => {
+  await mkdtemp(async outdir => {
+    srcmakcli(srcdir,
+      '--entrypoint lib/main.ts',
+      `--java-outdir ${outdir}`,
+      '--java-package-name package',
+      '--java-maven-group-id mygroup',
+      '--java-maven-artifact-id myartifact',
     );
 
     expect(await snapshotDirectory(outdir, [ 'generated@0.0.0.jsii.tgz' ])).toMatchSnapshot();

@@ -9,6 +9,10 @@ async function main() {
     .option('jsii-path', { desc: 'write .jsii output to this path', type: 'string' })
     .option('python-outdir', { desc: 'python output directory (requires --python-module-name)', type: 'string' })
     .option('python-module-name', { desc: 'python module name', type: 'string' })
+    .option('java-outdir', { desc: 'java output directory (requires --java-package-name and --java-maven-group-id)', type: 'string' })
+    .option('java-package-name', { desc: 'java package name', type: 'string' })
+    .option('java-maven-group-id', { desc: 'java maven group id', type: 'string' })
+    .option('java-maven-artifact-id', { desc: 'java maven artifact id', type: 'string' })
     .showHelpOnFail(true)
     .help();
 
@@ -27,6 +31,7 @@ async function main() {
     ...parseDepOption(),
     ...parseJsiiOptions(),
     ...parsePythonOptions(),
+    ...parseJavaOptions(),
   });
 
   function parseJsiiOptions() {
@@ -49,6 +54,27 @@ async function main() {
       python: {
         outdir: outdir,
         moduleName: moduleName,
+      },
+    }
+  }
+
+  function parseJavaOptions() {
+    const outdir = argv['java-outdir'];
+    const packageName = argv['java-package-name'];
+    const mavenGroupId = argv['java-maven-group-id'];
+    const mavenArtifactId = argv['java-maven-artifact-id'];
+    if (!outdir && !packageName && !mavenGroupId) { return undefined; }
+    if (!outdir) { throw new Error('--java-outdir is required'); }
+    if (!packageName) { throw new Error('--java-package-name is required'); }
+    if (!mavenGroupId) { throw new Error('--java-maven-group-id is required'); }
+    return {
+      java: {
+        outdir: outdir,
+        package: packageName,
+        maven: {
+          groupId: mavenGroupId,
+          artifactId: mavenArtifactId,
+        },
       },
     }
   }
