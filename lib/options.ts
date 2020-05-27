@@ -38,7 +38,7 @@ export interface JsiiOutputOptions {
   path: string;
 }
 
-export interface PythonOutputOptions { 
+export interface PythonOutputOptions {
   /**
    * Base root directory.
    */

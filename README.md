@@ -84,7 +84,7 @@ await srcmak('srcdir', {
 Or the `--java-*` switches in the CLI:
 
 ```bash
-$ jsii-srcmak /src/dir --java-outdir=dir --java-package-name=hello.world --java-maven-group-id hello --java-maven-artifact-id world
+$ jsii-srcmak /src/dir --java-outdir=dir --java-package=hello.world
 ```
 
 * The `outdir`/`--java-outdir` option points to the root directory of your Java project.
