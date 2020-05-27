@@ -115,6 +115,21 @@ Or through the CLI:
 $ jsii-srcmak /src/dir --dep node_modules/@types/node --dep node_modules/constructs
 ```
 
+## Contributing
+
+To build this project, you must first generate the `package.json`:
+
+```
+npx projen
+```
+
+Then you can install your dependencies and build:
+
+```
+yarn install
+yarn build
+```
+
 ## What's with this name?
 
 It's a silly little pun that stems from another pun: jsii has `jsii-pacmak`
