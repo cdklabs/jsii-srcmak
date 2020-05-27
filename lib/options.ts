@@ -60,20 +60,4 @@ export interface JavaOutputOptions {
    * The name of the java package to generate
    */
   package: string;
-
-  /**
-   * The maven info for this package
-   */
-  maven: {
-
-    /**
-     * The maven group id
-     */
-    groupId: string;
-
-    /**
-     * The maven artifact id
-     */
-    artifactId?: string;
-  };
 }

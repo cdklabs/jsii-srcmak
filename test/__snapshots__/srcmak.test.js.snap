@@ -68,7 +68,7 @@ public final class $Module extends JsiiModule {
 ",
   "src/main/hello/world/Hello.java": "package hello.world;
 
-@javax.annotation.Generated(value = \\"jsii-pacmak/1.5.0 (build 46538f8)\\", date = \\"2020-05-27T04:36:59.445Z\\")
+
 @software.amazon.jsii.Jsii(module = hello.world.$Module.class, fqn = \\"generated.Hello\\")
 public class Hello extends software.amazon.jsii.JsiiObject {
 
@@ -92,7 +92,7 @@ public class Hello extends software.amazon.jsii.JsiiObject {
 ",
   "src/main/hello/world/Operands.java": "package hello.world;
 
-@javax.annotation.Generated(value = \\"jsii-pacmak/1.5.0 (build 46538f8)\\", date = \\"2020-05-27T04:36:59.447Z\\")
+
 @software.amazon.jsii.Jsii(module = hello.world.$Module.class, fqn = \\"generated.Operands\\")
 @software.amazon.jsii.Jsii.Proxy(Operands.Jsii$Proxy.class)
 public interface Operands extends software.amazon.jsii.JsiiSerializable {

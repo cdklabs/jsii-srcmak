@@ -2,7 +2,7 @@
 
 exports[`java output 1`] = `
 Object {
-  "src/main/package/$Module.java": "package package;
+  "src/main/mypackage/$Module.java": "package mypackage;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -24,7 +24,7 @@ public final class $Module extends JsiiModule {
     private static Map<String, String> load() {
         final Map<String, String> result = new HashMap<>();
         final ClassLoader cl = $Module.class.getClassLoader();
-        try (final InputStream is = cl.getResourceAsStream(\\"package/$Module.txt\\");
+        try (final InputStream is = cl.getResourceAsStream(\\"mypackage/$Module.txt\\");
              final Reader rd = new InputStreamReader(is, StandardCharsets.UTF_8);
              final BufferedReader br = new BufferedReader(rd)) {
             br.lines()
@@ -66,13 +66,13 @@ public final class $Module extends JsiiModule {
     }
 }
 ",
-  "src/main/package/Calculator.java": "package package;
+  "src/main/mypackage/Calculator.java": "package mypackage;
 
 /**
  * A sophisticaed multi-language calculator.
  */
-@javax.annotation.Generated(value = \\"jsii-pacmak/1.5.0 (build 46538f8)\\", date = \\"2020-05-27T04:37:03.095Z\\")
-@software.amazon.jsii.Jsii(module = package.$Module.class, fqn = \\"generated.Calculator\\")
+
+@software.amazon.jsii.Jsii(module = mypackage.$Module.class, fqn = \\"generated.Calculator\\")
 public class Calculator extends software.amazon.jsii.JsiiObject {
 
     protected Calculator(final software.amazon.jsii.JsiiObjectRef objRef) {
@@ -93,7 +93,7 @@ public class Calculator extends software.amazon.jsii.JsiiObject {
      * <p>
      * @param ops operands. This parameter is required.
      */
-    public @org.jetbrains.annotations.NotNull java.lang.Number add(final @org.jetbrains.annotations.NotNull package.Operands ops) {
+    public @org.jetbrains.annotations.NotNull java.lang.Number add(final @org.jetbrains.annotations.NotNull mypackage.Operands ops) {
         return this.jsiiCall(\\"add\\", java.lang.Number.class, new Object[] { java.util.Objects.requireNonNull(ops, \\"ops is required\\") });
     }
 
@@ -102,7 +102,7 @@ public class Calculator extends software.amazon.jsii.JsiiObject {
      * <p>
      * @param ops operands. This parameter is required.
      */
-    public @org.jetbrains.annotations.NotNull java.lang.Number mul(final @org.jetbrains.annotations.NotNull package.Operands ops) {
+    public @org.jetbrains.annotations.NotNull java.lang.Number mul(final @org.jetbrains.annotations.NotNull mypackage.Operands ops) {
         return this.jsiiCall(\\"mul\\", java.lang.Number.class, new Object[] { java.util.Objects.requireNonNull(ops, \\"ops is required\\") });
     }
 
@@ -111,18 +111,18 @@ public class Calculator extends software.amazon.jsii.JsiiObject {
      * <p>
      * @param ops operands. This parameter is required.
      */
-    public @org.jetbrains.annotations.NotNull java.lang.Number sub(final @org.jetbrains.annotations.NotNull package.Operands ops) {
+    public @org.jetbrains.annotations.NotNull java.lang.Number sub(final @org.jetbrains.annotations.NotNull mypackage.Operands ops) {
         return this.jsiiCall(\\"sub\\", java.lang.Number.class, new Object[] { java.util.Objects.requireNonNull(ops, \\"ops is required\\") });
     }
 }
 ",
-  "src/main/package/Operands.java": "package package;
+  "src/main/mypackage/Operands.java": "package mypackage;
 
 /**
  * Math operands.
  */
-@javax.annotation.Generated(value = \\"jsii-pacmak/1.5.0 (build 46538f8)\\", date = \\"2020-05-27T04:37:03.097Z\\")
-@software.amazon.jsii.Jsii(module = package.$Module.class, fqn = \\"generated.Operands\\")
+
+@software.amazon.jsii.Jsii(module = mypackage.$Module.class, fqn = \\"generated.Operands\\")
 @software.amazon.jsii.Jsii.Proxy(Operands.Jsii$Proxy.class)
 public interface Operands extends software.amazon.jsii.JsiiSerializable {
 

@@ -67,7 +67,9 @@ test('python + different entrypoint + submodule', async () => {
         },
       });
 
-      const dir = await snapshotDirectory(target, [ 'generated@0.0.0.jsii.tgz' ]);
+      const dir = await snapshotDirectory(target, {
+        excludeFiles: [ 'generated@0.0.0.jsii.tgz' ],
+      });
       expect(dir).toMatchSnapshot();
     });
   });
@@ -97,14 +99,13 @@ test('java + different entrypoint', async () => {
         java: {
           outdir: target,
           package: 'hello.world',
-          maven: {
-            groupId: 'hello',
-            artifactId: 'world',
-          },
         },
       });
 
-      const dir = await snapshotDirectory(target, [ 'generated@0.0.0.jsii.tgz' ]);
+      const dir = await snapshotDirectory(target, {
+        excludeLines: [ /.*@javax.annotation.Generated.*/ ],
+        excludeFiles: [ 'generated@0.0.0.jsii.tgz' ],
+      });
       expect(dir).toMatchSnapshot();
     });
   });

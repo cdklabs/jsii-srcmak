@@ -76,11 +76,7 @@ To produce a Java module from your source, use the `java` option:
 await srcmak('srcdir', {
   java: {
     outdir: '/path/to/project/root',
-    package: 'hello.world',
-    maven: {
-      groupId: 'hello',
-      artifactId: 'world',
-    },
+    package: 'hello.world'
   }
 });
 ```
@@ -92,12 +88,10 @@ $ jsii-srcmak /src/dir --java-outdir=dir --java-package-name=hello.world --java-
 ```
 
 * The `outdir`/`--java-outdir` option points to the root directory of your Java project.
-* The `packageName`/`--java-package-name` option is the java package name.
-* The `maven { groupId }`/`--java-maven-group-id` option is the maven group id.
-* The `maven { artifactId }`/`--java-maven-artifact-id` option is the maven artifact id.
+* The `package`/`--java-package` option is the java package name.
 
 The output directory will include a java module that corresponds to the
-original module. This code depends on the following java modules:
+original module. This code depends on the following maven package (should be defined directly or indirectly in the project's `pom.xml` file):
 
 - [jsii](https://mvnrepository.com/artifact/software.amazon.jsii)
 
