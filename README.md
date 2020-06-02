@@ -95,6 +95,46 @@ original module. This code depends on the following maven package (should be def
 
 - [jsii](https://mvnrepository.com/artifact/software.amazon.jsii)
 
+The output directory will also include a tarbell `generated@0.0.0.jsii.tgz` that must be bundled in your project. Here is example snippet of how your `pom.xml` can take a dependency on these sources:
+
+1. Using the `build-helper-maven-plugin` generate source files for your import.
+
+```xml
+<plugin>
+  <groupId>org.codehaus.mojo</groupId>
+  <artifactId>build-helper-maven-plugin</artifactId>
+  <version>3.0.0</version>
+  <executions>
+      <execution>
+          <phase>generate-sources</phase>
+          <goals>
+              <goal>add-source</goal>
+          </goals>
+          <configuration>
+              <sources>
+                  <source>imports/src/main/k8s/main/java</source>
+              </sources>
+          </configuration>
+      </execution>
+  </executions>
+</plugin>
+```
+
+2. Set additional classpath elements for your import.
+
+```xml
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-surefire-plugin</artifactId>
+  <version>2.12.4</version>
+  <configuration>
+    <additionalClasspathElements>
+      <additionalClasspathElement>imports/src/main/k8s/main/java</additionalClasspathElement>
+    </additionalClasspathElements>
+  </configuration>
+</plugin>
+```
+
 ### Entrypoint
 
 The `entrypoint` option can be used to customize the name of the typescript entrypoint (default is `index.ts`).

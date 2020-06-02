@@ -25,7 +25,8 @@ export interface Options {
   python?: PythonOutputOptions;
 
   /**
-   * Produce java code.
+   * Produces java code under src/main/yourpackage/main/java/yourpackage/
+   * 
    * @default - java is not generated
    */
   java?: JavaOutputOptions;

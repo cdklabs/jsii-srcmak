@@ -1,7 +1,7 @@
 import * as fs from 'fs-extra';
 import * as path from 'path';
 
-interface excludeOptions {
+interface SnapshotOptions {
   excludeLines?: RegExp[];
   excludeFiles?: string[];
 }
@@ -10,7 +10,7 @@ interface excludeOptions {
  * Returns a dictionary where keys are relative file names and values are the
  * file contents. Useful to perform snapshot testing against full directories.
  */
-export async function snapshotDirectory(basedir: string, excludeOptions: excludeOptions = {}, reldir = '.'): Promise<Record<string, string>> {
+export async function snapshotDirectory(basedir: string, excludeOptions: SnapshotOptions = {}, reldir = '.'): Promise<Record<string, string>> {
   const result: Record<string, string> = { };
   const absdir = path.join(basedir, reldir);
   const { excludeLines, excludeFiles } = excludeOptions;

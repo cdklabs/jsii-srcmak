@@ -2,7 +2,7 @@
 
 exports[`java output 1`] = `
 Object {
-  "src/main/mypackage/$Module.java": "package mypackage;
+  "src/main/mypackage/main/java/mypackage/$Module.java": "package mypackage;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -66,7 +66,7 @@ public final class $Module extends JsiiModule {
     }
 }
 ",
-  "src/main/mypackage/Calculator.java": "package mypackage;
+  "src/main/mypackage/main/java/mypackage/Calculator.java": "package mypackage;
 
 /**
  * A sophisticaed multi-language calculator.
@@ -116,7 +116,7 @@ public class Calculator extends software.amazon.jsii.JsiiObject {
     }
 }
 ",
-  "src/main/mypackage/Operands.java": "package mypackage;
+  "src/main/mypackage/main/java/mypackage/Operands.java": "package mypackage;
 
 /**
  * Math operands.
@@ -252,6 +252,9 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
         }
     }
 }
+",
+  "src/main/mypackage/main/resources/mypackage/$Module.txt": "generated.Calculator=mypackage.Calculator
+generated.Operands=mypackage.Operands
 ",
 }
 `;
