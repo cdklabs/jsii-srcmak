@@ -67,7 +67,45 @@ test('python + different entrypoint + submodule', async () => {
         },
       });
 
-      const dir = await snapshotDirectory(target, [ 'generated@0.0.0.jsii.tgz' ]);
+      const dir = await snapshotDirectory(target, {
+        excludeFiles: [ 'generated@0.0.0.jsii.tgz' ],
+      });
+      expect(dir).toMatchSnapshot();
+    });
+  });
+});
+
+test('java + different entrypoint', async () => {
+  await mkdtemp(async source => {
+    const entry = 'different/entry.ts';
+    const ep = path.join(source, entry);
+    await fs.mkdirp(path.dirname(ep));
+    await fs.writeFile(ep, `
+    export interface Operands {
+      readonly lhs: number;
+      readonly rhs: number;
+    }
+
+    export class Hello {
+      public add(ops: Operands): number {
+        return ops.lhs + ops.rhs;
+      }
+    }
+    `);
+
+    await mkdtemp(async target => {
+      await srcmak(source, {
+        entrypoint: 'different/entry.ts',
+        java: {
+          outdir: target,
+          package: 'hello.world',
+        },
+      });
+
+      const dir = await snapshotDirectory(target, {
+        excludeLines: [ /.*@javax.annotation.Generated.*/ ],
+        excludeFiles: [ 'generated@0.0.0.jsii.tgz' ],
+      });
       expect(dir).toMatchSnapshot();
     });
   });

@@ -1,5 +1,264 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`java output 1`] = `
+Object {
+  "src/main/mypackage/main/java/mypackage/$Module.java": "package mypackage;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.IOException;
+import java.io.Reader;
+import java.io.UncheckedIOException;
+
+import java.nio.charset.StandardCharsets;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import software.amazon.jsii.JsiiModule;
+
+public final class $Module extends JsiiModule {
+    private static final Map<String, String> MODULE_TYPES = load();
+
+    private static Map<String, String> load() {
+        final Map<String, String> result = new HashMap<>();
+        final ClassLoader cl = $Module.class.getClassLoader();
+        try (final InputStream is = cl.getResourceAsStream(\\"mypackage/$Module.txt\\");
+             final Reader rd = new InputStreamReader(is, StandardCharsets.UTF_8);
+             final BufferedReader br = new BufferedReader(rd)) {
+            br.lines()
+              .filter(line -> !line.trim().isEmpty())
+              .forEach(line ->  {
+                final String[] parts = line.split(\\"=\\", 2);
+                final String fqn = parts[0];
+                final String className = parts[1];
+                result.put(fqn, className);
+            });
+        }
+        catch (final IOException exception) {
+            throw new UncheckedIOException(exception);
+        }
+        return result;
+    }
+
+    private final Map<String, Class<?>> cache = new HashMap<>();
+
+    public $Module() {
+        super(\\"generated\\", \\"0.0.0\\", $Module.class, \\"generated@0.0.0.jsii.tgz\\");
+    }
+
+    @Override
+    protected Class<?> resolveClass(final String fqn) throws ClassNotFoundException {
+        if (!MODULE_TYPES.containsKey(fqn)) {
+            throw new ClassNotFoundException(\\"Unknown JSII type: \\" + fqn);
+        }
+        return this.cache.computeIfAbsent(MODULE_TYPES.get(fqn), this::findClass);
+    }
+
+    private Class<?> findClass(final String binaryName) {
+        try {
+            return Class.forName(binaryName);
+        }
+        catch (final ClassNotFoundException exception) {
+            throw new RuntimeException(exception);
+        }
+    }
+}
+",
+  "src/main/mypackage/main/java/mypackage/Calculator.java": "package mypackage;
+
+/**
+ * A sophisticaed multi-language calculator.
+ */
+
+@software.amazon.jsii.Jsii(module = mypackage.$Module.class, fqn = \\"generated.Calculator\\")
+public class Calculator extends software.amazon.jsii.JsiiObject {
+
+    protected Calculator(final software.amazon.jsii.JsiiObjectRef objRef) {
+        super(objRef);
+    }
+
+    protected Calculator(final software.amazon.jsii.JsiiObject.InitializationMode initializationMode) {
+        super(initializationMode);
+    }
+
+    public Calculator() {
+        super(software.amazon.jsii.JsiiObject.InitializationMode.JSII);
+        software.amazon.jsii.JsiiEngine.getInstance().createNewObject(this);
+    }
+
+    /**
+     * Adds the two operands.
+     * <p>
+     * @param ops operands. This parameter is required.
+     */
+    public @org.jetbrains.annotations.NotNull java.lang.Number add(final @org.jetbrains.annotations.NotNull mypackage.Operands ops) {
+        return this.jsiiCall(\\"add\\", java.lang.Number.class, new Object[] { java.util.Objects.requireNonNull(ops, \\"ops is required\\") });
+    }
+
+    /**
+     * Multiplies the two operands.
+     * <p>
+     * @param ops operands. This parameter is required.
+     */
+    public @org.jetbrains.annotations.NotNull java.lang.Number mul(final @org.jetbrains.annotations.NotNull mypackage.Operands ops) {
+        return this.jsiiCall(\\"mul\\", java.lang.Number.class, new Object[] { java.util.Objects.requireNonNull(ops, \\"ops is required\\") });
+    }
+
+    /**
+     * Subtracts the two operands.
+     * <p>
+     * @param ops operands. This parameter is required.
+     */
+    public @org.jetbrains.annotations.NotNull java.lang.Number sub(final @org.jetbrains.annotations.NotNull mypackage.Operands ops) {
+        return this.jsiiCall(\\"sub\\", java.lang.Number.class, new Object[] { java.util.Objects.requireNonNull(ops, \\"ops is required\\") });
+    }
+}
+",
+  "src/main/mypackage/main/java/mypackage/Operands.java": "package mypackage;
+
+/**
+ * Math operands.
+ */
+
+@software.amazon.jsii.Jsii(module = mypackage.$Module.class, fqn = \\"generated.Operands\\")
+@software.amazon.jsii.Jsii.Proxy(Operands.Jsii$Proxy.class)
+public interface Operands extends software.amazon.jsii.JsiiSerializable {
+
+    /**
+     * Left-hand side operand.
+     */
+    @org.jetbrains.annotations.NotNull java.lang.Number getLhs();
+
+    /**
+     * Right-hand side operand.
+     */
+    @org.jetbrains.annotations.NotNull java.lang.Number getRhs();
+
+    /**
+     * @return a {@link Builder} of {@link Operands}
+     */
+    static Builder builder() {
+        return new Builder();
+    }
+    /**
+     * A builder for {@link Operands}
+     */
+    public static final class Builder {
+        private java.lang.Number lhs;
+        private java.lang.Number rhs;
+
+        /**
+         * Sets the value of {@link Operands#getLhs}
+         * @param lhs Left-hand side operand. This parameter is required.
+         * @return {@code this}
+         */
+        public Builder lhs(java.lang.Number lhs) {
+            this.lhs = lhs;
+            return this;
+        }
+
+        /**
+         * Sets the value of {@link Operands#getRhs}
+         * @param rhs Right-hand side operand. This parameter is required.
+         * @return {@code this}
+         */
+        public Builder rhs(java.lang.Number rhs) {
+            this.rhs = rhs;
+            return this;
+        }
+
+        /**
+         * Builds the configured instance.
+         * @return a new instance of {@link Operands}
+         * @throws NullPointerException if any required attribute was not provided
+         */
+        public Operands build() {
+            return new Jsii$Proxy(lhs, rhs);
+        }
+    }
+
+    /**
+     * An implementation for {@link Operands}
+     */
+    final class Jsii$Proxy extends software.amazon.jsii.JsiiObject implements Operands {
+        private final java.lang.Number lhs;
+        private final java.lang.Number rhs;
+
+        /**
+         * Constructor that initializes the object based on values retrieved from the JsiiObject.
+         * @param objRef Reference to the JSII managed object.
+         */
+        protected Jsii$Proxy(final software.amazon.jsii.JsiiObjectRef objRef) {
+            super(objRef);
+            this.lhs = this.jsiiGet(\\"lhs\\", java.lang.Number.class);
+            this.rhs = this.jsiiGet(\\"rhs\\", java.lang.Number.class);
+        }
+
+        /**
+         * Constructor that initializes the object based on literal property values passed by the {@link Builder}.
+         */
+        private Jsii$Proxy(final java.lang.Number lhs, final java.lang.Number rhs) {
+            super(software.amazon.jsii.JsiiObject.InitializationMode.JSII);
+            this.lhs = java.util.Objects.requireNonNull(lhs, \\"lhs is required\\");
+            this.rhs = java.util.Objects.requireNonNull(rhs, \\"rhs is required\\");
+        }
+
+        @Override
+        public java.lang.Number getLhs() {
+            return this.lhs;
+        }
+
+        @Override
+        public java.lang.Number getRhs() {
+            return this.rhs;
+        }
+
+        @Override
+        public com.fasterxml.jackson.databind.JsonNode $jsii$toJson() {
+            final com.fasterxml.jackson.databind.ObjectMapper om = software.amazon.jsii.JsiiObjectMapper.INSTANCE;
+            final com.fasterxml.jackson.databind.node.ObjectNode data = com.fasterxml.jackson.databind.node.JsonNodeFactory.instance.objectNode();
+
+            data.set(\\"lhs\\", om.valueToTree(this.getLhs()));
+            data.set(\\"rhs\\", om.valueToTree(this.getRhs()));
+
+            final com.fasterxml.jackson.databind.node.ObjectNode struct = com.fasterxml.jackson.databind.node.JsonNodeFactory.instance.objectNode();
+            struct.set(\\"fqn\\", om.valueToTree(\\"generated.Operands\\"));
+            struct.set(\\"data\\", data);
+
+            final com.fasterxml.jackson.databind.node.ObjectNode obj = com.fasterxml.jackson.databind.node.JsonNodeFactory.instance.objectNode();
+            obj.set(\\"$jsii.struct\\", struct);
+
+            return obj;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+
+            Operands.Jsii$Proxy that = (Operands.Jsii$Proxy) o;
+
+            if (!lhs.equals(that.lhs)) return false;
+            return this.rhs.equals(that.rhs);
+        }
+
+        @Override
+        public int hashCode() {
+            int result = this.lhs.hashCode();
+            result = 31 * result + (this.rhs.hashCode());
+            return result;
+        }
+    }
+}
+",
+  "src/main/mypackage/main/resources/mypackage/$Module.txt": "generated.Calculator=mypackage.Calculator
+generated.Operands=mypackage.Operands
+",
+}
+`;
+
 exports[`jsii output 1`] = `
 Object {
   "author": Object {

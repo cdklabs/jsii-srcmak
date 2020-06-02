@@ -23,6 +23,13 @@ export interface Options {
    * @default - python is not generated
    */
   python?: PythonOutputOptions;
+
+  /**
+   * Produces java code under src/main/yourpackage/main/java/yourpackage/
+   * 
+   * @default - java is not generated
+   */
+  java?: JavaOutputOptions;
 }
 
 export interface JsiiOutputOptions {
@@ -42,4 +49,16 @@ export interface PythonOutputOptions {
    * The name of the the python module to generate.
    */
   moduleName: string;
+}
+
+export interface JavaOutputOptions {
+  /**
+   * Base root directory.
+   */
+  outdir: string;
+
+  /**
+   * The name of the java package to generate
+   */
+  package: string;
 }

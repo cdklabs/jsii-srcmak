@@ -9,6 +9,8 @@ async function main() {
     .option('jsii-path', { desc: 'write .jsii output to this path', type: 'string' })
     .option('python-outdir', { desc: 'python output directory (requires --python-module-name)', type: 'string' })
     .option('python-module-name', { desc: 'python module name', type: 'string' })
+    .option('java-outdir', { desc: 'java output directory (requires --java-package)', type: 'string' })
+    .option('java-package', { desc: 'the java package (namespace) to use for all generated types', type: 'string' })
     .showHelpOnFail(true)
     .help();
 
@@ -27,6 +29,7 @@ async function main() {
     ...parseDepOption(),
     ...parseJsiiOptions(),
     ...parsePythonOptions(),
+    ...parseJavaOptions(),
   });
 
   function parseJsiiOptions() {
@@ -49,6 +52,20 @@ async function main() {
       python: {
         outdir: outdir,
         moduleName: moduleName,
+      },
+    }
+  }
+
+  function parseJavaOptions() {
+    const outdir = argv['java-outdir'];
+    const packageName = argv['java-package'];
+    if (!outdir && !packageName) { return undefined; }
+    if (!outdir) { throw new Error('--java-outdir is required'); }
+    if (!packageName) { throw new Error('--java-package is required'); }
+    return {
+      java: {
+        outdir: outdir,
+        package: packageName,
       },
     }
   }

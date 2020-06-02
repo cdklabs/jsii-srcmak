@@ -67,7 +67,73 @@ The output directory will include a python module that corresponds to the
 original module. This code depends on the following python modules:
 
 - [jsii](https://pypi.org/project/jsii/)
-- [publication](https://pypi.org/project/publication/)
+
+### Java Output
+
+To produce a Java module from your source, use the `java` option:
+
+```ts
+await srcmak('srcdir', {
+  java: {
+    outdir: '/path/to/project/root',
+    package: 'hello.world'
+  }
+});
+```
+
+Or the `--java-*` switches in the CLI:
+
+```bash
+$ jsii-srcmak /src/dir --java-outdir=dir --java-package=hello.world
+```
+
+* The `outdir`/`--java-outdir` option points to the root directory of your Java project.
+* The `package`/`--java-package` option is the java package name.
+
+The output directory will include a java module that corresponds to the
+original module. This code depends on the following maven package (should be defined directly or indirectly in the project's `pom.xml` file):
+
+- [jsii](https://mvnrepository.com/artifact/software.amazon.jsii)
+
+The output directory will also include a tarbell `generated@0.0.0.jsii.tgz` that must be bundled in your project. Here is example snippet of how your `pom.xml` can take a dependency on these sources:
+
+1. Using the `build-helper-maven-plugin` generate source files for your import.
+
+```xml
+<plugin>
+  <groupId>org.codehaus.mojo</groupId>
+  <artifactId>build-helper-maven-plugin</artifactId>
+  <version>3.0.0</version>
+  <executions>
+      <execution>
+          <phase>generate-sources</phase>
+          <goals>
+              <goal>add-source</goal>
+          </goals>
+          <configuration>
+              <sources>
+                  <source>imports/src/main/k8s/main/java</source>
+              </sources>
+          </configuration>
+      </execution>
+  </executions>
+</plugin>
+```
+
+2. Set additional classpath elements for your import.
+
+```xml
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-surefire-plugin</artifactId>
+  <version>2.12.4</version>
+  <configuration>
+    <additionalClasspathElements>
+      <additionalClasspathElement>imports/src/main/k8s/main/java</additionalClasspathElement>
+    </additionalClasspathElements>
+  </configuration>
+</plugin>
+```
 
 ### Entrypoint
 
@@ -113,6 +179,21 @@ Or through the CLI:
 
 ```bash
 $ jsii-srcmak /src/dir --dep node_modules/@types/node --dep node_modules/constructs
+```
+
+## Contributing
+
+To build this project, you must first generate the `package.json`:
+
+```
+npx projen
+```
+
+Then you can install your dependencies and build:
+
+```
+yarn install
+yarn build
 ```
 
 ## What's with this name?

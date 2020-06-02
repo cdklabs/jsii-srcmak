@@ -70,6 +70,16 @@ export async function compile(workdir: string, options: Options) {
     };
   }
 
+  if (options.java) {
+    targets.java = {
+      package: options.java.package,
+      maven: {
+        groupId: 'generated',
+        artifactId: 'generated',
+      },
+    };
+  }
+
   await fs.writeFile(path.join(workdir, 'package.json'), JSON.stringify(pkg, undefined, 2));
 
   await exec(compilerModule, args, {
