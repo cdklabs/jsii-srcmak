@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.4](https://github.com/eladb/jsii-srcmak/compare/v0.0.3...v0.0.4) (2020-06-02)
+
+
+### Features
+
+* Java support ([#2](https://github.com/eladb/jsii-srcmak/issues/2)) ([9e84d6e](https://github.com/eladb/jsii-srcmak/commit/9e84d6ee37662ba699d4a72f1656ca03d5fd949f))
+
 ### [0.0.3](https://github.com/eladb/jsii-srcmak/compare/v0.0.2...v0.0.3) (2020-05-26)
 
 
