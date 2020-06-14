@@ -2,7 +2,7 @@
 
 exports[`java + different entrypoint 1`] = `
 Object {
-  "src/main/hello/world/main/java/hello/world/$Module.java": "package hello.world;
+  "src/main/java/hello/world/$Module.java": "package hello.world;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -66,7 +66,7 @@ public final class $Module extends JsiiModule {
     }
 }
 ",
-  "src/main/hello/world/main/java/hello/world/Hello.java": "package hello.world;
+  "src/main/java/hello/world/Hello.java": "package hello.world;
 
 
 @software.amazon.jsii.Jsii(module = hello.world.$Module.class, fqn = \\"generated.Hello\\")
@@ -90,7 +90,7 @@ public class Hello extends software.amazon.jsii.JsiiObject {
     }
 }
 ",
-  "src/main/hello/world/main/java/hello/world/Operands.java": "package hello.world;
+  "src/main/java/hello/world/Operands.java": "package hello.world;
 
 
 @software.amazon.jsii.Jsii(module = hello.world.$Module.class, fqn = \\"generated.Operands\\")
@@ -218,7 +218,7 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
     }
 }
 ",
-  "src/main/hello/world/main/resources/hello/world/$Module.txt": "generated.Hello=hello.world.Hello
+  "src/main/resources/hello/world/$Module.txt": "generated.Hello=hello.world.Hello
 generated.Operands=hello.world.Operands
 ",
 }

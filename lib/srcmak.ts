@@ -3,6 +3,7 @@ import * as path from 'path';
 import { exec, mkdtemp } from './util';
 import { compile } from './compile';
 import { Options } from './options';
+import { ncp } from 'ncp';
 
 const pacmakModule = require.resolve('jsii-pacmak/bin/jsii-pacmak');
 
@@ -35,10 +36,13 @@ export async function srcmak(srcdir: string, options: Options = { }) {
     }
     
     if (options.java) {
-      const reldir = options.java.package.replace(/\./g, '/');
       const source = path.resolve(path.join(workdir, 'dist/java/src/'));
-      const target = path.join(options.java.outdir, 'src/main', reldir);
-      await fs.move(source, target, { overwrite: true });
+      const target = path.join(options.java.outdir, 'src/');
+      ncp(source, target, { clobber: false }, (err) => {
+        if (err) {
+          return console.error(err);
+        }
+      });
     }
   });
 }
