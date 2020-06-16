@@ -590,10 +590,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.13.tgz#ee1128e881b874c371374c1f72201893616417c9"
   integrity sha512-rouEWBImiRaSJsVA+ITTFM6ZxibuAlTuNOCyxVbwreu6k6+ujs7DfnU9o+PShFhET78pMBl3eH+AGSI5eOTkPA==
 
-"@types/node@^13.9.8":
-  version "13.13.12"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.13.12.tgz#9c72e865380a7dc99999ea0ef20fc9635b503d20"
-  integrity sha512-zWz/8NEPxoXNT9YyF2osqyA9WjssZukYpgI4UYZpOjcyqwIUqWGkcCionaEb9Ki+FULyPyvNFpg/329Kd2/pbw==
+"@types/node@^10.0.0":
+  version "10.17.26"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.26.tgz#a8a119960bff16b823be4c617da028570779bcfd"
+  integrity sha512-myMwkO2Cr82kirHY8uknNRHEVtn0wV3DTQfkrjx17jmkstDRZ24gNUdl8AHXVyVclTYI/bNjgTPTAWvWLqXqkw==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -4500,10 +4500,10 @@ progress@^2.0.0:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.1.19:
-  version "0.1.19"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.1.19.tgz#69d869312722171fd1d0e12f6e18cc90e94b1fb4"
-  integrity sha512-Ais7BvSEN0astAYzFxd56QJuSXqmgUnjtlI+xpF4MiargT2q68VzxlROpOoVxtL4ZQQ5MdFDJf93fzOm0a1rbQ==
+projen@^0.1.28:
+  version "0.1.28"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.1.28.tgz#4000577b1aba05ecd08bb34d234048b83c5255bb"
+  integrity sha512-f4cBHQj30ZpXp6YkWb4KJKoFVXf5aiGfGQVyWvEOF+k24TKYZZsOJRlZFKHIS06jnBchScwSbVWgaed7i/n6Ag==
   dependencies:
     constructs "2.0.1"
     yaml "^1.9.2"
@@ -5651,7 +5651,7 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@^3.8.3:
+typescript@^3.9.5:
   version "3.9.5"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.5.tgz#586f0dba300cde8be52dd1ac4f7e1009c1b13f36"
   integrity sha512-hSAifV3k+i6lEoCJ2k6R2Z/rp/H3+8sdmcn5NrS3/3kE7+RyZXm9aqvxWqjEXHAd8b0pShatpcdMTvEdvAJltQ==
