@@ -13,7 +13,7 @@ const project = new TypeScriptLibraryProject({
   },
   devDependencies: {
     '@types/ncp': Semver.caret('2.0.4'),
-    '@types/fs-extra': Semver.caret('9.0.1'),
+    '@types/fs-extra': Semver.caret('8.1.0'),
   },
   dependencies: {
     'jsii': Semver.caret('1.5.0'),
@@ -23,8 +23,6 @@ const project = new TypeScriptLibraryProject({
     'yargs': Semver.caret('11.1.1'),
   },
   releaseToNpm: true,
-  minNodeVersion: '14.0.0'
-
 });
 
 project.synth();
