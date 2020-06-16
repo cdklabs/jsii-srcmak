@@ -62,7 +62,11 @@ test('fails if only one java option is given', () => {
 });
 
 test('python output', async () => {
-  await mkdtemp(async outdir => {
+  await mkdtemp(async tmpdir => {
+
+    // put under a non-existent directory to verify it is created
+    const outdir = path.join(tmpdir, 'python');
+
     srcmakcli(srcdir,
       '--entrypoint lib/main.ts',
       `--python-outdir ${outdir}`,
@@ -76,7 +80,10 @@ test('python output', async () => {
 });
 
 test('java output', async () => {
-  await mkdtemp(async outdir => {
+  await mkdtemp(async tmpdir => {
+    // put under a non-existent directory to verify it is created
+    const outdir = path.join(tmpdir, 'java');
+
     srcmakcli(srcdir,
       '--entrypoint lib/main.ts',
       `--java-outdir ${outdir}`,

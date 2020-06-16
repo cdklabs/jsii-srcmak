@@ -3,7 +3,10 @@ import * as path from 'path';
 import { exec, mkdtemp } from './util';
 import { compile } from './compile';
 import { Options } from './options';
-import { ncp } from 'ncp';
+import { ncp as _ncp } from 'ncp';
+import { promisify } from 'util';
+
+const ncp = promisify(_ncp);
 
 const pacmakModule = require.resolve('jsii-pacmak/bin/jsii-pacmak');
 
@@ -38,11 +41,8 @@ export async function srcmak(srcdir: string, options: Options = { }) {
     if (options.java) {
       const source = path.resolve(path.join(workdir, 'dist/java/src/'));
       const target = path.join(options.java.outdir, 'src/');
-      ncp(source, target, { clobber: false }, (err) => {
-        if (err) {
-          return console.error(err);
-        }
-      });
+      await fs.mkdirp(target); // make sure target directory exists
+      await ncp(source, target, { clobber: false });
     }
   });
 }
