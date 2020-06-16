@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/eladb/jsii-srcmak/compare/v0.1.2...v0.1.3) (2020-06-16)
+
+
+### Bug Fixes
+
+* fails if java output directory does not exist ([6af49fe](https://github.com/eladb/jsii-srcmak/commit/6af49fefac3c4dadc0ca19ec3c56a44601548390))
+
 ### [0.1.2](https://github.com/eladb/jsii-srcmak/compare/v0.1.1...v0.1.2) (2020-06-16)
 
 ### [0.1.1](https://github.com/eladb/jsii-srcmak/compare/v0.0.5...v0.1.1) (2020-06-16)
