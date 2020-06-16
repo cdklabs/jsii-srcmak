@@ -2,7 +2,7 @@
 
 exports[`java output 1`] = `
 Object {
-  "src/main/mypackage/main/java/mypackage/$Module.java": "package mypackage;
+  "src/main/java/mypackage/$Module.java": "package mypackage;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -53,7 +53,11 @@ public final class $Module extends JsiiModule {
         if (!MODULE_TYPES.containsKey(fqn)) {
             throw new ClassNotFoundException(\\"Unknown JSII type: \\" + fqn);
         }
-        return this.cache.computeIfAbsent(MODULE_TYPES.get(fqn), this::findClass);
+        String className = MODULE_TYPES.get(fqn);
+        if (!this.cache.containsKey(className)) {
+            this.cache.put(className, this.findClass(className));
+        }
+        return this.cache.get(className);
     }
 
     private Class<?> findClass(final String binaryName) {
@@ -66,7 +70,7 @@ public final class $Module extends JsiiModule {
     }
 }
 ",
-  "src/main/mypackage/main/java/mypackage/Calculator.java": "package mypackage;
+  "src/main/java/mypackage/Calculator.java": "package mypackage;
 
 /**
  * A sophisticaed multi-language calculator.
@@ -116,7 +120,7 @@ public class Calculator extends software.amazon.jsii.JsiiObject {
     }
 }
 ",
-  "src/main/mypackage/main/java/mypackage/Operands.java": "package mypackage;
+  "src/main/java/mypackage/Operands.java": "package mypackage;
 
 /**
  * Math operands.
@@ -145,7 +149,7 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
     /**
      * A builder for {@link Operands}
      */
-    public static final class Builder {
+    public static final class Builder implements software.amazon.jsii.Builder<Operands> {
         private java.lang.Number lhs;
         private java.lang.Number rhs;
 
@@ -174,6 +178,7 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
          * @return a new instance of {@link Operands}
          * @throws NullPointerException if any required attribute was not provided
          */
+        @Override
         public Operands build() {
             return new Jsii$Proxy(lhs, rhs);
         }
@@ -253,7 +258,7 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
     }
 }
 ",
-  "src/main/mypackage/main/resources/mypackage/$Module.txt": "generated.Calculator=mypackage.Calculator
+  "src/main/resources/mypackage/$Module.txt": "generated.Calculator=mypackage.Calculator
 generated.Operands=mypackage.Operands
 ",
 }
@@ -268,9 +273,9 @@ Object {
     ],
   },
   "description": "generated",
-  "fingerprint": "YzbxW50rbVtKyO3xyXOGChedDt8pdGdCRYTETM1PW7k=",
+  "fingerprint": "+fSgo9PQwFAKmX2JcaRILwTXE/p1H1bq+QKuOREAfuE=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.5.0 (build 46538f8)",
+  "jsiiVersion": "1.6.0 (build 248e75b)",
   "license": "Apache-2.0",
   "name": "generated",
   "repository": Object {
