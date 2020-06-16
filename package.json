@@ -28,7 +28,6 @@
   },
   "devDependencies": {
     "@types/ncp": "^2.0.4",
-    "@types/node": "^10.0.0",
     "@types/fs-extra": "^9.0.1",
     "projen": "^0.1.28",
     "standard-version": "^8.0.0",
@@ -41,7 +40,8 @@
     "eslint-import-resolver-node": "^0.3.3",
     "eslint-import-resolver-typescript": "^2.0.0",
     "eslint-plugin-import": "^2.20.2",
-    "json-schema": "^0.2.5"
+    "json-schema": "^0.2.5",
+    "@types/node": "^14.0.0"
   },
   "peerDependencies": {},
   "dependencies": {
@@ -53,7 +53,7 @@
   },
   "bundledDependencies": [],
   "engines": {
-    "node": ">= 10.0.0"
+    "node": ">= 14.0.0"
   },
   "license": "Apache-2.0",
   "version": "0.0.4",
