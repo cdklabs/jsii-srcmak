@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/eladb/jsii-srcmak/compare/v0.0.4...v0.0.5) (2020-06-16)
+
+
+### Bug Fixes
+
+* java output location moved to src/main ([#3](https://github.com/eladb/jsii-srcmak/issues/3)) ([96c76e4](https://github.com/eladb/jsii-srcmak/commit/96c76e4e23568b55d13721bb302b36b156bdf20f)), closes [/github.com/awslabs/cdk8s/pull/233#discussion_r439811482](https://github.com/eladb//github.com/awslabs/cdk8s/pull/233/issues/discussion_r439811482)
+
 ### [0.0.4](https://github.com/eladb/jsii-srcmak/compare/v0.0.3...v0.0.4) (2020-06-02)
 
 
