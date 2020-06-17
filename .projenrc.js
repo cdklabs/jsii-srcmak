@@ -23,7 +23,7 @@ const project = new TypeScriptLibraryProject({
     'yargs': Semver.caret('11.1.1'),
   },
   releaseToNpm: true,
-  minNodeVersion: '10.3.0'
+  minNodeVersion: '11.10.1'
 });
 
 project.synth();
