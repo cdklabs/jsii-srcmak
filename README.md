@@ -95,7 +95,7 @@ original module. This code depends on the following maven package (should be def
 
 - [jsii](https://mvnrepository.com/artifact/software.amazon.jsii)
 
-The output directory will also include a tarbell `generated@0.0.0.jsii.tgz` that must be bundled in your project.
+The output directory will also include a tarball `generated@0.0.0.jsii.tgz` that must be bundled in your project.
 
 ### Entrypoint
 
