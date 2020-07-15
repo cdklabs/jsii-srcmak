@@ -25,4 +25,10 @@ const project = new TypeScriptLibraryProject({
   releaseToNpm: true,
 });
 
+// compile before test because we need the lib/cli.js to test the cli
+project.addScripts({
+  test: "yarn eslint && jest --passWithNoTests",
+  build: "yarn compile && yarn test && yarn run package",
+});
+
 project.synth();
