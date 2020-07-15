@@ -1,4 +1,4 @@
-import { srcmak } from '../lib';
+import { srcmak } from './srcmak';
 import * as yargs from 'yargs';
 
 async function main() {

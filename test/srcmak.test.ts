@@ -2,8 +2,8 @@
 import * as fs from 'fs-extra';
 import * as path from 'path';
 import { snapshotDirectory } from './util';
-import { srcmak } from '../lib';
-import { mkdtemp } from '../lib/util';
+import { srcmak } from '../src';
+import { mkdtemp } from '../src/util';
 
 jest.setTimeout(60_000); // 1min
 

@@ -1,7 +1,7 @@
 import { execFileSync } from 'child_process';
 import * as path from 'path';
 import * as fs from 'fs-extra';
-import { mkdtemp } from '../lib/util';
+import { mkdtemp } from '../src/util';
 import { snapshotDirectory } from './util';
 
 const program = require.resolve('../bin/jsii-srcmak');
