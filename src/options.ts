@@ -19,6 +19,12 @@ export interface Options {
   jsii?: JsiiOutputOptions;
 
   /**
+   * Package name
+   * @default "generated"
+   */
+  packageName?: string
+
+  /**
    * Produce python code.
    * @default - python is not generated
    */

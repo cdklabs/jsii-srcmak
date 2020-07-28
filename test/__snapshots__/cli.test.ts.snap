@@ -53,11 +53,7 @@ public final class $Module extends JsiiModule {
         if (!MODULE_TYPES.containsKey(fqn)) {
             throw new ClassNotFoundException(\\"Unknown JSII type: \\" + fqn);
         }
-        String className = MODULE_TYPES.get(fqn);
-        if (!this.cache.containsKey(className)) {
-            this.cache.put(className, this.findClass(className));
-        }
-        return this.cache.get(className);
+        return this.cache.computeIfAbsent(MODULE_TYPES.get(fqn), this::findClass);
     }
 
     private Class<?> findClass(final String binaryName) {
@@ -149,7 +145,7 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
     /**
      * A builder for {@link Operands}
      */
-    public static final class Builder implements software.amazon.jsii.Builder<Operands> {
+    public static final class Builder {
         private java.lang.Number lhs;
         private java.lang.Number rhs;
 
@@ -178,7 +174,6 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
          * @return a new instance of {@link Operands}
          * @throws NullPointerException if any required attribute was not provided
          */
-        @Override
         public Operands build() {
             return new Jsii$Proxy(lhs, rhs);
         }
@@ -273,9 +268,9 @@ Object {
     ],
   },
   "description": "generated",
-  "fingerprint": "+fSgo9PQwFAKmX2JcaRILwTXE/p1H1bq+QKuOREAfuE=",
+  "fingerprint": "YzbxW50rbVtKyO3xyXOGChedDt8pdGdCRYTETM1PW7k=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.6.0 (build 248e75b)",
+  "jsiiVersion": "1.5.0 (build 46538f8)",
   "license": "Apache-2.0",
   "name": "generated",
   "repository": Object {

@@ -11,6 +11,7 @@ const compilerModule = require.resolve('jsii/bin/jsii');
 export async function compile(workdir: string, options: Options) {
   const args = [ '--silence-warnings', 'reserved-word' ];
   const entrypoint = options.entrypoint ?? 'index.ts';
+  const packageName = options.packageName?.replace(/\./g, '').replace(/\//g, '') ?? 'generated';
 
   if (path.extname(entrypoint) !== '.ts') {
     throw new Error(`jsii entrypoint must be a .ts file: ${entrypoint}`);
@@ -46,9 +47,8 @@ export async function compile(workdir: string, options: Options) {
     }
   }
 
-
   const pkg = {
-    name: 'generated',
+    name: packageName,
     version: '0.0.0',
     author: 'generated@generated.com',
     main: `${basepath}.js`,
