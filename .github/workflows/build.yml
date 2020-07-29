@@ -9,7 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+<<<<<<< HEAD
       - run: npx projen@0.3.11
+=======
+      - run: npx projen@0.3.4
+>>>>>>> parent of 58e1784... chore: sync up dependencies with projen
       - run: yarn install --frozen-lockfile
       - name: Set git identity
         run: |-

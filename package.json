@@ -33,7 +33,11 @@
   "devDependencies": {
     "@types/ncp": "^2.0.4",
     "@types/fs-extra": "^8.1.0",
+<<<<<<< HEAD
     "projen": "^0.3.11",
+=======
+    "projen": "^0.3.4",
+>>>>>>> parent of 58e1784... chore: sync up dependencies with projen
     "standard-version": "^8.0.1",
     "typescript": "^3.9.5",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
@@ -50,8 +54,8 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "jsii": "^1.9.0",
-    "jsii-pacmak": "^1.9.0",
+    "jsii": "^1.5.0",
+    "jsii-pacmak": "^1.5.0",
     "fs-extra": "^9.0.0",
     "ncp": "^2.0.0",
     "yargs": "^11.1.1"
