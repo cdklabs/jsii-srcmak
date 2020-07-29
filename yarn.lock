@@ -3736,7 +3736,7 @@ lodash.templatesettings@^4.0.0:
   dependencies:
     lodash._reinterpolate "^3.0.0"
 
-lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19:
+lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15:
   version "4.17.19"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
   integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
@@ -4491,10 +4491,10 @@ progress@^2.0.0:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.3.7:
-  version "0.3.7"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.3.7.tgz#12a090c4b4258f06b05177044b96851cecc45f1b"
-  integrity sha512-QR3Y7BX8CCP0ovexVE5xRMCHeGHXaEccUcvn8T8wrJUbXcsyZkaex2xwMFKIu+ixP2mmaN9tGNUgMfx8rl8fAA==
+projen@^0.3.11:
+  version "0.3.12"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.3.12.tgz#d3c90f152890de34b4c199fce89785c374fece95"
+  integrity sha512-/n5FsPREQBua44gOJHaGILIaE2y9L/aMNguT4CI5++IKaQ+rFLZs0jT8oT0g4AmEvJTZ9P0zhCGjoMl+gWxvKg==
   dependencies:
     constructs "2.0.1"
     decamelize "^4.0.0"
