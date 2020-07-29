@@ -226,8 +226,6 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
   "src/main/resources/hello/world/$Module.txt": "javapackage.Hello=hello.world.Hello
 javapackage.Operands=hello.world.Operands
 ",
-  "src/main/resources/hello/world/javapackage@0.0.0.jsii.tgz": "�      �ko�H�����K���&@J�Hw�&�B ��ʏ�Yb���5�T��?1��.m�:F����˳��qU�Q5Q�8f��1 IR�R֭T��5��I�\\\\�I@'�R�����x��T��|\\"c������� ���G�\`s��f���*G�騨;���Q�B��
-_m]֔fU��mKs]�!M}Ь&c��t���t��]�7�Ӛ�e�zXkZc�y�8<M��i�	��H����[��H���=_i%rR�%���4�O�_e��y�7�n�9�xܒx0����\`�CH�Rv��e���!���?�	���O�o϶F�ai����h���+>�L\\\\�!�I}�\\\\;g]�fS�fw���֙A�f���i�K[?���jgs�%�u������Y*�75�VJ�y��6�����}�Em�E���1��[��6���|-���\\\\^��{r����?��ZH{JB�ታE����&?���e�b�*]0T�	k��T�Nv�[;d[���'�7/���    ",
 }
 `;
 
@@ -380,19 +378,6 @@ __all__ = [
 
 publication.publish()
 ",
-  "my_python_module/submodule/_jsii/pythonpackage@0.0.0.jsii.tgz": "�      �ko�H�����K���6��D��� ��� �TE�z����5�T����<]Ҫ���ݙ��Ύ��ih��p.;f��y�$�T(��
-y�(��K�,�J�I��(yx��>�3�QP����o�3� j>7]*���fc��#�\`�ql����ȵţ���f@�w4]�_��f���	�z9^w+�tm�3@��{'�\\\\*0����)[��$��}bB�
-%��.����X}!&�S�J1*1k�{.#ܥ��<�b/�X�Sk�����ZHj�����H�0a�V�ǫq��g��!K�1j}�Aoo��RW@ۮ�[����w�Z����H
-�^�qC�l[������u+��Ո����S_2Ji�C8�,2�Q.RĄ8F�Y iEo�H�IuZ���J�Db��
-r�)vx~4���(V���x���kc��X�maM�!
-��ź&�V�$i�j���W�4
-(wcC�m�7��޶�p����^yn�h�~�yh�uCo��O���=Jl�id���:�⃲V�d�JO��+�c��\\"�и�4�S?~R;1O8�{
-��{e'���Zyԅ5N�#�B���[�G8b�>�tk�+��z�m����&��ܻ?���Z���)�}n�$�p�}3]���M��+�3��;��D>0��Z�T�W�����Y�:�f�Dy�{?�w�j�<�ޜ��E�WU�,�Pn;t���d<^��ż�]�+��7�k��� ���$��̕>ƈg
-�S~��<�rv$�ww�-ё�]�j���%,ޝf��qy'�	S��t���7!^��1o�
-y��O�@��,�e�}4�4t������4���!0ק�4σ�qӽ<_�'0�ρ(����uNu��R�Me8hε~�W����ڴ��̂1��r&�����|/�Uz׺R�B�J���ed�-��~дt��k�4
-�����'KL�e5*�n�p�՜wnj���Y����tn���M��W�5\`�qyц��J�����ܴ��}���p�u �	�x-���sX;ߠ��&��w%�6��S�:�w&�f'P�괧Ơ9��R�B_�cOW���V?��z�������=N�B�мUnF_���a�5��~���z����^7�W��}���^�t�\`دM@�ו@k�Jj�(������$�)��dl�Fe����V��(�]�{L�ؔ���n��zm2��S�(�s7u�;����N��ڽ@m$rR�%������PPd���SP	y��;�����㆜� ��t��/�B���z4�&�-���/���/����3�������,m=�\\"m�8���17�
-;FR�>���׳y�As���IKаS����� 4V������;v���̓Z2Iɼ*�
-�a���?��6��aLϷ1�ŏ��C�_x�c��yH ���g@\\\\S	i�AH>��aM�f��P�����&��c�*M00T}�~'��w���C^�^��'�/�~9M   ",
   "my_python_module/submodule/py.typed": "
 ",
 }
