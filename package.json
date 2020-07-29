@@ -12,16 +12,16 @@
   },
   "scripts": {
     "projen": "node .projenrc.js && yarn install",
-    "projen:upgrade": "chmod +w package.json && yarn upgrade -L projen && chmod -w package.json && yarn projen",
-    "test": "yarn eslint && jest --passWithNoTests",
     "no-changes": "(git log --oneline -1 | grep -q \"chore(release):\") && echo \"No changes to release.\"",
     "bump": "yarn --silent no-changes || standard-version",
     "release": "yarn --silent no-changes || (yarn bump && git push --follow-tags origin master)",
+    "projen:upgrade": "chmod +w package.json && yarn upgrade -L projen && chmod -w package.json && yarn projen",
     "compile": "tsc",
     "watch": "tsc -w",
     "package": "rm -fr dist && mkdir -p dist/js && yarn pack && mv *.tgz dist/js/",
     "build": "yarn compile && yarn test && yarn run package",
     "eslint": "eslint . --ext .ts",
+    "test": "yarn eslint && jest --passWithNoTests",
     "test:watch": "jest --watch",
     "test:update": "jest --updateSnapshot"
   },
@@ -33,11 +33,8 @@
   "devDependencies": {
     "@types/ncp": "^2.0.4",
     "@types/fs-extra": "^8.1.0",
-<<<<<<< HEAD
-    "projen": "^0.3.11",
-=======
-    "projen": "^0.3.4",
->>>>>>> parent of 58e1784... chore: sync up dependencies with projen
+    "constructs": "^3.0.0",
+    "projen": "^0.3.14",
     "standard-version": "^8.0.1",
     "typescript": "^3.9.5",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
@@ -62,7 +59,7 @@
   },
   "bundledDependencies": [],
   "license": "Apache-2.0",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "types": "lib/index.d.ts",
   "jest": {
     "clearMocks": true,
