@@ -33,6 +33,7 @@
   "devDependencies": {
     "@types/ncp": "^2.0.4",
     "@types/fs-extra": "^8.1.0",
+    "constructs": "^3.0.0",
     "projen": "^0.3.14",
     "standard-version": "^8.0.1",
     "typescript": "^3.9.5",

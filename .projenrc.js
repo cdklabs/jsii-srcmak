@@ -14,6 +14,7 @@ const project = new TypeScriptLibraryProject({
   devDependencies: {
     '@types/ncp': Semver.caret('2.0.4'),
     '@types/fs-extra': Semver.caret('8.1.0'),
+    'constructs': Semver.caret('3.0.0'),
   },
   dependencies: {
     'jsii': Semver.caret('1.5.0'),
