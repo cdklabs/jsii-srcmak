@@ -12,7 +12,7 @@
   },
   "scripts": {
     "projen": "node .projenrc.js && yarn install",
-    "projen:upgrade": "yarn upgrade -L projen && yarn projen",
+    "projen:upgrade": "chmod +w package.json && yarn upgrade -L projen && chmod -w package.json && yarn projen",
     "test": "yarn eslint && jest --passWithNoTests",
     "no-changes": "(git log --oneline -1 | grep -q \"chore(release):\") && echo \"No changes to release.\"",
     "bump": "yarn --silent no-changes || standard-version",
@@ -33,7 +33,7 @@
   "devDependencies": {
     "@types/ncp": "^2.0.4",
     "@types/fs-extra": "^8.1.0",
-    "projen": "^0.3.10",
+    "projen": "^0.3.11",
     "standard-version": "^8.0.1",
     "typescript": "^3.9.5",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
