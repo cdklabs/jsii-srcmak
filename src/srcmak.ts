@@ -32,7 +32,7 @@ export async function srcmak(srcdir: string, options: Options = { }) {
 
     // extract code based on selected languages
     if (options.python) {
-      const reldir = options.python.moduleName.replace(/\./g, '/').replace(/-/g, ''); // jsii replaces "." with "/"
+      const reldir = options.python.moduleName.replace(/\./g, '/').replace(/-/g, '_'); // jsii replaces "." with "/"
       const source = path.resolve(path.join(workdir, 'dist/python/src', reldir));
       const target = path.join(options.python.outdir, reldir);
       await fs.move(source, target, { overwrite: true });

@@ -68,7 +68,7 @@ export async function compile(workdir: string, options: Options) {
   if (options.python) {
     targets.python = {
       distName: 'generated',
-      module: options.python.moduleName.replace(/-/g, ''),
+      module: options.python.moduleName.replace(/-/g, '_'),
     };
   }
 

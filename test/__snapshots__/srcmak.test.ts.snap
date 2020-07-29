@@ -294,7 +294,7 @@ Object {
 
 exports[`python + different entrypoint + submodule 1`] = `
 Object {
-  "mypython_module/submodule/__init__.py": "import abc
+  "my_python_module/submodule/__init__.py": "import abc
 import builtins
 import datetime
 import enum
@@ -365,7 +365,7 @@ __all__ = [
 
 publication.publish()
 ",
-  "mypython_module/submodule/_jsii/__init__.py": "import abc
+  "my_python_module/submodule/_jsii/__init__.py": "import abc
 import builtins
 import datetime
 import enum
@@ -385,26 +385,20 @@ __all__ = [
 
 publication.publish()
 ",
-  "mypython_module/submodule/_jsii/pythonpackage@0.0.0.jsii.tgz": "�      �ko�H�>�+,ߗF́m^%(��H��ש��X\`��z�S��o��]ڪ:F����kg��$e.MP*9#��c��\\\\&�[Ȥ���9��s9��	� ���8�J6��_��0��7�o	�a%�NM��a��
-IG0c'�@�D��w<J*��^d��!t���
-�	��!�\\"��آ�4<��D�ĝϊ��:�����Z7�T,0�𢳇l����$Ǽ���LV�erj�*�԰��zB��/!��Ȭ#��2	���n�@]+���Ŏ��1���@]�h<�S\\\\��\\"�fDɆ�l3����C�|�:��������Y��Z7UG�l�,%�#��@B��g�;�$kH��m�!H�5��S}���C�4��K^!?�1b�
-�ۭh iC����E�h4##�<�XC�I�x<F62h
-~���.~�U>\\\\���h�n�6�%�/�b[�w[��m�8t%U���Z�
-(
-WcG�}�w��־�h��t�,�6|�G�N��}���FԱ
-r�z���u��o���2�ٓ�6�hK���v\`��\\"^��Am=b1�
-8Ա����A�G���l�(F�\\\\
-I&Ԗ�g��ú�PI���rޮ�ٶm_��mҦ�{�߹��
-����3����_�3�5�{�,6�txQF��16&���2�R�#��|J����,�0�e���
-K��q�_�;o��-�X'~uM�;A��R��3#�'����Ϧ���_��K��3�ub ;a�N�ă<C
-M�n ��|�
-ZZ�M�5�~��H����o�B��-f}UL��A}��2�WL����7P�\\\\m%��\\"\`\`5	y�y� Ô�>\`�?��T�O������dY�:�:�[�-|S��3hjFL�(K�2�ȭ�A}%��83W�r]��K
-�x��r�1w$��a}%�{�P�ue��yxŊP���)���uM6:.��>���g���Q�J�dɺ���?�H��Tiu��<��{Zj?�|��r�+/k�Vkܷ\`�I:\\\\�4|���S�k��G�}lܫ�SHpm7��<������������q�熞:��=��ۮHD��P��hк��,��B�Y��-��~\\"V{�Zp�2�ct4EM����1]�q�՚ć��S��tT-8rm>����.9j�ǣ��T3������9�#�[r�Z3'V��ܯkʌ*2�i
-�j6k�VZ(F{2�S%ݜt�=\\"W��ʮ��\\\\�fb�2����{_�
-�>����ã9���=W�Erb�9��#V_7K@�����p�ؒ3�����w��/�wB����Ի&�-������~����%���v�1r�@�F϶�X]�Ʊ�tF؝n��ծϵs��lN5h�[:q
-�uj6L����\\"q�g�ys�s�!�LT2oJeY�P��aA������1��w�����;�׊�3�_�4��?�����
-L�����$�44����	>�{Ui����s����E]mo����.p��	��a    ",
-  "mypython_module/submodule/py.typed": "
+  "my_python_module/submodule/_jsii/pythonpackage@0.0.0.jsii.tgz": "�      �ko�H�����K���6��D��� ��� �TE�z����5�T����<]Ҫ���ݙ��Ύ��ih��p.;f��y�$�T(��
+y�(��K�,�J�I��(yx��>�3�QP����o�3� j>7]*���fc��#�\`�ql����ȵţ���f@�w4]�_��f���	�z9^w+�tm�3@��{'�\\\\*0����)[��$��}bB�
+%��.����X}!&�S�J1*1k�{.#ܥ��<�b/�X�Sk�����ZHj�����H�0a�V�ǫq��g��!K�1j}�Aoo��RW@ۮ�[����w�Z����H
+�^�qC�l[������u+��Ո����S_2Ji�C8�,2�Q.RĄ8F�Y iEo�H�IuZ���J�Db��
+r�)vx~4���(V���x���kc��X�maM�!
+��ź&�V�$i�j���W�4
+(wcC�m�7��޶�p����^yn�h�~�yh�uCo��O���=Jl�id���:�⃲V�d�JO��+�c��\\"�и�4�S?~R;1O8�{
+��{e'���Zyԅ5N�#�B���[�G8b�>�tk�+��z�m����&��ܻ?���Z���)�}n�$�p�}3]���M��+�3��;��D>0��Z�T�W�����Y�:�f�Dy�{?�w�j�<�ޜ��E�WU�,�Pn;t���d<^��ż�]�+��7�k��� ���$��̕>ƈg
+�S~��<�rv$�ww�-ё�]�j���%,ޝf��qy'�	S��t���7!^��1o�
+y��O�@��,�e�}4�4t������4���!0ק�4σ�qӽ<_�'0�ρ(����uNu��R�Me8hε~�W����ڴ��̂1��r&�����|/�Uz׺R�B�J���ed�-��~дt��k�4
+�����'KL�e5*�n�p�՜wnj���Y����tn���M��W�5\`�qyц��J�����ܴ��}���p�u �	�x-���sX;ߠ��&��w%�6��S�:�w&�f'P�괧Ơ9��R�B_�cOW���V?��z�������=N�B�мUnF_���a�5��~���z����^7�W��}���^�t�\`دM@�ו@k�Jj�(������$�)��dl�Fe����V��(�]�{L�ؔ���n��zm2��S�(�s7u�;����N��ڽ@m$rR�%������PPd���SP	y��;�����㆜� ��t��/�B���z4�&�-���/���/����3�������,m=�\\"m�8���17�
+;FR�>���׳y�As���IKаS����� 4V������;v���̓Z2Iɼ*�
+�a���?��6��aLϷ1�ŏ��C�_x�c��yH ���g@\\\\S	i�AH>��aM�f��P�����&��c�*M00T}�~'��w���C^�^��'�/�~9M   ",
+  "my_python_module/submodule/py.typed": "
 ",
 }
 `;
