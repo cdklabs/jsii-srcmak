@@ -45,7 +45,7 @@ public final class $Module extends JsiiModule {
     private final Map<String, Class<?>> cache = new HashMap<>();
 
     public $Module() {
-        super(\\"generated\\", \\"0.0.0\\", $Module.class, \\"generated@0.0.0.jsii.tgz\\");
+        super(\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060\\", \\"0.0.0\\", $Module.class, \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060@0.0.0.jsii.tgz\\");
     }
 
     @Override
@@ -76,7 +76,7 @@ public final class $Module extends JsiiModule {
  * A sophisticaed multi-language calculator.
  */
 
-@software.amazon.jsii.Jsii(module = mypackage.$Module.class, fqn = \\"generated.Calculator\\")
+@software.amazon.jsii.Jsii(module = mypackage.$Module.class, fqn = \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator\\")
 public class Calculator extends software.amazon.jsii.JsiiObject {
 
     protected Calculator(final software.amazon.jsii.JsiiObjectRef objRef) {
@@ -126,7 +126,7 @@ public class Calculator extends software.amazon.jsii.JsiiObject {
  * Math operands.
  */
 
-@software.amazon.jsii.Jsii(module = mypackage.$Module.class, fqn = \\"generated.Operands\\")
+@software.amazon.jsii.Jsii(module = mypackage.$Module.class, fqn = \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\")
 @software.amazon.jsii.Jsii.Proxy(Operands.Jsii$Proxy.class)
 public interface Operands extends software.amazon.jsii.JsiiSerializable {
 
@@ -229,7 +229,7 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
             data.set(\\"rhs\\", om.valueToTree(this.getRhs()));
 
             final com.fasterxml.jackson.databind.node.ObjectNode struct = com.fasterxml.jackson.databind.node.JsonNodeFactory.instance.objectNode();
-            struct.set(\\"fqn\\", om.valueToTree(\\"generated.Operands\\"));
+            struct.set(\\"fqn\\", om.valueToTree(\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\"));
             struct.set(\\"data\\", data);
 
             final com.fasterxml.jackson.databind.node.ObjectNode obj = com.fasterxml.jackson.databind.node.JsonNodeFactory.instance.objectNode();
@@ -258,9 +258,31 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
     }
 }
 ",
-  "src/main/resources/mypackage/$Module.txt": "generated.Calculator=mypackage.Calculator
-generated.Operands=mypackage.Operands
+  "src/main/resources/mypackage/$Module.txt": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator=mypackage.Calculator
+4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands=mypackage.Operands
 ",
+  "src/main/resources/mypackage/4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060@0.0.0.jsii.tgz": "�      �Zmsڸ���
+�K�m��54ә�� �
+	�wvvlI��ղ	f'�}�mLȽ���,�[��9�yt$��X2����L��|���|�P������Ky�|��B�ă|��J��Nx����(ߪ'p����H�3�qi�uT�N���
+Y'PKO�Al�!���[�z�}(f�a �ߠ��T��Ͼ\`�lj9�4|�TR��ңB�$W���r�B��J�X@J�J��/�/�Y&2���@�K|\`=��:� p}���X��5�P��>��ʬ��dx��R
+sET*�p�m(�QD���d�����L��i@��2uL��p�xV�5u\\"^][Ktk�(�����Nf���G�!�'�a�Sy.�kP��91b�a��(#G�[����Llӵv�W�ϑ\\\\�
+_J��J*&x�XK?	���5=>�1�U}�Z֐��Nl���1FtE�N�Vl\\"�=:��u9����LK�̡H&��]͡4٘�@4��03�C���$�/��Z75�Ce�.I@���A� 
+���k&���@2Z&v5���#�H4�4�du��ţQ���,T���	�@8�(q1�I��q�1��pΓə���ٚ�-kǝy�Cq�r���\\"%0 [�a�����b�����	�%!��=@[�Lkף��\`�T��^!��:T�}�:�8�m$���i˦:��<p�pu��郶6�1���xl����(��QY��F%�F���D彫86l~jP�sG����9(�iA�ڱ�&.����U���￿�yŗc��u���������5
+{;8j���39�.���N�o�e�,8���Ó,M;'���t�<:T0�1�I��k�uבmw@�S�J��T]]�4u�o��<63��@|�]:Q��,��4ۧ�9Z�RQ-<��7�8�Gg�GjL�
+�
+��t�y�#�Z���T��f{9�~U�y{4��|�X��-=��O��sj+��:�g״L��sL/���BN(������?��~DI��p0�)���T[��d0�#_���{C�i;�=����V��=�'7�5��3�{~{�Z	ƒ�'nnR���w)����fSA​�'X��/�.�5����3�m�O��{�oc�6���]2��r�o0�/S�y3x�Z�C=���/�_F��w� ��G{S���۵iɖ�V����o�>BU�᪝�2ӸTdFJ���k����RT\\\\ij.��
+],4x�ʠj)��y���96��~c��;�M%
+�K%��F��R�Z���<(��ޢ��'��Ug<lѶ�\`�uFC�I
+�W������wO,v{���Uo�w�T�վ������
+ͤr{�|��p��kb���.��z��O����m���Vb���-��Vo�މ�^+�_}�b��ٖ�x)l[:�N��^�2�w��]#����=߽n�V��b�oc����-�cX�������Q���~�����.�C�Q�K�[�pr�o��Xa����Bg�ac�c�q#�'�r�w������Ac��_����3�Fî)�*O[��w���
+R�~�*�-�/���(כ<�Ex���zkB��+]_�?S)�j\\"]���Z_�ׂ9gR���z%�S
+�C� ���:�U\\\\�>�(5u٦����Vd\\"���TmX��7*\`�LPN����9�Al��H����:SrEF�EO��JR�((����R)�q!^ХZ(ߵF��6�<X���@��U�MG�����I�k�ԪK�7q9����s[��<⚪I�n^�6� !�J�B�*|�}��c��	L�&�Aw���Ҍ��a�v!6
+�Φ�0�we���W��*��!G�c���)�7�Q���&p����f��wk�N]T��N�o�>Uj��@Qu�������^,���ㆇ5�]�e�w����r�q�Q	�	1:�3\\\\Ӟ���xb��<�[�V|��B�I>�C�Da�/����̓��
+��e��7���64\\\\�{
+
+1����
+��h�h����@�C����
+��J��_=3���m��������X����Q�����r'Z��c����3��1}��[����_��O�r?t���&�o��'q��}��tLg0�d�w���o�ݑǲb���߷����R�;)L,b\`b�0��ަ-B�ݖ��ώ�s9u�������6���Ba����b���!e��ٺaR/��['��(���IN�o%l\\"c��<NS�G.L�^��9�NVd�=�_٥��� M����$�>��|{���e�^c�t�Dk;��s9�s9�s�{�� ��%L 0  ",
 }
 `;
 
@@ -272,12 +294,12 @@ Object {
       "author",
     ],
   },
-  "description": "generated",
-  "fingerprint": "+fSgo9PQwFAKmX2JcaRILwTXE/p1H1bq+QKuOREAfuE=",
+  "description": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
+  "fingerprint": "ViAfgJbT/zOiPr7YHbv+SHTXd1cpQsg/Zcvu6QJ9p5Y=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.6.0 (build 248e75b)",
+  "jsiiVersion": "1.9.0 (build 5c646d5)",
   "license": "Apache-2.0",
-  "name": "generated",
+  "name": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
   "repository": Object {
     "type": "git",
     "url": "http://generated",
@@ -285,16 +307,16 @@ Object {
   "schema": "jsii/0.10.0",
   "targets": Object {
     "js": Object {
-      "npm": "generated",
+      "npm": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
     },
   },
   "types": Object {
-    "generated.Calculator": Object {
-      "assembly": "generated",
+    "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator": Object {
+      "assembly": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
       "docs": Object {
         "summary": "A sophisticaed multi-language calculator.",
       },
-      "fqn": "generated.Calculator",
+      "fqn": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator",
       "initializer": Object {},
       "kind": "class",
       "locationInModule": Object {
@@ -318,7 +340,7 @@ Object {
               },
               "name": "ops",
               "type": Object {
-                "fqn": "generated.Operands",
+                "fqn": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands",
               },
             },
           ],
@@ -344,7 +366,7 @@ Object {
               },
               "name": "ops",
               "type": Object {
-                "fqn": "generated.Operands",
+                "fqn": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands",
               },
             },
           ],
@@ -370,7 +392,7 @@ Object {
               },
               "name": "ops",
               "type": Object {
-                "fqn": "generated.Operands",
+                "fqn": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands",
               },
             },
           ],
@@ -383,13 +405,13 @@ Object {
       ],
       "name": "Calculator",
     },
-    "generated.Operands": Object {
-      "assembly": "generated",
+    "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands": Object {
+      "assembly": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
       "datatype": true,
       "docs": Object {
         "summary": "Math operands.",
       },
-      "fqn": "generated.Operands",
+      "fqn": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands",
       "kind": "interface",
       "locationInModule": Object {
         "filename": "lib/main.ts",
@@ -449,8 +471,12 @@ import publication
 from ._jsii import *
 
 
-class Calculator(metaclass=jsii.JSIIMeta, jsii_type=\\"generated.Calculator\\"):
+class Calculator(
+    metaclass=jsii.JSIIMeta,
+    jsii_type=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator\\",
+):
     \\"\\"\\"A sophisticaed multi-language calculator.\\"\\"\\"
+
     def __init__(self) -> None:
         jsii.create(Calculator, self, [])
 
@@ -488,8 +514,12 @@ class Calculator(metaclass=jsii.JSIIMeta, jsii_type=\\"generated.Calculator\\"):
         return jsii.invoke(self, \\"sub\\", [ops])
 
 
-@jsii.data_type(jsii_type=\\"generated.Operands\\", jsii_struct_bases=[], name_mapping={'lhs': 'lhs', 'rhs': 'rhs'})
-class Operands():
+@jsii.data_type(
+    jsii_type=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\",
+    jsii_struct_bases=[],
+    name_mapping={\\"lhs\\": \\"lhs\\", \\"rhs\\": \\"rhs\\"},
+)
+class Operands:
     def __init__(self, *, lhs: jsii.Number, rhs: jsii.Number) -> None:
         \\"\\"\\"Math operands.
 
@@ -497,19 +527,19 @@ class Operands():
         :param rhs: Right-hand side operand.
         \\"\\"\\"
         self._values = {
-            'lhs': lhs,
-            'rhs': rhs,
+            \\"lhs\\": lhs,
+            \\"rhs\\": rhs,
         }
 
     @builtins.property
     def lhs(self) -> jsii.Number:
         \\"\\"\\"Left-hand side operand.\\"\\"\\"
-        return self._values.get('lhs')
+        return self._values.get(\\"lhs\\")
 
     @builtins.property
     def rhs(self) -> jsii.Number:
         \\"\\"\\"Right-hand side operand.\\"\\"\\"
-        return self._values.get('rhs')
+        return self._values.get(\\"rhs\\")
 
     def __eq__(self, rhs) -> bool:
         return isinstance(rhs, self.__class__) and rhs._values == self._values
@@ -518,7 +548,9 @@ class Operands():
         return not (rhs == self)
 
     def __repr__(self) -> str:
-        return 'Operands(%s)' % ', '.join(k + '=' + repr(v) for k, v in self._values.items())
+        return \\"Operands(%s)\\" % \\", \\".join(
+            k + \\"=\\" + repr(v) for k, v in self._values.items()
+        )
 
 
 __all__ = [
@@ -528,6 +560,27 @@ __all__ = [
 
 publication.publish()
 ",
+  "my/python/module/_jsii/4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060@0.0.0.jsii.tgz": "�      �Zmsڸ���
+�K�m�
+B3��8	\`�K!���Ύ-)X��2����c�'d���;}�m���<:�Ql͕)9��\\\\J�>����(ri�</�r���P,�P*� u�� ��g�x.S��zBgxn����?3�U<�YN�#|�����SbGa��y�!�Ⱦ��K'.��7���	?����\`9�f�2�\\"*��r�^%e�/���yY<
+�R.�H��t.��/!���RQr�\`,�B�T�K|h=�Y�!p�c�ǳ�
+�H\\"�qܵY!W���գ:抨$�p�m$�SDL7Tui+H#򹵙��Ӏv�m��Y����v�5e1������a����N��9��C0O	s��g����8�;���5^ۇa7�f0uY{?���A�aaO
+?�έ�\\"�Ov�|+�ܕ�#OWX\\"ڃ�u]b�����H�P��\`�<�P���^r�ek@E
+����~�s�APsh3�]w���z�y��b����QE�+�5:�&�\\"����R��-��xL��S��3H�ꙡP3Ƕ�ùg�B��M�@\\\\����%t��{�1�.�4±��l�B�Bw�w�%�ʋO������t�ڊM֭�����}R�> �ʲ�=ڮS)�N��5�����~ߡ�!�s̔�xz�v���6=C%N�I[��q-[�$�uJ~jT��Ѩ���5*�-Qy��Q��AY�
+J�S_����=�����������;�)k��㑗��Z
+�'��7wvpԄ)s� r�]�x�N����,0J���)�.M{����t�ܳ�\\\\�I��3k5�)��?��)z!MI�Ώ�w���7}n��� ����j��,��4;��9^�2�Wt�]lSpX����Ԝ���ٯ��t��ٯ�)���/;�hN����ѭݭP勘g,�UL�S6��������m���߮t�<���żp��
+B�5��#J�s	 ��\\"�Qg�&��K�B�o�Ҷ���A���|���-�#�4��^dւ����[Xs�E��ݻ��{i�d�2a��K��fe�*(�.�7�n���o:�����&&{�3
+��\`�~
+�\`���l'w��ӛ�b�m��\`x�X�R0
+G@���>�����\`{\\"-Ŷa������]�G��i�ԟ�\\\\˼P�����o�'��JV<yf��W
+C.ux��j�����+��5f�Ac���Ce
+�+�0����J�٪l�2=\\\\o���U�*��Z��3�l<��a�}%y�;|U��o���^������ղ
+O�YH�A�|uh.�;+������K]~���o�_^}�7X�o�}x�7�{mw��m��M[��[�������B]wW.����m���঳rˠ���ۍ��ZG��B�yS���C| ��aW(��j_%�T{�O�ǣ���a���.�K��Q�K�;vp�rw�o�%�Xc��8�;���|�Z��+2�:�����	񠻴�[_G5q��J��gɵ�Ė��UT_A�1Q���+��\\"c�����]A���7���DXz����3��J/��5��
+|%X�aq.����֟�q�j(�yd�I����T�i��<<�d$�G�b(c�~_�jÞ�5�9� kw���|r+-P
+b��r���O�չ�/��V�z�$׊�:l�hƐj
+H՗^�	��.�F��=�W�ɕ��p�+���M<��\`o6.gP�a�'���Z���/]'��:;��:x�5M�뽂�o}AB̕t�jU��W�c����2lM����3ȡ��/;�r3�Al��Φ������_�*���G�c�/(�7�q���p����v���l�.iP�\\"�i��c�>�jM��c�-P0^7[_?�J嵿A���yk�.��6�8��<d@E|TB�jJ��.��\`OL�1��x�ƭ|#=���H����+IK{�1�\`�B<�������
+��J#�A��±0��/>�ш���wC������\\\\�k|j����r�p��/�����(���io��O���1x��
+��t�l?s�;7�������O�r�~}��L��o���E�V��1LCg���Mǽ������/��� ��&6111Q�N��m�6!��~K�qg����'���� �)�_|=����>�拉ãwt��6�b.N����3�;L�(�2u����G.ʟ]��y\\"����I*z�[م��� ]q���$>n�|�$'�*�������N��|-�嵼��r��?N � .  ",
   "my/python/module/_jsii/__init__.py": "import abc
 import builtins
 import datetime
@@ -538,7 +591,12 @@ import jsii
 import jsii.compat
 import publication
 
-__jsii_assembly__ = jsii.JSIIAssembly.load(\\"generated\\", \\"0.0.0\\", __name__[0:-6], \\"generated@0.0.0.jsii.tgz\\")
+__jsii_assembly__ = jsii.JSIIAssembly.load(
+    \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060\\",
+    \\"0.0.0\\",
+    __name__[0:-6],
+    \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060@0.0.0.jsii.tgz\\",
+)
 
 __all__ = [
     \\"__jsii_assembly__\\",

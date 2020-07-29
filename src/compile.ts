@@ -2,6 +2,7 @@ import * as fs from 'fs-extra';
 import * as path from 'path';
 import { exec } from './util';
 import { Options } from './options';
+import * as crypto from 'crypto';
 
 const compilerModule = require.resolve('jsii/bin/jsii');
 
@@ -11,7 +12,6 @@ const compilerModule = require.resolve('jsii/bin/jsii');
 export async function compile(workdir: string, options: Options) {
   const args = [ '--silence-warnings', 'reserved-word' ];
   const entrypoint = options.entrypoint ?? 'index.ts';
-  const packageName = options.packageName?.replace(/\./g, '').replace(/\//g, '') ?? 'generated';
 
   if (path.extname(entrypoint) !== '.ts') {
     throw new Error(`jsii entrypoint must be a .ts file: ${entrypoint}`);
@@ -23,6 +23,8 @@ export async function compile(workdir: string, options: Options) {
 
   // path to entrypoint without extension
   const basepath = path.join(path.dirname(entrypoint), path.basename(entrypoint, '.ts'));
+
+  const packageName = options.packageName?.replace(/\./g, '').replace(/\//g, '') ?? crypto.createHash('sha256').update(basepath, 'utf8').digest('hex');
 
   // jsii modules to include
   const moduleDirs = options.deps ?? [];
@@ -66,7 +68,7 @@ export async function compile(workdir: string, options: Options) {
   if (options.python) {
     targets.python = {
       distName: 'generated',
-      module: options.python.moduleName,
+      module: options.python.moduleName.replace(/-/g, ''),
     };
   }
 

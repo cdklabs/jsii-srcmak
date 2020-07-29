@@ -20,7 +20,7 @@ export interface Options {
 
   /**
    * Package name
-   * @default "generated"
+   * @default - hash of the basepath to the module
    */
   packageName?: string
 

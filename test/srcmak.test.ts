@@ -64,7 +64,7 @@ test('python + different entrypoint + submodule', async () => {
         packageName: 'python.package',
         python: {
           outdir: target,
-          moduleName: 'my_python_module.submodule',
+          moduleName: 'my-python_module.submodule',
         },
       });
 

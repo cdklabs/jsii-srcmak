@@ -226,20 +226,13 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
   "src/main/resources/hello/world/$Module.txt": "javapackage.Hello=hello.world.Hello
 javapackage.Operands=hello.world.Operands
 ",
-  "src/main/resources/hello/world/javapackage@0.0.0.jsii.tgz": "�      �ko�H�����K���6��D�.£$���SU������v�S��o��UM������;�����xlE{P&���1����R*q��J�r�{�(V*�	� IG��I���e�BA��������8�W\\\\gjQ���g07��� Q�A�_�(�Y�Q� t��k>���_�����F��\`���ΔG��nň�Z�� ��c�
-����!�,� �+y�{����T:FGe� �$XC&[�:!S���TdԆ|�l�aǢ���g�Nd�K�V
-c;�3��з �E!�
-!6A[����g07�Gd&|gR��i�W��\\"�P˵�������X_yD���(	�B*�8��iYOԱ��2愔��/#�Ma*�9E0�'!�����
-���ҵm�\\\\�����'�����6�,�%(��1&(��ǈ\\"�)��zy�%L��Sm��@�z2�����4�>-��'V�I�8�]O��O���Ii��8�Ĳ�
-��Dv��س!M�P�z��5��Қ\\"ǥ&�t�-x�b��q���*��NY�q4���>B0}J��=��+��P=wb���Mx���O�wi#ޣ�Z�Ԃ5�g��2�B*˘��a�pE%Y��l��ٖ����)\\"����a�R�%�����L�E����Lt 37�����k4�H�؜ 
-�M�e|���,d��s��:.΅��S�vH�k�]2J���p��g|n�{�j�a�)d#d�^O����X�l�/IҾ����q��0��\\\\O�!�����dv�=��u�!���X�o�oܣB\\\\$'nyp�[Ua����T#8H���f�\`5Y���AV9
-�2��@�,\`x�+����R
-])�
-��v�=�o��B�ʇ���SUa�R:D^G�u�\\\\u�3kѽ��<'0�#�,h惫�W�jq��K�U�
->����&UE͸&�׮�^����C7����ǽ�� '
-�m�S�U�UC_��{�ֿ;݆X��
-v#\\\\�nN�{}�m��X��޼տ���D�Fp�l ��7��чk>}�۸���]O ����\\"���\`��a7����-�����&���{��fiҾ8���Oj�#���՛Cod\\\\�F7�O�����Վ\\"��E�ɗ�Tf�Ɣ�U��,���!���T|е:�^<�ƼcK[X�:����s7�5���氤5��~Q�����l��9SӲ�t���j�>6�O>���ьKwԺ�{��겈Gw�	��Dz�
-���Z�-���Ҽs��yxe�HʩF��0��������>�?Q���N������?��l���}����g[#ۋ��]�l��7ln+>g�O�6��>}����k��Es��ԉ�L�W��\`���i��[?���fgw�%�u������IػA%�2SB��F��L-�8�&���g1��[��v���|-��A�6�Q,����W@PksqO��:<a��H�-�x��'\\\\�!���$&��9�� E��o��X�Ar�[;d{���'�/���    ",
+  "src/main/resources/hello/world/javapackage@0.0.0.jsii.tgz": "�      �ko�H�����K���&@J�Hw�&�B ��ʏ�Yb���5�T��?1��.m�:F����˳��qU�Q5Q�8f��1 IR�R֭T��5��I�\\\\�I@'�R�����x��T��|\\"c������� ���G�\`s��f���*G�騨;���Q�B��
+�>��3��B�@L����!ӱ:Q�(�BF�ȱ�� 9��=(�RqE�=DY�A.֋��^�eU�V�՝���:\\",d�'���E)B%F�ȧ�u���y ��Z�Zk5L�d �VC�oI*�R\\"B�D�-�J�3�����B�L��s�Xz�:!�I���c�<�c�e9�'�Z1]Lg�!���TD���'gNLYl2��TƐ�Y�:�_�3I)0����0J�=b��[ eAo9�ěB.óвg���h0�������_�,�\`��jŧ6�H7��/d$����i���cfu�%I�[5�����)�8�%m�/1qܼ�3�ߴ�^��<���6�>/iM�(a�n۠��RlC�LB��gk��e-��(��� 
+��S����tC�jl �z���Wbx������J�'�W�r�k�g��1N!���qض=�jV�'/��}�e��{�Y����˄���ʋ����� �n��⾇k4�H01愇�޹�==����ǡy7�f�q�6M�>U��.>�������u�H,�o]m�� N7�|�����x����{r��/���g��1$@����h 8g�S����h�:��]A���8��
+߄�jy(JN�|�F՛p$Ll�a!�΄h5�P���\\"c'�6�_��\\"d_�C8�ls'��
+��yX(�~��Q]��	�{qܴ0��0O���!���P����vy8h��~�S����m���c<�W%�<z*�İ>��z�}�w���R�W���uY��,�Wj}�mi����
+�����'KL���j��m̂��3�߹;����^�stq��;�swv�;��\`�uqzk��+�5�oy�sw%u���>]���Yp?�����?=���%�o��q���=λ��Y��������1h�����\\\\�_(cWS����i*�^Eo�}��!]K�����y�׀�7l]�H�i�۽ѰY��֣�5G�k������eЬ�]���AC7
+_m]֔fU��mKs]�!M}Ь&c��t���t��]�7�Ӛ�e�zXkZc�y�8<M��i�	��H����[��H���=_i%rR�%���4�O�_e��y�7�n�9�xܒx0����\`�CH�Rv��e���!���?�	���O�o϶F�ai����h���+>�L\\\\�!�I}�\\\\;g]�fS�fw���֙A�f���i�K[?���jgs�%�u������Y*�75�VJ�y��6�����}�Em�E���1��[��6���|-���\\\\^��{r����?��ZH{JB�ታE����&?���e�b�*]0T�	k��T�Nv�[;d[���'�7/���    ",
 }
 `;
 
@@ -251,12 +244,12 @@ Object {
       "author",
     ],
   },
-  "description": "generated",
-  "fingerprint": "cNtb65kyZQOiBulmzr+bs6dCGdv4uhea1tFTkbRGJTw=",
+  "description": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
+  "fingerprint": "6oK+Fme17BaQrSRFIR9SO8fcGINzbxpouGPKqn9MAhs=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.6.0 (build 248e75b)",
+  "jsiiVersion": "1.9.0 (build 5c646d5)",
   "license": "Apache-2.0",
-  "name": "generated",
+  "name": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
   "repository": Object {
     "type": "git",
     "url": "http://generated",
@@ -264,13 +257,13 @@ Object {
   "schema": "jsii/0.10.0",
   "targets": Object {
     "js": Object {
-      "npm": "generated",
+      "npm": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
     },
   },
   "types": Object {
-    "generated.Foo": Object {
-      "assembly": "generated",
-      "fqn": "generated.Foo",
+    "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6.Foo": Object {
+      "assembly": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
+      "fqn": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6.Foo",
       "initializer": Object {},
       "kind": "class",
       "locationInModule": Object {
@@ -301,7 +294,7 @@ Object {
 
 exports[`python + different entrypoint + submodule 1`] = `
 Object {
-  "my_python_module/submodule/__init__.py": "import abc
+  "mypython_module/submodule/__init__.py": "import abc
 import builtins
 import datetime
 import enum
@@ -329,25 +322,29 @@ class Hello(metaclass=jsii.JSIIMeta, jsii_type=\\"pythonpackage.Hello\\"):
         return jsii.invoke(self, \\"add\\", [ops])
 
 
-@jsii.data_type(jsii_type=\\"pythonpackage.Operands\\", jsii_struct_bases=[], name_mapping={'lhs': 'lhs', 'rhs': 'rhs'})
-class Operands():
+@jsii.data_type(
+    jsii_type=\\"pythonpackage.Operands\\",
+    jsii_struct_bases=[],
+    name_mapping={\\"lhs\\": \\"lhs\\", \\"rhs\\": \\"rhs\\"},
+)
+class Operands:
     def __init__(self, *, lhs: jsii.Number, rhs: jsii.Number) -> None:
         \\"\\"\\"
         :param lhs: -
         :param rhs: -
         \\"\\"\\"
         self._values = {
-            'lhs': lhs,
-            'rhs': rhs,
+            \\"lhs\\": lhs,
+            \\"rhs\\": rhs,
         }
 
     @builtins.property
     def lhs(self) -> jsii.Number:
-        return self._values.get('lhs')
+        return self._values.get(\\"lhs\\")
 
     @builtins.property
     def rhs(self) -> jsii.Number:
-        return self._values.get('rhs')
+        return self._values.get(\\"rhs\\")
 
     def __eq__(self, rhs) -> bool:
         return isinstance(rhs, self.__class__) and rhs._values == self._values
@@ -356,7 +353,9 @@ class Operands():
         return not (rhs == self)
 
     def __repr__(self) -> str:
-        return 'Operands(%s)' % ', '.join(k + '=' + repr(v) for k, v in self._values.items())
+        return \\"Operands(%s)\\" % \\", \\".join(
+            k + \\"=\\" + repr(v) for k, v in self._values.items()
+        )
 
 
 __all__ = [
@@ -366,7 +365,7 @@ __all__ = [
 
 publication.publish()
 ",
-  "my_python_module/submodule/_jsii/__init__.py": "import abc
+  "mypython_module/submodule/_jsii/__init__.py": "import abc
 import builtins
 import datetime
 import enum
@@ -376,7 +375,9 @@ import jsii
 import jsii.compat
 import publication
 
-__jsii_assembly__ = jsii.JSIIAssembly.load(\\"pythonpackage\\", \\"0.0.0\\", __name__[0:-6], \\"pythonpackage@0.0.0.jsii.tgz\\")
+__jsii_assembly__ = jsii.JSIIAssembly.load(
+    \\"pythonpackage\\", \\"0.0.0\\", __name__[0:-6], \\"pythonpackage@0.0.0.jsii.tgz\\"
+)
 
 __all__ = [
     \\"__jsii_assembly__\\",
@@ -384,17 +385,26 @@ __all__ = [
 
 publication.publish()
 ",
-  "my_python_module/submodule/_jsii/pythonpackage@0.0.0.jsii.tgz": "�      �ko�8p?�+�ܗ��Ixt۪�hy��B��rZUNb����NKX��o��]���VבZl�x^�'� m�F8��0B>|�$���	��rY%/|���,
-�I��(Y��N����8��ʷ�	���_��AD.�T<��-db��#la�8��LFi�6�㐌�f@�w0]�	�_���'u�4JNl�g�x@d9a��ımbǟz̹s��$C
-?:{�����.�%��C��'|�W�BJ�h�b�K2�(i)D�f�Ѐb�f���[z�{N��c�]j��1���@�4��)-K�t��l����9�nr	Q�{t�xk�\\"]mںkH�{w?�ki�6�����:�*6{U�6U���Հd����G�bN�A�8�E��K�wkHZ����p�Y���X%_\\"1p|�:1�����|�%�˧:�V�rM�꫱-�H8���X�����b�$�]��k{EQ@q�k�nj���v6X���}G�v �,���\\"�o�eMo��K-���=z�%&��S\`��*��^Y�q<J�'^�p��2�u�#�\\"#8u��7!���ĂC\\"
-��W��>޾��CmX��p)��8E�0<��t9R�M���u��ڗ=x�������w(�V�����L�g�[{&������Q��2~+��a
-�-�eb�\\\\���ʴ�8�n~�� ]��trLj�R{r�-O��t!���]T�B��f�L���x����Y�+'��^��]�HN��y��N���:��?�)���g�M9;��G̢Dt,|����0k	���TP�	��%
-(W>B�q��7_��4�_��\`��<��T$/�����y*��M\`�K5�D��۸��3�B�$�̄�ֹ�.䎱WW��9ꟺ��=o��&���A?/i��EV���\\\\����w�*�����g�)��f�ͫ�^�P���oa�W�a��ЗC�,��)��j�QM}��o�y�s'�Wr�ӿb��u�v�띻�]�J��:���f�����-�8�-5�N��u��fe��c�hͧ�6�Z��\\\\�kKF�3o�\\"�	�/w'��U��*u��]R�	l�:�m0r_ɍj����~��f�R�b�z��
-�����Y��C??ռ�IL[+�A�z�*y�o�U��Z%/����M���ː�Z7��'՜�alks{�Z=�\`���<sCYS�h\\\\��ʩ����r=��A��u��z��P�9�ӛ�����l���kwPm:mRt��L�����z�w����-���ּKZ�yxy�X�s����G]v..~��F��\\\\����e����������|���|=��]�%
-�[D�����.�0q�ٰE�ǥ�K�]=�}
-���NR����%��:��R,i�l6ov�c6d^Ւ�K�e��c[:���#,l��ƴ��I-������x�;p�e���Bx��?�ZKH�
-B���5�H�-��V;�/��u]��՛�c�)�քg�����?�!������E��   ",
-  "my_python_module/submodule/py.typed": "
+  "mypython_module/submodule/_jsii/pythonpackage@0.0.0.jsii.tgz": "�      �ko�H�>�+,ߗF́m^%(��H��ש��X\`��z�S��o��]ڪ:F����kg��$e.MP*9#��c��\\\\&�[Ȥ���9��s9��	� ���8�J6��_��0��7�o	�a%�NM��a��
+IG0c'�@�D��w<J*��^d��!t���
+�	��!�\\"��آ�4<��D�ĝϊ��:�����Z7�T,0�𢳇l����$Ǽ���LV�erj�*�԰��zB��/!��Ȭ#��2	���n�@]+���Ŏ��1���@]�h<�S\\\\��\\"�fDɆ�l3����C�|�:��������Y��Z7UG�l�,%�#��@B��g�;�$kH��m�!H�5��S}���C�4��K^!?�1b�
+�ۭh iC����E�h4##�<�XC�I�x<F62h
+~���.~�U>\\\\���h�n�6�%�/�b[�w[��m�8t%U���Z�
+(
+WcG�}�w��־�h��t�,�6|�G�N��}���FԱ
+r�z���u��o���2�ٓ�6�hK���v\`��\\"^��Am=b1�
+8Ա����A�G���l�(F�\\\\
+I&Ԗ�g��ú�PI���rޮ�ٶm_��mҦ�{�߹��
+����3����_�3�5�{�,6�txQF��16&���2�R�#��|J����,�0�e���
+K��q�_�;o��-�X'~uM�;A��R��3#�'����Ϧ���_��K��3�ub ;a�N�ă<C
+M�n ��|�
+ZZ�M�5�~��H����o�B��-f}UL��A}��2�WL����7P�\\\\m%��\\"\`\`5	y�y� Ô�>\`�?��T�O������dY�:�:�[�-|S��3hjFL�(K�2�ȭ�A}%��83W�r]��K
+�x��r�1w$��a}%�{�P�ue��yxŊP���)���uM6:.��>���g���Q�J�dɺ���?�H��Tiu��<��{Zj?�|��r�+/k�Vkܷ\`�I:\\\\�4|���S�k��G�}lܫ�SHpm7��<������������q�熞:��=��ۮHD��P��hк��,��B�Y��-��~\\"V{�Zp�2�ct4EM����1]�q�՚ć��S��tT-8rm>����.9j�ǣ��T3������9�#�[r�Z3'V��ܯkʌ*2�i
+�j6k�VZ(F{2�S%ݜt�=\\"W��ʮ��\\\\�fb�2����{_�
+�>����ã9���=W�Erb�9��#V_7K@�����p�ؒ3�����w��/�wB����Ի&�-������~����%���v�1r�@�F϶�X]�Ʊ�tF؝n��ծϵs��lN5h�[:q
+�uj6L����\\"q�g�ys�s�!�LT2oJeY�P��aA������1��w�����;�׊�3�_�4��?�����
+L�����$�44����	>�{Ui����s����E]mo����.p��	��a    ",
+  "mypython_module/submodule/py.typed": "
 ",
 }
 `;
