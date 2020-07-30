@@ -69,7 +69,7 @@ test('python + different entrypoint + submodule', async () => {
       });
 
       const dir = await snapshotDirectory(target, {
-        excludeFiles: [ 'generated@0.0.0.jsii.tgz' ],
+        excludeFiles: [ '@0.0.0.jsii.tgz' ],
       });
       expect(dir).toMatchSnapshot();
     });
@@ -106,7 +106,7 @@ test('java + different entrypoint', async () => {
 
       const dir = await snapshotDirectory(target, {
         excludeLines: [ /.*@javax.annotation.Generated.*/ ],
-        excludeFiles: [ 'generated@0.0.0.jsii.tgz' ],
+        excludeFiles: [ '@0.0.0.jsii.tgz' ],
       });
       expect(dir).toMatchSnapshot();
     });

@@ -15,8 +15,14 @@ export async function snapshotDirectory(basedir: string, excludeOptions: Snapsho
   const absdir = path.join(basedir, reldir);
   const { excludeLines, excludeFiles } = excludeOptions;
   for (const file of await fs.readdir(absdir)) {
-    if (excludeFiles?.includes(file)) {
-      continue; // skip
+    let skip = false
+    excludeFiles?.forEach((excludeFile) => {
+      if (file.includes(excludeFile)) {
+        skip = true;
+      }
+    });
+    if (skip) {
+      continue;
     }
 
     const abspath = path.join(absdir, file);
