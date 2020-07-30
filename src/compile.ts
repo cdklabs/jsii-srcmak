@@ -24,7 +24,7 @@ export async function compile(workdir: string, options: Options) {
   // path to entrypoint without extension
   const basepath = path.join(path.dirname(entrypoint), path.basename(entrypoint, '.ts'));
 
-  const packageName = options.packageName?.replace(/\./g, '').replace(/\//g, '') ?? crypto.createHash('sha256').update(basepath, 'utf8').digest('hex');
+  const moduleKey = options.moduleKey?.replace(/\./g, '').replace(/\//g, '') ?? crypto.createHash('sha256').update(basepath, 'utf8').digest('hex');
 
   // jsii modules to include
   const moduleDirs = options.deps ?? [];
@@ -50,7 +50,7 @@ export async function compile(workdir: string, options: Options) {
   }
 
   const pkg = {
-    name: packageName,
+    name: moduleKey,
     version: '0.0.0',
     author: 'generated@generated.com',
     main: `${basepath}.js`,

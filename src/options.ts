@@ -19,10 +19,13 @@ export interface Options {
   jsii?: JsiiOutputOptions;
 
   /**
-   * Package name
+   * Key for the module to prevent JSII collisions.
+   * 
+   * Use your own if it's project-unique, otherwise use default.
+   * 
    * @default - hash of the basepath to the module
    */
-  packageName?: string
+  moduleKey?: string
 
   /**
    * Produce python code.

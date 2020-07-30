@@ -61,7 +61,7 @@ test('python + different entrypoint + submodule', async () => {
     await mkdtemp(async target => {
       await srcmak(source, {
         entrypoint: 'different/entry.ts',
-        packageName: 'python.package',
+        moduleKey: 'python.package',
         python: {
           outdir: target,
           moduleName: 'my-python_module.submodule',
@@ -97,7 +97,7 @@ test('java + different entrypoint', async () => {
     await mkdtemp(async target => {
       await srcmak(source, {
         entrypoint: 'different/entry.ts',
-        packageName: 'java.package',
+        moduleKey: 'java.package',
         java: {
           outdir: target,
           package: 'hello.world',
