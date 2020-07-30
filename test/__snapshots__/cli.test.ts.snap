@@ -273,9 +273,9 @@ Object {
     ],
   },
   "description": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
-  "fingerprint": "ViAfgJbT/zOiPr7YHbv+SHTXd1cpQsg/Zcvu6QJ9p5Y=",
+  "fingerprint": "64TWv4C2KsEvkRVfUjD1gQTbNC2rsTlISDNv4F9JUw0=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.9.0 (build 5c646d5)",
+  "jsiiVersion": "1.6.0 (build 248e75b)",
   "license": "Apache-2.0",
   "name": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
   "repository": Object {
@@ -449,10 +449,7 @@ import publication
 from ._jsii import *
 
 
-class Calculator(
-    metaclass=jsii.JSIIMeta,
-    jsii_type=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator\\",
-):
+class Calculator(metaclass=jsii.JSIIMeta, jsii_type=\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator\"):
     \\"\\"\\"A sophisticaed multi-language calculator.\\"\\"\\"
 
     def __init__(self) -> None:
@@ -492,11 +489,7 @@ class Calculator(
         return jsii.invoke(self, \\"sub\\", [ops])
 
 
-@jsii.data_type(
-    jsii_type=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\",
-    jsii_struct_bases=[],
-    name_mapping={\\"lhs\\": \\"lhs\\", \\"rhs\\": \\"rhs\\"},
-)
+@jsii.data_type(jsii_type="4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands", jsii_struct_bases=[], name_mapping={'lhs': 'lhs', 'rhs': 'rhs'})
 class Operands:
     def __init__(self, *, lhs: jsii.Number, rhs: jsii.Number) -> None:
         \\"\\"\\"Math operands.
@@ -505,19 +498,19 @@ class Operands:
         :param rhs: Right-hand side operand.
         \\"\\"\\"
         self._values = {
-            \\"lhs\\": lhs,
-            \\"rhs\\": rhs,
+            'lhs': lhs,
+            'rhs': rhs,
         }
 
     @builtins.property
     def lhs(self) -> jsii.Number:
         \\"\\"\\"Left-hand side operand.\\"\\"\\"
-        return self._values.get(\\"lhs\\")
+        return self._values.get('lhs')
 
     @builtins.property
     def rhs(self) -> jsii.Number:
         \\"\\"\\"Right-hand side operand.\\"\\"\\"
-        return self._values.get(\\"rhs\\")
+        return self._values.get('rhs')
 
     def __eq__(self, rhs) -> bool:
         return isinstance(rhs, self.__class__) and rhs._values == self._values
@@ -526,9 +519,7 @@ class Operands:
         return not (rhs == self)
 
     def __repr__(self) -> str:
-        return \\"Operands(%s)\\" % \\", \\".join(
-            k + \\"=\\" + repr(v) for k, v in self._values.items()
-        )
+        return 'Operands(%s)' % ', '.join(k + '=' + repr(v) for k, v in self._values.items())
 
 
 __all__ = [
@@ -548,12 +539,7 @@ import jsii
 import jsii.compat
 import publication
 
-__jsii_assembly__ = jsii.JSIIAssembly.load(
-    \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060\\",
-    \\"0.0.0\\",
-    __name__[0:-6],
-    \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060@0.0.0.jsii.tgz\\",
-)
+__jsii_assembly__ = jsii.JSIIAssembly.load(\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060\", \"0.0.0\", __name__[0:-6], \"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060@0.0.0.jsii.tgz\")
 
 __all__ = [
     \\"__jsii_assembly__\\",
