@@ -53,11 +53,7 @@ public final class $Module extends JsiiModule {
         if (!MODULE_TYPES.containsKey(fqn)) {
             throw new ClassNotFoundException(\\"Unknown JSII type: \\" + fqn);
         }
-        String className = MODULE_TYPES.get(fqn);
-        if (!this.cache.containsKey(className)) {
-            this.cache.put(className, this.findClass(className));
-        }
-        return this.cache.get(className);
+        return this.cache.computeIfAbsent(MODULE_TYPES.get(fqn), this::findClass);
     }
 
     private Class<?> findClass(final String binaryName) {
@@ -114,7 +110,7 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
     /**
      * A builder for {@link Operands}
      */
-    public static final class Builder implements software.amazon.jsii.Builder<Operands> {
+    public static final class Builder {
         private java.lang.Number lhs;
         private java.lang.Number rhs;
 
@@ -143,7 +139,6 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
          * @return a new instance of {@link Operands}
          * @throws NullPointerException if any required attribute was not provided
          */
-        @Override
         public Operands build() {
             return new Jsii$Proxy(lhs, rhs);
         }
@@ -238,9 +233,9 @@ Object {
     ],
   },
   "description": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
-  "fingerprint": "6oK+Fme17BaQrSRFIR9SO8fcGINzbxpouGPKqn9MAhs=",
+  "fingerprint": "i19np+HVFMpwiHENNJeGk6AC3MVvpkkG7VtDtf9ouXs=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.9.0 (build 5c646d5)",
+  "jsiiVersion": "1.6.0 (build 248e75b)",
   "license": "Apache-2.0",
   "name": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
   "repository": Object {
@@ -315,29 +310,25 @@ class Hello(metaclass=jsii.JSIIMeta, jsii_type=\\"pythonpackage.Hello\\"):
         return jsii.invoke(self, \\"add\\", [ops])
 
 
-@jsii.data_type(
-    jsii_type=\\"pythonpackage.Operands\\",
-    jsii_struct_bases=[],
-    name_mapping={\\"lhs\\": \\"lhs\\", \\"rhs\\": \\"rhs\\"},
-)
-class Operands:
+@jsii.data_type(jsii_type=\\"pythonpackage.Operands\\", jsii_struct_bases=[], name_mapping={'lhs': 'lhs', 'rhs': 'rhs'})
+class Operands():
     def __init__(self, *, lhs: jsii.Number, rhs: jsii.Number) -> None:
         \\"\\"\\"
         :param lhs: -
         :param rhs: -
         \\"\\"\\"
         self._values = {
-            \\"lhs\\": lhs,
-            \\"rhs\\": rhs,
+            'lhs': lhs,
+            'rhs': rhs,
         }
 
     @builtins.property
     def lhs(self) -> jsii.Number:
-        return self._values.get(\\"lhs\\")
+        return self._values.get('lhs')
 
     @builtins.property
     def rhs(self) -> jsii.Number:
-        return self._values.get(\\"rhs\\")
+        return self._values.get('rhs')
 
     def __eq__(self, rhs) -> bool:
         return isinstance(rhs, self.__class__) and rhs._values == self._values
@@ -346,9 +337,7 @@ class Operands:
         return not (rhs == self)
 
     def __repr__(self) -> str:
-        return \\"Operands(%s)\\" % \\", \\".join(
-            k + \\"=\\" + repr(v) for k, v in self._values.items()
-        )
+        return 'Operands(%s)' % ', '.join(k + '=' + repr(v) for k, v in self._values.items())
 
 
 __all__ = [
@@ -368,9 +357,7 @@ import jsii
 import jsii.compat
 import publication
 
-__jsii_assembly__ = jsii.JSIIAssembly.load(
-    \\"pythonpackage\\", \\"0.0.0\\", __name__[0:-6], \\"pythonpackage@0.0.0.jsii.tgz\\"
-)
+__jsii_assembly__ = jsii.JSIIAssembly.load(\\"pythonpackage\\", \\"0.0.0\\", __name__[0:-6], \\"pythonpackage@0.0.0.jsii.tgz\\")
 
 __all__ = [
     \\"__jsii_assembly__\\",
