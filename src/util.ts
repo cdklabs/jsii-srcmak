@@ -2,6 +2,7 @@ import * as fs from 'fs-extra';
 import * as path from 'path';
 import * as os from 'os';
 import { spawn, SpawnOptions } from 'child_process';
+import { Options } from './options';
 
 export async function mkdtemp(closure: (dir: string) => Promise<void>) {
   const workdir = await fs.mkdtemp(path.join(os.tmpdir(), 'temp-'));
@@ -54,4 +55,21 @@ export async function exec(moduleName: string, args: string[] = [], options: Spa
       }
     });
   });
+}
+
+/**
+ * This validates that the Python module name and Java package name
+ * conform to language-specific constraints.
+ * 
+ * @param options Options set by the consumer
+ * @throws error if options do not conform
+ */
+export function validateOptions(options: Options) {
+  if (options.python?.moduleName.includes('-')) {
+    throw new Error(`Python moduleName [${options.python.moduleName}] may not contain "-"`);
+  }
+
+  if (options.java?.package.includes('-')) {
+    throw new Error(`Java package [${options.java.package}] may not contain "-"`);
+  }
 }

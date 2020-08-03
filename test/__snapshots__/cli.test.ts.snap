@@ -45,7 +45,7 @@ public final class $Module extends JsiiModule {
     private final Map<String, Class<?>> cache = new HashMap<>();
 
     public $Module() {
-        super(\\"generated\\", \\"0.0.0\\", $Module.class, \\"generated@0.0.0.jsii.tgz\\");
+        super(\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060\\", \\"0.0.0\\", $Module.class, \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060@0.0.0.jsii.tgz\\");
     }
 
     @Override
@@ -76,7 +76,7 @@ public final class $Module extends JsiiModule {
  * A sophisticaed multi-language calculator.
  */
 
-@software.amazon.jsii.Jsii(module = mypackage.$Module.class, fqn = \\"generated.Calculator\\")
+@software.amazon.jsii.Jsii(module = mypackage.$Module.class, fqn = \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator\\")
 public class Calculator extends software.amazon.jsii.JsiiObject {
 
     protected Calculator(final software.amazon.jsii.JsiiObjectRef objRef) {
@@ -126,7 +126,7 @@ public class Calculator extends software.amazon.jsii.JsiiObject {
  * Math operands.
  */
 
-@software.amazon.jsii.Jsii(module = mypackage.$Module.class, fqn = \\"generated.Operands\\")
+@software.amazon.jsii.Jsii(module = mypackage.$Module.class, fqn = \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\")
 @software.amazon.jsii.Jsii.Proxy(Operands.Jsii$Proxy.class)
 public interface Operands extends software.amazon.jsii.JsiiSerializable {
 
@@ -229,7 +229,7 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
             data.set(\\"rhs\\", om.valueToTree(this.getRhs()));
 
             final com.fasterxml.jackson.databind.node.ObjectNode struct = com.fasterxml.jackson.databind.node.JsonNodeFactory.instance.objectNode();
-            struct.set(\\"fqn\\", om.valueToTree(\\"generated.Operands\\"));
+            struct.set(\\"fqn\\", om.valueToTree(\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\"));
             struct.set(\\"data\\", data);
 
             final com.fasterxml.jackson.databind.node.ObjectNode obj = com.fasterxml.jackson.databind.node.JsonNodeFactory.instance.objectNode();
@@ -258,8 +258,8 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
     }
 }
 ",
-  "src/main/resources/mypackage/$Module.txt": "generated.Calculator=mypackage.Calculator
-generated.Operands=mypackage.Operands
+  "src/main/resources/mypackage/$Module.txt": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator=mypackage.Calculator
+4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands=mypackage.Operands
 ",
 }
 `;
@@ -272,12 +272,12 @@ Object {
       "author",
     ],
   },
-  "description": "generated",
-  "fingerprint": "+fSgo9PQwFAKmX2JcaRILwTXE/p1H1bq+QKuOREAfuE=",
+  "description": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
+  "fingerprint": "64TWv4C2KsEvkRVfUjD1gQTbNC2rsTlISDNv4F9JUw0=",
   "homepage": "http://generated",
   "jsiiVersion": "1.6.0 (build 248e75b)",
   "license": "Apache-2.0",
-  "name": "generated",
+  "name": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
   "repository": Object {
     "type": "git",
     "url": "http://generated",
@@ -285,16 +285,16 @@ Object {
   "schema": "jsii/0.10.0",
   "targets": Object {
     "js": Object {
-      "npm": "generated",
+      "npm": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
     },
   },
   "types": Object {
-    "generated.Calculator": Object {
-      "assembly": "generated",
+    "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator": Object {
+      "assembly": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
       "docs": Object {
         "summary": "A sophisticaed multi-language calculator.",
       },
-      "fqn": "generated.Calculator",
+      "fqn": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator",
       "initializer": Object {},
       "kind": "class",
       "locationInModule": Object {
@@ -318,7 +318,7 @@ Object {
               },
               "name": "ops",
               "type": Object {
-                "fqn": "generated.Operands",
+                "fqn": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands",
               },
             },
           ],
@@ -344,7 +344,7 @@ Object {
               },
               "name": "ops",
               "type": Object {
-                "fqn": "generated.Operands",
+                "fqn": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands",
               },
             },
           ],
@@ -370,7 +370,7 @@ Object {
               },
               "name": "ops",
               "type": Object {
-                "fqn": "generated.Operands",
+                "fqn": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands",
               },
             },
           ],
@@ -383,13 +383,13 @@ Object {
       ],
       "name": "Calculator",
     },
-    "generated.Operands": Object {
-      "assembly": "generated",
+    "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands": Object {
+      "assembly": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
       "datatype": true,
       "docs": Object {
         "summary": "Math operands.",
       },
-      "fqn": "generated.Operands",
+      "fqn": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands",
       "kind": "interface",
       "locationInModule": Object {
         "filename": "lib/main.ts",
@@ -449,7 +449,7 @@ import publication
 from ._jsii import *
 
 
-class Calculator(metaclass=jsii.JSIIMeta, jsii_type=\\"generated.Calculator\\"):
+class Calculator(metaclass=jsii.JSIIMeta, jsii_type=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator\\"):
     \\"\\"\\"A sophisticaed multi-language calculator.\\"\\"\\"
     def __init__(self) -> None:
         jsii.create(Calculator, self, [])
@@ -488,7 +488,7 @@ class Calculator(metaclass=jsii.JSIIMeta, jsii_type=\\"generated.Calculator\\"):
         return jsii.invoke(self, \\"sub\\", [ops])
 
 
-@jsii.data_type(jsii_type=\\"generated.Operands\\", jsii_struct_bases=[], name_mapping={'lhs': 'lhs', 'rhs': 'rhs'})
+@jsii.data_type(jsii_type=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\", jsii_struct_bases=[], name_mapping={'lhs': 'lhs', 'rhs': 'rhs'})
 class Operands():
     def __init__(self, *, lhs: jsii.Number, rhs: jsii.Number) -> None:
         \\"\\"\\"Math operands.
@@ -538,7 +538,7 @@ import jsii
 import jsii.compat
 import publication
 
-__jsii_assembly__ = jsii.JSIIAssembly.load(\\"generated\\", \\"0.0.0\\", __name__[0:-6], \\"generated@0.0.0.jsii.tgz\\")
+__jsii_assembly__ = jsii.JSIIAssembly.load(\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060\\", \\"0.0.0\\", __name__[0:-6], \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060@0.0.0.jsii.tgz\\")
 
 __all__ = [
     \\"__jsii_assembly__\\",

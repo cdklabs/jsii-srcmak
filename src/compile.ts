@@ -1,7 +1,8 @@
 import * as fs from 'fs-extra';
 import * as path from 'path';
-import { exec } from './util';
+import { exec, validateOptions } from './util';
 import { Options } from './options';
+import * as crypto from 'crypto';
 
 const compilerModule = require.resolve('jsii/bin/jsii');
 
@@ -9,6 +10,8 @@ const compilerModule = require.resolve('jsii/bin/jsii');
  * Compiles the source files in `workdir` with jsii.
  */
 export async function compile(workdir: string, options: Options) {
+  validateOptions(options);
+
   const args = [ '--silence-warnings', 'reserved-word' ];
   const entrypoint = options.entrypoint ?? 'index.ts';
 
@@ -22,6 +25,8 @@ export async function compile(workdir: string, options: Options) {
 
   // path to entrypoint without extension
   const basepath = path.join(path.dirname(entrypoint), path.basename(entrypoint, '.ts'));
+
+  const moduleKey = options.moduleKey?.replace(/\./g, '').replace(/\//g, '') ?? crypto.createHash('sha256').update(basepath, 'utf8').digest('hex');
 
   // jsii modules to include
   const moduleDirs = options.deps ?? [];
@@ -46,9 +51,8 @@ export async function compile(workdir: string, options: Options) {
     }
   }
 
-
   const pkg = {
-    name: 'generated',
+    name: moduleKey,
     version: '0.0.0',
     author: 'generated@generated.com',
     main: `${basepath}.js`,

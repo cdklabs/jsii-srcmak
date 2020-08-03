@@ -19,6 +19,15 @@ export interface Options {
   jsii?: JsiiOutputOptions;
 
   /**
+   * Key for the module to prevent JSII collisions.
+   * 
+   * Use your own if it's project-unique, otherwise use default.
+   * 
+   * @default - hash of the basepath to the module
+   */
+  moduleKey?: string
+
+  /**
    * Produce python code.
    * @default - python is not generated
    */
@@ -47,6 +56,9 @@ export interface PythonOutputOptions {
 
   /**
    * The name of the the python module to generate.
+   * 
+   * This must follow the standard Python module name conventions.
+   * For example, it cannot include a hyphen ('-')
    */
   moduleName: string;
 }
@@ -59,6 +71,9 @@ export interface JavaOutputOptions {
 
   /**
    * The name of the java package to generate
+   * 
+   * This must follow standard Java package conventions.
+   * For example, it cannot include a hyphen ('-')
    */
   package: string;
 }

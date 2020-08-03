@@ -74,7 +74,7 @@ test('python output', async () => {
     );
 
     expect(await snapshotDirectory(outdir, {
-      excludeFiles: [ 'generated@0.0.0.jsii.tgz' ],
+      excludeFiles: [ '@0.0.0.jsii.tgz' ],
     })).toMatchSnapshot();
   });
 });
@@ -92,7 +92,7 @@ test('java output', async () => {
 
     expect(await snapshotDirectory(outdir, {
       excludeLines: [ /.*@javax.annotation.Generated.*/ ],
-      excludeFiles: [ 'generated@0.0.0.jsii.tgz' ],
+      excludeFiles: [ '@0.0.0.jsii.tgz' ],
     })).toMatchSnapshot();
   });
 });

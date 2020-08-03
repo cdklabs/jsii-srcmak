@@ -61,6 +61,7 @@ test('python + different entrypoint + submodule', async () => {
     await mkdtemp(async target => {
       await srcmak(source, {
         entrypoint: 'different/entry.ts',
+        moduleKey: 'python.package',
         python: {
           outdir: target,
           moduleName: 'my_python_module.submodule',
@@ -68,7 +69,7 @@ test('python + different entrypoint + submodule', async () => {
       });
 
       const dir = await snapshotDirectory(target, {
-        excludeFiles: [ 'generated@0.0.0.jsii.tgz' ],
+        excludeFiles: [ '@0.0.0.jsii.tgz' ],
       });
       expect(dir).toMatchSnapshot();
     });
@@ -96,6 +97,7 @@ test('java + different entrypoint', async () => {
     await mkdtemp(async target => {
       await srcmak(source, {
         entrypoint: 'different/entry.ts',
+        moduleKey: 'java.package',
         java: {
           outdir: target,
           package: 'hello.world',
@@ -104,7 +106,7 @@ test('java + different entrypoint', async () => {
 
       const dir = await snapshotDirectory(target, {
         excludeLines: [ /.*@javax.annotation.Generated.*/ ],
-        excludeFiles: [ 'generated@0.0.0.jsii.tgz' ],
+        excludeFiles: [ '@0.0.0.jsii.tgz' ],
       });
       expect(dir).toMatchSnapshot();
     });
@@ -145,4 +147,26 @@ test('outputJsii can be used to look at the jsii file', async () => {
       expect(await fs.readJson(outputPath)).toMatchSnapshot();
     });
   })
+});
+
+test('java with invalid package', async () => {
+  await expect(srcmak('.', {
+    entrypoint: 'different/entry.ts',
+    moduleKey: 'java.package',
+    java: {
+      outdir: '.',
+      package: 'hello-world',
+    },
+  })).rejects.toEqual(new Error('Java package [hello-world] may not contain "-"'));
+});
+
+test('python with invalid module name', async () => {
+  await expect(srcmak('.', {
+    entrypoint: 'different/entry.ts',
+    moduleKey: 'python.package',
+    python: {
+      outdir: '.',
+      moduleName: 'my-python.submodule',
+    },
+  })).rejects.toEqual(new Error('Python moduleName [my-python.submodule] may not contain "-"'));
 });
