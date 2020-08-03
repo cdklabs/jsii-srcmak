@@ -315,7 +315,7 @@ class Hello(metaclass=jsii.JSIIMeta, jsii_type=\\"pythonpackage.Hello\\"):
         return jsii.invoke(self, \\"add\\", [ops])
 
 
-@jsii.data_type(jsii_type="pythonpackage.Operands", jsii_struct_bases=[], name_mapping={'lhs': 'lhs', 'rhs': 'rhs'})
+@jsii.data_type(jsii_type=\\"pythonpackage.Operands\\", jsii_struct_bases=[], name_mapping={'lhs': 'lhs', 'rhs': 'rhs'})
 class Operands():
     def __init__(self, *, lhs: jsii.Number, rhs: jsii.Number) -> None:
         \\"\\"\\"

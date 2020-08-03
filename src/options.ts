@@ -56,6 +56,9 @@ export interface PythonOutputOptions {
 
   /**
    * The name of the the python module to generate.
+   * 
+   * This must follow the standard Python module name conventions.
+   * For example, it cannot include a hyphen ('-')
    */
   moduleName: string;
 }
@@ -68,6 +71,9 @@ export interface JavaOutputOptions {
 
   /**
    * The name of the java package to generate
+   * 
+   * This must follow standard Java package conventions.
+   * For example, it cannot include a hyphen ('-')
    */
   package: string;
 }

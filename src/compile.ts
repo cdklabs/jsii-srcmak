@@ -1,6 +1,6 @@
 import * as fs from 'fs-extra';
 import * as path from 'path';
-import { exec } from './util';
+import { exec, validateOptions } from './util';
 import { Options } from './options';
 import * as crypto from 'crypto';
 
@@ -10,6 +10,8 @@ const compilerModule = require.resolve('jsii/bin/jsii');
  * Compiles the source files in `workdir` with jsii.
  */
 export async function compile(workdir: string, options: Options) {
+  validateOptions(options);
+
   const args = [ '--silence-warnings', 'reserved-word' ];
   const entrypoint = options.entrypoint ?? 'index.ts';
 
@@ -68,7 +70,7 @@ export async function compile(workdir: string, options: Options) {
   if (options.python) {
     targets.python = {
       distName: 'generated',
-      module: options.python.moduleName.replace(/-/g, '_'),
+      module: options.python.moduleName,
     };
   }
 

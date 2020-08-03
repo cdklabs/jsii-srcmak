@@ -64,7 +64,7 @@ test('python + different entrypoint + submodule', async () => {
         moduleKey: 'python.package',
         python: {
           outdir: target,
-          moduleName: 'my-python_module.submodule',
+          moduleName: 'my_python_module.submodule',
         },
       });
 
@@ -147,4 +147,26 @@ test('outputJsii can be used to look at the jsii file', async () => {
       expect(await fs.readJson(outputPath)).toMatchSnapshot();
     });
   })
+});
+
+test('java with invalid package', async () => {
+  await expect(srcmak('.', {
+    entrypoint: 'different/entry.ts',
+    moduleKey: 'java.package',
+    java: {
+      outdir: '.',
+      package: 'hello-world',
+    },
+  })).rejects.toEqual(new Error('Java package [hello-world] may not contain "-"'));
+});
+
+test('python with invalid module name', async () => {
+  await expect(srcmak('.', {
+    entrypoint: 'different/entry.ts',
+    moduleKey: 'python.package',
+    python: {
+      outdir: '.',
+      moduleName: 'my-python.submodule',
+    },
+  })).rejects.toEqual(new Error('Python moduleName [my-python.submodule] may not contain "-"'));
 });
