@@ -1,8 +1,10 @@
 const { TypeScriptLibraryProject, Semver, Jest, Eslint } = require('projen');
 
+const jsii = Semver.caret('1.9.0');
+
 const project = new TypeScriptLibraryProject({
   name: 'jsii-srcmak',
-  jsiiVersion: Semver.caret('1.5.0'),
+  jsiiVersion: jsii,
   description: 'generate source code in multiple languages from typescript',
   repository: 'https://github.com/eladb/jsii-srcmak.git',
   authorName: 'Elad Ben-Israel',
@@ -17,8 +19,8 @@ const project = new TypeScriptLibraryProject({
     'constructs': Semver.caret('3.0.0'),
   },
   dependencies: {
-    'jsii': Semver.caret('1.5.0'),
-    'jsii-pacmak': Semver.caret('1.5.0'),
+    'jsii': jsii,
+    'jsii-pacmak': jsii,
     'fs-extra': Semver.caret('9.0.0'),
     'ncp': Semver.caret('2.0.0'),
     'yargs': Semver.caret('11.1.1'),
