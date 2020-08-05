@@ -1,8 +1,8 @@
-const { TypeScriptLibraryProject, Semver, Jest, Eslint } = require('projen');
+const { TypeScriptProject, Semver, Jest, Eslint } = require('projen');
 
 const jsii = Semver.caret('1.9.0');
 
-const project = new TypeScriptLibraryProject({
+const project = new TypeScriptProject({
   name: 'jsii-srcmak',
   jsiiVersion: jsii,
   description: 'generate source code in multiple languages from typescript',
@@ -26,6 +26,9 @@ const project = new TypeScriptLibraryProject({
     'yargs': Semver.caret('11.1.1'),
   },
   releaseToNpm: true,
+
+  // superchain is needed to ensure jsii-pacmak has everything it needs
+  workflowContainerImage: 'jsii/superchain',
 });
 
 // compile before test because we need the lib/cli.js to test the cli
