@@ -4525,13 +4525,14 @@ progress@^2.0.0:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.3.23:
-  version "0.3.23"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.3.23.tgz#037c57d08ea8699f57cc4496ddcde39884024617"
-  integrity sha512-q++UO6fLWLHt3YN+zvwlp0rMaKrrx3OOCsRvvNMIdDJvYSIM8DapKb9hapm9YrTCg4YPF7AW/ERHMvUu0P42nA==
+projen@^0.3.30:
+  version "0.3.30"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.3.30.tgz#edd60fd440e3548c8fee16901a5b60331573b00e"
+  integrity sha512-a6/5goZFigFCNAPfDzJ1bzv8mb27/lwXZFaDXNKSitAmiFdEABY+Sw6ZrNIB4QIfYN6Wo/s5EWdXYzxa/2htyg==
   dependencies:
     decamelize "^4.0.0"
     fs-extra "^9.0.1"
+    glob "^7.1.6"
     yaml "^1.9.2"
     yargs "^15.4.0"
 

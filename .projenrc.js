@@ -26,6 +26,7 @@ const project = new TypeScriptProject({
     'yargs': Semver.caret('11.1.1'),
   },
   releaseToNpm: true,
+  projenUpgradeSecret: 'PROJEN_GITHUB_TOKEN',
 
   // superchain is needed to ensure jsii-pacmak has everything it needs
   workflowContainerImage: 'jsii/superchain',
