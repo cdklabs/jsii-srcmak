@@ -1,6 +1,6 @@
 const { TypeScriptProject, Semver, Jest, Eslint } = require('projen');
 
-const jsii = Semver.caret('1.9.0');
+const jsii = Semver.caret('1.11.0');
 
 const project = new TypeScriptProject({
   name: 'jsii-srcmak',

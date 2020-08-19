@@ -51,8 +51,8 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "jsii": "^1.9.0",
-    "jsii-pacmak": "^1.9.0",
+    "jsii": "^1.11.0",
+    "jsii-pacmak": "^1.11.0",
     "fs-extra": "^9.0.0",
     "ncp": "^2.0.0",
     "yargs": "^11.1.1"

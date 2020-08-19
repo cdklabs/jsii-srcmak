@@ -238,9 +238,9 @@ Object {
     ],
   },
   "description": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
-  "fingerprint": "6oK+Fme17BaQrSRFIR9SO8fcGINzbxpouGPKqn9MAhs=",
+  "fingerprint": "fzsLYL3/4667/gvYGSF6riTq32MYGIvZdEhtFpgqZEk=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.9.0 (build 5c646d5)",
+  "jsiiVersion": "1.11.0 (build 1e9b8e1)",
   "license": "Apache-2.0",
   "name": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
   "repository": Object {
