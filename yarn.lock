@@ -469,10 +469,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@jsii/spec@^1.11.0":
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/@jsii/spec/-/spec-1.11.0.tgz#ab3c33cc06b935d438dca69571f54d9977eee871"
-  integrity sha512-rRPbq3QGJ0OldafFPfU0vUyjubCe2Scm0xpWEt7EzmY2d8eauCEO9xBJwHSFdnkUFvMFZEgYjF2F856DepAl2Q==
+"@jsii/spec@^1.11.0", "@jsii/spec@^1.12.0":
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/@jsii/spec/-/spec-1.12.0.tgz#4b13acc5fe591a4c70137f38275ac3d8a977a958"
+  integrity sha512-xqiROAZjOLNhvGzVCdyNu1sJ4CLU+jxcQcRvXz3qkQobHeHRk4MMiqRVOk6LWaBNVtDjil4HlP1sRm5j/ZqYeQ==
   dependencies:
     jsonschema "^1.2.6"
 
@@ -3538,11 +3538,11 @@ jsii-rosetta@^1.11.0:
     yargs "^15.4.1"
 
 jsii@^1.11.0:
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/jsii/-/jsii-1.11.0.tgz#104454263fa7a57a73977e27de06b0416c894b1f"
-  integrity sha512-5/YZPqpSoXSi6h1JLMv8fa4iIyGfL14Va5p1J2NXkB7cQj5gPbl8gvi0KJiqmQXyF7urczGJB8vzuU15FyCalg==
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/jsii/-/jsii-1.12.0.tgz#bb0558cbaa298e4a0cf82846dace2b4db67259b9"
+  integrity sha512-IRTjtmNdsUVpb1uB6wP1GMtOYBhOouXfPLquurU+JvSauLFaTPX2piO4yV8xGKnoZwRwCK+QRKB/DPUkYlDQ9w==
   dependencies:
-    "@jsii/spec" "^1.11.0"
+    "@jsii/spec" "^1.12.0"
     case "^1.6.3"
     colors "^1.4.0"
     deep-equal "^2.0.3"
@@ -5691,12 +5691,7 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@^3.9.5:
-  version "3.9.5"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.5.tgz#586f0dba300cde8be52dd1ac4f7e1009c1b13f36"
-  integrity sha512-hSAifV3k+i6lEoCJ2k6R2Z/rp/H3+8sdmcn5NrS3/3kE7+RyZXm9aqvxWqjEXHAd8b0pShatpcdMTvEdvAJltQ==
-
-typescript@~3.9.7:
+typescript@^3.9.5, typescript@~3.9.7:
   version "3.9.7"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.7.tgz#98d600a5ebdc38f40cb277522f12dc800e9e25fa"
   integrity sha512-BLbiRkiBzAwsjut4x/dsibSTB6yWpwT5qWmC2OfuCg3GgVQCSgMs4vEctYPhsaGtd0AeuuHMkjZ2h2WG8MSzRw==
