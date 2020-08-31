@@ -22,7 +22,7 @@
     "watch": "tsc -w",
     "build": "yarn compile && yarn test && yarn run package",
     "eslint": "eslint . --ext .ts",
-    "test": "yarn eslint && jest --passWithNoTests",
+    "test": "yarn eslint && jest --passWithNoTests --updateSnapshot",
     "test:watch": "jest --watch",
     "test:update": "jest --updateSnapshot"
   },
@@ -32,13 +32,13 @@
     "organization": false
   },
   "devDependencies": {
-    "@types/fs-extra": "^8.1.0",
+    "@types/fs-extra": "^8",
     "@types/jest": "^26.0.7",
     "@types/ncp": "^2.0.4",
     "@types/node": "^10.17.0",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
     "@typescript-eslint/parser": "^2.19.2",
-    "constructs": "^3.0.0",
+    "constructs": "^3.0.4",
     "eslint": "^6.8.0",
     "eslint-import-resolver-node": "^0.3.3",
     "eslint-import-resolver-typescript": "^2.0.0",
@@ -52,11 +52,11 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "fs-extra": "^9.0.0",
-    "jsii": "^1.11.0",
-    "jsii-pacmak": "^1.11.0",
+    "fs-extra": "^9.0.1",
+    "jsii": "^1.12.0",
+    "jsii-pacmak": "^1.12.0",
     "ncp": "^2.0.0",
-    "yargs": "^11.1.1"
+    "yargs": "^15.4.1"
   },
   "bundledDependencies": [],
   "keywords": [],

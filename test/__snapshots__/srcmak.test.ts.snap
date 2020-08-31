@@ -238,9 +238,9 @@ Object {
     ],
   },
   "description": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
-  "fingerprint": "fzsLYL3/4667/gvYGSF6riTq32MYGIvZdEhtFpgqZEk=",
+  "fingerprint": "SEvFzbO2lHiU3z+uYhXHogLbTCCm7c6Hbdqn9T1oryI=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.11.0 (build 1e9b8e1)",
+  "jsiiVersion": "1.12.0 (build 5ddc9f2)",
   "license": "Apache-2.0",
   "name": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
   "repository": Object {
@@ -294,8 +294,8 @@ import enum
 import typing
 
 import jsii
-import jsii.compat
 import publication
+import typing_extensions
 
 from ._jsii import *
 
@@ -326,23 +326,27 @@ class Operands:
         :param lhs: -
         :param rhs: -
         \\"\\"\\"
-        self._values = {
+        self._values: typing.Dict[str, typing.Any] = {
             \\"lhs\\": lhs,
             \\"rhs\\": rhs,
         }
 
     @builtins.property
     def lhs(self) -> jsii.Number:
-        return self._values.get(\\"lhs\\")
+        result = self._values.get(\\"lhs\\")
+        assert result is not None, \\"Required property 'lhs' is missing\\"
+        return result
 
     @builtins.property
     def rhs(self) -> jsii.Number:
-        return self._values.get(\\"rhs\\")
+        result = self._values.get(\\"rhs\\")
+        assert result is not None, \\"Required property 'rhs' is missing\\"
+        return result
 
-    def __eq__(self, rhs) -> bool:
+    def __eq__(self, rhs: typing.Any) -> builtins.bool:
         return isinstance(rhs, self.__class__) and rhs._values == self._values
 
-    def __ne__(self, rhs) -> bool:
+    def __ne__(self, rhs: typing.Any) -> builtins.bool:
         return not (rhs == self)
 
     def __repr__(self) -> str:
@@ -365,8 +369,8 @@ import enum
 import typing
 
 import jsii
-import jsii.compat
 import publication
+import typing_extensions
 
 __jsii_assembly__ = jsii.JSIIAssembly.load(
     \\"pythonpackage\\", \\"0.0.0\\", __name__[0:-6], \\"pythonpackage@0.0.0.jsii.tgz\\"
