@@ -273,9 +273,9 @@ Object {
     ],
   },
   "description": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
-  "fingerprint": "baBvDricnb7p6b4Bh21n5vFILYhNSnbiixLrXxlRiys=",
+  "fingerprint": "GAmRv1ds0Lcc72nvT3AuuvD/obato2ikspSVJqx4TVE=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.11.0 (build 1e9b8e1)",
+  "jsiiVersion": "1.12.0 (build 5ddc9f2)",
   "license": "Apache-2.0",
   "name": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
   "repository": Object {
@@ -443,8 +443,8 @@ import enum
 import typing
 
 import jsii
-import jsii.compat
 import publication
+import typing_extensions
 
 from ._jsii import *
 
@@ -504,7 +504,7 @@ class Operands:
         :param lhs: Left-hand side operand.
         :param rhs: Right-hand side operand.
         \\"\\"\\"
-        self._values = {
+        self._values: typing.Dict[str, typing.Any] = {
             \\"lhs\\": lhs,
             \\"rhs\\": rhs,
         }
@@ -512,17 +512,21 @@ class Operands:
     @builtins.property
     def lhs(self) -> jsii.Number:
         \\"\\"\\"Left-hand side operand.\\"\\"\\"
-        return self._values.get(\\"lhs\\")
+        result = self._values.get(\\"lhs\\")
+        assert result is not None, \\"Required property 'lhs' is missing\\"
+        return result
 
     @builtins.property
     def rhs(self) -> jsii.Number:
         \\"\\"\\"Right-hand side operand.\\"\\"\\"
-        return self._values.get(\\"rhs\\")
+        result = self._values.get(\\"rhs\\")
+        assert result is not None, \\"Required property 'rhs' is missing\\"
+        return result
 
-    def __eq__(self, rhs) -> bool:
+    def __eq__(self, rhs: typing.Any) -> builtins.bool:
         return isinstance(rhs, self.__class__) and rhs._values == self._values
 
-    def __ne__(self, rhs) -> bool:
+    def __ne__(self, rhs: typing.Any) -> builtins.bool:
         return not (rhs == self)
 
     def __repr__(self) -> str:
@@ -545,8 +549,8 @@ import enum
 import typing
 
 import jsii
-import jsii.compat
 import publication
+import typing_extensions
 
 __jsii_assembly__ = jsii.JSIIAssembly.load(
     \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060\\",
