@@ -97,6 +97,35 @@ original module. This code depends on the following maven package (should be def
 
 The output directory will also include a tarball `generated@0.0.0.jsii.tgz` that must be bundled in your project.
 
+### .NET Output
+
+To produce a .NET module from your source, use the `dotnet` option:
+
+```ts
+await srcmak('srcdir', {
+  dotnet: {
+    outdir: '/path/to/project/root',
+    namespace: 'HelloWorld'
+  }
+});
+```
+
+Or the `--dotnet-*` switches in the CLI:
+
+```bash
+$ jsii-srcmak /src/dir --dotnet-outdir=dir --dotnet-namespace=HelloWorld
+```
+
+* The `outdir`/`--dotnet-outdir` option points to the root directory of your .NET project.
+* The `package`/`--dotnet-namespace` option is the .NET root namespace.
+
+The output directory will include a .NET project that corresponds to the
+original module. This code depends on the following NuGet package (It is already defined as a dependency in the generated project):
+
+- [jsii](https://www.nuget.org/packages/Amazon.JSII.Runtime/)
+
+The output directory will also include a tarball `generated@0.0.0.jsii.tgz` that must be bundled in your project (It is already included as an embedded resource in the generated project).
+
 ### Entrypoint
 
 The `entrypoint` option can be used to customize the name of the typescript entrypoint (default is `index.ts`).
