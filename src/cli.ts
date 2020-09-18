@@ -11,6 +11,8 @@ async function main() {
     .option('python-module-name', { desc: 'python module name', type: 'string' })
     .option('java-outdir', { desc: 'java output directory (requires --java-package)', type: 'string' })
     .option('java-package', { desc: 'the java package (namespace) to use for all generated types', type: 'string' })
+    .option('dotnet-outdir', { desc: 'dotnet output directory (requires --dotnet-namespace)', type: 'string' })
+    .option('dotnet-namespace', { desc: 'the dotnet namespace to use for all generated types', type: 'string' })
     .showHelpOnFail(true)
     .help();
 
@@ -30,6 +32,7 @@ async function main() {
     ...parseJsiiOptions(),
     ...parsePythonOptions(),
     ...parseJavaOptions(),
+    ...parseDotnetOptions(),
   });
 
   function parseJsiiOptions() {
@@ -66,6 +69,20 @@ async function main() {
       java: {
         outdir: outdir,
         package: packageName,
+      },
+    }
+  }
+
+  function parseDotnetOptions() {
+    const outdir = argv['dotnet-outdir'];
+    const namespace = argv['dotnet-namespace'];
+    if (!outdir && !namespace) { return undefined; }
+    if (!outdir) { throw new Error('--dotnet-outdir is required'); }
+    if (!namespace) { throw new Error('--dotnet-namespace is required'); }
+    return {
+      dotnet: {
+        outdir: outdir,
+        namespace: namespace,
       },
     }
   }

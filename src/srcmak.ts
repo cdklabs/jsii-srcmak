@@ -44,5 +44,12 @@ export async function srcmak(srcdir: string, options: Options = { }) {
       await fs.mkdirp(target); // make sure target directory exists
       await ncp(source, target, { clobber: false });
     }
+
+    if (options.dotnet) {
+      const reldir = options.dotnet.namespace;
+      const source = path.resolve(path.join(workdir, 'dist/dotnet/', reldir));
+      const target = path.join(options.dotnet.outdir, reldir);
+      await fs.move(source, target, { overwrite: true });
+    }
   });
 }

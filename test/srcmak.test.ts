@@ -113,6 +113,42 @@ test('java + different entrypoint', async () => {
   });
 });
 
+test('dotnet + different entrypoint', async () => {
+  await mkdtemp(async source => {
+    const entry = 'different/entry.ts';
+    const ep = path.join(source, entry);
+    await fs.mkdirp(path.dirname(ep));
+    await fs.writeFile(ep, `
+    export interface Operands {
+      readonly lhs: number;
+      readonly rhs: number;
+    }
+
+    export class Hello {
+      public add(ops: Operands): number {
+        return ops.lhs + ops.rhs;
+      }
+    }
+    `);
+
+    await mkdtemp(async target => {
+      await srcmak(source, {
+        entrypoint: 'different/entry.ts',
+        moduleKey: 'dotnet.package',
+        dotnet: {
+          outdir: target,
+          namespace: 'Hello.World',
+        },
+      });
+
+      const dir = await snapshotDirectory(target, {
+        excludeFiles: [ '@0.0.0.jsii.tgz' ],
+      });
+      expect(dir).toMatchSnapshot();
+    });
+  });
+});
+
 test('deps: compile against a local jsii dependency', async () => {
   await mkdtemp(async source => {
     await fs.writeFile(path.join(source, 'index.ts'), `
@@ -169,4 +205,15 @@ test('python with invalid module name', async () => {
       moduleName: 'my-python.submodule',
     },
   })).rejects.toEqual(new Error('Python moduleName [my-python.submodule] may not contain "-"'));
+});
+
+test('dotnet with invalid namespace', async () => {
+  await expect(srcmak('.', {
+    entrypoint: 'different/entry.ts',
+    moduleKey: 'dotnet.package',
+    dotnet: {
+      outdir: '.',
+      namespace: 'hello-world',
+    },
+  })).rejects.toEqual(new Error('Dotnet namespace [hello-world] may not contain "-"'));
 });

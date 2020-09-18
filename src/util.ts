@@ -58,7 +58,7 @@ export async function exec(moduleName: string, args: string[] = [], options: Spa
 }
 
 /**
- * This validates that the Python module name and Java package name
+ * This validates that the Python module name, Java package name, and Dotnet namespace
  * conform to language-specific constraints.
  * 
  * @param options Options set by the consumer
@@ -71,5 +71,9 @@ export function validateOptions(options: Options) {
 
   if (options.java?.package.includes('-')) {
     throw new Error(`Java package [${options.java.package}] may not contain "-"`);
+  }
+
+  if (options.dotnet?.namespace.includes('-')) {
+    throw new Error(`Dotnet namespace [${options.dotnet.namespace}] may not contain "-"`);
   }
 }

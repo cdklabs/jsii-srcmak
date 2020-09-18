@@ -39,6 +39,13 @@ export interface Options {
    * @default - java is not generated
    */
   java?: JavaOutputOptions;
+
+  /**
+   * Produces dotnet code.
+   * 
+   * @default - dotnet is not generated
+   */
+  dotnet?: DotnetOutputOptions;
 }
 
 export interface JsiiOutputOptions {
@@ -76,4 +83,19 @@ export interface JavaOutputOptions {
    * For example, it cannot include a hyphen ('-')
    */
   package: string;
+}
+
+export interface DotnetOutputOptions {
+  /**
+   * Base root directory.
+   */
+  outdir: string;
+
+  /**
+   * The root namespace to generate types in
+   * 
+   * This must follow standard dotnet namespace conventions.
+   * For example, it cannot include a hyphen ('-')
+   */
+  namespace: string;
 }

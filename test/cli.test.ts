@@ -61,6 +61,18 @@ test('fails if only one java option is given', () => {
   )).toThrow(/--java-package is required/);
 });
 
+test('fails if only one dotnet option is given', () => {
+  expect(() => srcmakcli(srcdir,
+    '--entrypoint lib/main.ts',
+    '--dotnet-namespace mypackage',
+  )).toThrow(/--dotnet-outdir is required/);
+
+  expect(() => srcmakcli(srcdir,
+    '--entrypoint lib/main.ts',
+    '--dotnet-outdir dir',
+  )).toThrow(/--dotnet-namespace is required/);
+});
+
 test('python output', async () => {
   await mkdtemp(async tmpdir => {
 
@@ -92,6 +104,23 @@ test('java output', async () => {
 
     expect(await snapshotDirectory(outdir, {
       excludeLines: [ /.*@javax.annotation.Generated.*/ ],
+      excludeFiles: [ '@0.0.0.jsii.tgz' ],
+    })).toMatchSnapshot();
+  });
+});
+
+test('dotnet output', async () => {
+  await mkdtemp(async tmpdir => {
+    // put under a non-existent directory to verify it is created
+    const outdir = path.join(tmpdir, 'dotnet');
+
+    srcmakcli(srcdir,
+      '--entrypoint lib/main.ts',
+      `--dotnet-outdir ${outdir}`,
+      '--dotnet-namespace MyPackage',
+    );
+
+    expect(await snapshotDirectory(outdir, {
       excludeFiles: [ '@0.0.0.jsii.tgz' ],
     })).toMatchSnapshot();
   });

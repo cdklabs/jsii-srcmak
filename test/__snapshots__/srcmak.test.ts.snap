@@ -1,5 +1,293 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`dotnet + different entrypoint 1`] = `
+Object {
+  "Hello.World/.jsii": "{
+  \\"author\\": {
+    \\"name\\": \\"generated@generated.com\\",
+    \\"roles\\": [
+      \\"author\\"
+    ]
+  },
+  \\"description\\": \\"dotnetpackage\\",
+  \\"homepage\\": \\"http://generated\\",
+  \\"jsiiVersion\\": \\"1.12.0 (build 5ddc9f2)\\",
+  \\"license\\": \\"Apache-2.0\\",
+  \\"name\\": \\"dotnetpackage\\",
+  \\"repository\\": {
+    \\"type\\": \\"git\\",
+    \\"url\\": \\"http://generated\\"
+  },
+  \\"schema\\": \\"jsii/0.10.0\\",
+  \\"targets\\": {
+    \\"dotnet\\": {
+      \\"namespace\\": \\"Hello.World\\",
+      \\"packageId\\": \\"Hello.World\\"
+    },
+    \\"js\\": {
+      \\"npm\\": \\"dotnetpackage\\"
+    }
+  },
+  \\"types\\": {
+    \\"dotnetpackage.Hello\\": {
+      \\"assembly\\": \\"dotnetpackage\\",
+      \\"fqn\\": \\"dotnetpackage.Hello\\",
+      \\"initializer\\": {},
+      \\"kind\\": \\"class\\",
+      \\"locationInModule\\": {
+        \\"filename\\": \\"different/entry.ts\\",
+        \\"line\\": 7
+      },
+      \\"methods\\": [
+        {
+          \\"locationInModule\\": {
+            \\"filename\\": \\"different/entry.ts\\",
+            \\"line\\": 8
+          },
+          \\"name\\": \\"add\\",
+          \\"parameters\\": [
+            {
+              \\"name\\": \\"ops\\",
+              \\"type\\": {
+                \\"fqn\\": \\"dotnetpackage.Operands\\"
+              }
+            }
+          ],
+          \\"returns\\": {
+            \\"type\\": {
+              \\"primitive\\": \\"number\\"
+            }
+          }
+        }
+      ],
+      \\"name\\": \\"Hello\\"
+    },
+    \\"dotnetpackage.Operands\\": {
+      \\"assembly\\": \\"dotnetpackage\\",
+      \\"datatype\\": true,
+      \\"fqn\\": \\"dotnetpackage.Operands\\",
+      \\"kind\\": \\"interface\\",
+      \\"locationInModule\\": {
+        \\"filename\\": \\"different/entry.ts\\",
+        \\"line\\": 2
+      },
+      \\"name\\": \\"Operands\\",
+      \\"properties\\": [
+        {
+          \\"abstract\\": true,
+          \\"immutable\\": true,
+          \\"locationInModule\\": {
+            \\"filename\\": \\"different/entry.ts\\",
+            \\"line\\": 3
+          },
+          \\"name\\": \\"lhs\\",
+          \\"type\\": {
+            \\"primitive\\": \\"number\\"
+          }
+        },
+        {
+          \\"abstract\\": true,
+          \\"immutable\\": true,
+          \\"locationInModule\\": {
+            \\"filename\\": \\"different/entry.ts\\",
+            \\"line\\": 4
+          },
+          \\"name\\": \\"rhs\\",
+          \\"type\\": {
+            \\"primitive\\": \\"number\\"
+          }
+        }
+      ]
+    }
+  },
+  \\"version\\": \\"0.0.0\\",
+  \\"fingerprint\\": \\"g/XKRL/tZdOfDLADweRQN8XExk4AtAGEDB5kef0R0fU=\\"
+}
+",
+  "Hello.World/AssemblyInfo.cs": "using Amazon.JSII.Runtime.Deputy;
+
+[assembly: JsiiAssembly(\\"dotnetpackage\\", \\"0.0.0\\", \\"dotnetpackage-0.0.0.tgz\\")]
+",
+  "Hello.World/Hello.World.csproj": "<Project Sdk=\\"Microsoft.NET.Sdk\\">
+  <PropertyGroup>
+    <!-- Package Identification -->
+    <Description>dotnetpackage</Description>
+    <PackageId>Hello.World</PackageId>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageVersion>0.0.0</PackageVersion>
+    <!-- Additional Metadata -->
+    <Authors>generated@generated.com</Authors>
+    <Language>en-US</Language>
+    <ProjectUrl>http://generated</ProjectUrl>
+    <RepositoryUrl>http://generated</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <!-- Build Configuration -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <IncludeSymbols>true</IncludeSymbols>
+    <IncludeSource>true</IncludeSource>
+    <Nullable>enable</Nullable>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include=\\"dotnetpackage-0.0.0.tgz\\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.12.0,2.0.0)\\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <NoWarn>0612,0618</NoWarn>
+  </PropertyGroup>
+</Project>
+
+",
+  "Hello.World/Hello/World/Hello.cs": "using Amazon.JSII.Runtime.Deputy;
+
+#pragma warning disable CS0672,CS0809,CS1591
+
+namespace Hello.World
+{
+    [JsiiClass(nativeType: typeof(Hello.World.Hello), fullyQualifiedName: \\"dotnetpackage.Hello\\")]
+    public class Hello : DeputyBase
+    {
+        public Hello(): base(new DeputyProps(System.Array.Empty<object>()))
+        {
+        }
+
+        /// <summary>Used by jsii to construct an instance of this class from a Javascript-owned object reference</summary>
+        /// <param name=\\"reference\\">The Javascript-owned object reference</param>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        protected Hello(ByRefValue reference): base(reference)
+        {
+        }
+
+        /// <summary>Used by jsii to construct an instance of this class from DeputyProps</summary>
+        /// <param name=\\"props\\">The deputy props</param>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        protected Hello(DeputyProps props): base(props)
+        {
+        }
+
+        [JsiiMethod(name: \\"add\\", returnsJson: \\"{\\\\\\"type\\\\\\":{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}}\\", parametersJson: \\"[{\\\\\\"name\\\\\\":\\\\\\"ops\\\\\\",\\\\\\"type\\\\\\":{\\\\\\"fqn\\\\\\":\\\\\\"dotnetpackage.Operands\\\\\\"}}]\\")]
+        public virtual double Add(Hello.World.IOperands ops)
+        {
+            return InvokeInstanceMethod<double>(new System.Type[]{typeof(Hello.World.IOperands)}, new object[]{ops});
+        }
+    }
+}
+",
+  "Hello.World/Hello/World/IOperands.cs": "using Amazon.JSII.Runtime.Deputy;
+
+#pragma warning disable CS0672,CS0809,CS1591
+
+namespace Hello.World
+{
+    [JsiiInterface(nativeType: typeof(IOperands), fullyQualifiedName: \\"dotnetpackage.Operands\\")]
+    public interface IOperands
+    {
+        [JsiiProperty(name: \\"lhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
+        double Lhs
+        {
+            get;
+        }
+
+        [JsiiProperty(name: \\"rhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
+        double Rhs
+        {
+            get;
+        }
+    }
+}
+",
+  "Hello.World/Hello/World/Internal/DependencyResolution/Anchor.cs": "#pragma warning disable CS0672,CS0809,CS1591
+
+namespace Hello.World.Internal.DependencyResolution
+{
+    public sealed class Anchor
+    {
+        public Anchor()
+        {
+        }
+    }
+}
+",
+  "Hello.World/Hello/World/Operands.cs": "using Amazon.JSII.Runtime.Deputy;
+
+#pragma warning disable CS0672,CS0809,CS1591
+
+namespace Hello.World
+{
+    #pragma warning disable CS8618
+
+    [JsiiByValue(fqn: \\"dotnetpackage.Operands\\")]
+    public class Operands : Hello.World.IOperands
+    {
+        [JsiiProperty(name: \\"lhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\", isOverride: true)]
+        public double Lhs
+        {
+            get;
+            set;
+        }
+
+        [JsiiProperty(name: \\"rhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\", isOverride: true)]
+        public double Rhs
+        {
+            get;
+            set;
+        }
+    }
+}
+",
+  "Hello.World/Hello/World/OperandsProxy.cs": "using Amazon.JSII.Runtime.Deputy;
+
+#pragma warning disable CS0672,CS0809,CS1591
+
+namespace Hello.World
+{
+    [JsiiTypeProxy(nativeType: typeof(IOperands), fullyQualifiedName: \\"dotnetpackage.Operands\\")]
+    internal sealed class OperandsProxy : DeputyBase, Hello.World.IOperands
+    {
+        private OperandsProxy(ByRefValue reference): base(reference)
+        {
+        }
+
+        [JsiiProperty(name: \\"lhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
+        public double Lhs
+        {
+            get => GetInstanceProperty<double>();
+        }
+
+        [JsiiProperty(name: \\"rhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
+        public double Rhs
+        {
+            get => GetInstanceProperty<double>();
+        }
+    }
+}
+",
+  "Hello.World/dotnetpackage-0.0.0.tgz": "�      �X�o�H�g�
+��Ҩ9�
+$%(҅�H!
+�SU����_��&�����Oޡѥ��c�Ļ;���zv<�-�Sy�ҩ	��ݏ!��/�Yn�:P6#�w��/<�x�E�?Ȟ
+r(�	��_��p��7�o	�K�[$y�y3����\`�!�!��x�R-#y���#
+����J�?���0�!�l3l��P�b&bvw����2��̀=f̾J�c��\\"4�!�1�s����45?���UdR_�
+h�?�\\"���@�mQ�,⮎��vp�E.;D�kd�,���a<��|J�#�g#��J~\`F<
+�\`����t�Ju-�k�z@�FK�6�,C3'tC�m�z�c�=_wL�)_ϺD�Rd(���0}��ݷ
+�1���:^ ?��1c�M�AUM+�n��F�ٰ4GGk&y���7��CD����G�[I�C��P���J�� ������4��uV�[�qmu��CVִ��X�Ć��o��mVQ����+|�!�M8�-�2qh�e�n��CL�{p�H�&3��1D�u���(��B��個��xMfr�#z�&�:vb��R�^�Qq/��}�}�*�X��0z�R�
+eDVٖ�>��dE�>��~�ηu�2Go�>�ܻ?����Z���'�=z2�O&��[ߛ��c��9��n2�Û�ݷ�i6����M��[͏���4{�n*w�bn��|�>]'�į.�~C
+�Qz;�&��t�\\\\����]���b�T��J:q��0$�B�A� ��4}
+R���m�0z�%�~E4LH��7n&�
+��<+$B\`P�q�����~��A\\"�r�=T#gky%(8XMAz�>�#HG�0s,w���B\\"�����CTԐm2�S�~�}��\`
+��D��P�,(2E�s���A����yG�X��m͐�s�x���9ud��a}�d:n_�<*b���~ƪ�T����t�uk�b�]��ܚ{�~WxO%C�բ����������r��qބ�~Ǌ�'z��T.un�UX��֠m�\\\\�f��S�o��'�}��i�Six-7�k���K�V��-X
+�-@��{�A>���o���i��r%*�͙֫M�fIs�w��V$}�H�7#��ɪ���݂?f[W���/>�>g�0.;�jc����*yG�NGJe�x�EG�
+xГ.{��(��A�<}=]�ڸ�*9A��tu�T��|����:�g�����X�4F��U*7uW;X���R�n�3Փ{���>V�����5R��W�Fzb�y8G��U7G��ѽ[�d8�~��v�qU�d�^�����;)��Q]�]����r��/����/�r�S����H_d�7�^l%
+����	Mn4v ZT¾���ײ9ԟ9���ĥ�רYI��aE��v�f_��{�7G;8Qż��5d#SC���$I!R��$��~���?�
+�U�����S�e�\\\\�t�57���5A�f���AMv���
+��Ή�4NCP�����bUg������D':�����   ",
+}
+`;
+
 exports[`java + different entrypoint 1`] = `
 Object {
   "src/main/java/hello/world/$Module.java": "package hello.world;
