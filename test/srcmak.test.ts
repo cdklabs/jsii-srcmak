@@ -113,7 +113,7 @@ test('java + different entrypoint', async () => {
   });
 });
 
-test('dotnet + different entrypoint', async () => {
+test('csharp + different entrypoint', async () => {
   await mkdtemp(async source => {
     const entry = 'different/entry.ts';
     const ep = path.join(source, entry);
@@ -134,8 +134,8 @@ test('dotnet + different entrypoint', async () => {
     await mkdtemp(async target => {
       await srcmak(source, {
         entrypoint: 'different/entry.ts',
-        moduleKey: 'dotnet.package',
-        dotnet: {
+        moduleKey: 'csharp.package',
+        csharp: {
           outdir: target,
           namespace: 'Hello.World',
         },
@@ -207,13 +207,13 @@ test('python with invalid module name', async () => {
   })).rejects.toEqual(new Error('Python moduleName [my-python.submodule] may not contain "-"'));
 });
 
-test('dotnet with invalid namespace', async () => {
+test('csharp with invalid namespace', async () => {
   await expect(srcmak('.', {
     entrypoint: 'different/entry.ts',
-    moduleKey: 'dotnet.package',
-    dotnet: {
+    moduleKey: 'csharp.package',
+    csharp: {
       outdir: '.',
       namespace: 'hello-world',
     },
-  })).rejects.toEqual(new Error('Dotnet namespace [hello-world] may not contain "-"'));
+  })).rejects.toEqual(new Error('C# namespace [hello-world] may not contain "-"'));
 });

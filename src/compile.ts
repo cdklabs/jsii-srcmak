@@ -84,10 +84,10 @@ export async function compile(workdir: string, options: Options) {
     };
   }
 
-  if (options.dotnet) {
+  if (options.csharp) {
     targets.dotnet = {
-      namespace: options.dotnet.namespace,
-      packageId: options.dotnet.namespace,
+      namespace: options.csharp.namespace,
+      packageId: options.csharp.namespace,
     };
   }
 

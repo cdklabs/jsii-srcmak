@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`dotnet + different entrypoint 1`] = `
+exports[`csharp + different entrypoint 1`] = `
 Object {
   "Hello.World/.jsii": "{
   \\"author\\": {
@@ -9,11 +9,11 @@ Object {
       \\"author\\"
     ]
   },
-  \\"description\\": \\"dotnetpackage\\",
+  \\"description\\": \\"csharppackage\\",
   \\"homepage\\": \\"http://generated\\",
   \\"jsiiVersion\\": \\"1.12.0 (build 5ddc9f2)\\",
   \\"license\\": \\"Apache-2.0\\",
-  \\"name\\": \\"dotnetpackage\\",
+  \\"name\\": \\"csharppackage\\",
   \\"repository\\": {
     \\"type\\": \\"git\\",
     \\"url\\": \\"http://generated\\"
@@ -25,13 +25,13 @@ Object {
       \\"packageId\\": \\"Hello.World\\"
     },
     \\"js\\": {
-      \\"npm\\": \\"dotnetpackage\\"
+      \\"npm\\": \\"csharppackage\\"
     }
   },
   \\"types\\": {
-    \\"dotnetpackage.Hello\\": {
-      \\"assembly\\": \\"dotnetpackage\\",
-      \\"fqn\\": \\"dotnetpackage.Hello\\",
+    \\"csharppackage.Hello\\": {
+      \\"assembly\\": \\"csharppackage\\",
+      \\"fqn\\": \\"csharppackage.Hello\\",
       \\"initializer\\": {},
       \\"kind\\": \\"class\\",
       \\"locationInModule\\": {
@@ -49,7 +49,7 @@ Object {
             {
               \\"name\\": \\"ops\\",
               \\"type\\": {
-                \\"fqn\\": \\"dotnetpackage.Operands\\"
+                \\"fqn\\": \\"csharppackage.Operands\\"
               }
             }
           ],
@@ -62,10 +62,10 @@ Object {
       ],
       \\"name\\": \\"Hello\\"
     },
-    \\"dotnetpackage.Operands\\": {
-      \\"assembly\\": \\"dotnetpackage\\",
+    \\"csharppackage.Operands\\": {
+      \\"assembly\\": \\"csharppackage\\",
       \\"datatype\\": true,
-      \\"fqn\\": \\"dotnetpackage.Operands\\",
+      \\"fqn\\": \\"csharppackage.Operands\\",
       \\"kind\\": \\"interface\\",
       \\"locationInModule\\": {
         \\"filename\\": \\"different/entry.ts\\",
@@ -101,17 +101,17 @@ Object {
     }
   },
   \\"version\\": \\"0.0.0\\",
-  \\"fingerprint\\": \\"g/XKRL/tZdOfDLADweRQN8XExk4AtAGEDB5kef0R0fU=\\"
+  \\"fingerprint\\": \\"mG6NnEA4XZ1m9xHiIMvxMdhoYlOfYkrtFxxKEuI8RdM=\\"
 }
 ",
   "Hello.World/AssemblyInfo.cs": "using Amazon.JSII.Runtime.Deputy;
 
-[assembly: JsiiAssembly(\\"dotnetpackage\\", \\"0.0.0\\", \\"dotnetpackage-0.0.0.tgz\\")]
+[assembly: JsiiAssembly(\\"csharppackage\\", \\"0.0.0\\", \\"csharppackage-0.0.0.tgz\\")]
 ",
   "Hello.World/Hello.World.csproj": "<Project Sdk=\\"Microsoft.NET.Sdk\\">
   <PropertyGroup>
     <!-- Package Identification -->
-    <Description>dotnetpackage</Description>
+    <Description>csharppackage</Description>
     <PackageId>Hello.World</PackageId>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageVersion>0.0.0</PackageVersion>
@@ -131,7 +131,7 @@ Object {
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <EmbeddedResource Include=\\"dotnetpackage-0.0.0.tgz\\" />
+    <EmbeddedResource Include=\\"csharppackage-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.12.0,2.0.0)\\" />
@@ -148,7 +148,7 @@ Object {
 
 namespace Hello.World
 {
-    [JsiiClass(nativeType: typeof(Hello.World.Hello), fullyQualifiedName: \\"dotnetpackage.Hello\\")]
+    [JsiiClass(nativeType: typeof(Hello.World.Hello), fullyQualifiedName: \\"csharppackage.Hello\\")]
     public class Hello : DeputyBase
     {
         public Hello(): base(new DeputyProps(System.Array.Empty<object>()))
@@ -169,7 +169,7 @@ namespace Hello.World
         {
         }
 
-        [JsiiMethod(name: \\"add\\", returnsJson: \\"{\\\\\\"type\\\\\\":{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}}\\", parametersJson: \\"[{\\\\\\"name\\\\\\":\\\\\\"ops\\\\\\",\\\\\\"type\\\\\\":{\\\\\\"fqn\\\\\\":\\\\\\"dotnetpackage.Operands\\\\\\"}}]\\")]
+        [JsiiMethod(name: \\"add\\", returnsJson: \\"{\\\\\\"type\\\\\\":{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}}\\", parametersJson: \\"[{\\\\\\"name\\\\\\":\\\\\\"ops\\\\\\",\\\\\\"type\\\\\\":{\\\\\\"fqn\\\\\\":\\\\\\"csharppackage.Operands\\\\\\"}}]\\")]
         public virtual double Add(Hello.World.IOperands ops)
         {
             return InvokeInstanceMethod<double>(new System.Type[]{typeof(Hello.World.IOperands)}, new object[]{ops});
@@ -183,7 +183,7 @@ namespace Hello.World
 
 namespace Hello.World
 {
-    [JsiiInterface(nativeType: typeof(IOperands), fullyQualifiedName: \\"dotnetpackage.Operands\\")]
+    [JsiiInterface(nativeType: typeof(IOperands), fullyQualifiedName: \\"csharppackage.Operands\\")]
     public interface IOperands
     {
         [JsiiProperty(name: \\"lhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
@@ -220,7 +220,7 @@ namespace Hello.World
 {
     #pragma warning disable CS8618
 
-    [JsiiByValue(fqn: \\"dotnetpackage.Operands\\")]
+    [JsiiByValue(fqn: \\"csharppackage.Operands\\")]
     public class Operands : Hello.World.IOperands
     {
         [JsiiProperty(name: \\"lhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\", isOverride: true)]
@@ -245,7 +245,7 @@ namespace Hello.World
 
 namespace Hello.World
 {
-    [JsiiTypeProxy(nativeType: typeof(IOperands), fullyQualifiedName: \\"dotnetpackage.Operands\\")]
+    [JsiiTypeProxy(nativeType: typeof(IOperands), fullyQualifiedName: \\"csharppackage.Operands\\")]
     internal sealed class OperandsProxy : DeputyBase, Hello.World.IOperands
     {
         private OperandsProxy(ByRefValue reference): base(reference)
@@ -266,25 +266,19 @@ namespace Hello.World
     }
 }
 ",
-  "Hello.World/dotnetpackage-0.0.0.tgz": "�      �X�o�H�g�
-��Ҩ9�
-$%(҅�H!
-�SU����_��&�����Oޡѥ��c�Ļ;���zv<�-�Sy�ҩ	��ݏ!��/�Yn�:P6#�w��/<�x�E�?Ȟ
-r(�	��_��p��7�o	�K�[$y�y3����\`�!�!��x�R-#y���#
-����J�?���0�!�l3l��P�b&bvw����2��̀=f̾J�c��\\"4�!�1�s����45?���UdR_�
-h�?�\\"���@�mQ�,⮎��vp�E.;D�kd�,���a<��|J�#�g#��J~\`F<
-�\`����t�Ju-�k�z@�FK�6�,C3'tC�m�z�c�=_wL�)_ϺD�Rd(���0}��ݷ
-�1���:^ ?��1c�M�AUM+�n��F�ٰ4GGk&y���7��CD����G�[I�C��P���J�� ������4��uV�[�qmu��CVִ��X�Ć��o��mVQ����+|�!�M8�-�2qh�e�n��CL�{p�H�&3��1D�u���(��B��個��xMfr�#z�&�:vb��R�^�Qq/��}�}�*�X��0z�R�
-eDVٖ�>��dE�>��~�ηu�2Go�>�ܻ?����Z���'�=z2�O&��[ߛ��c��9��n2�Û�ݷ�i6����M��[͏���4{�n*w�bn��|�>]'�į.�~C
-�Qz;�&��t�\\\\����]���b�T��J:q��0$�B�A� ��4}
-R���m�0z�%�~E4LH��7n&�
-��<+$B\`P�q�����~��A\\"�r�=T#gky%(8XMAz�>�#HG�0s,w���B\\"�����CTԐm2�S�~�}��\`
-��D��P�,(2E�s���A����yG�X��m͐�s�x���9ud��a}�d:n_�<*b���~ƪ�T����t�uk�b�]��ܚ{�~WxO%C�բ����������r��qބ�~Ǌ�'z��T.un�UX��֠m�\\\\�f��S�o��'�}��i�Six-7�k���K�V��-X
-�-@��{�A>���o���i��r%*�͙֫M�fIs�w��V$}�H�7#��ɪ���݂?f[W���/>�>g�0.;�jc����*yG�NGJe�x�EG�
-xГ.{��(��A�<}=]�ڸ�*9A��tu�T��|����:�g�����X�4F��U*7uW;X���R�n�3Փ{���>V�����5R��W�Fzb�y8G��U7G��ѽ[�d8�~��v�qU�d�^�����;)��Q]�]����r��/����/�r�S����H_d�7�^l%
-����	Mn4v ZT¾���ײ9ԟ9���ĥ�רYI��aE��v�f_��{�7G;8Qż��5d#SC���$I!R��$��~���?�
-�U�����S�e�\\\\�t�57���5A�f���AMv���
-��Ή�4NCP�����bUg������D':�����   ",
+  "Hello.World/csharppackage-0.0.0.tgz": "�      �ko�H�����K���6��D��$L)��u�*?�����)�����;4��Uu	��3;����U��2F��b��ǀ �B�۷PȋE�M�XD�T�NI������ �2��*��Od�>���8^����f0���#�!��t���?�Ȉc\\"
+t���p���!�#��2��S�
+q�(�BV��X�
+f�6s�s�T\`DDg��������M�+�VI'��5dӐ��b�?�4B%v�Q� ס�9�_���n���=b�U25��@K	h�sBV�gc�芿�0�t+HA�Pl����9��c�@+-��!�2VsB7��֮�}�w\`�j��P�:G�Rd���ߙ!���ӎ�4��+&^�0��)b���@�I+z�є �d��螉�T
+$b%'���d����e+.a���Y���k!\`}=��5	�4x�뚼_[]���!����^(wbC�m�7�8��(��t��]y|�E���}�Л ���:��K�a2-�=KE�?(k5NF���Qnܗ&>/�u�)��x�雐�؉ylá����^ډ�d��V.q\`�a�ĥPTʈ��-�C�,�)����v=϶u��Go�il��|�Bo-�N��z���g�k�����^���L^�#l��v�2ު�Z�͇B(Z�y��ټ����
+��U���O~�ћ�|f�����oq>�m�Є����������L*���?x�\\"��$u��W'HcY�ED���Es�!��r��/��	�����CQ��'��0*�Kn�\`�.2a�E�Q\\"�r�-T#'ky%*8X�Bz�ޅ#HGq�X���\\\\��:�PSq]� �����e|S�inB�BU(*N�ߐ���B�=y�,��қ�0��^Q�쩧�M�5��R�A��B���W�IeQ�Z��˥��0U����7t��
+zb�*[���+�j�\`���������y���
+�����c��{5��Z��kM����'�i?��6��ǻpm��'��Z@���װv�A�\`
+� !�^ �� ��s5_���Fۗ�l�fz�1�[תT_�W�͹'_}˵nA��}�
+�;�f
+���8������
+��1cZ�iV��ʞZ��՚���O�xؗ����8����^u
+�(z��J�Y�kEQ�5Lm�4�4�~���MT��4�=HsC�7��.Uk�7e׻X���V�����)�s7T�����U��Vח뉜To��ɵ�W�/R�i|�W�f�krF�x\\\\��.���NH�R���e<���3�l;���b�5���v�/��NKFO��xK����tB��������Ous��l�gNw;:i)4jV��DJѴ�ݻ�׽�����NR1�*e��֑�E�\`Q��w\\"�ۘ������N�b�������//���g@TSqiӁKZ qX��m��d�\\\\��w��!똤J�tUA����<u���W;�^�^����Î   ",
 }
 `;
 

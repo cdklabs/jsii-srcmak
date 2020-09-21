@@ -11,8 +11,8 @@ async function main() {
     .option('python-module-name', { desc: 'python module name', type: 'string' })
     .option('java-outdir', { desc: 'java output directory (requires --java-package)', type: 'string' })
     .option('java-package', { desc: 'the java package (namespace) to use for all generated types', type: 'string' })
-    .option('dotnet-outdir', { desc: 'dotnet output directory (requires --dotnet-namespace)', type: 'string' })
-    .option('dotnet-namespace', { desc: 'the dotnet namespace to use for all generated types', type: 'string' })
+    .option('csharp-outdir', { desc: 'C# output directory (requires --csharp-namespace)', type: 'string' })
+    .option('csharp-namespace', { desc: 'the C# namespace to use for all generated types', type: 'string' })
     .showHelpOnFail(true)
     .help();
 
@@ -32,7 +32,7 @@ async function main() {
     ...parseJsiiOptions(),
     ...parsePythonOptions(),
     ...parseJavaOptions(),
-    ...parseDotnetOptions(),
+    ...parseCSharpOptions(),
   });
 
   function parseJsiiOptions() {
@@ -73,14 +73,14 @@ async function main() {
     }
   }
 
-  function parseDotnetOptions() {
-    const outdir = argv['dotnet-outdir'];
-    const namespace = argv['dotnet-namespace'];
+  function parseCSharpOptions() {
+    const outdir = argv['csharp-outdir'];
+    const namespace = argv['csharp-namespace'];
     if (!outdir && !namespace) { return undefined; }
-    if (!outdir) { throw new Error('--dotnet-outdir is required'); }
-    if (!namespace) { throw new Error('--dotnet-namespace is required'); }
+    if (!outdir) { throw new Error('--csharp-outdir is required'); }
+    if (!namespace) { throw new Error('--csharp-namespace is required'); }
     return {
-      dotnet: {
+      csharp: {
         outdir: outdir,
         namespace: namespace,
       },

@@ -61,16 +61,16 @@ test('fails if only one java option is given', () => {
   )).toThrow(/--java-package is required/);
 });
 
-test('fails if only one dotnet option is given', () => {
+test('fails if only one csharp option is given', () => {
   expect(() => srcmakcli(srcdir,
     '--entrypoint lib/main.ts',
-    '--dotnet-namespace mypackage',
-  )).toThrow(/--dotnet-outdir is required/);
+    '--csharp-namespace mypackage',
+  )).toThrow(/--csharp-outdir is required/);
 
   expect(() => srcmakcli(srcdir,
     '--entrypoint lib/main.ts',
-    '--dotnet-outdir dir',
-  )).toThrow(/--dotnet-namespace is required/);
+    '--csharp-outdir dir',
+  )).toThrow(/--csharp-namespace is required/);
 });
 
 test('python output', async () => {
@@ -109,15 +109,15 @@ test('java output', async () => {
   });
 });
 
-test('dotnet output', async () => {
+test('csharp output', async () => {
   await mkdtemp(async tmpdir => {
     // put under a non-existent directory to verify it is created
-    const outdir = path.join(tmpdir, 'dotnet');
+    const outdir = path.join(tmpdir, 'csharp');
 
     srcmakcli(srcdir,
       '--entrypoint lib/main.ts',
-      `--dotnet-outdir ${outdir}`,
-      '--dotnet-namespace MyPackage',
+      `--csharp-outdir ${outdir}`,
+      '--csharp-namespace MyPackage',
     );
 
     expect(await snapshotDirectory(outdir, {

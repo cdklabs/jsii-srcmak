@@ -41,11 +41,11 @@ export interface Options {
   java?: JavaOutputOptions;
 
   /**
-   * Produces dotnet code.
+   * Produces C# code.
    * 
-   * @default - dotnet is not generated
+   * @default - C# is not generated
    */
-  dotnet?: DotnetOutputOptions;
+  csharp?: CSharpOutputOptions;
 }
 
 export interface JsiiOutputOptions {
@@ -85,7 +85,7 @@ export interface JavaOutputOptions {
   package: string;
 }
 
-export interface DotnetOutputOptions {
+export interface CSharpOutputOptions {
   /**
    * Base root directory.
    */
@@ -94,7 +94,7 @@ export interface DotnetOutputOptions {
   /**
    * The root namespace to generate types in
    * 
-   * This must follow standard dotnet namespace conventions.
+   * This must follow standard C# namespace conventions.
    * For example, it cannot include a hyphen ('-')
    */
   namespace: string;

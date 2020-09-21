@@ -97,29 +97,29 @@ original module. This code depends on the following maven package (should be def
 
 The output directory will also include a tarball `generated@0.0.0.jsii.tgz` that must be bundled in your project.
 
-### .NET Output
+### C# Output
 
-To produce a .NET module from your source, use the `dotnet` option:
+To produce a C# module from your source, use the `csharp` option:
 
 ```ts
 await srcmak('srcdir', {
-  dotnet: {
+  csharp: {
     outdir: '/path/to/project/root',
     namespace: 'HelloWorld'
   }
 });
 ```
 
-Or the `--dotnet-*` switches in the CLI:
+Or the `--csharp-*` switches in the CLI:
 
 ```bash
-$ jsii-srcmak /src/dir --dotnet-outdir=dir --dotnet-namespace=HelloWorld
+$ jsii-srcmak /src/dir --csharp-outdir=dir --csharp-namespace=HelloWorld
 ```
 
-* The `outdir`/`--dotnet-outdir` option points to the root directory of your .NET project.
-* The `package`/`--dotnet-namespace` option is the .NET root namespace.
+* The `outdir`/`--csharp-outdir` option points to the root directory of your C# project.
+* The `package`/`--csharp-namespace` option is the C# root namespace.
 
-The output directory will include a .NET project that corresponds to the
+The output directory will include a C# project that corresponds to the
 original module. This code depends on the following NuGet package (It is already defined as a dependency in the generated project):
 
 - [jsii](https://www.nuget.org/packages/Amazon.JSII.Runtime/)

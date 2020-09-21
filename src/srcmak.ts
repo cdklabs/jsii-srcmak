@@ -45,10 +45,10 @@ export async function srcmak(srcdir: string, options: Options = { }) {
       await ncp(source, target, { clobber: false });
     }
 
-    if (options.dotnet) {
-      const reldir = options.dotnet.namespace;
+    if (options.csharp) {
+      const reldir = options.csharp.namespace;
       const source = path.resolve(path.join(workdir, 'dist/dotnet/', reldir));
-      const target = path.join(options.dotnet.outdir, reldir);
+      const target = path.join(options.csharp.outdir, reldir);
       await fs.move(source, target, { overwrite: true });
     }
   });
