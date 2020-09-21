@@ -142,7 +142,7 @@ test('csharp + different entrypoint', async () => {
       });
 
       const dir = await snapshotDirectory(target, {
-        excludeFiles: [ '@0.0.0.jsii.tgz' ],
+        excludeFiles: [ '0.0.0.tgz' ],
       });
       expect(dir).toMatchSnapshot();
     });

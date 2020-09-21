@@ -121,7 +121,7 @@ test('csharp output', async () => {
     );
 
     expect(await snapshotDirectory(outdir, {
-      excludeFiles: [ '@0.0.0.jsii.tgz' ],
+      excludeFiles: [ '0.0.0.tgz' ],
     })).toMatchSnapshot();
   });
 });
