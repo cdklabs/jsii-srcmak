@@ -84,6 +84,13 @@ export async function compile(workdir: string, options: Options) {
     };
   }
 
+  if (options.csharp) {
+    targets.dotnet = {
+      namespace: options.csharp.namespace,
+      packageId: options.csharp.namespace,
+    };
+  }
+
   await fs.writeFile(path.join(workdir, 'package.json'), JSON.stringify(pkg, undefined, 2));
 
   await exec(compilerModule, args, {

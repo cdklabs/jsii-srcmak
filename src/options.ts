@@ -39,6 +39,13 @@ export interface Options {
    * @default - java is not generated
    */
   java?: JavaOutputOptions;
+
+  /**
+   * Produces C# code.
+   * 
+   * @default - C# is not generated
+   */
+  csharp?: CSharpOutputOptions;
 }
 
 export interface JsiiOutputOptions {
@@ -76,4 +83,19 @@ export interface JavaOutputOptions {
    * For example, it cannot include a hyphen ('-')
    */
   package: string;
+}
+
+export interface CSharpOutputOptions {
+  /**
+   * Base root directory.
+   */
+  outdir: string;
+
+  /**
+   * The root namespace to generate types in
+   * 
+   * This must follow standard C# namespace conventions.
+   * For example, it cannot include a hyphen ('-')
+   */
+  namespace: string;
 }

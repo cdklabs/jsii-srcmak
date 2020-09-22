@@ -11,6 +11,8 @@ async function main() {
     .option('python-module-name', { desc: 'python module name', type: 'string' })
     .option('java-outdir', { desc: 'java output directory (requires --java-package)', type: 'string' })
     .option('java-package', { desc: 'the java package (namespace) to use for all generated types', type: 'string' })
+    .option('csharp-outdir', { desc: 'C# output directory (requires --csharp-namespace)', type: 'string' })
+    .option('csharp-namespace', { desc: 'the C# namespace to use for all generated types', type: 'string' })
     .showHelpOnFail(true)
     .help();
 
@@ -30,6 +32,7 @@ async function main() {
     ...parseJsiiOptions(),
     ...parsePythonOptions(),
     ...parseJavaOptions(),
+    ...parseCSharpOptions(),
   });
 
   function parseJsiiOptions() {
@@ -66,6 +69,20 @@ async function main() {
       java: {
         outdir: outdir,
         package: packageName,
+      },
+    }
+  }
+
+  function parseCSharpOptions() {
+    const outdir = argv['csharp-outdir'];
+    const namespace = argv['csharp-namespace'];
+    if (!outdir && !namespace) { return undefined; }
+    if (!outdir) { throw new Error('--csharp-outdir is required'); }
+    if (!namespace) { throw new Error('--csharp-namespace is required'); }
+    return {
+      csharp: {
+        outdir: outdir,
+        namespace: namespace,
       },
     }
   }

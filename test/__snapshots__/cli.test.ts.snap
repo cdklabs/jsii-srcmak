@@ -1,5 +1,372 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`csharp output 1`] = `
+Object {
+  "MyPackage/.jsii": "{
+  \\"author\\": {
+    \\"name\\": \\"generated@generated.com\\",
+    \\"roles\\": [
+      \\"author\\"
+    ]
+  },
+  \\"description\\": \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060\\",
+  \\"homepage\\": \\"http://generated\\",
+  \\"jsiiVersion\\": \\"1.12.0 (build 5ddc9f2)\\",
+  \\"license\\": \\"Apache-2.0\\",
+  \\"name\\": \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060\\",
+  \\"repository\\": {
+    \\"type\\": \\"git\\",
+    \\"url\\": \\"http://generated\\"
+  },
+  \\"schema\\": \\"jsii/0.10.0\\",
+  \\"targets\\": {
+    \\"dotnet\\": {
+      \\"namespace\\": \\"MyPackage\\",
+      \\"packageId\\": \\"MyPackage\\"
+    },
+    \\"js\\": {
+      \\"npm\\": \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060\\"
+    }
+  },
+  \\"types\\": {
+    \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator\\": {
+      \\"assembly\\": \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060\\",
+      \\"docs\\": {
+        \\"summary\\": \\"A sophisticaed multi-language calculator.\\"
+      },
+      \\"fqn\\": \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator\\",
+      \\"initializer\\": {},
+      \\"kind\\": \\"class\\",
+      \\"locationInModule\\": {
+        \\"filename\\": \\"lib/main.ts\\",
+        \\"line\\": 19
+      },
+      \\"methods\\": [
+        {
+          \\"docs\\": {
+            \\"summary\\": \\"Adds the two operands.\\"
+          },
+          \\"locationInModule\\": {
+            \\"filename\\": \\"lib/main.ts\\",
+            \\"line\\": 24
+          },
+          \\"name\\": \\"add\\",
+          \\"parameters\\": [
+            {
+              \\"docs\\": {
+                \\"summary\\": \\"operands.\\"
+              },
+              \\"name\\": \\"ops\\",
+              \\"type\\": {
+                \\"fqn\\": \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\"
+              }
+            }
+          ],
+          \\"returns\\": {
+            \\"type\\": {
+              \\"primitive\\": \\"number\\"
+            }
+          }
+        },
+        {
+          \\"docs\\": {
+            \\"summary\\": \\"Multiplies the two operands.\\"
+          },
+          \\"locationInModule\\": {
+            \\"filename\\": \\"lib/main.ts\\",
+            \\"line\\": 40
+          },
+          \\"name\\": \\"mul\\",
+          \\"parameters\\": [
+            {
+              \\"docs\\": {
+                \\"summary\\": \\"operands.\\"
+              },
+              \\"name\\": \\"ops\\",
+              \\"type\\": {
+                \\"fqn\\": \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\"
+              }
+            }
+          ],
+          \\"returns\\": {
+            \\"type\\": {
+              \\"primitive\\": \\"number\\"
+            }
+          }
+        },
+        {
+          \\"docs\\": {
+            \\"summary\\": \\"Subtracts the two operands.\\"
+          },
+          \\"locationInModule\\": {
+            \\"filename\\": \\"lib/main.ts\\",
+            \\"line\\": 32
+          },
+          \\"name\\": \\"sub\\",
+          \\"parameters\\": [
+            {
+              \\"docs\\": {
+                \\"summary\\": \\"operands.\\"
+              },
+              \\"name\\": \\"ops\\",
+              \\"type\\": {
+                \\"fqn\\": \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\"
+              }
+            }
+          ],
+          \\"returns\\": {
+            \\"type\\": {
+              \\"primitive\\": \\"number\\"
+            }
+          }
+        }
+      ],
+      \\"name\\": \\"Calculator\\"
+    },
+    \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\": {
+      \\"assembly\\": \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060\\",
+      \\"datatype\\": true,
+      \\"docs\\": {
+        \\"summary\\": \\"Math operands.\\"
+      },
+      \\"fqn\\": \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\",
+      \\"kind\\": \\"interface\\",
+      \\"locationInModule\\": {
+        \\"filename\\": \\"lib/main.ts\\",
+        \\"line\\": 4
+      },
+      \\"name\\": \\"Operands\\",
+      \\"properties\\": [
+        {
+          \\"abstract\\": true,
+          \\"docs\\": {
+            \\"summary\\": \\"Left-hand side operand.\\"
+          },
+          \\"immutable\\": true,
+          \\"locationInModule\\": {
+            \\"filename\\": \\"lib/main.ts\\",
+            \\"line\\": 8
+          },
+          \\"name\\": \\"lhs\\",
+          \\"type\\": {
+            \\"primitive\\": \\"number\\"
+          }
+        },
+        {
+          \\"abstract\\": true,
+          \\"docs\\": {
+            \\"summary\\": \\"Right-hand side operand.\\"
+          },
+          \\"immutable\\": true,
+          \\"locationInModule\\": {
+            \\"filename\\": \\"lib/main.ts\\",
+            \\"line\\": 13
+          },
+          \\"name\\": \\"rhs\\",
+          \\"type\\": {
+            \\"primitive\\": \\"number\\"
+          }
+        }
+      ]
+    }
+  },
+  \\"version\\": \\"0.0.0\\",
+  \\"fingerprint\\": \\"F2Ja2YDGjKNYeGATUA/z5rZjbzgcQStHaXQMJ2VJRjg=\\"
+}
+",
+  "MyPackage/AssemblyInfo.cs": "using Amazon.JSII.Runtime.Deputy;
+
+[assembly: JsiiAssembly(\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060\\", \\"0.0.0\\", \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz\\")]
+",
+  "MyPackage/MyPackage.csproj": "<Project Sdk=\\"Microsoft.NET.Sdk\\">
+  <PropertyGroup>
+    <!-- Package Identification -->
+    <Description>4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060</Description>
+    <PackageId>MyPackage</PackageId>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageVersion>0.0.0</PackageVersion>
+    <!-- Additional Metadata -->
+    <Authors>generated@generated.com</Authors>
+    <Language>en-US</Language>
+    <ProjectUrl>http://generated</ProjectUrl>
+    <RepositoryUrl>http://generated</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <!-- Build Configuration -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <IncludeSymbols>true</IncludeSymbols>
+    <IncludeSource>true</IncludeSource>
+    <Nullable>enable</Nullable>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz\\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.12.0,2.0.0)\\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <NoWarn>0612,0618</NoWarn>
+  </PropertyGroup>
+</Project>
+
+",
+  "MyPackage/MyPackage/Calculator.cs": "using Amazon.JSII.Runtime.Deputy;
+
+#pragma warning disable CS0672,CS0809,CS1591
+
+namespace MyPackage
+{
+    /// <summary>A sophisticaed multi-language calculator.</summary>
+    [JsiiClass(nativeType: typeof(MyPackage.Calculator), fullyQualifiedName: \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator\\")]
+    public class Calculator : DeputyBase
+    {
+        public Calculator(): base(new DeputyProps(System.Array.Empty<object>()))
+        {
+        }
+
+        /// <summary>Used by jsii to construct an instance of this class from a Javascript-owned object reference</summary>
+        /// <param name=\\"reference\\">The Javascript-owned object reference</param>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        protected Calculator(ByRefValue reference): base(reference)
+        {
+        }
+
+        /// <summary>Used by jsii to construct an instance of this class from DeputyProps</summary>
+        /// <param name=\\"props\\">The deputy props</param>
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        protected Calculator(DeputyProps props): base(props)
+        {
+        }
+
+        /// <summary>Adds the two operands.</summary>
+        /// <param name=\\"ops\\">operands.</param>
+        [JsiiMethod(name: \\"add\\", returnsJson: \\"{\\\\\\"type\\\\\\":{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}}\\", parametersJson: \\"[{\\\\\\"docs\\\\\\":{\\\\\\"summary\\\\\\":\\\\\\"operands.\\\\\\"},\\\\\\"name\\\\\\":\\\\\\"ops\\\\\\",\\\\\\"type\\\\\\":{\\\\\\"fqn\\\\\\":\\\\\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\\\\\"}}]\\")]
+        public virtual double Add(MyPackage.IOperands ops)
+        {
+            return InvokeInstanceMethod<double>(new System.Type[]{typeof(MyPackage.IOperands)}, new object[]{ops});
+        }
+
+        /// <summary>Multiplies the two operands.</summary>
+        /// <param name=\\"ops\\">operands.</param>
+        [JsiiMethod(name: \\"mul\\", returnsJson: \\"{\\\\\\"type\\\\\\":{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}}\\", parametersJson: \\"[{\\\\\\"docs\\\\\\":{\\\\\\"summary\\\\\\":\\\\\\"operands.\\\\\\"},\\\\\\"name\\\\\\":\\\\\\"ops\\\\\\",\\\\\\"type\\\\\\":{\\\\\\"fqn\\\\\\":\\\\\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\\\\\"}}]\\")]
+        public virtual double Mul(MyPackage.IOperands ops)
+        {
+            return InvokeInstanceMethod<double>(new System.Type[]{typeof(MyPackage.IOperands)}, new object[]{ops});
+        }
+
+        /// <summary>Subtracts the two operands.</summary>
+        /// <param name=\\"ops\\">operands.</param>
+        [JsiiMethod(name: \\"sub\\", returnsJson: \\"{\\\\\\"type\\\\\\":{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}}\\", parametersJson: \\"[{\\\\\\"docs\\\\\\":{\\\\\\"summary\\\\\\":\\\\\\"operands.\\\\\\"},\\\\\\"name\\\\\\":\\\\\\"ops\\\\\\",\\\\\\"type\\\\\\":{\\\\\\"fqn\\\\\\":\\\\\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\\\\\"}}]\\")]
+        public virtual double Sub(MyPackage.IOperands ops)
+        {
+            return InvokeInstanceMethod<double>(new System.Type[]{typeof(MyPackage.IOperands)}, new object[]{ops});
+        }
+    }
+}
+",
+  "MyPackage/MyPackage/IOperands.cs": "using Amazon.JSII.Runtime.Deputy;
+
+#pragma warning disable CS0672,CS0809,CS1591
+
+namespace MyPackage
+{
+    /// <summary>Math operands.</summary>
+    [JsiiInterface(nativeType: typeof(IOperands), fullyQualifiedName: \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\")]
+    public interface IOperands
+    {
+        /// <summary>Left-hand side operand.</summary>
+        [JsiiProperty(name: \\"lhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
+        double Lhs
+        {
+            get;
+        }
+
+        /// <summary>Right-hand side operand.</summary>
+        [JsiiProperty(name: \\"rhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
+        double Rhs
+        {
+            get;
+        }
+    }
+}
+",
+  "MyPackage/MyPackage/Internal/DependencyResolution/Anchor.cs": "#pragma warning disable CS0672,CS0809,CS1591
+
+namespace MyPackage.Internal.DependencyResolution
+{
+    public sealed class Anchor
+    {
+        public Anchor()
+        {
+        }
+    }
+}
+",
+  "MyPackage/MyPackage/Operands.cs": "using Amazon.JSII.Runtime.Deputy;
+
+#pragma warning disable CS0672,CS0809,CS1591
+
+namespace MyPackage
+{
+    #pragma warning disable CS8618
+
+    /// <summary>Math operands.</summary>
+    [JsiiByValue(fqn: \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\")]
+    public class Operands : MyPackage.IOperands
+    {
+        /// <summary>Left-hand side operand.</summary>
+        [JsiiProperty(name: \\"lhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\", isOverride: true)]
+        public double Lhs
+        {
+            get;
+            set;
+        }
+
+        /// <summary>Right-hand side operand.</summary>
+        [JsiiProperty(name: \\"rhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\", isOverride: true)]
+        public double Rhs
+        {
+            get;
+            set;
+        }
+    }
+}
+",
+  "MyPackage/MyPackage/OperandsProxy.cs": "using Amazon.JSII.Runtime.Deputy;
+
+#pragma warning disable CS0672,CS0809,CS1591
+
+namespace MyPackage
+{
+    /// <summary>Math operands.</summary>
+    [JsiiTypeProxy(nativeType: typeof(IOperands), fullyQualifiedName: \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\")]
+    internal sealed class OperandsProxy : DeputyBase, MyPackage.IOperands
+    {
+        private OperandsProxy(ByRefValue reference): base(reference)
+        {
+        }
+
+        /// <summary>Left-hand side operand.</summary>
+        [JsiiProperty(name: \\"lhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
+        public double Lhs
+        {
+            get => GetInstanceProperty<double>();
+        }
+
+        /// <summary>Right-hand side operand.</summary>
+        [JsiiProperty(name: \\"rhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
+        public double Rhs
+        {
+            get => GetInstanceProperty<double>();
+        }
+    }
+}
+",
+}
+`;
+
 exports[`java output 1`] = `
 Object {
   "src/main/java/mypackage/$Module.java": "package mypackage;

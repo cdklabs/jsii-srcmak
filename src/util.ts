@@ -58,7 +58,7 @@ export async function exec(moduleName: string, args: string[] = [], options: Spa
 }
 
 /**
- * This validates that the Python module name and Java package name
+ * This validates that the Python module name, Java package name, and C# namespace
  * conform to language-specific constraints.
  * 
  * @param options Options set by the consumer
@@ -71,5 +71,9 @@ export function validateOptions(options: Options) {
 
   if (options.java?.package.includes('-')) {
     throw new Error(`Java package [${options.java.package}] may not contain "-"`);
+  }
+
+  if (options.csharp?.namespace.includes('-')) {
+    throw new Error(`C# namespace [${options.csharp.namespace}] may not contain "-"`);
   }
 }
