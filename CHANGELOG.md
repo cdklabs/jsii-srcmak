@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.38 (2020-09-22)
+
+
+### Features
+
+* .NET Support ([#73](https://github.com/eladb/jsii-srcmak/issues/73)) ([a0dc5ea](https://github.com/eladb/jsii-srcmak/commit/a0dc5ea0d53daf62df62601372771a2be15d74ec))
+
 ### 0.1.37 (2020-09-21)
 
 ### 0.1.36 (2020-09-17)
