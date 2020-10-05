@@ -1,5 +1,5 @@
-import { srcmak } from './srcmak';
 import * as yargs from 'yargs';
+import { srcmak } from './srcmak';
 
 async function main() {
   const args = yargs
@@ -42,7 +42,7 @@ async function main() {
       jsii: {
         path: jsiiPath,
       },
-    }
+    };
   }
 
   function parsePythonOptions() {
@@ -56,7 +56,7 @@ async function main() {
         outdir: outdir,
         moduleName: moduleName,
       },
-    }
+    };
   }
 
   function parseJavaOptions() {
@@ -70,7 +70,7 @@ async function main() {
         outdir: outdir,
         package: packageName,
       },
-    }
+    };
   }
 
   function parseCSharpOptions() {
@@ -84,7 +84,7 @@ async function main() {
         outdir: outdir,
         namespace: namespace,
       },
-    }
+    };
   }
 
   function parseDepOption() {
