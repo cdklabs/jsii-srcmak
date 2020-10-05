@@ -1,9 +1,9 @@
 
-import * as fs from 'fs-extra';
 import * as path from 'path';
-import { snapshotDirectory } from './util';
+import * as fs from 'fs-extra';
 import { srcmak } from '../src';
 import { mkdtemp } from '../src/util';
+import { snapshotDirectory } from './util';
 
 jest.setTimeout(60_000); // 1min
 
@@ -31,8 +31,7 @@ test('compilation error fails and includes error message', async () => {
     await fs.writeFile(path.join(source, 'index.ts'), 'I DO NOT COMPUTE');
 
     let error;
-    try { await srcmak(source); }
-    catch (e) { error = e; }
+    try { await srcmak(source); } catch (e) { error = e; }
 
     expect(error).toBeDefined();
     expect(error.message).toMatch(/Cannot find name 'COMPUTE'/);
@@ -69,7 +68,7 @@ test('python + different entrypoint + submodule', async () => {
       });
 
       const dir = await snapshotDirectory(target, {
-        excludeFiles: [ '@0.0.0.jsii.tgz' ],
+        excludeFiles: ['@0.0.0.jsii.tgz'],
       });
       expect(dir).toMatchSnapshot();
     });
@@ -105,8 +104,8 @@ test('java + different entrypoint', async () => {
       });
 
       const dir = await snapshotDirectory(target, {
-        excludeLines: [ /.*@javax.annotation.Generated.*/ ],
-        excludeFiles: [ '@0.0.0.jsii.tgz' ],
+        excludeLines: [/.*@javax.annotation.Generated.*/],
+        excludeFiles: ['@0.0.0.jsii.tgz'],
       });
       expect(dir).toMatchSnapshot();
     });
@@ -142,7 +141,7 @@ test('csharp + different entrypoint', async () => {
       });
 
       const dir = await snapshotDirectory(target, {
-        excludeFiles: [ '0.0.0.tgz' ],
+        excludeFiles: ['0.0.0.tgz'],
       });
       expect(dir).toMatchSnapshot();
     });
@@ -182,7 +181,7 @@ test('outputJsii can be used to look at the jsii file', async () => {
       await srcmak(source, { jsii: { path: outputPath } });
       expect(await fs.readJson(outputPath)).toMatchSnapshot();
     });
-  })
+  });
 });
 
 test('java with invalid package', async () => {

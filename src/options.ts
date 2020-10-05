@@ -20,12 +20,12 @@ export interface Options {
 
   /**
    * Key for the module to prevent JSII collisions.
-   * 
+   *
    * Use your own if it's project-unique, otherwise use default.
-   * 
+   *
    * @default - hash of the basepath to the module
    */
-  moduleKey?: string
+  moduleKey?: string;
 
   /**
    * Produce python code.
@@ -35,14 +35,14 @@ export interface Options {
 
   /**
    * Produces java code under src/main/
-   * 
+   *
    * @default - java is not generated
    */
   java?: JavaOutputOptions;
 
   /**
    * Produces C# code.
-   * 
+   *
    * @default - C# is not generated
    */
   csharp?: CSharpOutputOptions;
@@ -63,7 +63,7 @@ export interface PythonOutputOptions {
 
   /**
    * The name of the the python module to generate.
-   * 
+   *
    * This must follow the standard Python module name conventions.
    * For example, it cannot include a hyphen ('-')
    */
@@ -78,7 +78,7 @@ export interface JavaOutputOptions {
 
   /**
    * The name of the java package to generate
-   * 
+   *
    * This must follow standard Java package conventions.
    * For example, it cannot include a hyphen ('-')
    */
@@ -93,7 +93,7 @@ export interface CSharpOutputOptions {
 
   /**
    * The root namespace to generate types in
-   * 
+   *
    * This must follow standard C# namespace conventions.
    * For example, it cannot include a hyphen ('-')
    */

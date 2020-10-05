@@ -86,7 +86,7 @@ test('python output', async () => {
     );
 
     expect(await snapshotDirectory(outdir, {
-      excludeFiles: [ '@0.0.0.jsii.tgz' ],
+      excludeFiles: ['@0.0.0.jsii.tgz'],
     })).toMatchSnapshot();
   });
 });
@@ -103,8 +103,8 @@ test('java output', async () => {
     );
 
     expect(await snapshotDirectory(outdir, {
-      excludeLines: [ /.*@javax.annotation.Generated.*/ ],
-      excludeFiles: [ '@0.0.0.jsii.tgz' ],
+      excludeLines: [/.*@javax.annotation.Generated.*/],
+      excludeFiles: ['@0.0.0.jsii.tgz'],
     })).toMatchSnapshot();
   });
 });
@@ -121,21 +121,21 @@ test('csharp output', async () => {
     );
 
     expect(await snapshotDirectory(outdir, {
-      excludeFiles: [ '0.0.0.tgz' ],
+      excludeFiles: ['0.0.0.tgz'],
     })).toMatchSnapshot();
   });
 });
 
 test('dependencies', async () => {
-  await mkdtemp(async srcdir => {
-    await fs.writeFile(path.join(srcdir, 'index.ts'), `
+  await mkdtemp(async srcdir2 => {
+    await fs.writeFile(path.join(srcdir2, 'index.ts'), `
       import * as fs from 'fs';
       fs.writeFileSync('foo.bar', 'hello');
     `);
 
     // resolve against *this* executable
     const dep = path.dirname(require.resolve('@types/node/package.json'));
-    srcmakcli(srcdir, `--dep ${dep}`);
+    srcmakcli(srcdir2, `--dep ${dep}`);
   });
 });
 

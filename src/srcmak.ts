@@ -1,10 +1,10 @@
-import * as fs from 'fs-extra';
 import * as path from 'path';
-import { exec, mkdtemp } from './util';
+import { promisify } from 'util';
+import * as fs from 'fs-extra';
+import { ncp as _ncp } from 'ncp';
 import { compile } from './compile';
 import { Options } from './options';
-import { ncp as _ncp } from 'ncp';
-import { promisify } from 'util';
+import { exec, mkdtemp } from './util';
 
 const ncp = promisify(_ncp);
 
@@ -28,7 +28,7 @@ export async function srcmak(srcdir: string, options: Options = { }) {
     }
 
     // run pacmak to generate code
-    await exec(pacmakModule, [ '--code-only' ], { cwd: workdir });
+    await exec(pacmakModule, ['--code-only'], { cwd: workdir });
 
     // extract code based on selected languages
     if (options.python) {
@@ -37,7 +37,7 @@ export async function srcmak(srcdir: string, options: Options = { }) {
       const target = path.join(options.python.outdir, reldir);
       await fs.move(source, target, { overwrite: true });
     }
-    
+
     if (options.java) {
       const source = path.resolve(path.join(workdir, 'dist/java/src/'));
       const target = path.join(options.java.outdir, 'src/');

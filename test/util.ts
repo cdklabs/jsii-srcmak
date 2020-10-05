@@ -1,5 +1,5 @@
-import * as fs from 'fs-extra';
 import * as path from 'path';
+import * as fs from 'fs-extra';
 
 interface SnapshotOptions {
   excludeLines?: RegExp[];
@@ -15,7 +15,7 @@ export async function snapshotDirectory(basedir: string, excludeOptions: Snapsho
   const absdir = path.join(basedir, reldir);
   const { excludeLines, excludeFiles } = excludeOptions;
   for (const file of await fs.readdir(absdir)) {
-    let skip = false
+    let skip = false;
     excludeFiles?.forEach((excludeFile) => {
       if (file.includes(excludeFile)) {
         skip = true;

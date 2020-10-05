@@ -1,7 +1,7 @@
-import * as fs from 'fs-extra';
-import * as path from 'path';
-import * as os from 'os';
 import { spawn, SpawnOptions } from 'child_process';
+import * as os from 'os';
+import * as path from 'path';
+import * as fs from 'fs-extra';
 import { Options } from './options';
 
 export async function mkdtemp(closure: (dir: string) => Promise<void>) {
@@ -14,7 +14,7 @@ export async function mkdtemp(closure: (dir: string) => Promise<void>) {
     } else {
       console.error(`NOTE: Temp directory retained (RETAIN_TMP=1): ${workdir}`);
     }
-  } catch(e) {
+  } catch (e) {
     console.error(`NOTE: Temp directory retained due to an error: ${workdir}`);
     throw e;
   }
@@ -25,9 +25,9 @@ export async function exec(moduleName: string, args: string[] = [], options: Spa
 
     const opts: SpawnOptions = {
       ...options,
-      stdio: [ 'inherit', 'pipe', 'pipe' ],
+      stdio: ['inherit', 'pipe', 'pipe'],
     };
-    const child = spawn(process.execPath, [ moduleName, ...args ], opts);
+    const child = spawn(process.execPath, [moduleName, ...args], opts);
 
     const data = new Array<Buffer>();
     child.stdout?.on('data', chunk => data.push(chunk));
@@ -49,8 +49,7 @@ export async function exec(moduleName: string, args: string[] = [], options: Spa
     child.once('exit', code => {
       if (code === 0) {
         return ok();
-      }
-      else {
+      } else {
         return fail(newError(`jsii compilation failed with non-zero exit code: ${code}`));
       }
     });
@@ -60,7 +59,7 @@ export async function exec(moduleName: string, args: string[] = [], options: Spa
 /**
  * This validates that the Python module name, Java package name, and C# namespace
  * conform to language-specific constraints.
- * 
+ *
  * @param options Options set by the consumer
  * @throws error if options do not conform
  */

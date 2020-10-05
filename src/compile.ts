@@ -1,8 +1,8 @@
-import * as fs from 'fs-extra';
-import * as path from 'path';
-import { exec, validateOptions } from './util';
-import { Options } from './options';
 import * as crypto from 'crypto';
+import * as path from 'path';
+import * as fs from 'fs-extra';
+import { Options } from './options';
+import { exec, validateOptions } from './util';
 
 const compilerModule = require.resolve('jsii/bin/jsii');
 
@@ -12,7 +12,7 @@ const compilerModule = require.resolve('jsii/bin/jsii');
 export async function compile(workdir: string, options: Options) {
   validateOptions(options);
 
-  const args = [ '--silence-warnings', 'reserved-word' ];
+  const args = ['--silence-warnings', 'reserved-word'];
   const entrypoint = options.entrypoint ?? 'index.ts';
 
   if (path.extname(entrypoint) !== '.ts') {
