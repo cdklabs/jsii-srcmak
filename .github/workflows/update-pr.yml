@@ -9,10 +9,10 @@ jobs:
     if: ${{ github.event.issue.pull_request && contains(github.event.comment.body, '@projen update') }}
     runs-on: ubuntu-latest
     steps:
-      - name: Dump GitHub context
+      - name: PR head
         env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
+          PR_URL: ${{ toJson(github.event.pull_request.url) }}
+        run: curl --silent $PR_URL | jq ".head.ref"
 #       - uses: actions/checkout@v2
 #         env:
 #           REF: github.event.issue.pull_request
