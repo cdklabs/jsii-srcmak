@@ -9,22 +9,26 @@ jobs:
     if: ${{ github.event.issue.pull_request && contains(github.event.comment.body, '@projen update') }}
     runs-on: ubuntu-latest
     steps:
-      - run: echo "$FOO"
+      - name: Get pull request branch
+        id: query_pull_request
         env:
-          FOO: ${{ toJson(github.event.pull_request) }}
-#       - uses: actions/checkout@v2
-#         env:
-#           REF: github.event.issue.pull_request
-#       - run: yarn install --frozen-lockfile
-#       - run: yarn projen
-#       - run: yarn build
-#       - name: Commit files
-#         run: |
-#           git config --local user.email "action@github.com"
-#           git config --local user.name "GitHub Action"
-#           git commit -m "chore: generate files" -a
-#       - name: Push changes
-#         uses: ad-m/github-push-action@master
-#         with:
-#           github_token: ${{ secrets.GITHUB_TOKEN }}
-#           branch: ${{ github.ref }}
+          PULL_REQUEST_URL: ${{ github.event.issue.pull_request.url }}
+        run: |
+          BRANCH_STR=$(curl --silent $PULL_REQUEST_URL | jq ".head.ref")
+          echo "::set-output name=branch::$(node -p $BRANCH_STR)"
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ steps.query_pull_request.outputs.branch }}
+      - run: yarn install --frozen-lockfile
+      - run: yarn projen
+      - run: yarn build
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "chore: generate files" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          branch: ${{ steps.query_pull_request.outputs.branch }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
