@@ -14,7 +14,8 @@ jobs:
         env:
           PULL_REQUEST_URL: ${{ github.event.issue.pull_request.url }}
         run: |
-          echo "::set-output name=branch::$(curl --silent $PULL_REQUEST_URL | jq ".head.ref")"
+          BRANCH_STR=$(curl --silent $PULL_REQUEST_URL | jq ".head.ref")
+          echo "::set-output name=branch::$(node -p $BRANCH_STR)"
       - uses: actions/checkout@v2
         with:
           ref: ${{ steps.query_pull_request.outputs.branch }}
