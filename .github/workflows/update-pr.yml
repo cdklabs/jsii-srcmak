@@ -9,9 +9,10 @@ jobs:
     if: ${{ github.event.issue.pull_request && contains(github.event.comment.body, '@projen update') }}
     runs-on: ubuntu-latest
     steps:
-      - run: echo "$FOO"
+      - name: Dump GitHub context
         env:
-          FOO: ${{ toJson(github.event.pull_request) }}
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
 #       - uses: actions/checkout@v2
 #         env:
 #           REF: github.event.issue.pull_request
