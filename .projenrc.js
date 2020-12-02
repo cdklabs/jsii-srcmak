@@ -9,7 +9,7 @@ const project = new TypeScriptProject({
   stability: 'experimental',
 
   bin: {
-    'jsii-srcmak': 'bin/jsii-srcmak'
+    'jsii-srcmak': 'bin/jsii-srcmak',
   },
 
   devDeps: [
@@ -23,7 +23,7 @@ const project = new TypeScriptProject({
     'jsii-pacmak',
     'fs-extra',
     'ncp',
-    'yargs'
+    'yargs',
   ],
 
   releaseToNpm: true,
