@@ -7,10 +7,10 @@ on:
 jobs:
   update_pr_branch:
     name: PR comment
-    if: ${{ github.event.issue.pull_request && github.event.issue.comment.body == "@projen update" }}
+    if: ${{ github.event.issue.pull_request }}
     runs-on: ubuntu-latest
     steps:
-      - run: echo "hello!"
+      - run: echo "hello! ${{ github.event.issue.comment.body }}"
 #      - uses: actions/checkout@v2
 #      - run: yarn install --frozen-lockfile
 #      - run: yarn projen
