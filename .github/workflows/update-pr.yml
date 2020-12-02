@@ -11,8 +11,13 @@ jobs:
     steps:
       - name: PR head
         env:
-          PR_URL: ${{ github.event.issue.pull_request.url }}
-        run: curl --silent $PR_URL | jq ".head.ref"
+          PULL_REQUEST_URL: ${{ github.event.issue.pull_request.url }}
+          REPOSITORY_URL: ${{ github.repositoryUrl }}
+        run: |
+          BRANCH=$(curl --silent $PULL_REQUEST_URL | jq ".head.ref")
+          git clone $REPOSITORY_URL -b $BRANCH workdir
+          cd workdir
+          ls
 #       - uses: actions/checkout@v2
 #         env:
 #           REF: github.event.issue.pull_request
