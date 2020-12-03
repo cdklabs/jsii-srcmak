@@ -55,6 +55,7 @@ junit.xml
 !/.github/dependabot.yml
 !/.github/workflows/projenupgrade.yml
 !/.github/pull_request_template.md
+!/.github/workflows/rebuild-bot.yml
 !/tsconfig.json
 !/src
 !/tsconfig.jest.json
