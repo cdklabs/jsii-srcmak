@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.1.161 (2020-12-22)
+
+
+### Features
+
+* .NET Support ([#73](https://github.com/eladb/jsii-srcmak/issues/73)) ([a0dc5ea](https://github.com/eladb/jsii-srcmak/commit/a0dc5ea0d53daf62df62601372771a2be15d74ec))
+* export "Options" ([18cb8f3](https://github.com/eladb/jsii-srcmak/commit/18cb8f354640fd39077ccf362a5112a3bcd1befa))
+* initial version ([158e2dd](https://github.com/eladb/jsii-srcmak/commit/158e2dd356d54fd180fdb6ebe54a2dd06f9a2469))
+* Java support ([#2](https://github.com/eladb/jsii-srcmak/issues/2)) ([9e84d6e](https://github.com/eladb/jsii-srcmak/commit/9e84d6ee37662ba699d4a72f1656ca03d5fd949f))
+* make "compile" private ([38fd95f](https://github.com/eladb/jsii-srcmak/commit/38fd95f9e176121103f2986ccae6890e81e487ed))
+* make this a real thang ([b6c7c7e](https://github.com/eladb/jsii-srcmak/commit/b6c7c7efacd054dc64f72b342194436650e1bf2f))
+* outputJsii ([1fd47b1](https://github.com/eladb/jsii-srcmak/commit/1fd47b13af3f18cab55ec0b26be408c1a78a16bc))
+
+
+### Bug Fixes
+
+* fails if java output directory does not exist ([6af49fe](https://github.com/eladb/jsii-srcmak/commit/6af49fefac3c4dadc0ca19ec3c56a44601548390))
+* java output location moved to src/main ([#3](https://github.com/eladb/jsii-srcmak/issues/3)) ([96c76e4](https://github.com/eladb/jsii-srcmak/commit/96c76e4e23568b55d13721bb302b36b156bdf20f)), closes [/github.com/awslabs/cdk8s/pull/233#discussion_r439811482](https://github.com/eladb//github.com/awslabs/cdk8s/pull/233/issues/discussion_r439811482)
+* Package name collisions ([#22](https://github.com/eladb/jsii-srcmak/issues/22)) ([766de96](https://github.com/eladb/jsii-srcmak/commit/766de96d655463dadf5a9578ba38d47121be447b))
+
 ### 0.1.160 (2020-12-22)
 
 ### 0.1.159 (2020-12-22)
