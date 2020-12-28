@@ -1,9 +1,9 @@
-const { TypeScriptProject, Semver, Jest, Eslint } = require('projen');
+const { TypeScriptProject } = require('projen');
 
 const project = new TypeScriptProject({
   name: 'jsii-srcmak',
   description: 'generate source code in multiple languages from typescript',
-  repository: 'https://github.com/eladb/jsii-srcmak.git',
+  repository: 'https://github.com/aws/jsii-srcmak.git',
   authorName: 'Elad Ben-Israel',
   authorEmail: 'benisrae@amazon.com',
   stability: 'experimental',
