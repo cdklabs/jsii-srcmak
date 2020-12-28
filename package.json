@@ -62,7 +62,7 @@
   "keywords": [],
   "main": "lib/index.js",
   "license": "Apache-2.0",
-  "version": "0.1.166",
+  "version": "0.1.167",
   "jest": {
     "clearMocks": true,
     "collectCoverage": true,
