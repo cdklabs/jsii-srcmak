@@ -643,9 +643,9 @@
   integrity sha512-rouEWBImiRaSJsVA+ITTFM6ZxibuAlTuNOCyxVbwreu6k6+ujs7DfnU9o+PShFhET78pMBl3eH+AGSI5eOTkPA==
 
 "@types/node@^10.17.0":
-  version "10.17.49"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.49.tgz#ecf0b67bab4b84d0ec9b0709db4aac3824a51c4a"
-  integrity sha512-PGaJNs5IZz5XgzwJvL/1zRfZB7iaJ5BydZ8/Picm+lUNYoNO9iVTQkVy5eUh0dZDrx3rBOIs3GCbCRmMuYyqwg==
+  version "10.17.50"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.50.tgz#7a20902af591282aa9176baefc37d4372131c32d"
+  integrity sha512-vwX+/ija9xKc/z9VqMCdbf4WYcMTGsI0I/L/6shIF3qXURxZOhPQlPRHtjTpiNhAwn0paMJzlOQqw6mAGEQnTA==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -1406,9 +1406,9 @@ concat-stream@^2.0.0:
     typedarray "^0.0.6"
 
 constructs@^3.0.4:
-  version "3.2.78"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.2.78.tgz#5357c744583441cd6384c7d1078b2f0953832411"
-  integrity sha512-T6Jr0SKwRoKKqCrI1yRpYBCv5dWguzVcDpaeghabfY+i8qNvYpLdfAUQjihLlltdAGn+Izes7607BqVlSpIIdg==
+  version "3.2.82"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.2.82.tgz#bc5decf72106ff4e47b50ea2d7295aeb4bdda722"
+  integrity sha512-80EOj+tfy7kSNEgj/xeJLCjRsQ7TpMdkNox05BTTxbLWh33O8W2jYHqzlI8BmPXtCyRoPUXDVkOsZJtT2BoqEA==
 
 contains-path@^0.1.0:
   version "0.1.0"
@@ -4626,6 +4626,7 @@ projen@^0.9.3:
   version "0.9.3"
   resolved "https://registry.yarnpkg.com/projen/-/projen-0.9.3.tgz#a81835d45362aee8662729a705a926f39ed55cfb"
   integrity sha512-ZSRO6ZEiAPlxqXVqlUxE4/R8HzpKjre3mbv/udASss1xz1cyvB9ZEk6kzxA0b0nEMtirwXI08zGFBS6nt7PFIw==
+
   dependencies:
     "@iarna/toml" "^2.2.5"
     chalk "^4.1.0"
