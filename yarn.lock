@@ -1392,9 +1392,9 @@ concat-stream@^2.0.0:
     typedarray "^0.0.6"
 
 constructs@^3.0.4:
-  version "3.2.91"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.2.91.tgz#c0541dc75650ca642d2fef58fb957547f54caa81"
-  integrity sha512-Cu6ILCOug7kWEA6WtV8BKhQYSsnR16h3z3YBN9akUhRo/hZX9L/LR+qJj8BJaYcuwc6lc3i6qwmZj8uM+WsjFg==
+  version "3.2.93"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.2.93.tgz#25d3d6643f5c76bf4eeff836c10b509a65123056"
+  integrity sha512-mhiCUCygNvc0GCD2g3QP94j8AoMQayg6OoCchJrkUGagwPtbCQsWyS0ehNimxxc9qiFqNTaw6/Awm78rQEPrXQ==
 
 contains-path@^0.1.0:
   version "0.1.0"
