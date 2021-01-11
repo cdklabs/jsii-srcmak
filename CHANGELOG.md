@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.189](https://github.com/eladb/jsii-srcmak/compare/v0.1.188...v0.1.189) (2021-01-11)
+
 ### [0.1.188](https://github.com/eladb/jsii-srcmak/compare/v0.1.187...v0.1.188) (2021-01-11)
 
 ### [0.1.187](https://github.com/eladb/jsii-srcmak/compare/v0.1.186...v0.1.187) (2021-01-09)
