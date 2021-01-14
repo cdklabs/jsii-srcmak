@@ -2,108 +2,6 @@
 
 exports[`csharp + different entrypoint 1`] = `
 Object {
-  "Hello.World/.jsii": "{
-  \\"author\\": {
-    \\"name\\": \\"generated@generated.com\\",
-    \\"roles\\": [
-      \\"author\\"
-    ]
-  },
-  \\"description\\": \\"csharppackage\\",
-  \\"homepage\\": \\"http://generated\\",
-  \\"jsiiVersion\\": \\"1.12.0 (build 5ddc9f2)\\",
-  \\"license\\": \\"Apache-2.0\\",
-  \\"name\\": \\"csharppackage\\",
-  \\"repository\\": {
-    \\"type\\": \\"git\\",
-    \\"url\\": \\"http://generated\\"
-  },
-  \\"schema\\": \\"jsii/0.10.0\\",
-  \\"targets\\": {
-    \\"dotnet\\": {
-      \\"namespace\\": \\"Hello.World\\",
-      \\"packageId\\": \\"Hello.World\\"
-    },
-    \\"js\\": {
-      \\"npm\\": \\"csharppackage\\"
-    }
-  },
-  \\"types\\": {
-    \\"csharppackage.Hello\\": {
-      \\"assembly\\": \\"csharppackage\\",
-      \\"fqn\\": \\"csharppackage.Hello\\",
-      \\"initializer\\": {},
-      \\"kind\\": \\"class\\",
-      \\"locationInModule\\": {
-        \\"filename\\": \\"different/entry.ts\\",
-        \\"line\\": 7
-      },
-      \\"methods\\": [
-        {
-          \\"locationInModule\\": {
-            \\"filename\\": \\"different/entry.ts\\",
-            \\"line\\": 8
-          },
-          \\"name\\": \\"add\\",
-          \\"parameters\\": [
-            {
-              \\"name\\": \\"ops\\",
-              \\"type\\": {
-                \\"fqn\\": \\"csharppackage.Operands\\"
-              }
-            }
-          ],
-          \\"returns\\": {
-            \\"type\\": {
-              \\"primitive\\": \\"number\\"
-            }
-          }
-        }
-      ],
-      \\"name\\": \\"Hello\\"
-    },
-    \\"csharppackage.Operands\\": {
-      \\"assembly\\": \\"csharppackage\\",
-      \\"datatype\\": true,
-      \\"fqn\\": \\"csharppackage.Operands\\",
-      \\"kind\\": \\"interface\\",
-      \\"locationInModule\\": {
-        \\"filename\\": \\"different/entry.ts\\",
-        \\"line\\": 2
-      },
-      \\"name\\": \\"Operands\\",
-      \\"properties\\": [
-        {
-          \\"abstract\\": true,
-          \\"immutable\\": true,
-          \\"locationInModule\\": {
-            \\"filename\\": \\"different/entry.ts\\",
-            \\"line\\": 3
-          },
-          \\"name\\": \\"lhs\\",
-          \\"type\\": {
-            \\"primitive\\": \\"number\\"
-          }
-        },
-        {
-          \\"abstract\\": true,
-          \\"immutable\\": true,
-          \\"locationInModule\\": {
-            \\"filename\\": \\"different/entry.ts\\",
-            \\"line\\": 4
-          },
-          \\"name\\": \\"rhs\\",
-          \\"type\\": {
-            \\"primitive\\": \\"number\\"
-          }
-        }
-      ]
-    }
-  },
-  \\"version\\": \\"0.0.0\\",
-  \\"fingerprint\\": \\"mG6NnEA4XZ1m9xHiIMvxMdhoYlOfYkrtFxxKEuI8RdM=\\"
-}
-",
   "Hello.World/AssemblyInfo.cs": "using Amazon.JSII.Runtime.Deputy;
 
 [assembly: JsiiAssembly(\\"csharppackage\\", \\"0.0.0\\", \\"csharppackage-0.0.0.tgz\\")]
@@ -134,10 +32,13 @@ Object {
     <EmbeddedResource Include=\\"csharppackage-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.12.0,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.17.1,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
+    <!-- Silence [Obsolete] warnings -->
     <NoWarn>0612,0618</NoWarn>
+    <!-- Treat warnings symptomatic of code generation bugs as errors -->
+    <WarningsAsErrors>0108,0109</WarningsAsErrors>
   </PropertyGroup>
 </Project>
 
@@ -151,7 +52,7 @@ namespace Hello.World
     [JsiiClass(nativeType: typeof(Hello.World.Hello), fullyQualifiedName: \\"csharppackage.Hello\\")]
     public class Hello : DeputyBase
     {
-        public Hello(): base(new DeputyProps(System.Array.Empty<object>()))
+        public Hello(): base(new DeputyProps(System.Array.Empty<object?>()))
         {
         }
 
@@ -172,7 +73,7 @@ namespace Hello.World
         [JsiiMethod(name: \\"add\\", returnsJson: \\"{\\\\\\"type\\\\\\":{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}}\\", parametersJson: \\"[{\\\\\\"name\\\\\\":\\\\\\"ops\\\\\\",\\\\\\"type\\\\\\":{\\\\\\"fqn\\\\\\":\\\\\\"csharppackage.Operands\\\\\\"}}]\\")]
         public virtual double Add(Hello.World.IOperands ops)
         {
-            return InvokeInstanceMethod<double>(new System.Type[]{typeof(Hello.World.IOperands)}, new object[]{ops});
+            return InvokeInstanceMethod<double>(new System.Type[]{typeof(Hello.World.IOperands)}, new object[]{ops})!;
         }
     }
 }
@@ -196,6 +97,26 @@ namespace Hello.World
         double Rhs
         {
             get;
+        }
+
+        [JsiiTypeProxy(nativeType: typeof(IOperands), fullyQualifiedName: \\"csharppackage.Operands\\")]
+        internal sealed class _Proxy : DeputyBase, Hello.World.IOperands
+        {
+            private _Proxy(ByRefValue reference): base(reference)
+            {
+            }
+
+            [JsiiProperty(name: \\"lhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
+            public double Lhs
+            {
+                get => GetInstanceProperty<double>()!;
+            }
+
+            [JsiiProperty(name: \\"rhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
+            public double Rhs
+            {
+                get => GetInstanceProperty<double>()!;
+            }
         }
     }
 }
@@ -239,33 +160,6 @@ namespace Hello.World
     }
 }
 ",
-  "Hello.World/Hello/World/OperandsProxy.cs": "using Amazon.JSII.Runtime.Deputy;
-
-#pragma warning disable CS0672,CS0809,CS1591
-
-namespace Hello.World
-{
-    [JsiiTypeProxy(nativeType: typeof(IOperands), fullyQualifiedName: \\"csharppackage.Operands\\")]
-    internal sealed class OperandsProxy : DeputyBase, Hello.World.IOperands
-    {
-        private OperandsProxy(ByRefValue reference): base(reference)
-        {
-        }
-
-        [JsiiProperty(name: \\"lhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
-        public double Lhs
-        {
-            get => GetInstanceProperty<double>();
-        }
-
-        [JsiiProperty(name: \\"rhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
-        public double Rhs
-        {
-            get => GetInstanceProperty<double>();
-        }
-    }
-}
-",
 }
 `;
 
@@ -287,6 +181,7 @@ import java.util.Map;
 
 import software.amazon.jsii.JsiiModule;
 
+@software.amazon.jsii.Internal
 public final class $Module extends JsiiModule {
     private static final Map<String, String> MODULE_TYPES = load();
 
@@ -359,7 +254,7 @@ public class Hello extends software.amazon.jsii.JsiiObject {
     }
 
     public @org.jetbrains.annotations.NotNull java.lang.Number add(final @org.jetbrains.annotations.NotNull hello.world.Operands ops) {
-        return this.jsiiCall(\\"add\\", java.lang.Number.class, new Object[] { java.util.Objects.requireNonNull(ops, \\"ops is required\\") });
+        return software.amazon.jsii.Kernel.call(this, \\"add\\", software.amazon.jsii.NativeType.forClass(java.lang.Number.class), new Object[] { java.util.Objects.requireNonNull(ops, \\"ops is required\\") });
     }
 }
 ",
@@ -421,6 +316,7 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
     /**
      * An implementation for {@link Operands}
      */
+    @software.amazon.jsii.Internal
     final class Jsii$Proxy extends software.amazon.jsii.JsiiObject implements Operands {
         private final java.lang.Number lhs;
         private final java.lang.Number rhs;
@@ -431,30 +327,31 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
          */
         protected Jsii$Proxy(final software.amazon.jsii.JsiiObjectRef objRef) {
             super(objRef);
-            this.lhs = this.jsiiGet(\\"lhs\\", java.lang.Number.class);
-            this.rhs = this.jsiiGet(\\"rhs\\", java.lang.Number.class);
+            this.lhs = software.amazon.jsii.Kernel.get(this, \\"lhs\\", software.amazon.jsii.NativeType.forClass(java.lang.Number.class));
+            this.rhs = software.amazon.jsii.Kernel.get(this, \\"rhs\\", software.amazon.jsii.NativeType.forClass(java.lang.Number.class));
         }
 
         /**
          * Constructor that initializes the object based on literal property values passed by the {@link Builder}.
          */
-        private Jsii$Proxy(final java.lang.Number lhs, final java.lang.Number rhs) {
+        protected Jsii$Proxy(final java.lang.Number lhs, final java.lang.Number rhs) {
             super(software.amazon.jsii.JsiiObject.InitializationMode.JSII);
             this.lhs = java.util.Objects.requireNonNull(lhs, \\"lhs is required\\");
             this.rhs = java.util.Objects.requireNonNull(rhs, \\"rhs is required\\");
         }
 
         @Override
-        public java.lang.Number getLhs() {
+        public final java.lang.Number getLhs() {
             return this.lhs;
         }
 
         @Override
-        public java.lang.Number getRhs() {
+        public final java.lang.Number getRhs() {
             return this.rhs;
         }
 
         @Override
+        @software.amazon.jsii.Internal
         public com.fasterxml.jackson.databind.JsonNode $jsii$toJson() {
             final com.fasterxml.jackson.databind.ObjectMapper om = software.amazon.jsii.JsiiObjectMapper.INSTANCE;
             final com.fasterxml.jackson.databind.node.ObjectNode data = com.fasterxml.jackson.databind.node.JsonNodeFactory.instance.objectNode();
@@ -473,7 +370,7 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
         }
 
         @Override
-        public boolean equals(Object o) {
+        public final boolean equals(final Object o) {
             if (this == o) return true;
             if (o == null || getClass() != o.getClass()) return false;
 
@@ -484,7 +381,7 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
         }
 
         @Override
-        public int hashCode() {
+        public final int hashCode() {
             int result = this.lhs.hashCode();
             result = 31 * result + (this.rhs.hashCode());
             return result;
@@ -507,10 +404,17 @@ Object {
     ],
   },
   "description": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
-  "fingerprint": "SEvFzbO2lHiU3z+uYhXHogLbTCCm7c6Hbdqn9T1oryI=",
+  "fingerprint": "Gd4GMfJopxt1xnckAq5wEWrN2c14HJbbRsxw2kx2Vlk=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.12.0 (build 5ddc9f2)",
+  "jsiiVersion": "1.17.1 (build 2bac5fd)",
   "license": "Apache-2.0",
+  "metadata": Object {
+    "jsii": Object {
+      "pacmak": Object {
+        "hasDefaultInterfaces": true,
+      },
+    },
+  },
   "name": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
   "repository": Object {
     "type": "git",
