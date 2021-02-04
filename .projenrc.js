@@ -7,6 +7,7 @@ const project = new TypeScriptProject({
   authorName: 'Elad Ben-Israel',
   authorEmail: 'benisrae@amazon.com',
   stability: 'experimental',
+  defaultReleaseBranch: 'master',
 
   bin: {
     'jsii-srcmak': 'bin/jsii-srcmak',
