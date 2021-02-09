@@ -51,5 +51,12 @@ export async function srcmak(srcdir: string, options: Options = { }) {
       const target = path.join(options.csharp.outdir, reldir);
       await fs.move(source, target, { overwrite: true });
     }
+
+    if (options.golang) {
+      const reldir = options.golang.moduleName.replace(/_/g, '');
+      const source = path.resolve(path.join(workdir, 'dist/go/', reldir));
+      const target = path.join(options.golang.outdir, reldir);
+      await fs.move(source, target, { overwrite: true });
+    }
   });
 }

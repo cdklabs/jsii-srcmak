@@ -75,4 +75,8 @@ export function validateOptions(options: Options) {
   if (options.csharp?.namespace.includes('-')) {
     throw new Error(`C# namespace [${options.csharp.namespace}] may not contain "-"`);
   }
+
+  if (options.golang?.moduleName.includes('_')) {
+    throw new Error(`Go module name [${options.golang.moduleName}] may not contain "_"`);
+  }
 }

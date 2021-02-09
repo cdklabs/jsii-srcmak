@@ -73,6 +73,18 @@ test('fails if only one csharp option is given', () => {
   )).toThrow(/--csharp-namespace is required/);
 });
 
+test('fails if only one golang option is given', () => {
+  expect(() => srcmakcli(srcdir,
+    '--entrypoint lib/main.ts',
+    '--golang-module mypackage',
+  )).toThrow(/--golang-outdir is required/);
+
+  expect(() => srcmakcli(srcdir,
+    '--entrypoint lib/main.ts',
+    '--golang-outdir dir',
+  )).toThrow(/--golang-module is required/);
+});
+
 test('python output', async () => {
   await mkdtemp(async tmpdir => {
 
@@ -118,6 +130,23 @@ test('csharp output', async () => {
       '--entrypoint lib/main.ts',
       `--csharp-outdir ${outdir}`,
       '--csharp-namespace MyPackage',
+    );
+
+    expect(await snapshotDirectory(outdir, {
+      excludeFiles: ['0.0.0.tgz'],
+    })).toMatchSnapshot();
+  });
+});
+
+test('golang output', async () => {
+  await mkdtemp(async tmpdir => {
+    // put under a non-existent directory to verify it is created
+    const outdir = path.join(tmpdir, 'go');
+
+    srcmakcli(srcdir,
+      '--entrypoint lib/main.ts',
+      `--golang-outdir ${outdir}`,
+      '--golang-module helloworld',
     );
 
     expect(await snapshotDirectory(outdir, {

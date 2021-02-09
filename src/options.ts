@@ -46,6 +46,13 @@ export interface Options {
    * @default - C# is not generated
    */
   csharp?: CSharpOutputOptions;
+
+  /**
+   * Produces Golang code.
+   * 
+   * @default - go is not generated
+   */
+  golang?: GoLangOutputOptions;
 }
 
 export interface JsiiOutputOptions {
@@ -98,4 +105,19 @@ export interface CSharpOutputOptions {
    * For example, it cannot include a hyphen ('-')
    */
   namespace: string;
+}
+
+export interface GoLangOutputOptions {
+  /**
+   * Base root directory.
+   */
+  outdir: string;
+
+  /**
+   * The go module name
+   *
+   * This must follow standard Go module name conventions.
+   * For example, it cannot include an underscore ('_') or be camelCased
+   */
+  moduleName: string;
 }
