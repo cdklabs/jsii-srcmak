@@ -91,6 +91,12 @@ export async function compile(workdir: string, options: Options) {
     };
   }
 
+  if (options.golang) {
+    targets.go = {
+      moduleName: options.golang.moduleName,
+    };
+  }
+
   await fs.writeFile(path.join(workdir, 'package.json'), JSON.stringify(pkg, undefined, 2));
 
   await exec(compilerModule, args, {

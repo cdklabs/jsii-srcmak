@@ -13,6 +13,8 @@ async function main() {
     .option('java-package', { desc: 'the java package (namespace) to use for all generated types', type: 'string' })
     .option('csharp-outdir', { desc: 'C# output directory (requires --csharp-namespace)', type: 'string' })
     .option('csharp-namespace', { desc: 'the C# namespace to use for all generated types', type: 'string' })
+    .option('golang-outdir', { desc: 'golang output directory (requires --golang-module)', type: 'string' })
+    .option('golang-module', { desc: 'the golang module to use for all generated types', type: 'string' })
     .showHelpOnFail(true)
     .help();
 
@@ -33,6 +35,7 @@ async function main() {
     ...parsePythonOptions(),
     ...parseJavaOptions(),
     ...parseCSharpOptions(),
+    ...parseGoLangOptions(),
   });
 
   function parseJsiiOptions() {
@@ -83,6 +86,21 @@ async function main() {
       csharp: {
         outdir: outdir,
         namespace: namespace,
+      },
+    };
+  }
+
+  function parseGoLangOptions() {
+    const outdir = argv['golang-outdir'];
+    const module = argv['golang-module'];
+    if (!outdir && !module) { return undefined; }
+    if (!outdir) { throw new Error('--golang-outdir is required'); }
+    if (!module) { throw new Error('--golang-module is required'); }
+    return {
+      // moduleKey: module,
+      golang: {
+        outdir: outdir,
+        moduleName: module,
       },
     };
   }
