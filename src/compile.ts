@@ -43,7 +43,7 @@ export async function compile(workdir: string, options: Options) {
 
     const targetdir = path.join(path.join(workdir, 'node_modules'), moduleName);
     await fs.mkdirp(path.dirname(targetdir));
-    await fs.ensureSymlink(dir, targetdir);
+    await fs.copy(dir, targetdir);
 
     // add to "deps" and "peer deps"
     if (!moduleName.startsWith('@types/')) {
