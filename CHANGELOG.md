@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.223](https://github.com/aws/jsii-srcmak/compare/v0.1.222...v0.1.223) (2021-02-22)
+
+
+### Bug Fixes
+
+* symlinks don’t work on windows ([#307](https://github.com/aws/jsii-srcmak/issues/307)) ([96ce223](https://github.com/aws/jsii-srcmak/commit/96ce2238c4ddb9bf512f9d32218e2c4374e15d56))
+
 ### [0.1.222](https://github.com/eladb/jsii-srcmak/compare/v0.1.221...v0.1.222) (2021-02-08)
 
 ### [0.1.221](https://github.com/eladb/jsii-srcmak/compare/v0.1.220...v0.1.221) (2021-02-08)
