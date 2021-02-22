@@ -3689,20 +3689,20 @@ jsii-rosetta@^1.20.1:
     yargs "^16.2.0"
 
 jsii@^1.12.0:
-  version "1.17.1"
-  resolved "https://registry.yarnpkg.com/jsii/-/jsii-1.17.1.tgz#1c8cdece2354a87155e4ea989690c9e1ae8af049"
-  integrity sha512-Hx2oJjD7mXWD73A8yRkNzE9QDkfn+oDNUAwQgeMV5xteBvrzKFwiToucMTrPPVL/KO2mEXvWP2Or7MY03DFu7w==
+  version "1.20.1"
+  resolved "https://registry.yarnpkg.com/jsii/-/jsii-1.20.1.tgz#e41b32a3968e781aec1348099e441c3fa5509639"
+  integrity sha512-e4LS9u4QhhsqDN/JlK7JHDhYXhg3fiw+nq1xU5EeAtHQJvmM7CXTXhgDT9FjtnkWbnnjCOd0hgLcE8yIIZ8Lkw==
   dependencies:
-    "@jsii/spec" "^1.17.1"
+    "@jsii/spec" "^1.20.1"
     case "^1.6.3"
     colors "^1.4.0"
     deep-equal "^2.0.5"
-    fs-extra "^9.0.1"
+    fs-extra "^9.1.0"
     log4js "^6.3.0"
     semver "^7.3.4"
     semver-intersect "^1.4.0"
     sort-json "^2.0.0"
-    spdx-license-list "^6.3.0"
+    spdx-license-list "^6.4.0"
     typescript "~3.9.7"
     yargs "^16.2.0"
 
