@@ -668,7 +668,7 @@ class Calculator(
         \\"\\"\\"
         ops = Operands(lhs=lhs, rhs=rhs)
 
-        return jsii.invoke(self, \\"add\\", [ops])
+        return typing.cast(jsii.Number, jsii.invoke(self, \\"add\\", [ops]))
 
     @jsii.member(jsii_name=\\"mul\\")
     def mul(self, *, lhs: jsii.Number, rhs: jsii.Number) -> jsii.Number:
@@ -679,7 +679,7 @@ class Calculator(
         \\"\\"\\"
         ops = Operands(lhs=lhs, rhs=rhs)
 
-        return jsii.invoke(self, \\"mul\\", [ops])
+        return typing.cast(jsii.Number, jsii.invoke(self, \\"mul\\", [ops]))
 
     @jsii.member(jsii_name=\\"sub\\")
     def sub(self, *, lhs: jsii.Number, rhs: jsii.Number) -> jsii.Number:
@@ -690,7 +690,7 @@ class Calculator(
         \\"\\"\\"
         ops = Operands(lhs=lhs, rhs=rhs)
 
-        return jsii.invoke(self, \\"sub\\", [ops])
+        return typing.cast(jsii.Number, jsii.invoke(self, \\"sub\\", [ops]))
 
 
 @jsii.data_type(
@@ -715,14 +715,14 @@ class Operands:
         \\"\\"\\"Left-hand side operand.\\"\\"\\"
         result = self._values.get(\\"lhs\\")
         assert result is not None, \\"Required property 'lhs' is missing\\"
-        return result
+        return typing.cast(jsii.Number, result)
 
     @builtins.property
     def rhs(self) -> jsii.Number:
         \\"\\"\\"Right-hand side operand.\\"\\"\\"
         result = self._values.get(\\"rhs\\")
         assert result is not None, \\"Required property 'rhs' is missing\\"
-        return result
+        return typing.cast(jsii.Number, result)
 
     def __eq__(self, rhs: typing.Any) -> builtins.bool:
         return isinstance(rhs, self.__class__) and rhs._values == self._values
