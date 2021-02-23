@@ -479,10 +479,10 @@ class Hello(metaclass=jsii.JSIIMeta, jsii_type=\\"pythonpackage.Hello\\"):
 
     @jsii.member(jsii_name=\\"add\\")
     def add(self, *, lhs: jsii.Number, rhs: jsii.Number) -> jsii.Number:
-        \\"\\"\\"
+        '''
         :param lhs: -
         :param rhs: -
-        \\"\\"\\"
+        '''
         ops = Operands(lhs=lhs, rhs=rhs)
 
         return typing.cast(jsii.Number, jsii.invoke(self, \\"add\\", [ops]))
@@ -495,10 +495,10 @@ class Hello(metaclass=jsii.JSIIMeta, jsii_type=\\"pythonpackage.Hello\\"):
 )
 class Operands:
     def __init__(self, *, lhs: jsii.Number, rhs: jsii.Number) -> None:
-        \\"\\"\\"
+        '''
         :param lhs: -
         :param rhs: -
-        \\"\\"\\"
+        '''
         self._values: typing.Dict[str, typing.Any] = {
             \\"lhs\\": lhs,
             \\"rhs\\": rhs,
