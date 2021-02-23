@@ -654,40 +654,40 @@ class Calculator(
     metaclass=jsii.JSIIMeta,
     jsii_type=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator\\",
 ):
-    \\"\\"\\"A sophisticaed multi-language calculator.\\"\\"\\"
+    '''A sophisticaed multi-language calculator.'''
 
     def __init__(self) -> None:
         jsii.create(Calculator, self, [])
 
     @jsii.member(jsii_name=\\"add\\")
     def add(self, *, lhs: jsii.Number, rhs: jsii.Number) -> jsii.Number:
-        \\"\\"\\"Adds the two operands.
+        '''Adds the two operands.
 
         :param lhs: Left-hand side operand.
         :param rhs: Right-hand side operand.
-        \\"\\"\\"
+        '''
         ops = Operands(lhs=lhs, rhs=rhs)
 
         return typing.cast(jsii.Number, jsii.invoke(self, \\"add\\", [ops]))
 
     @jsii.member(jsii_name=\\"mul\\")
     def mul(self, *, lhs: jsii.Number, rhs: jsii.Number) -> jsii.Number:
-        \\"\\"\\"Multiplies the two operands.
+        '''Multiplies the two operands.
 
         :param lhs: Left-hand side operand.
         :param rhs: Right-hand side operand.
-        \\"\\"\\"
+        '''
         ops = Operands(lhs=lhs, rhs=rhs)
 
         return typing.cast(jsii.Number, jsii.invoke(self, \\"mul\\", [ops]))
 
     @jsii.member(jsii_name=\\"sub\\")
     def sub(self, *, lhs: jsii.Number, rhs: jsii.Number) -> jsii.Number:
-        \\"\\"\\"Subtracts the two operands.
+        '''Subtracts the two operands.
 
         :param lhs: Left-hand side operand.
         :param rhs: Right-hand side operand.
-        \\"\\"\\"
+        '''
         ops = Operands(lhs=lhs, rhs=rhs)
 
         return typing.cast(jsii.Number, jsii.invoke(self, \\"sub\\", [ops]))
@@ -700,11 +700,11 @@ class Calculator(
 )
 class Operands:
     def __init__(self, *, lhs: jsii.Number, rhs: jsii.Number) -> None:
-        \\"\\"\\"Math operands.
+        '''Math operands.
 
         :param lhs: Left-hand side operand.
         :param rhs: Right-hand side operand.
-        \\"\\"\\"
+        '''
         self._values: typing.Dict[str, typing.Any] = {
             \\"lhs\\": lhs,
             \\"rhs\\": rhs,
@@ -712,14 +712,14 @@ class Operands:
 
     @builtins.property
     def lhs(self) -> jsii.Number:
-        \\"\\"\\"Left-hand side operand.\\"\\"\\"
+        '''Left-hand side operand.'''
         result = self._values.get(\\"lhs\\")
         assert result is not None, \\"Required property 'lhs' is missing\\"
         return typing.cast(jsii.Number, result)
 
     @builtins.property
     def rhs(self) -> jsii.Number:
-        \\"\\"\\"Right-hand side operand.\\"\\"\\"
+        '''Right-hand side operand.'''
         result = self._values.get(\\"rhs\\")
         assert result is not None, \\"Required property 'rhs' is missing\\"
         return typing.cast(jsii.Number, result)
