@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.247](https://github.com/aws/jsii-srcmak/compare/v0.1.246...v0.1.247) (2021-03-05)
+
 ### [0.1.246](https://github.com/aws/jsii-srcmak/compare/v0.1.245...v0.1.246) (2021-03-04)
 
 ### [0.1.245](https://github.com/aws/jsii-srcmak/compare/v0.1.244...v0.1.245) (2021-03-04)
