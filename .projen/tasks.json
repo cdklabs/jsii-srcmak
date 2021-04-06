@@ -75,6 +75,9 @@
       "description": "Full release build (test+compile)",
       "steps": [
         {
+          "exec": "npx projen"
+        },
+        {
           "spawn": "compile"
         },
         {
