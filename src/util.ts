@@ -21,7 +21,7 @@ export async function mkdtemp(closure: (dir: string) => Promise<void>) {
 }
 
 export async function exec(moduleName: string, args: string[] = [], options: SpawnOptions = { }) {
-  return new Promise((ok, fail) => {
+  return new Promise<void>((ok, fail) => {
 
     const opts: SpawnOptions = {
       ...options,
