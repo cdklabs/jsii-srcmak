@@ -25,7 +25,7 @@ async function main() {
     process.exit(1);
   }
 
-  const srcdir = argv._[0];
+  const srcdir = argv._[0] as string;
   await srcmak(srcdir, {
     entrypoint: argv.entrypoint,
     ...parseDepOption(),

@@ -105,7 +105,7 @@ limitations under the License.",
     <EmbeddedResource Include=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.26.0,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.29.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -540,9 +540,9 @@ Object {
     ],
   },
   "description": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
-  "fingerprint": "pjCkC5jI1DgxSDKBXKm3CvWs2KnLtVsSdBQNSnQ++FE=",
+  "fingerprint": "I0U7mCDl36OZ+HCwBmCJX4agmOG82yfDflVXsIY2A4M=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.26.0 (build 7d76e02)",
+  "jsiiVersion": "1.29.0 (build 41df200)",
   "license": "Apache-2.0",
   "metadata": Object {
     "jsii": Object {
