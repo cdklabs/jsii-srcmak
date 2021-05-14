@@ -172,7 +172,8 @@ test('golang + different entrypoint', async () => {
         moduleKey: 'helloworld',
         golang: {
           outdir: target,
-          moduleName: 'helloworld',
+          moduleName: 'github.com/hello/world',
+          packageName: 'package',
         },
       });
 

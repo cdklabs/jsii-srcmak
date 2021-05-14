@@ -94,6 +94,7 @@ export async function compile(workdir: string, options: Options) {
   if (options.golang) {
     targets.go = {
       moduleName: options.golang.moduleName,
+      packageName: options.golang.packageName,
     };
   }
 

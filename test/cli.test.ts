@@ -146,7 +146,8 @@ test('golang output', async () => {
     srcmakcli(srcdir,
       '--entrypoint lib/main.ts',
       `--golang-outdir ${outdir}`,
-      '--golang-module helloworld',
+      '--golang-module github.com/hello/world',
+      '--golang-package package',
     );
 
     expect(await snapshotDirectory(outdir, {

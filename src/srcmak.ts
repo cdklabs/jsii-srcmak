@@ -53,7 +53,7 @@ export async function srcmak(srcdir: string, options: Options = { }) {
     }
 
     if (options.golang) {
-      const reldir = options.golang.moduleName.replace(/_/g, '');
+      let reldir = options.golang.packageName;
       const source = path.resolve(path.join(workdir, 'dist/go/', reldir));
       const target = path.join(options.golang.outdir, reldir);
       await fs.move(source, target, { overwrite: true });

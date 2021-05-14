@@ -116,8 +116,18 @@ export interface GoLangOutputOptions {
   /**
    * The go module name
    *
+   * The name of the target repository for this module (e.g. github.com/foo/bar)
+   *
    * This must follow standard Go module name conventions.
    * For example, it cannot include an underscore ('_') or be camelCased
    */
   moduleName: string;
+
+  /**
+   * The name of the Go package.
+   *
+   * E.g. "tools" would result in something like github.com/foo/bar/tools
+   * depeding on the supplied moduleName
+   */
+  packageName: string;
 }
