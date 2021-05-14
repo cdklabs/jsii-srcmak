@@ -73,16 +73,22 @@ test('fails if only one csharp option is given', () => {
   )).toThrow(/--csharp-namespace is required/);
 });
 
-test('fails if only one golang option is given', () => {
+test('fails if required golang options are missing', () => {
   expect(() => srcmakcli(srcdir,
     '--entrypoint lib/main.ts',
-    '--golang-module mypackage',
+    '--golang-module github.com/a/b',
   )).toThrow(/--golang-outdir is required/);
 
   expect(() => srcmakcli(srcdir,
     '--entrypoint lib/main.ts',
     '--golang-outdir dir',
   )).toThrow(/--golang-module is required/);
+
+  expect(() => srcmakcli(srcdir,
+    '--entrypoint lib/main.ts',
+    '--golang-module github.com/a/b',
+    '--golang-outdir dir',
+  )).toThrow(/--golang-package is required/);
 });
 
 test('python output', async () => {

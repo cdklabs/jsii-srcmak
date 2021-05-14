@@ -49,7 +49,7 @@ export interface Options {
 
   /**
    * Produces Golang code.
-   * 
+   *
    * @default - go is not generated
    */
   golang?: GoLangOutputOptions;

@@ -169,11 +169,11 @@ test('golang + different entrypoint', async () => {
     await mkdtemp(async target => {
       await srcmak(source, {
         entrypoint: 'different/entry.ts',
-        moduleKey: 'helloworld',
+        moduleKey: 'gopackage',
         golang: {
           outdir: target,
-          moduleName: 'github.com/hello/world',
-          packageName: 'package',
+          moduleName: 'github.com/org/repo',
+          packageName: 'hello',
         },
       });
 
