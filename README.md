@@ -126,6 +126,47 @@ original module. This code depends on the following NuGet package (It is already
 
 The output directory will also include a tarball `generated@0.0.0.jsii.tgz` that must be bundled in your project (It is already included as an embedded resource in the generated project).
 
+### Go Output
+
+To produce a Go module from your source, use the `golang` option:
+
+```ts
+await srcmak('srcdir', {
+  golang: {
+    outdir: '/path/to/project/root',
+    moduleName: 'github.com/yourorg/your-submodule-go',
+    packageName: 'helloworld'
+  }
+});
+```
+
+Or the `--golang-*` switches in the CLI:
+
+```bash
+$ jsii-srcmak /src/dir --golang-outdir=dir --golang-module="github.com/yourorg/your-submodule-go" --golang-package="helloworld"
+```
+
+* The `outdir`/`--golang-outdir` option points to the root directory of your base Go project (where your `go.mod` is in, if you have one).
+* The `moduleName`/`--golang-module` option is the module of the generated project. Usually a link to a repository where your submodule could be published, e.g. `github.com/yourorg/your-submodule-go`
+* The `packageName`/`--golang-package` is the package in which the generated Go code will be in. It will be placed in the submodule. So the import path becomes e.g. `github.com/yourorg/your-submodule-go/yourpackage`
+
+The output directory will include a directory named with the `packageName`/`--golang-package` containing the generated Go code.
+This code depends on the following Go module (It is already included in the `go.mod` of the submodule):
+
+- [jsii-runtime-go](github.com/aws/jsii-runtime-go)
+
+To use your generated submodule, you specify it as a depedency in your base `go.mod`:
+```
+require github.com/yourorg/your-submodule-go/yourpackage v0.0.0
+
+replace github.com/yourorg/your-submodule-go/yourpackage => ./yourpackage
+```
+The `replace` directive is used to tell Go where to find your generated package.
+
+#### Nested output directories
+It is possible to set the `outdir`/`--golang-outdir` option to a directory other than the root of your base Go project. For example, if you want to nest the generated code in a folder `generated` or similar.  
+In this case, you need to adjust the `replace` directive to point to the directory in which the `go.mod` of the generated package can be found.
+
 ### Entrypoint
 
 The `entrypoint` option can be used to customize the name of the typescript entrypoint (default is `index.ts`).
