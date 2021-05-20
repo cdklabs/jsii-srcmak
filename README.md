@@ -126,6 +126,50 @@ original module. This code depends on the following NuGet package (It is already
 
 The output directory will also include a tarball `generated@0.0.0.jsii.tgz` that must be bundled in your project (It is already included as an embedded resource in the generated project).
 
+### Go Output
+
+To produce a Go module from your source, use the `golang` option:
+
+```ts
+await srcmak('srcdir', {
+  golang: {
+    outdir: '/path/to/project/root',
+    moduleName: 'github.com/yourorg/your-root-project',
+    packageName: 'helloworld'
+  }
+});
+```
+
+Or the `--golang-*` switches in the CLI:
+
+```bash
+$ jsii-srcmak /src/dir --golang-outdir=dir --golang-module="github.com/yourorg/your-root-project" --golang-package="helloworld"
+```
+
+* The `outdir`/`--golang-outdir` option points to the root directory of your base Go project (where your `go.mod` is in, if you have one).
+* The `moduleName`/`--golang-module` option must match the Go module name of the project that includes the generated source code e.g. `github.com/yourorg/your-root-project`. This is currently required, because the generated code needs to reference a submodule which is generated in a nested directory (see also upstream issue https://github.com/aws/jsii/issues/2847 for more information).
+* The `packageName`/`--golang-package` is the package in which the generated Go code will be in. It will be placed in the submodule. So the import path becomes e.g. `github.com/yourorg/your-root-project/yourpackage`.
+
+The output directory will include a directory named with the `packageName`/`--golang-package` containing the generated Go code.
+This code depends on the following Go module:
+
+- [jsii-runtime-go](github.com/aws/jsii-runtime-go)
+
+which you need to include in your `go.mod`:
+```
+require github.com/aws/jsii-runtime-go v1.29.0 # update the version to match the jsii version used in your version of jsii-srcmak
+```
+
+
+#### Nested output directories
+It is also possible to set the `outdir`/`--golang-outdir` option to a nested directory inside your Go project. For example, if you want to nest the generated code in a directory called `generated`.
+In that case you need to append the subdirectory to the module name (e.g. `github.com/yourorg/your-root-project/generated`):
+
+```bash
+$ jsii-srcmak /src/dir --golang-outdir=~/projects/your-root-project/generated --golang-module="github.com/yourorg/your-root-project/generated" --golang-package="helloworld"
+```
+Your import path will then become e.g. `github.com/yourorg/your-root-project/generated/yourpackage`.
+
 ### Entrypoint
 
 The `entrypoint` option can be used to customize the name of the typescript entrypoint (default is `index.ts`).

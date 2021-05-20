@@ -46,6 +46,13 @@ export interface Options {
    * @default - C# is not generated
    */
   csharp?: CSharpOutputOptions;
+
+  /**
+   * Produces Golang code.
+   *
+   * @default - go is not generated
+   */
+  golang?: GoLangOutputOptions;
 }
 
 export interface JsiiOutputOptions {
@@ -98,4 +105,34 @@ export interface CSharpOutputOptions {
    * For example, it cannot include a hyphen ('-')
    */
   namespace: string;
+}
+
+export interface GoLangOutputOptions {
+  /**
+   * The output directory for the generated Go code.
+   * Usually the root directory of your Go project, but may also be a subdirectory.
+   *
+   * The generated Go code will be placed inside a nested directory with the name
+   * given via `packageName` inside of this directory.
+   */
+  outdir: string;
+
+  /**
+   * The go module name
+   *
+   * This must match the name of the parent go module the source code is generated in (e.g. github.com/yourorg/yourproject).
+   * See https://github.com/aws/jsii/issues/2847#issue-896419111 for the background on why this is required.
+   *
+   * This must follow standard Go module name conventions.
+   * For example, it cannot include an underscore ('_') or be camelCased
+   */
+  moduleName: string;
+
+  /**
+   * The name of the Go package.
+   *
+   * E.g. "tools" would result in something like github.com/yourorg/yourproject/tools
+   * depeding on the supplied moduleName
+   */
+  packageName: string;
 }

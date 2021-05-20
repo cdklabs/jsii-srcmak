@@ -57,7 +57,7 @@ export async function compile(workdir: string, options: Options) {
     author: 'generated@generated.com',
     main: `${basepath}.js`,
     types: `${basepath}.d.ts`,
-    license: 'Apache-2.0',
+    license: 'UNLICENSED',
     repository: { url: 'http://generated', type: 'git' },
     jsii: {
       outdir: 'dist',
@@ -88,6 +88,13 @@ export async function compile(workdir: string, options: Options) {
     targets.dotnet = {
       namespace: options.csharp.namespace,
       packageId: options.csharp.namespace,
+    };
+  }
+
+  if (options.golang) {
+    targets.go = {
+      moduleName: options.golang.moduleName,
+      packageName: options.golang.packageName,
     };
   }
 
