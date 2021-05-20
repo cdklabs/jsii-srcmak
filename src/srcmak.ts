@@ -57,6 +57,9 @@ export async function srcmak(srcdir: string, options: Options = { }) {
       const source = path.resolve(path.join(workdir, 'dist/go/', reldir));
       const target = path.join(options.golang.outdir, reldir);
       await fs.move(source, target, { overwrite: true });
+      // remove go.mod as this would make it a submodule
+      // awaits https://github.com/aws/jsii/issues/2848
+      await fs.remove(path.join(target, 'go.mod'));
     }
   });
 }

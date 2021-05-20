@@ -116,7 +116,8 @@ export interface GoLangOutputOptions {
   /**
    * The go module name
    *
-   * The name of the target repository for this module (e.g. github.com/foo/bar)
+   * This must match the name of the parent go module the source code is generated in (e.g. github.com/yourorg/yourproject).
+   * See https://github.com/aws/jsii/issues/2847#issue-896419111 for the background on why this is required.
    *
    * This must follow standard Go module name conventions.
    * For example, it cannot include an underscore ('_') or be camelCased
@@ -126,7 +127,7 @@ export interface GoLangOutputOptions {
   /**
    * The name of the Go package.
    *
-   * E.g. "tools" would result in something like github.com/foo/bar/tools
+   * E.g. "tools" would result in something like github.com/yourorg/yourproject/tools
    * depeding on the supplied moduleName
    */
   packageName: string;

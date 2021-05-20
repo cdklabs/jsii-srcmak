@@ -339,14 +339,6 @@ distributed under the License is distributed on an \\"AS IS\\" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.",
-  "package/go.mod": "module github.com/hello/world/package
-
-go 1.16
-
-require (
-	github.com/aws/jsii-runtime-go v1.29.0
-)
-",
   "package/jsii/jsii.go": "// Package jsii contains the functionaility needed for jsii packages to
 // initialize their dependencies and themselves. Users should never need to use this package
 // directly. If you find you need to - please report a bug at
