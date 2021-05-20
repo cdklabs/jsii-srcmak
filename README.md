@@ -162,8 +162,13 @@ require github.com/aws/jsii-runtime-go v1.29.0 # update the version to match the
 
 
 #### Nested output directories
-It is possible to set the `outdir`/`--golang-outdir` option to a directory other than the root of your base Go project. For example, if you want to nest the generated code in a folder `generated` or similar.  
-In that case you need to append the subdirectory to the module name (e.g. `github.com/yourorg/your-root-project/generated`). Your import path will then become e.g. `github.com/yourorg/your-root-project/generated/yourpackage`.
+It is also possible to set the `outdir`/`--golang-outdir` option to a nested directory inside your Go project. For example, if you want to nest the generated code in a directory called `generated`.
+In that case you need to append the subdirectory to the module name (e.g. `github.com/yourorg/your-root-project/generated`):
+
+```bash
+$ jsii-srcmak /src/dir --golang-outdir=~/projects/your-root-project/generated --golang-module="github.com/yourorg/your-root-project/generated" --golang-package="helloworld"
+```
+Your import path will then become e.g. `github.com/yourorg/your-root-project/generated/yourpackage`.
 
 ### Entrypoint
 

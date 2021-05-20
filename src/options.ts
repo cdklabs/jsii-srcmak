@@ -109,7 +109,11 @@ export interface CSharpOutputOptions {
 
 export interface GoLangOutputOptions {
   /**
-   * Base root directory.
+   * The output directory for the generated Go code.
+   * Usually the root directory of your Go project, but may also be a subdirectory.
+   *
+   * The generated Go code will be placed inside a nested directory with the name
+   * given via `packageName` inside of this directory.
    */
   outdir: string;
 
