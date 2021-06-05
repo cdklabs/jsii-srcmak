@@ -32,7 +32,7 @@ Object {
     <EmbeddedResource Include=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.29.0,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.30.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -202,7 +202,7 @@ package jsii
 import (
 	_      \\"embed\\"
 
-	_jsii_ \\"github.com/aws/jsii-runtime-go\\"
+	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
 )
 
 //go:embed 4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz
@@ -219,7 +219,7 @@ func Initialize() {
 package package
 
 import (
-	_jsii_ \\"github.com/aws/jsii-runtime-go\\"
+	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
 	_init_ \\"github.com/hello/world/package/jsii\\"
 )
 
@@ -315,7 +315,7 @@ type Operands struct {
 import (
 	\\"reflect\\"
 
-	_jsii_ \\"github.com/aws/jsii-runtime-go\\"
+	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
 )
 
 func init() {
@@ -618,9 +618,9 @@ Object {
     ],
   },
   "description": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
-  "fingerprint": "BksItnE0iisIDaYLGa58+QavVe+DYGz0zXw4tXmhmtI=",
+  "fingerprint": "6U/ANJNnCeoamVBsde8b/g5MeYz5taKOX7+yfTZYGJo=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.29.0 (build 41df200)",
+  "jsiiVersion": "1.30.0 (build adae23f)",
   "license": "UNLICENSED",
   "metadata": Object {
     "jsii": Object {

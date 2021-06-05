@@ -32,7 +32,7 @@ Object {
     <EmbeddedResource Include=\\"csharppackage-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.29.0,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.30.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -169,7 +169,7 @@ Object {
 package hello
 
 import (
-	_jsii_ \\"github.com/aws/jsii-runtime-go\\"
+	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
 	_init_ \\"github.com/org/repo/hello/jsii\\"
 )
 
@@ -230,7 +230,7 @@ type Operands struct {
 import (
 	\\"reflect\\"
 
-	_jsii_ \\"github.com/aws/jsii-runtime-go\\"
+	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
 )
 
 func init() {
@@ -259,7 +259,7 @@ package jsii
 import (
 	_      \\"embed\\"
 
-	_jsii_ \\"github.com/aws/jsii-runtime-go\\"
+	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
 )
 
 //go:embed gopackage-0.0.0.tgz
@@ -518,9 +518,9 @@ Object {
     ],
   },
   "description": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
-  "fingerprint": "fADKQZ8+ZkFrVjkgmhwGmLhV7fmLnu/SYfFU+CS48aY=",
+  "fingerprint": "aTTiBD9bme79JYzFtNoq2fYZz8W3McpkbhK6MFfrehM=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.29.0 (build 41df200)",
+  "jsiiVersion": "1.30.0 (build adae23f)",
   "license": "UNLICENSED",
   "metadata": Object {
     "jsii": Object {
