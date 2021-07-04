@@ -38,7 +38,7 @@
     "@types/node": "^10.17.0",
     "@typescript-eslint/eslint-plugin": "^4.28.1",
     "@typescript-eslint/parser": "^4.28.1",
-    "constructs": "^3.3.94",
+    "constructs": "^3.3.95",
     "eslint": "^7.30.0",
     "eslint-import-resolver-node": "^0.3.4",
     "eslint-import-resolver-typescript": "^2.4.0",
