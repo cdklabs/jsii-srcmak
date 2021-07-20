@@ -32,7 +32,7 @@ Object {
     <EmbeddedResource Include=\\"csharppackage-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.30.0,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.31.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -518,9 +518,9 @@ Object {
     ],
   },
   "description": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
-  "fingerprint": "aTTiBD9bme79JYzFtNoq2fYZz8W3McpkbhK6MFfrehM=",
+  "fingerprint": "wVQ8FTIkBRqx8XSxTQJpaUUUfKeYX2+4Re1aqPN5YH4=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.30.0 (build adae23f)",
+  "jsiiVersion": "1.31.0 (build 6fa403d)",
   "license": "UNLICENSED",
   "metadata": Object {
     "jsii": Object {
