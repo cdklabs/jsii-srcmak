@@ -38,9 +38,9 @@
     "@types/jest": "^26.0.24",
     "@types/ncp": "^2.0.5",
     "@types/node": "^10.17.0",
-    "@typescript-eslint/eslint-plugin": "^4.29.1",
-    "@typescript-eslint/parser": "^4.29.1",
-    "constructs": "^3.3.123",
+    "@typescript-eslint/eslint-plugin": "^4.29.2",
+    "@typescript-eslint/parser": "^4.29.2",
+    "constructs": "^3.3.124",
     "eslint": "^7.32.0",
     "eslint-import-resolver-node": "^0.3.6",
     "eslint-import-resolver-typescript": "^2.4.0",
@@ -56,8 +56,8 @@
   },
   "dependencies": {
     "fs-extra": "^9.1.0",
-    "jsii": "^1.32.0",
-    "jsii-pacmak": "^1.32.0",
+    "jsii": "^1.33.0",
+    "jsii-pacmak": "^1.33.0",
     "ncp": "^2.0.0",
     "yargs": "^15.4.1"
   },
