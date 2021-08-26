@@ -32,7 +32,7 @@ Object {
     <EmbeddedResource Include=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.33.0,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.34.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -618,9 +618,9 @@ Object {
     ],
   },
   "description": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
-  "fingerprint": "NFPIzDZ8mjLokoq2PYxeYoV9o0Ww+2rwH8uYoRf1lY4=",
+  "fingerprint": "jOH8Z3bAT5XG5czRDuJSu5zK9oATzXv2t0+HEBOPE2U=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.33.0 (build 7951e32)",
+  "jsiiVersion": "1.34.0 (build 9b72778)",
   "license": "UNLICENSED",
   "metadata": Object {
     "jsii": Object {
@@ -808,7 +808,7 @@ class Calculator(
     '''A sophisticaed multi-language calculator.'''
 
     def __init__(self) -> None:
-        jsii.create(Calculator, self, [])
+        jsii.create(self.__class__, self, [])
 
     @jsii.member(jsii_name=\\"add\\")
     def add(self, *, lhs: jsii.Number, rhs: jsii.Number) -> jsii.Number:

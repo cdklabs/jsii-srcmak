@@ -32,7 +32,7 @@ Object {
     <EmbeddedResource Include=\\"csharppackage-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.33.0,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.34.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -518,9 +518,9 @@ Object {
     ],
   },
   "description": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
-  "fingerprint": "il52HIxD00YODOtu0Ws43Y/O2Cuy7YSPTJjKaZu+yqM=",
+  "fingerprint": "GPaMBlrN02VRmFO+Jk81fhDBkQBnjBPiEWm3FW7+rEY=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.33.0 (build 7951e32)",
+  "jsiiVersion": "1.34.0 (build 9b72778)",
   "license": "UNLICENSED",
   "metadata": Object {
     "jsii": Object {
@@ -589,7 +589,7 @@ from ._jsii import *
 
 class Hello(metaclass=jsii.JSIIMeta, jsii_type=\\"pythonpackage.Hello\\"):
     def __init__(self) -> None:
-        jsii.create(Hello, self, [])
+        jsii.create(self.__class__, self, [])
 
     @jsii.member(jsii_name=\\"add\\")
     def add(self, *, lhs: jsii.Number, rhs: jsii.Number) -> jsii.Number:
