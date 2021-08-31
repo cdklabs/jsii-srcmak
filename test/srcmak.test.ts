@@ -31,7 +31,7 @@ test('compilation error fails and includes error message', async () => {
     await fs.writeFile(path.join(source, 'index.ts'), 'I DO NOT COMPUTE');
 
     let error;
-    try { await srcmak(source); } catch (e) { error = e; }
+    try { await srcmak(source); } catch (e: any) { error = e; }
 
     expect(error).toBeDefined();
     expect(error.message).toMatch(/Cannot find name 'COMPUTE'/);
