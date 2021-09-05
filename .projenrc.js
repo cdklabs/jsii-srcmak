@@ -34,7 +34,7 @@ const project = new TypeScriptProject({
   // superchain is needed to ensure jsii-pacmak has everything it needs
   workflowContainerImage: 'jsii/superchain',
   autoApproveOptions: {
-    allowedUsernames: ['aws-cdk-automation'],
+    allowedUsernames: ['cdklabs-automation'],
     secret: 'GITHUB_TOKEN',
   },
   autoApproveUpgrades: true,
