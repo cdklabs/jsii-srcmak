@@ -32,7 +32,7 @@ const project = new TypeScriptProject({
   compileBeforeTest: true,
 
   // superchain is needed to ensure jsii-pacmak has everything it needs
-  workflowContainerImage: 'jsii/superchain',
+  workflowContainerImage: 'jsii/superchain:1-buster-slim-nightly',
   autoApproveOptions: {
     allowedUsernames: ['cdklabs-automation'],
     secret: 'GITHUB_TOKEN',
