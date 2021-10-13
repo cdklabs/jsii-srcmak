@@ -32,7 +32,7 @@ Object {
     <EmbeddedResource Include=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.38.0,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.39.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -618,9 +618,9 @@ Object {
     ],
   },
   "description": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
-  "fingerprint": "JzYnFNmixFnS59VmcJ/jJa0FgF8fmPxv4hnhX+UH4/U=",
+  "fingerprint": "D6VfGWVI9T6XaXz+AFUAvEJyUWvObi/Upct2SXigACA=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.38.0 (build 717bef2)",
+  "jsiiVersion": "1.39.0 (build 8af72c2)",
   "license": "UNLICENSED",
   "metadata": Object {
     "jsii": Object {
@@ -734,6 +734,7 @@ Object {
         },
       ],
       "name": "Calculator",
+      "symbolId": "lib/main:Calculator",
     },
     "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands": Object {
       "assembly": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
@@ -780,6 +781,7 @@ Object {
           },
         },
       ],
+      "symbolId": "lib/main:Operands",
     },
   },
   "version": "0.0.0",
