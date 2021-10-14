@@ -26,6 +26,7 @@ export async function exec(moduleName: string, args: string[] = [], options: Spa
     const opts: SpawnOptions = {
       ...options,
       stdio: ['inherit', 'pipe', 'pipe'],
+      shell: true,
     };
     const child = spawn(process.execPath, [moduleName, ...args], opts);
 
