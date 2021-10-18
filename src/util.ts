@@ -28,7 +28,7 @@ export async function exec(moduleName: string, args: string[] = [], options: Spa
       stdio: ['inherit', 'pipe', 'pipe'],
       shell: true,
     };
-    const child = spawn(process.execPath, [moduleName, ...args], opts);
+    const child = spawn(`"${process.execPath}"`, [moduleName, ...args], opts);
 
     const data = new Array<Buffer>();
     child.stdout?.on('data', chunk => data.push(chunk));
