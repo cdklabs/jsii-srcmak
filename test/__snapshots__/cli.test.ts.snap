@@ -32,7 +32,7 @@ Object {
     <EmbeddedResource Include=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.40.0,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.41.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -618,9 +618,9 @@ Object {
     ],
   },
   "description": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
-  "fingerprint": "d7FBdCbftpOxU8U/7mhIw3AS+M/dVjSRg2korqxvHEo=",
+  "fingerprint": "dvuMAkWAVY+Cu5ew2F/mKbgvrFpM1DXiBA60DSsersQ=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.40.0 (build 9713b9d)",
+  "jsiiVersion": "1.41.0 (build a274beb)",
   "license": "UNLICENSED",
   "metadata": Object {
     "jsii": Object {
