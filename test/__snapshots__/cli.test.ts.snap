@@ -32,7 +32,7 @@ Object {
     <EmbeddedResource Include=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.43.0,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.44.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -493,8 +493,8 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
      * A builder for {@link Operands}
      */
     public static final class Builder implements software.amazon.jsii.Builder<Operands> {
-        private java.lang.Number lhs;
-        private java.lang.Number rhs;
+        java.lang.Number lhs;
+        java.lang.Number rhs;
 
         /**
          * Sets the value of {@link Operands#getLhs}
@@ -523,7 +523,7 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
          */
         @Override
         public Operands build() {
-            return new Jsii$Proxy(lhs, rhs);
+            return new Jsii$Proxy(this);
         }
     }
 
@@ -548,10 +548,10 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
         /**
          * Constructor that initializes the object based on literal property values passed by the {@link Builder}.
          */
-        protected Jsii$Proxy(final java.lang.Number lhs, final java.lang.Number rhs) {
+        protected Jsii$Proxy(final Builder builder) {
             super(software.amazon.jsii.JsiiObject.InitializationMode.JSII);
-            this.lhs = java.util.Objects.requireNonNull(lhs, \\"lhs is required\\");
-            this.rhs = java.util.Objects.requireNonNull(rhs, \\"rhs is required\\");
+            this.lhs = java.util.Objects.requireNonNull(builder.lhs, \\"lhs is required\\");
+            this.rhs = java.util.Objects.requireNonNull(builder.rhs, \\"rhs is required\\");
         }
 
         @Override
@@ -618,9 +618,9 @@ Object {
     ],
   },
   "description": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
-  "fingerprint": "DMAd0zBPyYSFLVHDeseLndOz+FtVFAx2REyJTjHdKcI=",
+  "fingerprint": "a4G7sZmCT8/fxp7i8JzHIgRqmFBe6YZiGAX/bn6Ai5I=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.43.0 (build b69a797)",
+  "jsiiVersion": "1.44.0 (build 5cf3021)",
   "license": "UNLICENSED",
   "metadata": Object {
     "jsii": Object {
