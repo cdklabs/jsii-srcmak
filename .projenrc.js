@@ -1,6 +1,6 @@
-const { TypeScriptProject } = require('projen');
+const { typescript } = require('projen');
 
-const project = new TypeScriptProject({
+const project = new typescript.TypeScriptProject({
   name: 'jsii-srcmak',
   description: 'generate source code in multiple languages from typescript',
   repository: 'https://github.com/aws/jsii-srcmak.git',
