@@ -32,7 +32,7 @@ Object {
     <EmbeddedResource Include=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.52.1,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.53.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -171,7 +171,7 @@ namespace MyPackage
     public class Operands : MyPackage.IOperands
     {
         /// <summary>Left-hand side operand.</summary>
-        [JsiiProperty(name: \\"lhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\", isOverride: true)]
+        [JsiiProperty(name: \\"lhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
         public double Lhs
         {
             get;
@@ -179,7 +179,7 @@ namespace MyPackage
         }
 
         /// <summary>Right-hand side operand.</summary>
-        [JsiiProperty(name: \\"rhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\", isOverride: true)]
+        [JsiiProperty(name: \\"rhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
         public double Rhs
         {
             get;
@@ -618,9 +618,9 @@ Object {
     ],
   },
   "description": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
-  "fingerprint": "vC4tgzJHX8/vxWG3TGtLzCZB89dVzujfkhquSTqaqlI=",
+  "fingerprint": "Mtwv8UD8s0CBJZkxZoZREgRCSkaXzx6XBwDr80TCNAk=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.52.1 (build 5ccc8f6)",
+  "jsiiVersion": "1.53.0 (build c071d26)",
   "license": "UNLICENSED",
   "metadata": Object {
     "jsii": Object {
