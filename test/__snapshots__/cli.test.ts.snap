@@ -32,7 +32,7 @@ Object {
     <EmbeddedResource Include=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.54.0,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.55.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -225,8 +225,11 @@ import (
 
 // A sophisticaed multi-language calculator.
 type Calculator interface {
+	// Adds the two operands.
 	Add(ops *Operands) *float64
+	// Multiplies the two operands.
 	Mul(ops *Operands) *float64
+	// Subtracts the two operands.
 	Sub(ops *Operands) *float64
 }
 
@@ -259,7 +262,6 @@ func NewCalculator_Override(c Calculator) {
 	)
 }
 
-// Adds the two operands.
 func (c *jsiiProxy_Calculator) Add(ops *Operands) *float64 {
 	var returns *float64
 
@@ -273,7 +275,6 @@ func (c *jsiiProxy_Calculator) Add(ops *Operands) *float64 {
 	return returns
 }
 
-// Multiplies the two operands.
 func (c *jsiiProxy_Calculator) Mul(ops *Operands) *float64 {
 	var returns *float64
 
@@ -287,7 +288,6 @@ func (c *jsiiProxy_Calculator) Mul(ops *Operands) *float64 {
 	return returns
 }
 
-// Subtracts the two operands.
 func (c *jsiiProxy_Calculator) Sub(ops *Operands) *float64 {
 	var returns *float64
 
@@ -618,9 +618,9 @@ Object {
     ],
   },
   "description": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
-  "fingerprint": "vOaEsr++YWiq6BNbLPWIipP4xGfVlPYsHmUQo8jR0Is=",
+  "fingerprint": "Nx6h7Yrif/CgsfRq5M1TogL/s4eg3jbj/jsYgcf0ksI=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.54.0 (build b1b977a)",
+  "jsiiVersion": "1.55.0 (build 3e0fc04)",
   "license": "UNLICENSED",
   "metadata": Object {
     "jsii": Object {
