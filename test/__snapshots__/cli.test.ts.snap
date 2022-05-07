@@ -32,7 +32,7 @@ Object {
     <EmbeddedResource Include=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.57.0,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.58.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -304,9 +304,9 @@ func (c *jsiiProxy_Calculator) Sub(ops *Operands) *float64 {
 // Math operands.
 type Operands struct {
 	// Left-hand side operand.
-	Lhs *float64 \`json:\\"lhs\\" yaml:\\"lhs\\"\`
+	Lhs *float64 \`field:\\"required\\" json:\\"lhs\\" yaml:\\"lhs\\"\`
 	// Right-hand side operand.
-	Rhs *float64 \`json:\\"rhs\\" yaml:\\"rhs\\"\`
+	Rhs *float64 \`field:\\"required\\" json:\\"rhs\\" yaml:\\"rhs\\"\`
 }
 
 ",
@@ -618,9 +618,9 @@ Object {
     ],
   },
   "description": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
-  "fingerprint": "r4vcEg97mgpZOcMHKYhLuEnQ8fx2Ilbptd6yyCMeKBM=",
+  "fingerprint": "TQokZ7qEge0L2PIMCDxdQeJzHl12M9zI57Kyrg1LGck=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.57.0 (build f614666)",
+  "jsiiVersion": "1.58.0 (build f8ba112)",
   "license": "UNLICENSED",
   "metadata": Object {
     "jsii": Object {
