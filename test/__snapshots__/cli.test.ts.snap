@@ -32,7 +32,7 @@ Object {
     <EmbeddedResource Include=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.62.0,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.63.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -618,9 +618,9 @@ Object {
     ],
   },
   "description": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
-  "fingerprint": "5noLeYnznRnjH/mndFuCIzki+Jy3VdMNWCR7rVNlpMo=",
+  "fingerprint": "8HkzOkptANjSsZ3p+YGAsKw7jhKZM1MpdSS8TQpFJTc=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.62.0 (build 293ac17)",
+  "jsiiVersion": "1.63.0 (build 7c24e36)",
   "license": "UNLICENSED",
   "metadata": Object {
     "jsii": Object {
@@ -800,6 +800,8 @@ import jsii
 import publication
 import typing_extensions
 
+from typeguard import check_type
+
 from ._jsii import *
 
 
@@ -858,6 +860,10 @@ class Operands:
         :param lhs: Left-hand side operand.
         :param rhs: Right-hand side operand.
         '''
+        if __debug__:
+            type_hints = typing.get_type_hints(Operands.__init__)
+            check_type(argname=\\"argument lhs\\", value=lhs, expected_type=type_hints[\\"lhs\\"])
+            check_type(argname=\\"argument rhs\\", value=rhs, expected_type=type_hints[\\"rhs\\"])
         self._values: typing.Dict[str, typing.Any] = {
             \\"lhs\\": lhs,
             \\"rhs\\": rhs,
@@ -905,6 +911,8 @@ import typing
 import jsii
 import publication
 import typing_extensions
+
+from typeguard import check_type
 
 __jsii_assembly__ = jsii.JSIIAssembly.load(
     \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060\\",
