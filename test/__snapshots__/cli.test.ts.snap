@@ -32,7 +32,7 @@ Object {
     <EmbeddedResource Include=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.63.2,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.64.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -53,8 +53,14 @@ namespace MyPackage
     [JsiiClass(nativeType: typeof(MyPackage.Calculator), fullyQualifiedName: \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator\\")]
     public class Calculator : DeputyBase
     {
-        public Calculator(): base(new DeputyProps(System.Array.Empty<object?>()))
+        public Calculator(): base(_MakeDeputyProps())
         {
+        }
+
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        private static DeputyProps _MakeDeputyProps()
+        {
+            return new DeputyProps(System.Array.Empty<object?>());
         }
 
         /// <summary>Used by jsii to construct an instance of this class from a Javascript-owned object reference</summary>
@@ -215,7 +221,34 @@ func Initialize() {
 	_jsii_.Load(\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060\\", \\"0.0.0\\", tarball)
 }
 ",
-  "package/package.go": "// 4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060
+  "package/package.go": "package package
+
+import (
+	\\"reflect\\"
+
+	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
+)
+
+func init() {
+	_jsii_.RegisterClass(
+		\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator\\",
+		reflect.TypeOf((*Calculator)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: \\"add\\", GoMethod: \\"Add\\"},
+			_jsii_.MemberMethod{JsiiMethod: \\"mul\\", GoMethod: \\"Mul\\"},
+			_jsii_.MemberMethod{JsiiMethod: \\"sub\\", GoMethod: \\"Sub\\"},
+		},
+		func() interface{} {
+			return &jsiiProxy_Calculator{}
+		},
+	)
+	_jsii_.RegisterStruct(
+		\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\",
+		reflect.TypeOf((*Operands)(nil)).Elem(),
+	)
+}
+",
+  "package/package_Calculator.go": "// 4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060
 package package
 
 import (
@@ -301,6 +334,11 @@ func (c *jsiiProxy_Calculator) Sub(ops *Operands) *float64 {
 	return returns
 }
 
+",
+  "package/package_Operands.go": "// 4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060
+package package
+
+
 // Math operands.
 type Operands struct {
 	// Left-hand side operand.
@@ -309,33 +347,6 @@ type Operands struct {
 	Rhs *float64 \`field:\\"required\\" json:\\"rhs\\" yaml:\\"rhs\\"\`
 }
 
-",
-  "package/package.init.go": "package package
-
-import (
-	\\"reflect\\"
-
-	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
-)
-
-func init() {
-	_jsii_.RegisterClass(
-		\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator\\",
-		reflect.TypeOf((*Calculator)(nil)).Elem(),
-		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: \\"add\\", GoMethod: \\"Add\\"},
-			_jsii_.MemberMethod{JsiiMethod: \\"mul\\", GoMethod: \\"Mul\\"},
-			_jsii_.MemberMethod{JsiiMethod: \\"sub\\", GoMethod: \\"Sub\\"},
-		},
-		func() interface{} {
-			return &jsiiProxy_Calculator{}
-		},
-	)
-	_jsii_.RegisterStruct(
-		\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\",
-		reflect.TypeOf((*Operands)(nil)).Elem(),
-	)
-}
 ",
   "package/version": "0.0.0
 ",
@@ -618,9 +629,9 @@ Object {
     ],
   },
   "description": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
-  "fingerprint": "I3ELL8xinAa33UAGAj7YLafeOoxuOrGKam+MCmWmt2I=",
+  "fingerprint": "c4ypDjzvgghWr0w3Po3S7V5hMneP7FqjTHBAl2sQt4Q=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.63.2 (build a8a8833)",
+  "jsiiVersion": "1.64.0 (build 4c1eae8)",
   "license": "UNLICENSED",
   "metadata": Object {
     "jsii": Object {

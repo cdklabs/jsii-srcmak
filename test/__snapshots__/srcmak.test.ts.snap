@@ -32,7 +32,7 @@ Object {
     <EmbeddedResource Include=\\"csharppackage-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.63.2,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.64.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -52,8 +52,14 @@ namespace Hello.World
     [JsiiClass(nativeType: typeof(Hello.World.Hello), fullyQualifiedName: \\"csharppackage.Hello\\")]
     public class Hello : DeputyBase
     {
-        public Hello(): base(new DeputyProps(System.Array.Empty<object?>()))
+        public Hello(): base(_MakeDeputyProps())
         {
+        }
+
+        [System.Runtime.CompilerServices.MethodImpl(System.Runtime.CompilerServices.MethodImplOptions.AggressiveInlining)]
+        private static DeputyProps _MakeDeputyProps()
+        {
+            return new DeputyProps(System.Array.Empty<object?>());
         }
 
         /// <summary>Used by jsii to construct an instance of this class from a Javascript-owned object reference</summary>
@@ -165,7 +171,32 @@ namespace Hello.World
 
 exports[`golang + different entrypoint 1`] = `
 Object {
-  "hello/hello.go": "// gopackage
+  "hello/hello.go": "package hello
+
+import (
+	\\"reflect\\"
+
+	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
+)
+
+func init() {
+	_jsii_.RegisterClass(
+		\\"gopackage.Hello\\",
+		reflect.TypeOf((*Hello)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: \\"add\\", GoMethod: \\"Add\\"},
+		},
+		func() interface{} {
+			return &jsiiProxy_Hello{}
+		},
+	)
+	_jsii_.RegisterStruct(
+		\\"gopackage.Operands\\",
+		reflect.TypeOf((*Operands)(nil)).Elem(),
+	)
+}
+",
+  "hello/hello_Hello.go": "// gopackage
 package hello
 
 import (
@@ -219,36 +250,16 @@ func (h *jsiiProxy_Hello) Add(ops *Operands) *float64 {
 	return returns
 }
 
+",
+  "hello/hello_Operands.go": "// gopackage
+package hello
+
+
 type Operands struct {
 	Lhs *float64 \`field:\\"required\\" json:\\"lhs\\" yaml:\\"lhs\\"\`
 	Rhs *float64 \`field:\\"required\\" json:\\"rhs\\" yaml:\\"rhs\\"\`
 }
 
-",
-  "hello/hello.init.go": "package hello
-
-import (
-	\\"reflect\\"
-
-	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
-)
-
-func init() {
-	_jsii_.RegisterClass(
-		\\"gopackage.Hello\\",
-		reflect.TypeOf((*Hello)(nil)).Elem(),
-		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: \\"add\\", GoMethod: \\"Add\\"},
-		},
-		func() interface{} {
-			return &jsiiProxy_Hello{}
-		},
-	)
-	_jsii_.RegisterStruct(
-		\\"gopackage.Operands\\",
-		reflect.TypeOf((*Operands)(nil)).Elem(),
-	)
-}
 ",
   "hello/jsii/jsii.go": "// Package jsii contains the functionaility needed for jsii packages to
 // initialize their dependencies and themselves. Users should never need to use this package
@@ -518,9 +529,9 @@ Object {
     ],
   },
   "description": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
-  "fingerprint": "HLiMwNxJXg7mj/N3uzVqjDFgGzyojKEVPmv9fCTrwJQ=",
+  "fingerprint": "//MgsHX27TwGpIEMzQI5JNKe/mzKQDNt/RzfQ3hcmj0=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.63.2 (build a8a8833)",
+  "jsiiVersion": "1.64.0 (build 4c1eae8)",
   "license": "UNLICENSED",
   "metadata": Object {
     "jsii": Object {
