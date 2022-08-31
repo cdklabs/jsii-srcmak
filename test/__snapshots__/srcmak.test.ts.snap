@@ -32,7 +32,7 @@ Object {
     <EmbeddedResource Include=\\"csharppackage-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.65.1,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.66.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -238,6 +238,9 @@ func NewHello_Override(h Hello) {
 }
 
 func (h *jsiiProxy_Hello) Add(ops *Operands) *float64 {
+	if err := h.validateAddParameters(ops); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -248,6 +251,43 @@ func (h *jsiiProxy_Hello) Add(ops *Operands) *float64 {
 	)
 
 	return returns
+}
+
+",
+  "hello/hello_Hello__no_runtime_type_checking.go": "//go:build no_runtime_type_checking
+// +build no_runtime_type_checking
+
+// gopackage
+package hello
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (h *jsiiProxy_Hello) validateAddParameters(ops *Operands) error {
+	return nil
+}
+
+",
+  "hello/hello_Hello__runtime_type_checks.go": "//go:build !no_runtime_type_checking
+// +build !no_runtime_type_checking
+
+// gopackage
+package hello
+
+import (
+	\\"fmt\\"
+
+	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
+)
+
+func (h *jsiiProxy_Hello) validateAddParameters(ops *Operands) error {
+	if ops == nil {
+		return fmt.Errorf(\\"parameter ops is required, but nil was provided\\")
+	}
+	if err := _jsii_.ValidateStruct(ops, func() string { return \\"parameter ops\\" }); err != nil {
+		return err
+	}
+
+	return nil
 }
 
 ",
@@ -529,9 +569,9 @@ Object {
     ],
   },
   "description": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
-  "fingerprint": "taeoRB6E5LlE+pwjkIT+LpR5dCdLcGFBXjLBRLtr5oM=",
+  "fingerprint": "+cgcgv3EcaseSMzLkUCeZet0F6KYE7uhbxQmot4kqcM=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.65.1 (build b0947e4)",
+  "jsiiVersion": "1.66.0 (build 3c9512b)",
   "license": "UNLICENSED",
   "metadata": Object {
     "jsii": Object {
