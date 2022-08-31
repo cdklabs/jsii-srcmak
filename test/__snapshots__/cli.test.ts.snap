@@ -32,7 +32,7 @@ Object {
     <EmbeddedResource Include=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.65.1,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.66.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -296,6 +296,9 @@ func NewCalculator_Override(c Calculator) {
 }
 
 func (c *jsiiProxy_Calculator) Add(ops *Operands) *float64 {
+	if err := c.validateAddParameters(ops); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -309,6 +312,9 @@ func (c *jsiiProxy_Calculator) Add(ops *Operands) *float64 {
 }
 
 func (c *jsiiProxy_Calculator) Mul(ops *Operands) *float64 {
+	if err := c.validateMulParameters(ops); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -322,6 +328,9 @@ func (c *jsiiProxy_Calculator) Mul(ops *Operands) *float64 {
 }
 
 func (c *jsiiProxy_Calculator) Sub(ops *Operands) *float64 {
+	if err := c.validateSubParameters(ops); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -332,6 +341,73 @@ func (c *jsiiProxy_Calculator) Sub(ops *Operands) *float64 {
 	)
 
 	return returns
+}
+
+",
+  "package/package_Calculator__no_runtime_type_checking.go": "//go:build no_runtime_type_checking
+// +build no_runtime_type_checking
+
+// 4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060
+package package
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (c *jsiiProxy_Calculator) validateAddParameters(ops *Operands) error {
+	return nil
+}
+
+func (c *jsiiProxy_Calculator) validateMulParameters(ops *Operands) error {
+	return nil
+}
+
+func (c *jsiiProxy_Calculator) validateSubParameters(ops *Operands) error {
+	return nil
+}
+
+",
+  "package/package_Calculator__runtime_type_checks.go": "//go:build !no_runtime_type_checking
+// +build !no_runtime_type_checking
+
+// 4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060
+package package
+
+import (
+	\\"fmt\\"
+
+	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
+)
+
+func (c *jsiiProxy_Calculator) validateAddParameters(ops *Operands) error {
+	if ops == nil {
+		return fmt.Errorf(\\"parameter ops is required, but nil was provided\\")
+	}
+	if err := _jsii_.ValidateStruct(ops, func() string { return \\"parameter ops\\" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (c *jsiiProxy_Calculator) validateMulParameters(ops *Operands) error {
+	if ops == nil {
+		return fmt.Errorf(\\"parameter ops is required, but nil was provided\\")
+	}
+	if err := _jsii_.ValidateStruct(ops, func() string { return \\"parameter ops\\" }); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+func (c *jsiiProxy_Calculator) validateSubParameters(ops *Operands) error {
+	if ops == nil {
+		return fmt.Errorf(\\"parameter ops is required, but nil was provided\\")
+	}
+	if err := _jsii_.ValidateStruct(ops, func() string { return \\"parameter ops\\" }); err != nil {
+		return err
+	}
+
+	return nil
 }
 
 ",
@@ -629,9 +705,9 @@ Object {
     ],
   },
   "description": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
-  "fingerprint": "FKJG+SHCTsMMbyMQNF2ocyiRvfbZoyk3725cEPxdjqs=",
+  "fingerprint": "PlEGy87+rtmVCdHNq/UrqIGPilVJejg7TO08T72CDzo=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.65.1 (build b0947e4)",
+  "jsiiVersion": "1.66.0 (build 3c9512b)",
   "license": "UNLICENSED",
   "metadata": Object {
     "jsii": Object {
