@@ -32,7 +32,7 @@ Object {
     <EmbeddedResource Include=\\"csharppackage-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.69.0,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.70.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -255,7 +255,6 @@ func (h *jsiiProxy_Hello) Add(ops *Operands) *float64 {
 
 ",
   "hello/hello_Hello__no_runtime_type_checking.go": "//go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 // gopackage
 package hello
@@ -268,7 +267,6 @@ func (h *jsiiProxy_Hello) validateAddParameters(ops *Operands) error {
 
 ",
   "hello/hello_Hello__runtime_type_checks.go": "//go:build !no_runtime_type_checking
-// +build !no_runtime_type_checking
 
 // gopackage
 package hello
@@ -569,9 +567,9 @@ Object {
     ],
   },
   "description": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
-  "fingerprint": "hdghYj3T64k00fhZFtM7EYEg1tY3qq6wwJGjNl7v9no=",
+  "fingerprint": "7DqDWVWPOhMnYPha1dyvoBIARkaUu8xes+1gG8xM080=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.69.0 (build f656c31)",
+  "jsiiVersion": "1.70.0 (build 03c2f6f)",
   "license": "UNLICENSED",
   "metadata": Object {
     "jsii": Object {
@@ -668,7 +666,9 @@ class Operands:
         :param rhs: -
         '''
         if __debug__:
-            type_hints = typing.get_type_hints(Operands.__init__)
+            def stub(*, lhs: jsii.Number, rhs: jsii.Number) -> None:
+                ...
+            type_hints = typing.get_type_hints(stub)
             check_type(argname=\\"argument lhs\\", value=lhs, expected_type=type_hints[\\"lhs\\"])
             check_type(argname=\\"argument rhs\\", value=rhs, expected_type=type_hints[\\"rhs\\"])
         self._values: typing.Dict[str, typing.Any] = {
