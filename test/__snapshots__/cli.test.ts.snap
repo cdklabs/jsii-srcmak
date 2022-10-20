@@ -32,7 +32,7 @@ Object {
     <EmbeddedResource Include=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.69.0,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.70.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -345,7 +345,6 @@ func (c *jsiiProxy_Calculator) Sub(ops *Operands) *float64 {
 
 ",
   "package/package_Calculator__no_runtime_type_checking.go": "//go:build no_runtime_type_checking
-// +build no_runtime_type_checking
 
 // 4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060
 package package
@@ -366,7 +365,6 @@ func (c *jsiiProxy_Calculator) validateSubParameters(ops *Operands) error {
 
 ",
   "package/package_Calculator__runtime_type_checks.go": "//go:build !no_runtime_type_checking
-// +build !no_runtime_type_checking
 
 // 4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060
 package package
@@ -705,9 +703,9 @@ Object {
     ],
   },
   "description": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
-  "fingerprint": "1+UAh5rc+qHVWewGQd+eDf7hENyGgCzNN8ZtFafpRtc=",
+  "fingerprint": "XKw2HkzEiADGe1GyZbVjMSWMj62eom6qtoiynPNYe0I=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.69.0 (build f656c31)",
+  "jsiiVersion": "1.70.0 (build 03c2f6f)",
   "license": "UNLICENSED",
   "metadata": Object {
     "jsii": Object {
@@ -948,7 +946,9 @@ class Operands:
         :param rhs: Right-hand side operand.
         '''
         if __debug__:
-            type_hints = typing.get_type_hints(Operands.__init__)
+            def stub(*, lhs: jsii.Number, rhs: jsii.Number) -> None:
+                ...
+            type_hints = typing.get_type_hints(stub)
             check_type(argname=\\"argument lhs\\", value=lhs, expected_type=type_hints[\\"lhs\\"])
             check_type(argname=\\"argument rhs\\", value=rhs, expected_type=type_hints[\\"rhs\\"])
         self._values: typing.Dict[str, typing.Any] = {
