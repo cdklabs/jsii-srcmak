@@ -32,7 +32,7 @@ Object {
     <EmbeddedResource Include=\\"csharppackage-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.71.0,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.72.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -567,9 +567,9 @@ Object {
     ],
   },
   "description": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
-  "fingerprint": "IEVtQw7wSmUL+efM/Lq+PV04W3FOPwtDTY+TYk+dvPA=",
+  "fingerprint": "FDy4knqqI5YZqC6dORqvZ6CjXwzIg4pkKeueAt7Bc+Y=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.71.0 (build f1f58ae)",
+  "jsiiVersion": "1.72.0 (build 4b8828b)",
   "license": "UNLICENSED",
   "metadata": Object {
     "jsii": Object {
@@ -666,12 +666,10 @@ class Operands:
         :param rhs: -
         '''
         if __debug__:
-            def stub(*, lhs: jsii.Number, rhs: jsii.Number) -> None:
-                ...
-            type_hints = typing.get_type_hints(stub)
+            type_hints = typing.get_type_hints(_typecheckingstub__be3a9403b95ce7f8a86be94c66555dc360ad3231bf31a6ad0030c4198da87142)
             check_type(argname=\\"argument lhs\\", value=lhs, expected_type=type_hints[\\"lhs\\"])
             check_type(argname=\\"argument rhs\\", value=rhs, expected_type=type_hints[\\"rhs\\"])
-        self._values: typing.Dict[str, typing.Any] = {
+        self._values: typing.Dict[builtins.str, typing.Any] = {
             \\"lhs\\": lhs,
             \\"rhs\\": rhs,
         }
@@ -706,6 +704,14 @@ __all__ = [
 ]
 
 publication.publish()
+
+def _typecheckingstub__be3a9403b95ce7f8a86be94c66555dc360ad3231bf31a6ad0030c4198da87142(
+    *,
+    lhs: jsii.Number,
+    rhs: jsii.Number,
+) -> None:
+    \\"\\"\\"Type checking stubs\\"\\"\\"
+    pass
 ",
   "my_python_module/submodule/_jsii/__init__.py": "import abc
 import builtins
