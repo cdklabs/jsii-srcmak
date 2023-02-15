@@ -32,7 +32,7 @@ Object {
     <EmbeddedResource Include=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.74.0,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.75.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -199,56 +199,7 @@ namespace MyPackage
 
 exports[`golang output 1`] = `
 Object {
-  "package/jsii/jsii.go": "// Package jsii contains the functionaility needed for jsii packages to
-// initialize their dependencies and themselves. Users should never need to use this package
-// directly. If you find you need to - please report a bug at
-// https://github.com/aws/jsii/issues/new/choose
-package jsii
-
-import (
-	_      \\"embed\\"
-
-	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
-)
-
-//go:embed 4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz
-var tarball []byte
-
-// Initialize loads the necessary packages in the @jsii/kernel to support the enclosing module.
-// The implementation is idempotent (and hence safe to be called over and over).
-func Initialize() {
-	// Load this library into the kernel
-	_jsii_.Load(\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060\\", \\"0.0.0\\", tarball)
-}
-",
-  "package/package.go": "package package
-
-import (
-	\\"reflect\\"
-
-	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
-)
-
-func init() {
-	_jsii_.RegisterClass(
-		\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator\\",
-		reflect.TypeOf((*Calculator)(nil)).Elem(),
-		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: \\"add\\", GoMethod: \\"Add\\"},
-			_jsii_.MemberMethod{JsiiMethod: \\"mul\\", GoMethod: \\"Mul\\"},
-			_jsii_.MemberMethod{JsiiMethod: \\"sub\\", GoMethod: \\"Sub\\"},
-		},
-		func() interface{} {
-			return &jsiiProxy_Calculator{}
-		},
-	)
-	_jsii_.RegisterStruct(
-		\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\",
-		reflect.TypeOf((*Operands)(nil)).Elem(),
-	)
-}
-",
-  "package/package_Calculator.go": "// 4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060
+  "package/Calculator.go": "// 4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060
 package package
 
 import (
@@ -344,27 +295,7 @@ func (c *jsiiProxy_Calculator) Sub(ops *Operands) *float64 {
 }
 
 ",
-  "package/package_Calculator__no_runtime_type_checking.go": "//go:build no_runtime_type_checking
-
-// 4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060
-package package
-
-// Building without runtime type checking enabled, so all the below just return nil
-
-func (c *jsiiProxy_Calculator) validateAddParameters(ops *Operands) error {
-	return nil
-}
-
-func (c *jsiiProxy_Calculator) validateMulParameters(ops *Operands) error {
-	return nil
-}
-
-func (c *jsiiProxy_Calculator) validateSubParameters(ops *Operands) error {
-	return nil
-}
-
-",
-  "package/package_Calculator__runtime_type_checks.go": "//go:build !no_runtime_type_checking
+  "package/Calculator__checks.go": "//go:build !no_runtime_type_checking
 
 // 4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060
 package package
@@ -409,7 +340,27 @@ func (c *jsiiProxy_Calculator) validateSubParameters(ops *Operands) error {
 }
 
 ",
-  "package/package_Operands.go": "// 4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060
+  "package/Calculator__no_checks.go": "//go:build no_runtime_type_checking
+
+// 4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060
+package package
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (c *jsiiProxy_Calculator) validateAddParameters(ops *Operands) error {
+	return nil
+}
+
+func (c *jsiiProxy_Calculator) validateMulParameters(ops *Operands) error {
+	return nil
+}
+
+func (c *jsiiProxy_Calculator) validateSubParameters(ops *Operands) error {
+	return nil
+}
+
+",
+  "package/Operands.go": "// 4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060
 package package
 
 
@@ -421,6 +372,55 @@ type Operands struct {
 	Rhs *float64 \`field:\\"required\\" json:\\"rhs\\" yaml:\\"rhs\\"\`
 }
 
+",
+  "package/jsii/jsii.go": "// Package jsii contains the functionaility needed for jsii packages to
+// initialize their dependencies and themselves. Users should never need to use this package
+// directly. If you find you need to - please report a bug at
+// https://github.com/aws/jsii/issues/new/choose
+package jsii
+
+import (
+	_      \\"embed\\"
+
+	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
+)
+
+//go:embed 4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz
+var tarball []byte
+
+// Initialize loads the necessary packages in the @jsii/kernel to support the enclosing module.
+// The implementation is idempotent (and hence safe to be called over and over).
+func Initialize() {
+	// Load this library into the kernel
+	_jsii_.Load(\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060\\", \\"0.0.0\\", tarball)
+}
+",
+  "package/main.go": "package package
+
+import (
+	\\"reflect\\"
+
+	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
+)
+
+func init() {
+	_jsii_.RegisterClass(
+		\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator\\",
+		reflect.TypeOf((*Calculator)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: \\"add\\", GoMethod: \\"Add\\"},
+			_jsii_.MemberMethod{JsiiMethod: \\"mul\\", GoMethod: \\"Mul\\"},
+			_jsii_.MemberMethod{JsiiMethod: \\"sub\\", GoMethod: \\"Sub\\"},
+		},
+		func() interface{} {
+			return &jsiiProxy_Calculator{}
+		},
+	)
+	_jsii_.RegisterStruct(
+		\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\",
+		reflect.TypeOf((*Operands)(nil)).Elem(),
+	)
+}
 ",
   "package/version": "0.0.0
 ",
@@ -703,9 +703,9 @@ Object {
     ],
   },
   "description": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
-  "fingerprint": "aHQugcugG/aGC4ctTI+AHPmqaefhHfgBoWExMEMXvMI=",
+  "fingerprint": "CwvyYhNouAIcJpJ9ii3MTM/LALCem40DZ1Y/5Otad3M=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.74.0 (build 6d08790)",
+  "jsiiVersion": "1.75.0 (build 63bb957)",
   "license": "UNLICENSED",
   "metadata": Object {
     "jsii": Object {

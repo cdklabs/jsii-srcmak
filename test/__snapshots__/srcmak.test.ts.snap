@@ -32,7 +32,7 @@ Object {
     <EmbeddedResource Include=\\"csharppackage-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.74.0,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.75.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -171,32 +171,7 @@ namespace Hello.World
 
 exports[`golang + different entrypoint 1`] = `
 Object {
-  "hello/hello.go": "package hello
-
-import (
-	\\"reflect\\"
-
-	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
-)
-
-func init() {
-	_jsii_.RegisterClass(
-		\\"gopackage.Hello\\",
-		reflect.TypeOf((*Hello)(nil)).Elem(),
-		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: \\"add\\", GoMethod: \\"Add\\"},
-		},
-		func() interface{} {
-			return &jsiiProxy_Hello{}
-		},
-	)
-	_jsii_.RegisterStruct(
-		\\"gopackage.Operands\\",
-		reflect.TypeOf((*Operands)(nil)).Elem(),
-	)
-}
-",
-  "hello/hello_Hello.go": "// gopackage
+  "hello/Hello.go": "// gopackage
 package hello
 
 import (
@@ -254,19 +229,7 @@ func (h *jsiiProxy_Hello) Add(ops *Operands) *float64 {
 }
 
 ",
-  "hello/hello_Hello__no_runtime_type_checking.go": "//go:build no_runtime_type_checking
-
-// gopackage
-package hello
-
-// Building without runtime type checking enabled, so all the below just return nil
-
-func (h *jsiiProxy_Hello) validateAddParameters(ops *Operands) error {
-	return nil
-}
-
-",
-  "hello/hello_Hello__runtime_type_checks.go": "//go:build !no_runtime_type_checking
+  "hello/Hello__checks.go": "//go:build !no_runtime_type_checking
 
 // gopackage
 package hello
@@ -289,7 +252,19 @@ func (h *jsiiProxy_Hello) validateAddParameters(ops *Operands) error {
 }
 
 ",
-  "hello/hello_Operands.go": "// gopackage
+  "hello/Hello__no_checks.go": "//go:build no_runtime_type_checking
+
+// gopackage
+package hello
+
+// Building without runtime type checking enabled, so all the below just return nil
+
+func (h *jsiiProxy_Hello) validateAddParameters(ops *Operands) error {
+	return nil
+}
+
+",
+  "hello/Operands.go": "// gopackage
 package hello
 
 
@@ -319,6 +294,31 @@ var tarball []byte
 func Initialize() {
 	// Load this library into the kernel
 	_jsii_.Load(\\"gopackage\\", \\"0.0.0\\", tarball)
+}
+",
+  "hello/main.go": "package hello
+
+import (
+	\\"reflect\\"
+
+	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
+)
+
+func init() {
+	_jsii_.RegisterClass(
+		\\"gopackage.Hello\\",
+		reflect.TypeOf((*Hello)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberMethod{JsiiMethod: \\"add\\", GoMethod: \\"Add\\"},
+		},
+		func() interface{} {
+			return &jsiiProxy_Hello{}
+		},
+	)
+	_jsii_.RegisterStruct(
+		\\"gopackage.Operands\\",
+		reflect.TypeOf((*Operands)(nil)).Elem(),
+	)
 }
 ",
   "hello/version": "0.0.0
@@ -567,9 +567,9 @@ Object {
     ],
   },
   "description": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
-  "fingerprint": "K28Z0WyRfUNUeAm9AiO2ofCx4FtK1reIVjMDvlXtpiU=",
+  "fingerprint": "RfGR/VRqZbhc1amakYP+T05jXo/1NVLDGcpSJT7Ixxo=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.74.0 (build 6d08790)",
+  "jsiiVersion": "1.75.0 (build 63bb957)",
   "license": "UNLICENSED",
   "metadata": Object {
     "jsii": Object {
