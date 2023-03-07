@@ -26,13 +26,14 @@ Object {
     <IncludeSource>true</IncludeSource>
     <Nullable>enable</Nullable>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RollForward>Major</RollForward>
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include=\\"csharppackage-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.76.0,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.77.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -567,9 +568,9 @@ Object {
     ],
   },
   "description": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
-  "fingerprint": "L0n23FivomM9C25366XzpjdMcm91mAVvVsGJTZPfX5Q=",
+  "fingerprint": "tyjvWEfqqJIJTfUD8c1MtBXtk8nuZdH+EnXGOe8TB+Q=",
   "homepage": "http://generated",
-  "jsiiVersion": "1.76.0 (build a2651be)",
+  "jsiiVersion": "1.77.0 (build 3e5fa88)",
   "license": "UNLICENSED",
   "metadata": Object {
     "jsii": Object {
