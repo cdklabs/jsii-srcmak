@@ -39,7 +39,7 @@ export async function exec(moduleName: string, args: string[] = [], options: Spa
       '  | ' + Buffer.concat(data).toString('utf-8').split('\n').filter(x => x).join('\n  | '),
       '  +----------------------------------------------------------------------------------',
       `  | Command: ${moduleName} ${args.join(' ')}`,
-      `  | Workdir: ${path.resolve(options.cwd ?? '.')}`,
+      `  | Workdir: ${path.resolve(options.cwd?.toString() ?? '.')}`,
       '  +----------------------------------------------------------------------------------',
     ].join('\n'));
 
