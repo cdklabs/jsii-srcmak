@@ -40,7 +40,7 @@
     "@types/node": "^16",
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
-    "constructs": "^3.4.283",
+    "constructs": "^3.4.284",
     "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.7",
     "eslint-import-resolver-typescript": "^2.7.1",
@@ -48,7 +48,7 @@
     "jest": "^27",
     "jest-junit": "^15",
     "npm-check-updates": "^16",
-    "projen": "^0.69.8",
+    "projen": "^0.69.9",
     "standard-version": "^9",
     "ts-jest": "^27",
     "typescript": "^4.9.5"
