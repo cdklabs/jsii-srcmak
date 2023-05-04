@@ -4070,7 +4070,7 @@ jsii@1.80.0:
     typescript "~3.9.10"
     yargs "^16.2.0"
 
-jsii@^5.0.7:
+jsii@~5.0.7:
   version "5.0.7"
   resolved "https://registry.yarnpkg.com/jsii/-/jsii-5.0.7.tgz#3b35ec28097fbbb2315486a7c3933b66bfce3325"
   integrity sha512-T1So9pQiWBtjq+ki6HrilEDbV/YSxiorY05TjzjHbQtHsIZ1lJlLEIdN1YW9JVD2CrCRZgIPqeBIHwNZazDRcA==
