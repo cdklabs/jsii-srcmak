@@ -1,11 +1,12 @@
-const { typescript } = require('projen');
+const { CdklabsTypeScriptProject } = require('cdklabs-projen-project-types');
 
-const project = new typescript.TypeScriptProject({
+const project = new CdklabsTypeScriptProject({
   name: 'jsii-srcmak',
+  private: false,
+  setNodeEngineVersion: false,
+  workflowNodeVersion: '16.x',
   description: 'generate source code in multiple languages from typescript',
   repository: 'https://github.com/aws/jsii-srcmak.git',
-  authorName: 'Elad Ben-Israel',
-  authorEmail: 'benisrae@amazon.com',
   stability: 'experimental',
   defaultReleaseBranch: 'main',
 
@@ -17,6 +18,7 @@ const project = new typescript.TypeScriptProject({
     '@types/ncp',
     '@types/fs-extra@^8',
     'constructs',
+    'cdklabs-projen-project-types',
   ],
 
   deps: [
