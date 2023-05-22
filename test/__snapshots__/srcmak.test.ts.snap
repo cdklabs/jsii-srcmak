@@ -33,7 +33,7 @@ Object {
     <EmbeddedResource Include=\\"csharppackage-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.80.0,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.81.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -172,8 +172,7 @@ namespace Hello.World
 
 exports[`golang + different entrypoint 1`] = `
 Object {
-  "hello/Hello.go": "// gopackage
-package hello
+  "hello/Hello.go": "package hello
 
 import (
 	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
@@ -232,7 +231,6 @@ func (h *jsiiProxy_Hello) Add(ops *Operands) *float64 {
 ",
   "hello/Hello__checks.go": "//go:build !no_runtime_type_checking
 
-// gopackage
 package hello
 
 import (
@@ -255,7 +253,6 @@ func (h *jsiiProxy_Hello) validateAddParameters(ops *Operands) error {
 ",
   "hello/Hello__no_checks.go": "//go:build no_runtime_type_checking
 
-// gopackage
 package hello
 
 // Building without runtime type checking enabled, so all the below just return nil
@@ -265,8 +262,7 @@ func (h *jsiiProxy_Hello) validateAddParameters(ops *Operands) error {
 }
 
 ",
-  "hello/Operands.go": "// gopackage
-package hello
+  "hello/Operands.go": "package hello
 
 
 type Operands struct {
@@ -297,7 +293,8 @@ func Initialize() {
 	_jsii_.Load(\\"gopackage\\", \\"0.0.0\\", tarball)
 }
 ",
-  "hello/main.go": "package hello
+  "hello/main.go": "// gopackage
+package hello
 
 import (
 	\\"reflect\\"

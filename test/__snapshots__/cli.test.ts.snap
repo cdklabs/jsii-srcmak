@@ -33,7 +33,7 @@ Object {
     <EmbeddedResource Include=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.80.0,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.81.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -200,8 +200,7 @@ namespace MyPackage
 
 exports[`golang output 1`] = `
 Object {
-  "package/Calculator.go": "// 4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060
-package package
+  "package/Calculator.go": "package package
 
 import (
 	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
@@ -298,7 +297,6 @@ func (c *jsiiProxy_Calculator) Sub(ops *Operands) *float64 {
 ",
   "package/Calculator__checks.go": "//go:build !no_runtime_type_checking
 
-// 4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060
 package package
 
 import (
@@ -343,7 +341,6 @@ func (c *jsiiProxy_Calculator) validateSubParameters(ops *Operands) error {
 ",
   "package/Calculator__no_checks.go": "//go:build no_runtime_type_checking
 
-// 4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060
 package package
 
 // Building without runtime type checking enabled, so all the below just return nil
@@ -361,8 +358,7 @@ func (c *jsiiProxy_Calculator) validateSubParameters(ops *Operands) error {
 }
 
 ",
-  "package/Operands.go": "// 4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060
-package package
+  "package/Operands.go": "package package
 
 
 // Math operands.
@@ -396,7 +392,8 @@ func Initialize() {
 	_jsii_.Load(\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060\\", \\"0.0.0\\", tarball)
 }
 ",
-  "package/main.go": "package package
+  "package/main.go": "// 4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060
+package package
 
 import (
 	\\"reflect\\"
