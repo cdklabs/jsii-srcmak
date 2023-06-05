@@ -85,6 +85,11 @@
       "type": "build"
     },
     {
+      "name": "jackspeak",
+      "version": "2.0.3",
+      "type": "override"
+    },
+    {
       "name": "fs-extra",
       "type": "runtime"
     },

@@ -42,4 +42,6 @@ const project = new CdklabsTypeScriptProject({
   autoApproveUpgrades: true,
 });
 
+project.package.addPackageResolutions('jackspeak@2.0.3');
+
 project.synth();
