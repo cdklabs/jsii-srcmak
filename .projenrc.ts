@@ -1,7 +1,8 @@
-const { CdklabsTypeScriptProject } = require('cdklabs-projen-project-types');
+import { CdklabsTypeScriptProject } from 'cdklabs-projen-project-types';
 
 const project = new CdklabsTypeScriptProject({
   name: 'jsii-srcmak',
+  projenrcTs: true,
   private: false,
   setNodeEngineVersion: false,
   workflowNodeVersion: '16.x',
@@ -30,11 +31,9 @@ const project = new CdklabsTypeScriptProject({
   ],
 
   releaseToNpm: true,
-  projenUpgradeSecret: 'PROJEN_GITHUB_TOKEN',
-  compileBeforeTest: true,
 
   // superchain is needed to ensure jsii-pacmak has everything it needs
-  workflowContainerImage: 'jsii/superchain:1-buster-slim-nightly',
+  workflowContainerImage: 'jsii/superchain:1-buster-slim-node16',
   autoApproveOptions: {
     allowedUsernames: ['cdklabs-automation'],
     secret: 'GITHUB_TOKEN',
