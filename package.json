@@ -42,8 +42,8 @@
     "@types/node": "^14",
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
-    "cdklabs-projen-project-types": "^0.1.120",
-    "constructs": "^3.4.316",
+    "cdklabs-projen-project-types": "^0.1.123",
+    "constructs": "^3.4.317",
     "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.7",
     "eslint-import-resolver-typescript": "^2.7.1",
@@ -58,7 +58,7 @@
   },
   "dependencies": {
     "fs-extra": "^9.1.0",
-    "jsii": "~5.1.0",
+    "jsii": "~5.1.1",
     "jsii-pacmak": "^1.82.0",
     "ncp": "^2.0.0",
     "yargs": "^15.4.1"

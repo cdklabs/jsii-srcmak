@@ -1542,10 +1542,10 @@ case@^1.6.3:
   resolved "https://registry.yarnpkg.com/case/-/case-1.6.3.tgz#0a4386e3e9825351ca2e6216c60467ff5f1ea1c9"
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
-cdklabs-projen-project-types@^0.1.120:
-  version "0.1.120"
-  resolved "https://registry.yarnpkg.com/cdklabs-projen-project-types/-/cdklabs-projen-project-types-0.1.120.tgz#7680d878f96cf712c433ac0dc4e8282476a048a1"
-  integrity sha512-hRFXYDQm8U7ONNlU4MnM/fHQ/rv0lHBzZg3JgSCmncVXuBZ4xRlLz+XxH+DvpakeyawlwCSzB7c5WlsMWL2ovg==
+cdklabs-projen-project-types@^0.1.123:
+  version "0.1.123"
+  resolved "https://registry.yarnpkg.com/cdklabs-projen-project-types/-/cdklabs-projen-project-types-0.1.123.tgz#54d5fd301193239732c22030e2620e7850b781d8"
+  integrity sha512-5Y6SYKTb4qzAwqP4gFkjVU+TS2S5MOY6sW2gFjEy2cScn8LuGQ6w+0JXDoih3Xglj7BNkzEophJ3wbyBaU8Ijw==
   dependencies:
     projen "^0.71.82"
     yaml "^2.3.1"
@@ -1771,10 +1771,10 @@ console-control-strings@^1.1.0:
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
 
-constructs@^3.4.316:
-  version "3.4.316"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.4.316.tgz#a49b9d1df07b51e9e63eb8f455924fe7e941dbb5"
-  integrity sha512-SWN20/XXNf2y1f3ZqfNx3pRXlsnykIv0qiF7gs5xRXt2fYuSTxe2FhpIUs1hQTP6iDyAEAtEP7EhzGoS/Y9wcQ==
+constructs@^3.4.317:
+  version "3.4.317"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.4.317.tgz#5aace94dc381ed0491655ab868305b0a0d69854f"
+  integrity sha512-mHCy+9Zf07oMMwagiBcwcUGmSe2ZChJNPcbrB0rbJKxQpbiVrbZ+r574727V4Ubhb0l2ZAaTEt7o/74i1X+L8Q==
 
 conventional-changelog-angular@^5.0.12:
   version "5.0.13"
@@ -4060,10 +4060,10 @@ jsii@1.82.0:
     typescript "~3.9.10"
     yargs "^16.2.0"
 
-jsii@~5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/jsii/-/jsii-5.1.0.tgz#402b99d889db246b402e7bd634f65d8b4ea43648"
-  integrity sha512-wGvX0Um8eyk1dcSHxMCdUR+CCbCw9stx+TGsauNVg+jspJA1lV1rbHyeHDLu5DovVzi8nTLuld6C8vWjfA0Kbw==
+jsii@~5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/jsii/-/jsii-5.1.1.tgz#403ef10ae0cdb1814319f48d98d5dff12fd6945f"
+  integrity sha512-K7LDH6ltqnRhlcSDS1AacjuxTJdz+ZOCwNQAyVL81ssBmj6PaRbn71ejLdVn26WsZjtaOJBHg9I3zp6LVl3u8Q==
   dependencies:
     "@jsii/check-node" "1.82.0"
     "@jsii/spec" "^1.82.0"
@@ -6190,9 +6190,9 @@ typescript@^4.9.5:
   integrity sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==
 
 typescript@next:
-  version "5.2.0-dev.20230604"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.2.0-dev.20230604.tgz#1713801ff534308db6b7cca3dd1df1102a96841a"
-  integrity sha512-S+m9ocHTc37/7/vpvz9n9ClkqteqN3jcwFYAZb3Gc7uFmvBKcjHSU8y+ccAh+d1sOgzu3WPZW8WrbCsGZWmfCw==
+  version "5.2.0-dev.20230605"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.2.0-dev.20230605.tgz#60479c398e828163323a351300c976a1ac911a47"
+  integrity sha512-xMeI7pFrOfxZTt1m4a2txN1E2Qh9IzLT9LNdc0DlEwJJKXjajj5j/nFLwWOUEnaFZBT6v35jlgLogG5HuSxUyA==
 
 typescript@~3.9.10:
   version "3.9.10"
@@ -6475,6 +6475,7 @@ workerpool@^6.4.0:
   integrity sha512-i3KR1mQMNwY2wx20ozq2EjISGtQWDIfV56We+yGJ5yDs8jTwQiLLaqHlkBHITlCuJnYlVRmXegxFxZg7gqI++A==
 
 "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
+  name wrap-ansi-cjs
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
