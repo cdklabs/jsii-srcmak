@@ -1,3 +1,4 @@
+import {  } from 'cdklabs-projen-project-types';
 import { CdklabsTypeScriptProject } from 'cdklabs-projen-project-types';
 
 const project = new CdklabsTypeScriptProject({
