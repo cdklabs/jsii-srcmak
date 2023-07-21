@@ -28,6 +28,14 @@ export interface Options {
   moduleKey?: string;
 
   /**
+   * Specify export overrides in the package.json file.
+   * The key is the name of the export, the value is the file to be imported.
+   *
+   * See https://nodejs.org/api/packages.html#exports for more information
+   */
+  exports?: Record<string, ExportDefinition | string>;
+
+  /**
    * Produce python code.
    * @default - python is not generated
    */
@@ -135,4 +143,14 @@ export interface GoLangOutputOptions {
    * depeding on the supplied moduleName
    */
   packageName: string;
+}
+
+/**
+ * See https://nodejs.org/api/packages.html#conditional-exports for more information
+ */
+export interface ExportDefinition {
+  node?: string;
+  import?: string;
+  require?: string;
+  default?: string;
 }
