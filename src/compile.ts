@@ -67,6 +67,10 @@ export async function compile(workdir: string, options: Options) {
     peerDependencies: deps,
   };
 
+  if (options.exports) {
+    (pkg as Record<string, any>).exports = options.exports;
+  }
+
   if (options.python) {
     targets.python = {
       distName: 'generated',
