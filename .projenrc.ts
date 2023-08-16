@@ -1,11 +1,13 @@
-const { typescript } = require('projen');
+import { CdklabsTypeScriptProject } from 'cdklabs-projen-project-types';
 
-const project = new typescript.TypeScriptProject({
+const project = new CdklabsTypeScriptProject({
   name: 'jsii-srcmak',
+  projenrcTs: true,
+  private: false,
+  setNodeEngineVersion: false,
+  workflowNodeVersion: '16.x',
   description: 'generate source code in multiple languages from typescript',
   repository: 'https://github.com/aws/jsii-srcmak.git',
-  authorName: 'Elad Ben-Israel',
-  authorEmail: 'benisrae@amazon.com',
   stability: 'experimental',
   defaultReleaseBranch: 'main',
 
@@ -17,6 +19,7 @@ const project = new typescript.TypeScriptProject({
     '@types/ncp',
     '@types/fs-extra@^8',
     'constructs',
+    'cdklabs-projen-project-types',
   ],
 
   deps: [
@@ -28,16 +31,16 @@ const project = new typescript.TypeScriptProject({
   ],
 
   releaseToNpm: true,
-  projenUpgradeSecret: 'PROJEN_GITHUB_TOKEN',
-  compileBeforeTest: true,
 
   // superchain is needed to ensure jsii-pacmak has everything it needs
-  workflowContainerImage: 'jsii/superchain:1-buster-slim-nightly',
+  workflowContainerImage: 'jsii/superchain:1-buster-slim-node16',
   autoApproveOptions: {
     allowedUsernames: ['cdklabs-automation'],
     secret: 'GITHUB_TOKEN',
   },
   autoApproveUpgrades: true,
 });
+
+project.package.addPackageResolutions('jackspeak@2.0.3');
 
 project.synth();
