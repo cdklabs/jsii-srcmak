@@ -50,7 +50,7 @@
     "jest": "^27",
     "jest-junit": "^15",
     "npm-check-updates": "^16",
-    "projen": "^0.73.31",
+    "projen": "^0.73.32",
     "standard-version": "^9",
     "ts-jest": "^27",
     "ts-node": "^10.9.1",
@@ -58,7 +58,7 @@
   },
   "dependencies": {
     "fs-extra": "^9.1.0",
-    "jsii": "~5.2.8",
+    "jsii": "~5.2.9",
     "jsii-pacmak": "^1.89.0",
     "ncp": "^2.0.0",
     "yargs": "^15.4.1"
