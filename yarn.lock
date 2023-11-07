@@ -903,9 +903,9 @@
     "@types/node" "*"
 
 "@types/http-cache-semantics@^4.0.2":
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/@types/http-cache-semantics/-/http-cache-semantics-4.0.3.tgz#a3ff232bf7d5c55f38e4e45693eda2ebb545794d"
-  integrity sha512-V46MYLFp08Wf2mmaBhvgjStM3tPa+2GAdy/iqoX+noX1//zje2x4XmrIU0cAwyClATsTmahbtoQ2EwP7I5WSiA==
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/@types/http-cache-semantics/-/http-cache-semantics-4.0.4.tgz#b979ebad3919799c979b17c72621c0bc0a31c6c4"
+  integrity sha512-1m0bIFVc7eJWyve9S0RnuRgcQqF/Xd5QsUZAZeQFr1Q3/p9JWoQQEqmVy+DPTNpGXwhgIetAoYF8JSc33q29QA==
 
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0", "@types/istanbul-lib-coverage@^2.0.1":
   version "2.0.5"
@@ -6344,9 +6344,9 @@ typescript@^4.9.5:
   integrity sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==
 
 typescript@next:
-  version "5.4.0-dev.20231106"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.4.0-dev.20231106.tgz#2f18d69554ee22325fce7309f45c1e6b37f68ea1"
-  integrity sha512-Uxjjt7meOHOSXpQJkiObTPUXfQKqSkdcMQOV+ZAjo3U1w/D/1Qah5Pdg0x/jt/fIA6laCNWLogS+QiaT5HOohw==
+  version "5.4.0-dev.20231107"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.4.0-dev.20231107.tgz#0adf8a770e56a85ed42d7d493cb55c2253042a34"
+  integrity sha512-4bQlfsyFjzZMo1bSLEkFJEcvuQ64pgE0S/BpdWu16lYsQOfJZtntZIyWdED3h+e96IMtVgrC6sxzfPZhj4J/dw==
 
 typescript@~3.9.10:
   version "3.9.10"
