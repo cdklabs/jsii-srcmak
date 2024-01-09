@@ -5,7 +5,7 @@ const project = new CdklabsTypeScriptProject({
   projenrcTs: true,
   private: false,
   setNodeEngineVersion: false,
-  workflowNodeVersion: '16.x',
+  workflowNodeVersion: '18.x',
   description: 'generate source code in multiple languages from typescript',
   repository: 'https://github.com/aws/jsii-srcmak.git',
   stability: 'experimental',
