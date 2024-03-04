@@ -701,9 +701,9 @@ Object {
     ],
   },
   "description": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
-  "fingerprint": "5aauUFZaCWZp+NXT+4+wCHJTrKNycr7t+kHOyCHoel4=",
+  "fingerprint": "DSNQuyDWsAh0ybXl0FzISKJk8OJCT1K/GiClCGALlPw=",
   "homepage": "http://generated",
-  "jsiiVersion": "5.3.23 (build 3518248)",
+  "jsiiVersion": "5.3.25 (build 5bc5da9)",
   "license": "UNLICENSED",
   "metadata": Object {
     "jsii": Object {
