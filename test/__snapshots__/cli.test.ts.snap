@@ -33,7 +33,7 @@ Object {
     <EmbeddedResource Include=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.95.0,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.96.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -873,7 +873,10 @@ Object {
 
 exports[`python output 1`] = `
 Object {
-  "my/python/module/__init__.py": "import abc
+  "my/python/module/__init__.py": "from pkgutil import extend_path
+__path__ = extend_path(__path__, __name__)
+
+import abc
 import builtins
 import datetime
 import enum
@@ -993,7 +996,10 @@ def _typecheckingstub__62b72180950e738f3da9d30928f89aeb536b4a0ac6dbb349ce3eb7a1e
     \\"\\"\\"Type checking stubs\\"\\"\\"
     pass
 ",
-  "my/python/module/_jsii/__init__.py": "import abc
+  "my/python/module/_jsii/__init__.py": "from pkgutil import extend_path
+__path__ = extend_path(__path__, __name__)
+
+import abc
 import builtins
 import datetime
 import enum

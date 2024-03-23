@@ -33,7 +33,7 @@ Object {
     <EmbeddedResource Include=\\"csharppackage-0.0.0.tgz\\" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.95.0,2.0.0)\\" />
+    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.96.0,2.0.0)\\" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -622,7 +622,10 @@ Object {
 
 exports[`python + different entrypoint + submodule 1`] = `
 Object {
-  "my_python_module/submodule/__init__.py": "import abc
+  "my_python_module/submodule/__init__.py": "from pkgutil import extend_path
+__path__ = extend_path(__path__, __name__)
+
+import abc
 import builtins
 import datetime
 import enum
@@ -711,7 +714,10 @@ def _typecheckingstub__be3a9403b95ce7f8a86be94c66555dc360ad3231bf31a6ad0030c4198
     \\"\\"\\"Type checking stubs\\"\\"\\"
     pass
 ",
-  "my_python_module/submodule/_jsii/__init__.py": "import abc
+  "my_python_module/submodule/_jsii/__init__.py": "from pkgutil import extend_path
+__path__ = extend_path(__path__, __name__)
+
+import abc
 import builtins
 import datetime
 import enum
