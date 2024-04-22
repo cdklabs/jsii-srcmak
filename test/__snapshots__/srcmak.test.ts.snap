@@ -565,9 +565,9 @@ Object {
     ],
   },
   "description": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
-  "fingerprint": "29kFNp8b1CX1kmO0ADY/5HA/UPrlEsP2NBN47VH421s=",
+  "fingerprint": "Dpnrz2Z2/eeMY9VBEdQXbKxqASpHgmc+1JUqwwtsXxo=",
   "homepage": "http://generated",
-  "jsiiVersion": "5.4.3 (build f32f407)",
+  "jsiiVersion": "5.4.6 (build c14be2b)",
   "license": "UNLICENSED",
   "metadata": Object {
     "jsii": Object {
