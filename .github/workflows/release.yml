@@ -59,7 +59,9 @@ jobs:
       image: jsii/superchain:1-buster-slim-node16
   release_github:
     name: Publish to GitHub Releases
-    needs: release
+    needs:
+      - release
+      - release_npm
     runs-on: ubuntu-latest
     permissions:
       contents: write
