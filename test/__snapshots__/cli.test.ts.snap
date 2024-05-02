@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`csharp output 1`] = `
-Object {
+{
   "MyPackage/AssemblyInfo.cs": "using Amazon.JSII.Runtime.Deputy;
 
-[assembly: JsiiAssembly(\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060\\", \\"0.0.0\\", \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz\\")]
+[assembly: JsiiAssembly("4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060", "0.0.0", "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz")]
 ",
-  "MyPackage/MyPackage.csproj": "<Project Sdk=\\"Microsoft.NET.Sdk\\">
+  "MyPackage/MyPackage.csproj": "<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <!-- Package Identification -->
     <Description>4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060</Description>
@@ -30,10 +30,10 @@ Object {
     <RollForward>Major</RollForward>
   </PropertyGroup>
   <ItemGroup>
-    <EmbeddedResource Include=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz\\" />
+    <EmbeddedResource Include="4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.97.0,2.0.0)\\" />
+    <PackageReference Include="Amazon.JSII.Runtime" Version="[1.98.0,2.0.0)" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -51,7 +51,7 @@ Object {
 namespace MyPackage
 {
     /// <summary>A sophisticaed multi-language calculator.</summary>
-    [JsiiClass(nativeType: typeof(MyPackage.Calculator), fullyQualifiedName: \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator\\")]
+    [JsiiClass(nativeType: typeof(MyPackage.Calculator), fullyQualifiedName: "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator")]
     public class Calculator : DeputyBase
     {
         public Calculator(): base(_MakeDeputyProps())
@@ -65,38 +65,38 @@ namespace MyPackage
         }
 
         /// <summary>Used by jsii to construct an instance of this class from a Javascript-owned object reference</summary>
-        /// <param name=\\"reference\\">The Javascript-owned object reference</param>
+        /// <param name="reference">The Javascript-owned object reference</param>
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         protected Calculator(ByRefValue reference): base(reference)
         {
         }
 
         /// <summary>Used by jsii to construct an instance of this class from DeputyProps</summary>
-        /// <param name=\\"props\\">The deputy props</param>
+        /// <param name="props">The deputy props</param>
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         protected Calculator(DeputyProps props): base(props)
         {
         }
 
         /// <summary>Adds the two operands.</summary>
-        /// <param name=\\"ops\\">operands.</param>
-        [JsiiMethod(name: \\"add\\", returnsJson: \\"{\\\\\\"type\\\\\\":{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}}\\", parametersJson: \\"[{\\\\\\"docs\\\\\\":{\\\\\\"summary\\\\\\":\\\\\\"operands.\\\\\\"},\\\\\\"name\\\\\\":\\\\\\"ops\\\\\\",\\\\\\"type\\\\\\":{\\\\\\"fqn\\\\\\":\\\\\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\\\\\"}}]\\")]
+        /// <param name="ops">operands.</param>
+        [JsiiMethod(name: "add", returnsJson: "{\\"type\\":{\\"primitive\\":\\"number\\"}}", parametersJson: "[{\\"docs\\":{\\"summary\\":\\"operands.\\"},\\"name\\":\\"ops\\",\\"type\\":{\\"fqn\\":\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\"}}]")]
         public virtual double Add(MyPackage.IOperands ops)
         {
             return InvokeInstanceMethod<double>(new System.Type[]{typeof(MyPackage.IOperands)}, new object[]{ops})!;
         }
 
         /// <summary>Multiplies the two operands.</summary>
-        /// <param name=\\"ops\\">operands.</param>
-        [JsiiMethod(name: \\"mul\\", returnsJson: \\"{\\\\\\"type\\\\\\":{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}}\\", parametersJson: \\"[{\\\\\\"docs\\\\\\":{\\\\\\"summary\\\\\\":\\\\\\"operands.\\\\\\"},\\\\\\"name\\\\\\":\\\\\\"ops\\\\\\",\\\\\\"type\\\\\\":{\\\\\\"fqn\\\\\\":\\\\\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\\\\\"}}]\\")]
+        /// <param name="ops">operands.</param>
+        [JsiiMethod(name: "mul", returnsJson: "{\\"type\\":{\\"primitive\\":\\"number\\"}}", parametersJson: "[{\\"docs\\":{\\"summary\\":\\"operands.\\"},\\"name\\":\\"ops\\",\\"type\\":{\\"fqn\\":\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\"}}]")]
         public virtual double Mul(MyPackage.IOperands ops)
         {
             return InvokeInstanceMethod<double>(new System.Type[]{typeof(MyPackage.IOperands)}, new object[]{ops})!;
         }
 
         /// <summary>Subtracts the two operands.</summary>
-        /// <param name=\\"ops\\">operands.</param>
-        [JsiiMethod(name: \\"sub\\", returnsJson: \\"{\\\\\\"type\\\\\\":{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}}\\", parametersJson: \\"[{\\\\\\"docs\\\\\\":{\\\\\\"summary\\\\\\":\\\\\\"operands.\\\\\\"},\\\\\\"name\\\\\\":\\\\\\"ops\\\\\\",\\\\\\"type\\\\\\":{\\\\\\"fqn\\\\\\":\\\\\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\\\\\"}}]\\")]
+        /// <param name="ops">operands.</param>
+        [JsiiMethod(name: "sub", returnsJson: "{\\"type\\":{\\"primitive\\":\\"number\\"}}", parametersJson: "[{\\"docs\\":{\\"summary\\":\\"operands.\\"},\\"name\\":\\"ops\\",\\"type\\":{\\"fqn\\":\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\"}}]")]
         public virtual double Sub(MyPackage.IOperands ops)
         {
             return InvokeInstanceMethod<double>(new System.Type[]{typeof(MyPackage.IOperands)}, new object[]{ops})!;
@@ -111,25 +111,25 @@ namespace MyPackage
 namespace MyPackage
 {
     /// <summary>Math operands.</summary>
-    [JsiiInterface(nativeType: typeof(IOperands), fullyQualifiedName: \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\")]
+    [JsiiInterface(nativeType: typeof(IOperands), fullyQualifiedName: "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands")]
     public interface IOperands
     {
         /// <summary>Left-hand side operand.</summary>
-        [JsiiProperty(name: \\"lhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
+        [JsiiProperty(name: "lhs", typeJson: "{\\"primitive\\":\\"number\\"}")]
         double Lhs
         {
             get;
         }
 
         /// <summary>Right-hand side operand.</summary>
-        [JsiiProperty(name: \\"rhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
+        [JsiiProperty(name: "rhs", typeJson: "{\\"primitive\\":\\"number\\"}")]
         double Rhs
         {
             get;
         }
 
         /// <summary>Math operands.</summary>
-        [JsiiTypeProxy(nativeType: typeof(IOperands), fullyQualifiedName: \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\")]
+        [JsiiTypeProxy(nativeType: typeof(IOperands), fullyQualifiedName: "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands")]
         internal sealed class _Proxy : DeputyBase, MyPackage.IOperands
         {
             private _Proxy(ByRefValue reference): base(reference)
@@ -137,14 +137,14 @@ namespace MyPackage
             }
 
             /// <summary>Left-hand side operand.</summary>
-            [JsiiProperty(name: \\"lhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
+            [JsiiProperty(name: "lhs", typeJson: "{\\"primitive\\":\\"number\\"}")]
             public double Lhs
             {
                 get => GetInstanceProperty<double>()!;
             }
 
             /// <summary>Right-hand side operand.</summary>
-            [JsiiProperty(name: \\"rhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
+            [JsiiProperty(name: "rhs", typeJson: "{\\"primitive\\":\\"number\\"}")]
             public double Rhs
             {
                 get => GetInstanceProperty<double>()!;
@@ -174,11 +174,11 @@ namespace MyPackage
     #pragma warning disable CS8618
 
     /// <summary>Math operands.</summary>
-    [JsiiByValue(fqn: \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\")]
+    [JsiiByValue(fqn: "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands")]
     public class Operands : MyPackage.IOperands
     {
         /// <summary>Left-hand side operand.</summary>
-        [JsiiProperty(name: \\"lhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
+        [JsiiProperty(name: "lhs", typeJson: "{\\"primitive\\":\\"number\\"}")]
         public double Lhs
         {
             get;
@@ -186,7 +186,7 @@ namespace MyPackage
         }
 
         /// <summary>Right-hand side operand.</summary>
-        [JsiiProperty(name: \\"rhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
+        [JsiiProperty(name: "rhs", typeJson: "{\\"primitive\\":\\"number\\"}")]
         public double Rhs
         {
             get;
@@ -199,12 +199,12 @@ namespace MyPackage
 `;
 
 exports[`golang output 1`] = `
-Object {
+{
   "package/Calculator.go": "package package
 
 import (
-	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
-	_init_ \\"github.com/hello/world/package/jsii\\"
+	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
+	_init_ "github.com/hello/world/package/jsii"
 )
 
 // A sophisticaed multi-language calculator.
@@ -228,7 +228,7 @@ func NewCalculator() Calculator {
 	j := jsiiProxy_Calculator{}
 
 	_jsii_.Create(
-		\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator\\",
+		"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator",
 		nil, // no parameters
 		&j,
 	)
@@ -240,7 +240,7 @@ func NewCalculator_Override(c Calculator) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator\\",
+		"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator",
 		nil, // no parameters
 		c,
 	)
@@ -254,7 +254,7 @@ func (c *jsiiProxy_Calculator) Add(ops *Operands) *float64 {
 
 	_jsii_.Invoke(
 		c,
-		\\"add\\",
+		"add",
 		[]interface{}{ops},
 		&returns,
 	)
@@ -270,7 +270,7 @@ func (c *jsiiProxy_Calculator) Mul(ops *Operands) *float64 {
 
 	_jsii_.Invoke(
 		c,
-		\\"mul\\",
+		"mul",
 		[]interface{}{ops},
 		&returns,
 	)
@@ -286,7 +286,7 @@ func (c *jsiiProxy_Calculator) Sub(ops *Operands) *float64 {
 
 	_jsii_.Invoke(
 		c,
-		\\"sub\\",
+		"sub",
 		[]interface{}{ops},
 		&returns,
 	)
@@ -300,16 +300,16 @@ func (c *jsiiProxy_Calculator) Sub(ops *Operands) *float64 {
 package package
 
 import (
-	\\"fmt\\"
+	"fmt"
 
-	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
+	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 )
 
 func (c *jsiiProxy_Calculator) validateAddParameters(ops *Operands) error {
 	if ops == nil {
-		return fmt.Errorf(\\"parameter ops is required, but nil was provided\\")
+		return fmt.Errorf("parameter ops is required, but nil was provided")
 	}
-	if err := _jsii_.ValidateStruct(ops, func() string { return \\"parameter ops\\" }); err != nil {
+	if err := _jsii_.ValidateStruct(ops, func() string { return "parameter ops" }); err != nil {
 		return err
 	}
 
@@ -318,9 +318,9 @@ func (c *jsiiProxy_Calculator) validateAddParameters(ops *Operands) error {
 
 func (c *jsiiProxy_Calculator) validateMulParameters(ops *Operands) error {
 	if ops == nil {
-		return fmt.Errorf(\\"parameter ops is required, but nil was provided\\")
+		return fmt.Errorf("parameter ops is required, but nil was provided")
 	}
-	if err := _jsii_.ValidateStruct(ops, func() string { return \\"parameter ops\\" }); err != nil {
+	if err := _jsii_.ValidateStruct(ops, func() string { return "parameter ops" }); err != nil {
 		return err
 	}
 
@@ -329,9 +329,9 @@ func (c *jsiiProxy_Calculator) validateMulParameters(ops *Operands) error {
 
 func (c *jsiiProxy_Calculator) validateSubParameters(ops *Operands) error {
 	if ops == nil {
-		return fmt.Errorf(\\"parameter ops is required, but nil was provided\\")
+		return fmt.Errorf("parameter ops is required, but nil was provided")
 	}
-	if err := _jsii_.ValidateStruct(ops, func() string { return \\"parameter ops\\" }); err != nil {
+	if err := _jsii_.ValidateStruct(ops, func() string { return "parameter ops" }); err != nil {
 		return err
 	}
 
@@ -364,9 +364,9 @@ func (c *jsiiProxy_Calculator) validateSubParameters(ops *Operands) error {
 // Math operands.
 type Operands struct {
 	// Left-hand side operand.
-	Lhs *float64 \`field:\\"required\\" json:\\"lhs\\" yaml:\\"lhs\\"\`
+	Lhs *float64 \`field:"required" json:"lhs" yaml:"lhs"\`
 	// Right-hand side operand.
-	Rhs *float64 \`field:\\"required\\" json:\\"rhs\\" yaml:\\"rhs\\"\`
+	Rhs *float64 \`field:"required" json:"rhs" yaml:"rhs"\`
 }
 
 ",
@@ -377,9 +377,9 @@ type Operands struct {
 package jsii
 
 import (
-	_      \\"embed\\"
+	_      "embed"
 
-	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
+	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 )
 
 //go:embed 4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz
@@ -389,33 +389,33 @@ var tarball []byte
 // The implementation is idempotent (and hence safe to be called over and over).
 func Initialize() {
 	// Load this library into the kernel
-	_jsii_.Load(\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060\\", \\"0.0.0\\", tarball)
+	_jsii_.Load("4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060", "0.0.0", tarball)
 }
 ",
   "package/main.go": "// 4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060
 package package
 
 import (
-	\\"reflect\\"
+	"reflect"
 
-	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
+	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 )
 
 func init() {
 	_jsii_.RegisterClass(
-		\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator\\",
+		"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator",
 		reflect.TypeOf((*Calculator)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: \\"add\\", GoMethod: \\"Add\\"},
-			_jsii_.MemberMethod{JsiiMethod: \\"mul\\", GoMethod: \\"Mul\\"},
-			_jsii_.MemberMethod{JsiiMethod: \\"sub\\", GoMethod: \\"Sub\\"},
+			_jsii_.MemberMethod{JsiiMethod: "add", GoMethod: "Add"},
+			_jsii_.MemberMethod{JsiiMethod: "mul", GoMethod: "Mul"},
+			_jsii_.MemberMethod{JsiiMethod: "sub", GoMethod: "Sub"},
 		},
 		func() interface{} {
 			return &jsiiProxy_Calculator{}
 		},
 	)
 	_jsii_.RegisterStruct(
-		\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\",
+		"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands",
 		reflect.TypeOf((*Operands)(nil)).Elem(),
 	)
 }
@@ -426,7 +426,7 @@ func init() {
 `;
 
 exports[`java output 1`] = `
-Object {
+{
   "src/main/java/mypackage/$Module.java": "package mypackage;
 
 import java.io.BufferedReader;
@@ -450,13 +450,13 @@ public final class $Module extends JsiiModule {
     private static Map<String, String> load() {
         final Map<String, String> result = new HashMap<>();
         final ClassLoader cl = $Module.class.getClassLoader();
-        try (final InputStream is = cl.getResourceAsStream(\\"mypackage/$Module.txt\\");
+        try (final InputStream is = cl.getResourceAsStream("mypackage/$Module.txt");
              final Reader rd = new InputStreamReader(is, StandardCharsets.UTF_8);
              final BufferedReader br = new BufferedReader(rd)) {
             br.lines()
               .filter(line -> !line.trim().isEmpty())
               .forEach(line ->  {
-                final String[] parts = line.split(\\"=\\", 2);
+                final String[] parts = line.split("=", 2);
                 final String fqn = parts[0];
                 final String className = parts[1];
                 result.put(fqn, className);
@@ -471,13 +471,13 @@ public final class $Module extends JsiiModule {
     private final Map<String, Class<?>> cache = new HashMap<>();
 
     public $Module() {
-        super(\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060\\", \\"0.0.0\\", $Module.class, \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060@0.0.0.jsii.tgz\\");
+        super("4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060", "0.0.0", $Module.class, "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060@0.0.0.jsii.tgz");
     }
 
     @Override
     protected Class<?> resolveClass(final String fqn) throws ClassNotFoundException {
         if (!MODULE_TYPES.containsKey(fqn)) {
-            throw new ClassNotFoundException(\\"Unknown JSII type: \\" + fqn);
+            throw new ClassNotFoundException("Unknown JSII type: " + fqn);
         }
         String className = MODULE_TYPES.get(fqn);
         if (!this.cache.containsKey(className)) {
@@ -502,7 +502,7 @@ public final class $Module extends JsiiModule {
  * A sophisticaed multi-language calculator.
  */
 
-@software.amazon.jsii.Jsii(module = mypackage.$Module.class, fqn = \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator\\")
+@software.amazon.jsii.Jsii(module = mypackage.$Module.class, fqn = "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator")
 public class Calculator extends software.amazon.jsii.JsiiObject {
 
     protected Calculator(final software.amazon.jsii.JsiiObjectRef objRef) {
@@ -524,7 +524,7 @@ public class Calculator extends software.amazon.jsii.JsiiObject {
      * @param ops operands. This parameter is required.
      */
     public @org.jetbrains.annotations.NotNull java.lang.Number add(final @org.jetbrains.annotations.NotNull mypackage.Operands ops) {
-        return software.amazon.jsii.Kernel.call(this, \\"add\\", software.amazon.jsii.NativeType.forClass(java.lang.Number.class), new Object[] { java.util.Objects.requireNonNull(ops, \\"ops is required\\") });
+        return software.amazon.jsii.Kernel.call(this, "add", software.amazon.jsii.NativeType.forClass(java.lang.Number.class), new Object[] { java.util.Objects.requireNonNull(ops, "ops is required") });
     }
 
     /**
@@ -533,7 +533,7 @@ public class Calculator extends software.amazon.jsii.JsiiObject {
      * @param ops operands. This parameter is required.
      */
     public @org.jetbrains.annotations.NotNull java.lang.Number mul(final @org.jetbrains.annotations.NotNull mypackage.Operands ops) {
-        return software.amazon.jsii.Kernel.call(this, \\"mul\\", software.amazon.jsii.NativeType.forClass(java.lang.Number.class), new Object[] { java.util.Objects.requireNonNull(ops, \\"ops is required\\") });
+        return software.amazon.jsii.Kernel.call(this, "mul", software.amazon.jsii.NativeType.forClass(java.lang.Number.class), new Object[] { java.util.Objects.requireNonNull(ops, "ops is required") });
     }
 
     /**
@@ -542,7 +542,7 @@ public class Calculator extends software.amazon.jsii.JsiiObject {
      * @param ops operands. This parameter is required.
      */
     public @org.jetbrains.annotations.NotNull java.lang.Number sub(final @org.jetbrains.annotations.NotNull mypackage.Operands ops) {
-        return software.amazon.jsii.Kernel.call(this, \\"sub\\", software.amazon.jsii.NativeType.forClass(java.lang.Number.class), new Object[] { java.util.Objects.requireNonNull(ops, \\"ops is required\\") });
+        return software.amazon.jsii.Kernel.call(this, "sub", software.amazon.jsii.NativeType.forClass(java.lang.Number.class), new Object[] { java.util.Objects.requireNonNull(ops, "ops is required") });
     }
 }
 ",
@@ -552,7 +552,7 @@ public class Calculator extends software.amazon.jsii.JsiiObject {
  * Math operands.
  */
 
-@software.amazon.jsii.Jsii(module = mypackage.$Module.class, fqn = \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\")
+@software.amazon.jsii.Jsii(module = mypackage.$Module.class, fqn = "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands")
 @software.amazon.jsii.Jsii.Proxy(Operands.Jsii$Proxy.class)
 public interface Operands extends software.amazon.jsii.JsiiSerializable {
 
@@ -624,8 +624,8 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
          */
         protected Jsii$Proxy(final software.amazon.jsii.JsiiObjectRef objRef) {
             super(objRef);
-            this.lhs = software.amazon.jsii.Kernel.get(this, \\"lhs\\", software.amazon.jsii.NativeType.forClass(java.lang.Number.class));
-            this.rhs = software.amazon.jsii.Kernel.get(this, \\"rhs\\", software.amazon.jsii.NativeType.forClass(java.lang.Number.class));
+            this.lhs = software.amazon.jsii.Kernel.get(this, "lhs", software.amazon.jsii.NativeType.forClass(java.lang.Number.class));
+            this.rhs = software.amazon.jsii.Kernel.get(this, "rhs", software.amazon.jsii.NativeType.forClass(java.lang.Number.class));
         }
 
         /**
@@ -633,8 +633,8 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
          */
         protected Jsii$Proxy(final Builder builder) {
             super(software.amazon.jsii.JsiiObject.InitializationMode.JSII);
-            this.lhs = java.util.Objects.requireNonNull(builder.lhs, \\"lhs is required\\");
-            this.rhs = java.util.Objects.requireNonNull(builder.rhs, \\"rhs is required\\");
+            this.lhs = java.util.Objects.requireNonNull(builder.lhs, "lhs is required");
+            this.rhs = java.util.Objects.requireNonNull(builder.rhs, "rhs is required");
         }
 
         @Override
@@ -653,15 +653,15 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
             final com.fasterxml.jackson.databind.ObjectMapper om = software.amazon.jsii.JsiiObjectMapper.INSTANCE;
             final com.fasterxml.jackson.databind.node.ObjectNode data = com.fasterxml.jackson.databind.node.JsonNodeFactory.instance.objectNode();
 
-            data.set(\\"lhs\\", om.valueToTree(this.getLhs()));
-            data.set(\\"rhs\\", om.valueToTree(this.getRhs()));
+            data.set("lhs", om.valueToTree(this.getLhs()));
+            data.set("rhs", om.valueToTree(this.getRhs()));
 
             final com.fasterxml.jackson.databind.node.ObjectNode struct = com.fasterxml.jackson.databind.node.JsonNodeFactory.instance.objectNode();
-            struct.set(\\"fqn\\", om.valueToTree(\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\"));
-            struct.set(\\"data\\", data);
+            struct.set("fqn", om.valueToTree("4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands"));
+            struct.set("data", data);
 
             final com.fasterxml.jackson.databind.node.ObjectNode obj = com.fasterxml.jackson.databind.node.JsonNodeFactory.instance.objectNode();
-            obj.set(\\"$jsii.struct\\", struct);
+            obj.set("$jsii.struct", struct);
 
             return obj;
         }
@@ -693,10 +693,10 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
 `;
 
 exports[`jsii output 1`] = `
-Object {
-  "author": Object {
+{
+  "author": {
     "name": "generated@generated.com",
-    "roles": Array [
+    "roles": [
       "author",
     ],
   },
@@ -705,112 +705,112 @@ Object {
   "homepage": "http://generated",
   "jsiiVersion": "5.4.9 (build 91580f2)",
   "license": "UNLICENSED",
-  "metadata": Object {
-    "jsii": Object {
-      "pacmak": Object {
+  "metadata": {
+    "jsii": {
+      "pacmak": {
         "hasDefaultInterfaces": true,
       },
     },
   },
   "name": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
-  "repository": Object {
+  "repository": {
     "type": "git",
     "url": "http://generated",
   },
   "schema": "jsii/0.10.0",
-  "targets": Object {
-    "js": Object {
+  "targets": {
+    "js": {
       "npm": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
     },
   },
-  "types": Object {
-    "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator": Object {
+  "types": {
+    "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator": {
       "assembly": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
-      "docs": Object {
+      "docs": {
         "summary": "A sophisticaed multi-language calculator.",
       },
       "fqn": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator",
-      "initializer": Object {},
+      "initializer": {},
       "kind": "class",
-      "locationInModule": Object {
+      "locationInModule": {
         "filename": "lib/main.ts",
         "line": 19,
       },
-      "methods": Array [
-        Object {
-          "docs": Object {
+      "methods": [
+        {
+          "docs": {
             "summary": "Adds the two operands.",
           },
-          "locationInModule": Object {
+          "locationInModule": {
             "filename": "lib/main.ts",
             "line": 24,
           },
           "name": "add",
-          "parameters": Array [
-            Object {
-              "docs": Object {
+          "parameters": [
+            {
+              "docs": {
                 "summary": "operands.",
               },
               "name": "ops",
-              "type": Object {
+              "type": {
                 "fqn": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands",
               },
             },
           ],
-          "returns": Object {
-            "type": Object {
+          "returns": {
+            "type": {
               "primitive": "number",
             },
           },
         },
-        Object {
-          "docs": Object {
+        {
+          "docs": {
             "summary": "Multiplies the two operands.",
           },
-          "locationInModule": Object {
+          "locationInModule": {
             "filename": "lib/main.ts",
             "line": 40,
           },
           "name": "mul",
-          "parameters": Array [
-            Object {
-              "docs": Object {
+          "parameters": [
+            {
+              "docs": {
                 "summary": "operands.",
               },
               "name": "ops",
-              "type": Object {
+              "type": {
                 "fqn": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands",
               },
             },
           ],
-          "returns": Object {
-            "type": Object {
+          "returns": {
+            "type": {
               "primitive": "number",
             },
           },
         },
-        Object {
-          "docs": Object {
+        {
+          "docs": {
             "summary": "Subtracts the two operands.",
           },
-          "locationInModule": Object {
+          "locationInModule": {
             "filename": "lib/main.ts",
             "line": 32,
           },
           "name": "sub",
-          "parameters": Array [
-            Object {
-              "docs": Object {
+          "parameters": [
+            {
+              "docs": {
                 "summary": "operands.",
               },
               "name": "ops",
-              "type": Object {
+              "type": {
                 "fqn": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands",
               },
             },
           ],
-          "returns": Object {
-            "type": Object {
+          "returns": {
+            "type": {
               "primitive": "number",
             },
           },
@@ -819,47 +819,47 @@ Object {
       "name": "Calculator",
       "symbolId": "lib/main:Calculator",
     },
-    "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands": Object {
+    "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands": {
       "assembly": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
       "datatype": true,
-      "docs": Object {
+      "docs": {
         "summary": "Math operands.",
       },
       "fqn": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands",
       "kind": "interface",
-      "locationInModule": Object {
+      "locationInModule": {
         "filename": "lib/main.ts",
         "line": 4,
       },
       "name": "Operands",
-      "properties": Array [
-        Object {
+      "properties": [
+        {
           "abstract": true,
-          "docs": Object {
+          "docs": {
             "summary": "Left-hand side operand.",
           },
           "immutable": true,
-          "locationInModule": Object {
+          "locationInModule": {
             "filename": "lib/main.ts",
             "line": 8,
           },
           "name": "lhs",
-          "type": Object {
+          "type": {
             "primitive": "number",
           },
         },
-        Object {
+        {
           "abstract": true,
-          "docs": Object {
+          "docs": {
             "summary": "Right-hand side operand.",
           },
           "immutable": true,
-          "locationInModule": Object {
+          "locationInModule": {
             "filename": "lib/main.ts",
             "line": 13,
           },
           "name": "rhs",
-          "type": Object {
+          "type": {
             "primitive": "number",
           },
         },
@@ -872,7 +872,7 @@ Object {
 `;
 
 exports[`python output 1`] = `
-Object {
+{
   "my/python/module/__init__.py": "from pkgutil import extend_path
 __path__ = extend_path(__path__, __name__)
 
@@ -893,14 +893,14 @@ from ._jsii import *
 
 class Calculator(
     metaclass=jsii.JSIIMeta,
-    jsii_type=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator\\",
+    jsii_type="4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Calculator",
 ):
     '''A sophisticaed multi-language calculator.'''
 
     def __init__(self) -> None:
         jsii.create(self.__class__, self, [])
 
-    @jsii.member(jsii_name=\\"add\\")
+    @jsii.member(jsii_name="add")
     def add(self, *, lhs: jsii.Number, rhs: jsii.Number) -> jsii.Number:
         '''Adds the two operands.
 
@@ -909,9 +909,9 @@ class Calculator(
         '''
         ops = Operands(lhs=lhs, rhs=rhs)
 
-        return typing.cast(jsii.Number, jsii.invoke(self, \\"add\\", [ops]))
+        return typing.cast(jsii.Number, jsii.invoke(self, "add", [ops]))
 
-    @jsii.member(jsii_name=\\"mul\\")
+    @jsii.member(jsii_name="mul")
     def mul(self, *, lhs: jsii.Number, rhs: jsii.Number) -> jsii.Number:
         '''Multiplies the two operands.
 
@@ -920,9 +920,9 @@ class Calculator(
         '''
         ops = Operands(lhs=lhs, rhs=rhs)
 
-        return typing.cast(jsii.Number, jsii.invoke(self, \\"mul\\", [ops]))
+        return typing.cast(jsii.Number, jsii.invoke(self, "mul", [ops]))
 
-    @jsii.member(jsii_name=\\"sub\\")
+    @jsii.member(jsii_name="sub")
     def sub(self, *, lhs: jsii.Number, rhs: jsii.Number) -> jsii.Number:
         '''Subtracts the two operands.
 
@@ -931,13 +931,13 @@ class Calculator(
         '''
         ops = Operands(lhs=lhs, rhs=rhs)
 
-        return typing.cast(jsii.Number, jsii.invoke(self, \\"sub\\", [ops]))
+        return typing.cast(jsii.Number, jsii.invoke(self, "sub", [ops]))
 
 
 @jsii.data_type(
-    jsii_type=\\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands\\",
+    jsii_type="4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060.Operands",
     jsii_struct_bases=[],
-    name_mapping={\\"lhs\\": \\"lhs\\", \\"rhs\\": \\"rhs\\"},
+    name_mapping={"lhs": "lhs", "rhs": "rhs"},
 )
 class Operands:
     def __init__(self, *, lhs: jsii.Number, rhs: jsii.Number) -> None:
@@ -948,25 +948,25 @@ class Operands:
         '''
         if __debug__:
             type_hints = typing.get_type_hints(_typecheckingstub__62b72180950e738f3da9d30928f89aeb536b4a0ac6dbb349ce3eb7a1e3c2a293)
-            check_type(argname=\\"argument lhs\\", value=lhs, expected_type=type_hints[\\"lhs\\"])
-            check_type(argname=\\"argument rhs\\", value=rhs, expected_type=type_hints[\\"rhs\\"])
+            check_type(argname="argument lhs", value=lhs, expected_type=type_hints["lhs"])
+            check_type(argname="argument rhs", value=rhs, expected_type=type_hints["rhs"])
         self._values: typing.Dict[builtins.str, typing.Any] = {
-            \\"lhs\\": lhs,
-            \\"rhs\\": rhs,
+            "lhs": lhs,
+            "rhs": rhs,
         }
 
     @builtins.property
     def lhs(self) -> jsii.Number:
         '''Left-hand side operand.'''
-        result = self._values.get(\\"lhs\\")
-        assert result is not None, \\"Required property 'lhs' is missing\\"
+        result = self._values.get("lhs")
+        assert result is not None, "Required property 'lhs' is missing"
         return typing.cast(jsii.Number, result)
 
     @builtins.property
     def rhs(self) -> jsii.Number:
         '''Right-hand side operand.'''
-        result = self._values.get(\\"rhs\\")
-        assert result is not None, \\"Required property 'rhs' is missing\\"
+        result = self._values.get("rhs")
+        assert result is not None, "Required property 'rhs' is missing"
         return typing.cast(jsii.Number, result)
 
     def __eq__(self, rhs: typing.Any) -> builtins.bool:
@@ -976,14 +976,14 @@ class Operands:
         return not (rhs == self)
 
     def __repr__(self) -> str:
-        return \\"Operands(%s)\\" % \\", \\".join(
-            k + \\"=\\" + repr(v) for k, v in self._values.items()
+        return "Operands(%s)" % ", ".join(
+            k + "=" + repr(v) for k, v in self._values.items()
         )
 
 
 __all__ = [
-    \\"Calculator\\",
-    \\"Operands\\",
+    "Calculator",
+    "Operands",
 ]
 
 publication.publish()
@@ -993,7 +993,7 @@ def _typecheckingstub__62b72180950e738f3da9d30928f89aeb536b4a0ac6dbb349ce3eb7a1e
     lhs: jsii.Number,
     rhs: jsii.Number,
 ) -> None:
-    \\"\\"\\"Type checking stubs\\"\\"\\"
+    """Type checking stubs"""
     pass
 ",
   "my/python/module/_jsii/__init__.py": "from pkgutil import extend_path
@@ -1012,14 +1012,14 @@ import typing_extensions
 from typeguard import check_type
 
 __jsii_assembly__ = jsii.JSIIAssembly.load(
-    \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060\\",
-    \\"0.0.0\\",
+    "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
+    "0.0.0",
     __name__[0:-6],
-    \\"4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060@0.0.0.jsii.tgz\\",
+    "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060@0.0.0.jsii.tgz",
 )
 
 __all__ = [
-    \\"__jsii_assembly__\\",
+    "__jsii_assembly__",
 ]
 
 publication.publish()

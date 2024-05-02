@@ -227,13 +227,13 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --dep=prod --filter=fs-extra,jsii,jsii-pacmak,ncp,yargs"
+          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --dep=prod --filter=fs-extra,jsii,jsii-pacmak,jsii-rosetta,ncp,yargs"
         },
         {
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade fs-extra jsii jsii-pacmak ncp yargs"
+          "exec": "yarn upgrade fs-extra jsii jsii-pacmak jsii-rosetta ncp yargs"
         },
         {
           "exec": "npx projen"
