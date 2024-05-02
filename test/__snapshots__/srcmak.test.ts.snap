@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`csharp + different entrypoint 1`] = `
-Object {
+{
   "Hello.World/AssemblyInfo.cs": "using Amazon.JSII.Runtime.Deputy;
 
-[assembly: JsiiAssembly(\\"csharppackage\\", \\"0.0.0\\", \\"csharppackage-0.0.0.tgz\\")]
+[assembly: JsiiAssembly("csharppackage", "0.0.0", "csharppackage-0.0.0.tgz")]
 ",
-  "Hello.World/Hello.World.csproj": "<Project Sdk=\\"Microsoft.NET.Sdk\\">
+  "Hello.World/Hello.World.csproj": "<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <!-- Package Identification -->
     <Description>csharppackage</Description>
@@ -30,10 +30,10 @@ Object {
     <RollForward>Major</RollForward>
   </PropertyGroup>
   <ItemGroup>
-    <EmbeddedResource Include=\\"csharppackage-0.0.0.tgz\\" />
+    <EmbeddedResource Include="csharppackage-0.0.0.tgz" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include=\\"Amazon.JSII.Runtime\\" Version=\\"[1.97.0,2.0.0)\\" />
+    <PackageReference Include="Amazon.JSII.Runtime" Version="[1.98.0,2.0.0)" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -50,7 +50,7 @@ Object {
 
 namespace Hello.World
 {
-    [JsiiClass(nativeType: typeof(Hello.World.Hello), fullyQualifiedName: \\"csharppackage.Hello\\")]
+    [JsiiClass(nativeType: typeof(Hello.World.Hello), fullyQualifiedName: "csharppackage.Hello")]
     public class Hello : DeputyBase
     {
         public Hello(): base(_MakeDeputyProps())
@@ -64,20 +64,20 @@ namespace Hello.World
         }
 
         /// <summary>Used by jsii to construct an instance of this class from a Javascript-owned object reference</summary>
-        /// <param name=\\"reference\\">The Javascript-owned object reference</param>
+        /// <param name="reference">The Javascript-owned object reference</param>
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         protected Hello(ByRefValue reference): base(reference)
         {
         }
 
         /// <summary>Used by jsii to construct an instance of this class from DeputyProps</summary>
-        /// <param name=\\"props\\">The deputy props</param>
+        /// <param name="props">The deputy props</param>
         [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
         protected Hello(DeputyProps props): base(props)
         {
         }
 
-        [JsiiMethod(name: \\"add\\", returnsJson: \\"{\\\\\\"type\\\\\\":{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}}\\", parametersJson: \\"[{\\\\\\"name\\\\\\":\\\\\\"ops\\\\\\",\\\\\\"type\\\\\\":{\\\\\\"fqn\\\\\\":\\\\\\"csharppackage.Operands\\\\\\"}}]\\")]
+        [JsiiMethod(name: "add", returnsJson: "{\\"type\\":{\\"primitive\\":\\"number\\"}}", parametersJson: "[{\\"name\\":\\"ops\\",\\"type\\":{\\"fqn\\":\\"csharppackage.Operands\\"}}]")]
         public virtual double Add(Hello.World.IOperands ops)
         {
             return InvokeInstanceMethod<double>(new System.Type[]{typeof(Hello.World.IOperands)}, new object[]{ops})!;
@@ -91,35 +91,35 @@ namespace Hello.World
 
 namespace Hello.World
 {
-    [JsiiInterface(nativeType: typeof(IOperands), fullyQualifiedName: \\"csharppackage.Operands\\")]
+    [JsiiInterface(nativeType: typeof(IOperands), fullyQualifiedName: "csharppackage.Operands")]
     public interface IOperands
     {
-        [JsiiProperty(name: \\"lhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
+        [JsiiProperty(name: "lhs", typeJson: "{\\"primitive\\":\\"number\\"}")]
         double Lhs
         {
             get;
         }
 
-        [JsiiProperty(name: \\"rhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
+        [JsiiProperty(name: "rhs", typeJson: "{\\"primitive\\":\\"number\\"}")]
         double Rhs
         {
             get;
         }
 
-        [JsiiTypeProxy(nativeType: typeof(IOperands), fullyQualifiedName: \\"csharppackage.Operands\\")]
+        [JsiiTypeProxy(nativeType: typeof(IOperands), fullyQualifiedName: "csharppackage.Operands")]
         internal sealed class _Proxy : DeputyBase, Hello.World.IOperands
         {
             private _Proxy(ByRefValue reference): base(reference)
             {
             }
 
-            [JsiiProperty(name: \\"lhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
+            [JsiiProperty(name: "lhs", typeJson: "{\\"primitive\\":\\"number\\"}")]
             public double Lhs
             {
                 get => GetInstanceProperty<double>()!;
             }
 
-            [JsiiProperty(name: \\"rhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
+            [JsiiProperty(name: "rhs", typeJson: "{\\"primitive\\":\\"number\\"}")]
             public double Rhs
             {
                 get => GetInstanceProperty<double>()!;
@@ -148,17 +148,17 @@ namespace Hello.World
 {
     #pragma warning disable CS8618
 
-    [JsiiByValue(fqn: \\"csharppackage.Operands\\")]
+    [JsiiByValue(fqn: "csharppackage.Operands")]
     public class Operands : Hello.World.IOperands
     {
-        [JsiiProperty(name: \\"lhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
+        [JsiiProperty(name: "lhs", typeJson: "{\\"primitive\\":\\"number\\"}")]
         public double Lhs
         {
             get;
             set;
         }
 
-        [JsiiProperty(name: \\"rhs\\", typeJson: \\"{\\\\\\"primitive\\\\\\":\\\\\\"number\\\\\\"}\\")]
+        [JsiiProperty(name: "rhs", typeJson: "{\\"primitive\\":\\"number\\"}")]
         public double Rhs
         {
             get;
@@ -171,12 +171,12 @@ namespace Hello.World
 `;
 
 exports[`golang + different entrypoint 1`] = `
-Object {
+{
   "hello/Hello.go": "package hello
 
 import (
-	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
-	_init_ \\"github.com/org/repo/hello/jsii\\"
+	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
+	_init_ "github.com/org/repo/hello/jsii"
 )
 
 type Hello interface {
@@ -194,7 +194,7 @@ func NewHello() Hello {
 	j := jsiiProxy_Hello{}
 
 	_jsii_.Create(
-		\\"gopackage.Hello\\",
+		"gopackage.Hello",
 		nil, // no parameters
 		&j,
 	)
@@ -206,7 +206,7 @@ func NewHello_Override(h Hello) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		\\"gopackage.Hello\\",
+		"gopackage.Hello",
 		nil, // no parameters
 		h,
 	)
@@ -220,7 +220,7 @@ func (h *jsiiProxy_Hello) Add(ops *Operands) *float64 {
 
 	_jsii_.Invoke(
 		h,
-		\\"add\\",
+		"add",
 		[]interface{}{ops},
 		&returns,
 	)
@@ -234,16 +234,16 @@ func (h *jsiiProxy_Hello) Add(ops *Operands) *float64 {
 package hello
 
 import (
-	\\"fmt\\"
+	"fmt"
 
-	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
+	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 )
 
 func (h *jsiiProxy_Hello) validateAddParameters(ops *Operands) error {
 	if ops == nil {
-		return fmt.Errorf(\\"parameter ops is required, but nil was provided\\")
+		return fmt.Errorf("parameter ops is required, but nil was provided")
 	}
-	if err := _jsii_.ValidateStruct(ops, func() string { return \\"parameter ops\\" }); err != nil {
+	if err := _jsii_.ValidateStruct(ops, func() string { return "parameter ops" }); err != nil {
 		return err
 	}
 
@@ -266,8 +266,8 @@ func (h *jsiiProxy_Hello) validateAddParameters(ops *Operands) error {
 
 
 type Operands struct {
-	Lhs *float64 \`field:\\"required\\" json:\\"lhs\\" yaml:\\"lhs\\"\`
-	Rhs *float64 \`field:\\"required\\" json:\\"rhs\\" yaml:\\"rhs\\"\`
+	Lhs *float64 \`field:"required" json:"lhs" yaml:"lhs"\`
+	Rhs *float64 \`field:"required" json:"rhs" yaml:"rhs"\`
 }
 
 ",
@@ -278,9 +278,9 @@ type Operands struct {
 package jsii
 
 import (
-	_      \\"embed\\"
+	_      "embed"
 
-	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
+	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 )
 
 //go:embed gopackage-0.0.0.tgz
@@ -290,31 +290,31 @@ var tarball []byte
 // The implementation is idempotent (and hence safe to be called over and over).
 func Initialize() {
 	// Load this library into the kernel
-	_jsii_.Load(\\"gopackage\\", \\"0.0.0\\", tarball)
+	_jsii_.Load("gopackage", "0.0.0", tarball)
 }
 ",
   "hello/main.go": "// gopackage
 package hello
 
 import (
-	\\"reflect\\"
+	"reflect"
 
-	_jsii_ \\"github.com/aws/jsii-runtime-go/runtime\\"
+	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 )
 
 func init() {
 	_jsii_.RegisterClass(
-		\\"gopackage.Hello\\",
+		"gopackage.Hello",
 		reflect.TypeOf((*Hello)(nil)).Elem(),
 		[]_jsii_.Member{
-			_jsii_.MemberMethod{JsiiMethod: \\"add\\", GoMethod: \\"Add\\"},
+			_jsii_.MemberMethod{JsiiMethod: "add", GoMethod: "Add"},
 		},
 		func() interface{} {
 			return &jsiiProxy_Hello{}
 		},
 	)
 	_jsii_.RegisterStruct(
-		\\"gopackage.Operands\\",
+		"gopackage.Operands",
 		reflect.TypeOf((*Operands)(nil)).Elem(),
 	)
 }
@@ -325,7 +325,7 @@ func init() {
 `;
 
 exports[`java + different entrypoint 1`] = `
-Object {
+{
   "src/main/java/hello/world/$Module.java": "package hello.world;
 
 import java.io.BufferedReader;
@@ -349,13 +349,13 @@ public final class $Module extends JsiiModule {
     private static Map<String, String> load() {
         final Map<String, String> result = new HashMap<>();
         final ClassLoader cl = $Module.class.getClassLoader();
-        try (final InputStream is = cl.getResourceAsStream(\\"hello/world/$Module.txt\\");
+        try (final InputStream is = cl.getResourceAsStream("hello/world/$Module.txt");
              final Reader rd = new InputStreamReader(is, StandardCharsets.UTF_8);
              final BufferedReader br = new BufferedReader(rd)) {
             br.lines()
               .filter(line -> !line.trim().isEmpty())
               .forEach(line ->  {
-                final String[] parts = line.split(\\"=\\", 2);
+                final String[] parts = line.split("=", 2);
                 final String fqn = parts[0];
                 final String className = parts[1];
                 result.put(fqn, className);
@@ -370,13 +370,13 @@ public final class $Module extends JsiiModule {
     private final Map<String, Class<?>> cache = new HashMap<>();
 
     public $Module() {
-        super(\\"javapackage\\", \\"0.0.0\\", $Module.class, \\"javapackage@0.0.0.jsii.tgz\\");
+        super("javapackage", "0.0.0", $Module.class, "javapackage@0.0.0.jsii.tgz");
     }
 
     @Override
     protected Class<?> resolveClass(final String fqn) throws ClassNotFoundException {
         if (!MODULE_TYPES.containsKey(fqn)) {
-            throw new ClassNotFoundException(\\"Unknown JSII type: \\" + fqn);
+            throw new ClassNotFoundException("Unknown JSII type: " + fqn);
         }
         String className = MODULE_TYPES.get(fqn);
         if (!this.cache.containsKey(className)) {
@@ -398,7 +398,7 @@ public final class $Module extends JsiiModule {
   "src/main/java/hello/world/Hello.java": "package hello.world;
 
 
-@software.amazon.jsii.Jsii(module = hello.world.$Module.class, fqn = \\"javapackage.Hello\\")
+@software.amazon.jsii.Jsii(module = hello.world.$Module.class, fqn = "javapackage.Hello")
 public class Hello extends software.amazon.jsii.JsiiObject {
 
     protected Hello(final software.amazon.jsii.JsiiObjectRef objRef) {
@@ -415,14 +415,14 @@ public class Hello extends software.amazon.jsii.JsiiObject {
     }
 
     public @org.jetbrains.annotations.NotNull java.lang.Number add(final @org.jetbrains.annotations.NotNull hello.world.Operands ops) {
-        return software.amazon.jsii.Kernel.call(this, \\"add\\", software.amazon.jsii.NativeType.forClass(java.lang.Number.class), new Object[] { java.util.Objects.requireNonNull(ops, \\"ops is required\\") });
+        return software.amazon.jsii.Kernel.call(this, "add", software.amazon.jsii.NativeType.forClass(java.lang.Number.class), new Object[] { java.util.Objects.requireNonNull(ops, "ops is required") });
     }
 }
 ",
   "src/main/java/hello/world/Operands.java": "package hello.world;
 
 
-@software.amazon.jsii.Jsii(module = hello.world.$Module.class, fqn = \\"javapackage.Operands\\")
+@software.amazon.jsii.Jsii(module = hello.world.$Module.class, fqn = "javapackage.Operands")
 @software.amazon.jsii.Jsii.Proxy(Operands.Jsii$Proxy.class)
 public interface Operands extends software.amazon.jsii.JsiiSerializable {
 
@@ -488,8 +488,8 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
          */
         protected Jsii$Proxy(final software.amazon.jsii.JsiiObjectRef objRef) {
             super(objRef);
-            this.lhs = software.amazon.jsii.Kernel.get(this, \\"lhs\\", software.amazon.jsii.NativeType.forClass(java.lang.Number.class));
-            this.rhs = software.amazon.jsii.Kernel.get(this, \\"rhs\\", software.amazon.jsii.NativeType.forClass(java.lang.Number.class));
+            this.lhs = software.amazon.jsii.Kernel.get(this, "lhs", software.amazon.jsii.NativeType.forClass(java.lang.Number.class));
+            this.rhs = software.amazon.jsii.Kernel.get(this, "rhs", software.amazon.jsii.NativeType.forClass(java.lang.Number.class));
         }
 
         /**
@@ -497,8 +497,8 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
          */
         protected Jsii$Proxy(final Builder builder) {
             super(software.amazon.jsii.JsiiObject.InitializationMode.JSII);
-            this.lhs = java.util.Objects.requireNonNull(builder.lhs, \\"lhs is required\\");
-            this.rhs = java.util.Objects.requireNonNull(builder.rhs, \\"rhs is required\\");
+            this.lhs = java.util.Objects.requireNonNull(builder.lhs, "lhs is required");
+            this.rhs = java.util.Objects.requireNonNull(builder.rhs, "rhs is required");
         }
 
         @Override
@@ -517,15 +517,15 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
             final com.fasterxml.jackson.databind.ObjectMapper om = software.amazon.jsii.JsiiObjectMapper.INSTANCE;
             final com.fasterxml.jackson.databind.node.ObjectNode data = com.fasterxml.jackson.databind.node.JsonNodeFactory.instance.objectNode();
 
-            data.set(\\"lhs\\", om.valueToTree(this.getLhs()));
-            data.set(\\"rhs\\", om.valueToTree(this.getRhs()));
+            data.set("lhs", om.valueToTree(this.getLhs()));
+            data.set("rhs", om.valueToTree(this.getRhs()));
 
             final com.fasterxml.jackson.databind.node.ObjectNode struct = com.fasterxml.jackson.databind.node.JsonNodeFactory.instance.objectNode();
-            struct.set(\\"fqn\\", om.valueToTree(\\"javapackage.Operands\\"));
-            struct.set(\\"data\\", data);
+            struct.set("fqn", om.valueToTree("javapackage.Operands"));
+            struct.set("data", data);
 
             final com.fasterxml.jackson.databind.node.ObjectNode obj = com.fasterxml.jackson.databind.node.JsonNodeFactory.instance.objectNode();
-            obj.set(\\"$jsii.struct\\", struct);
+            obj.set("$jsii.struct", struct);
 
             return obj;
         }
@@ -557,10 +557,10 @@ javapackage.Operands=hello.world.Operands
 `;
 
 exports[`outputJsii can be used to look at the jsii file 1`] = `
-Object {
-  "author": Object {
+{
+  "author": {
     "name": "generated@generated.com",
-    "roles": Array [
+    "roles": [
       "author",
     ],
   },
@@ -569,43 +569,43 @@ Object {
   "homepage": "http://generated",
   "jsiiVersion": "5.4.9 (build 91580f2)",
   "license": "UNLICENSED",
-  "metadata": Object {
-    "jsii": Object {
-      "pacmak": Object {
+  "metadata": {
+    "jsii": {
+      "pacmak": {
         "hasDefaultInterfaces": true,
       },
     },
   },
   "name": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
-  "repository": Object {
+  "repository": {
     "type": "git",
     "url": "http://generated",
   },
   "schema": "jsii/0.10.0",
-  "targets": Object {
-    "js": Object {
+  "targets": {
+    "js": {
       "npm": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
     },
   },
-  "types": Object {
-    "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6.Foo": Object {
+  "types": {
+    "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6.Foo": {
       "assembly": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
       "fqn": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6.Foo",
-      "initializer": Object {},
+      "initializer": {},
       "kind": "class",
-      "locationInModule": Object {
+      "locationInModule": {
         "filename": "index.ts",
         "line": 2,
       },
-      "methods": Array [
-        Object {
-          "locationInModule": Object {
+      "methods": [
+        {
+          "locationInModule": {
             "filename": "index.ts",
             "line": 3,
           },
           "name": "hello",
-          "returns": Object {
-            "type": Object {
+          "returns": {
+            "type": {
               "primitive": "string",
             },
           },
@@ -621,7 +621,7 @@ Object {
 `;
 
 exports[`python + different entrypoint + submodule 1`] = `
-Object {
+{
   "my_python_module/submodule/__init__.py": "from pkgutil import extend_path
 __path__ = extend_path(__path__, __name__)
 
@@ -640,11 +640,11 @@ from typeguard import check_type
 from ._jsii import *
 
 
-class Hello(metaclass=jsii.JSIIMeta, jsii_type=\\"pythonpackage.Hello\\"):
+class Hello(metaclass=jsii.JSIIMeta, jsii_type="pythonpackage.Hello"):
     def __init__(self) -> None:
         jsii.create(self.__class__, self, [])
 
-    @jsii.member(jsii_name=\\"add\\")
+    @jsii.member(jsii_name="add")
     def add(self, *, lhs: jsii.Number, rhs: jsii.Number) -> jsii.Number:
         '''
         :param lhs: -
@@ -652,13 +652,13 @@ class Hello(metaclass=jsii.JSIIMeta, jsii_type=\\"pythonpackage.Hello\\"):
         '''
         ops = Operands(lhs=lhs, rhs=rhs)
 
-        return typing.cast(jsii.Number, jsii.invoke(self, \\"add\\", [ops]))
+        return typing.cast(jsii.Number, jsii.invoke(self, "add", [ops]))
 
 
 @jsii.data_type(
-    jsii_type=\\"pythonpackage.Operands\\",
+    jsii_type="pythonpackage.Operands",
     jsii_struct_bases=[],
-    name_mapping={\\"lhs\\": \\"lhs\\", \\"rhs\\": \\"rhs\\"},
+    name_mapping={"lhs": "lhs", "rhs": "rhs"},
 )
 class Operands:
     def __init__(self, *, lhs: jsii.Number, rhs: jsii.Number) -> None:
@@ -668,23 +668,23 @@ class Operands:
         '''
         if __debug__:
             type_hints = typing.get_type_hints(_typecheckingstub__be3a9403b95ce7f8a86be94c66555dc360ad3231bf31a6ad0030c4198da87142)
-            check_type(argname=\\"argument lhs\\", value=lhs, expected_type=type_hints[\\"lhs\\"])
-            check_type(argname=\\"argument rhs\\", value=rhs, expected_type=type_hints[\\"rhs\\"])
+            check_type(argname="argument lhs", value=lhs, expected_type=type_hints["lhs"])
+            check_type(argname="argument rhs", value=rhs, expected_type=type_hints["rhs"])
         self._values: typing.Dict[builtins.str, typing.Any] = {
-            \\"lhs\\": lhs,
-            \\"rhs\\": rhs,
+            "lhs": lhs,
+            "rhs": rhs,
         }
 
     @builtins.property
     def lhs(self) -> jsii.Number:
-        result = self._values.get(\\"lhs\\")
-        assert result is not None, \\"Required property 'lhs' is missing\\"
+        result = self._values.get("lhs")
+        assert result is not None, "Required property 'lhs' is missing"
         return typing.cast(jsii.Number, result)
 
     @builtins.property
     def rhs(self) -> jsii.Number:
-        result = self._values.get(\\"rhs\\")
-        assert result is not None, \\"Required property 'rhs' is missing\\"
+        result = self._values.get("rhs")
+        assert result is not None, "Required property 'rhs' is missing"
         return typing.cast(jsii.Number, result)
 
     def __eq__(self, rhs: typing.Any) -> builtins.bool:
@@ -694,14 +694,14 @@ class Operands:
         return not (rhs == self)
 
     def __repr__(self) -> str:
-        return \\"Operands(%s)\\" % \\", \\".join(
-            k + \\"=\\" + repr(v) for k, v in self._values.items()
+        return "Operands(%s)" % ", ".join(
+            k + "=" + repr(v) for k, v in self._values.items()
         )
 
 
 __all__ = [
-    \\"Hello\\",
-    \\"Operands\\",
+    "Hello",
+    "Operands",
 ]
 
 publication.publish()
@@ -711,7 +711,7 @@ def _typecheckingstub__be3a9403b95ce7f8a86be94c66555dc360ad3231bf31a6ad0030c4198
     lhs: jsii.Number,
     rhs: jsii.Number,
 ) -> None:
-    \\"\\"\\"Type checking stubs\\"\\"\\"
+    """Type checking stubs"""
     pass
 ",
   "my_python_module/submodule/_jsii/__init__.py": "from pkgutil import extend_path
@@ -730,11 +730,11 @@ import typing_extensions
 from typeguard import check_type
 
 __jsii_assembly__ = jsii.JSIIAssembly.load(
-    \\"pythonpackage\\", \\"0.0.0\\", __name__[0:-6], \\"pythonpackage@0.0.0.jsii.tgz\\"
+    "pythonpackage", "0.0.0", __name__[0:-6], "pythonpackage@0.0.0.jsii.tgz"
 )
 
 __all__ = [
-    \\"__jsii_assembly__\\",
+    "__jsii_assembly__",
 ]
 
 publication.publish()
