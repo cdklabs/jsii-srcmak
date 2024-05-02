@@ -25,6 +25,7 @@ const project = new CdklabsTypeScriptProject({
   deps: [
     'jsii',
     'jsii-pacmak',
+    'jsii-rosetta',
     'fs-extra',
     'ncp',
     'yargs',

@@ -98,6 +98,10 @@
       "type": "runtime"
     },
     {
+      "name": "jsii-rosetta",
+      "type": "runtime"
+    },
+    {
       "name": "ncp",
       "type": "runtime"
     },
