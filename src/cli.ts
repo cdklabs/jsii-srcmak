@@ -19,7 +19,7 @@ async function main() {
     .showHelpOnFail(true)
     .help();
 
-  const argv = args.argv;
+  const argv = args.parseSync();
 
   if (argv._.length !== 1) {
     args.showHelp();
