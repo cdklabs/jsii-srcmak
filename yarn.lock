@@ -4635,9 +4635,9 @@ stream-chain@^2.2.5:
   integrity sha512-1TJmBx6aSWqZ4tx7aTpBDXK0/e2hhcNSTV8+CbFJtDjbb+I1mZ8lHit0Grw9GRT+6JbIrrDd8esncgBi8aBXGA==
 
 stream-json@^1.8.0:
-  version "1.9.0"
-  resolved "https://registry.yarnpkg.com/stream-json/-/stream-json-1.9.0.tgz#caae36fd9fff99662f504dce859bc855d5668282"
-  integrity sha512-TqnfW7hRTKje7UobBzXZJ2qOEDJvdcSVgVIK/fopC03xINFuFqQs8RVjyDT4ry7TmOo2ueAXwpXXXG4tNgtvoQ==
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/stream-json/-/stream-json-1.9.1.tgz#e3fec03e984a503718946c170db7d74556c2a187"
+  integrity sha512-uWkjJ+2Nt/LO9Z/JyKZbMusL8Dkh97uUBTv3AJQ74y07lVahLY4eEFsPsE97pxYBwr8nnjMAIch5eqI0gPShyw==
   dependencies:
     stream-chain "^2.2.5"
 
@@ -4990,9 +4990,9 @@ typescript@^5.6.3:
   integrity sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==
 
 typescript@next:
-  version "5.8.0-dev.20241111"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.8.0-dev.20241111.tgz#8a481638472882e0c0bb6faec641a71b1858c76c"
-  integrity sha512-deGbPJipGG/DiJ4nR0NhFuccD2XD6xfUAQCvqMLWxVsM4p9zmhKNMWotkMQEm/l9HjXhnVr0dFJ8u4B9y3y+ZA==
+  version "5.8.0-dev.20241112"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.8.0-dev.20241112.tgz#7852a824ebb53175239648f244a77fcffaaf469d"
+  integrity sha512-h5Ik9z9sIGe898ya+9bG+XBZQHzSYFY0Q1X9QmsDjcX2xf3jwNnWaUAE0NLVw0Lx+XBRBB2qf7GyfeqDNrzofQ==
 
 typescript@~5.5:
   version "5.5.4"
