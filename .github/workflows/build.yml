@@ -4,6 +4,7 @@ name: build
 on:
   pull_request: {}
   workflow_dispatch: {}
+  merge_group: {}
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,7 +23,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18.x
+          node-version: lts/*
       - name: Install dependencies
         run: yarn install --check-files
       - name: build
@@ -47,7 +48,7 @@ jobs:
           cat repo.patch
           exit 1
     container:
-      image: jsii/superchain:1-buster-slim-node16
+      image: jsii/superchain:1-bookworm-slim
   self-mutation:
     needs: build
     runs-on: ubuntu-latest

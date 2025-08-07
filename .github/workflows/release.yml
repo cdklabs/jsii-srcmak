@@ -31,7 +31,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18.x
+          node-version: lts/*
       - name: Install dependencies
         run: yarn install --check-files --frozen-lockfile
       - name: release
@@ -59,7 +59,7 @@ jobs:
           path: dist
           overwrite: true
     container:
-      image: jsii/superchain:1-buster-slim-node16
+      image: jsii/superchain:1-bookworm-slim
   release_github:
     name: Publish to GitHub Releases
     needs:
@@ -72,7 +72,7 @@ jobs:
     steps:
       - uses: actions/setup-node@v4
         with:
-          node-version: 18.x
+          node-version: lts/*
       - name: Download build artifacts
         uses: actions/download-artifact@v4
         with:
@@ -86,7 +86,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: errout=$(mktemp); gh release create $(cat dist/releasetag.txt) -R $GITHUB_REPOSITORY -F dist/changelog.md -t $(cat dist/releasetag.txt) --target $GITHUB_SHA 2> $errout && true; exitcode=$?; if [ $exitcode -ne 0 ] && ! grep -q "Release.tag_name already exists" $errout; then cat $errout; exit $exitcode; fi
     container:
-      image: jsii/superchain:1-buster-slim-node16
+      image: jsii/superchain:1-bookworm-slim
   release_npm:
     name: Publish to npm
     needs: release
@@ -98,7 +98,7 @@ jobs:
     steps:
       - uses: actions/setup-node@v4
         with:
-          node-version: 18.x
+          node-version: lts/*
       - name: Download build artifacts
         uses: actions/download-artifact@v4
         with:
@@ -115,4 +115,4 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx -p publib@latest publib-npm
     container:
-      image: jsii/superchain:1-buster-slim-node16
+      image: jsii/superchain:1-bookworm-slim
