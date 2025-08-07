@@ -5,11 +5,13 @@ const project = new CdklabsTypeScriptProject({
   projenrcTs: true,
   private: false,
   setNodeEngineVersion: false,
-  workflowNodeVersion: '18.x',
   description: 'generate source code in multiple languages from typescript',
   repository: 'https://github.com/cdklabs/jsii-srcmak.git',
   stability: 'experimental',
   defaultReleaseBranch: 'main',
+
+  // superchain is needed to ensure jsii-pacmak has everything it needs
+  workflowContainerImage: 'jsii/superchain:1-bookworm-slim',
 
   bin: {
     'jsii-srcmak': 'bin/jsii-srcmak',
@@ -32,14 +34,12 @@ const project = new CdklabsTypeScriptProject({
   ],
 
   releaseToNpm: true,
-
-  // superchain is needed to ensure jsii-pacmak has everything it needs
-  workflowContainerImage: 'jsii/superchain:1-buster-slim-node16',
+  enablePRAutoMerge: true,
+  autoApproveUpgrades: true,
   autoApproveOptions: {
     allowedUsernames: ['cdklabs-automation'],
     secret: 'GITHUB_TOKEN',
   },
-  autoApproveUpgrades: true,
 });
 
 project.package.addPackageResolutions('jackspeak@2.0.3');
