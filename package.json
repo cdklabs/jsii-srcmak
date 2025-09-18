@@ -60,7 +60,7 @@
     "fs-extra": "^9.1.0",
     "jsii": "~5.9.4",
     "jsii-pacmak": "^1.114.1",
-    "jsii-rosetta": "^5.9.4",
+    "jsii-rosetta": "^5.9.5",
     "ncp": "^2.0.0",
     "yargs": "^17.7.2"
   },
