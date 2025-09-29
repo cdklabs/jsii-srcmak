@@ -26,14 +26,14 @@ exports[`csharp + different entrypoint 1`] = `
     <IncludeSource>true</IncludeSource>
     <Nullable>enable</Nullable>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <RollForward>Major</RollForward>
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="csharppackage-0.0.0.tgz" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Amazon.JSII.Runtime" Version="[1.114.1,2.0.0)" />
+    <PackageReference Include="Amazon.JSII.Runtime" Version="[1.115.0,2.0.0)" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -565,9 +565,9 @@ exports[`outputJsii can be used to look at the jsii file 1`] = `
     ],
   },
   "description": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
-  "fingerprint": "8S/eOj25Ls/Q5T8FYlCXukbmwj+uuW1cqb8IdLTY5CI=",
+  "fingerprint": "/5K29rGXJj9DA4xstTGma7Y2tFv9y4Bu5x0YaZ0vcX0=",
   "homepage": "http://generated",
-  "jsiiVersion": "5.9.4 (build db676e9)",
+  "jsiiVersion": "5.9.7 (build 1693b5a)",
   "license": "UNLICENSED",
   "metadata": {
     "jsii": {
