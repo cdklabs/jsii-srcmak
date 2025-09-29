@@ -26,14 +26,14 @@ exports[`csharp output 1`] = `
     <IncludeSource>true</IncludeSource>
     <Nullable>enable</Nullable>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <RollForward>Major</RollForward>
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Amazon.JSII.Runtime" Version="[1.114.1,2.0.0)" />
+    <PackageReference Include="Amazon.JSII.Runtime" Version="[1.115.0,2.0.0)" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -701,9 +701,9 @@ exports[`jsii output 1`] = `
     ],
   },
   "description": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
-  "fingerprint": "Q6r2Cs29uXw/h9l3TGMMQ6yo/WiO42WP9oOUibPibw8=",
+  "fingerprint": "moKN7RPvhSlvPd9GYGvllV5KZISfElbxWN63tA/OQgI=",
   "homepage": "http://generated",
-  "jsiiVersion": "5.9.4 (build db676e9)",
+  "jsiiVersion": "5.9.7 (build 1693b5a)",
   "license": "UNLICENSED",
   "metadata": {
     "jsii": {
