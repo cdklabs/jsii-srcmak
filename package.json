@@ -54,7 +54,7 @@
     "projen": "^0.92.9",
     "ts-jest": "^29",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "fs-extra": "^9.1.0",
