@@ -33,7 +33,7 @@ exports[`csharp output 1`] = `
     <EmbeddedResource Include="4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Amazon.JSII.Runtime" Version="[1.120.0,2.0.0)" />
+    <PackageReference Include="Amazon.JSII.Runtime" Version="[1.121.0,2.0.0)" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -667,7 +667,7 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
         }
 
         @Override
-        public final boolean equals(final Object o) {
+        public final boolean equals(final java.lang.Object o) {
             if (this == o) return true;
             if (o == null || getClass() != o.getClass()) return false;
 
@@ -701,9 +701,9 @@ exports[`jsii output 1`] = `
     ],
   },
   "description": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
-  "fingerprint": "DPL8kDp9xj44AzIObFYVMMarq4xO/2/h7JJwMXbx03k=",
+  "fingerprint": "ben/P95zlkItCXGhoIOl1BZiC6c/VAWiRcXTF6ec9k0=",
   "homepage": "http://generated",
-  "jsiiVersion": "5.9.14 (build 9fc28bd)",
+  "jsiiVersion": "5.9.20 (build 6e2b13a)",
   "license": "UNLICENSED",
   "metadata": {
     "jsii": {

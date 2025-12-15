@@ -33,7 +33,7 @@ exports[`csharp + different entrypoint 1`] = `
     <EmbeddedResource Include="csharppackage-0.0.0.tgz" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Amazon.JSII.Runtime" Version="[1.120.0,2.0.0)" />
+    <PackageReference Include="Amazon.JSII.Runtime" Version="[1.121.0,2.0.0)" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -531,7 +531,7 @@ public interface Operands extends software.amazon.jsii.JsiiSerializable {
         }
 
         @Override
-        public final boolean equals(final Object o) {
+        public final boolean equals(final java.lang.Object o) {
             if (this == o) return true;
             if (o == null || getClass() != o.getClass()) return false;
 
@@ -565,9 +565,9 @@ exports[`outputJsii can be used to look at the jsii file 1`] = `
     ],
   },
   "description": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
-  "fingerprint": "fFjece3hZDqPrZfGS63gWQN0c3hJJAbclko2/lxLm6A=",
+  "fingerprint": "LgUqAj8byyelut5k3tOTJjB/KQgBvENZ38uXCZuHw0w=",
   "homepage": "http://generated",
-  "jsiiVersion": "5.9.14 (build 9fc28bd)",
+  "jsiiVersion": "5.9.20 (build 6e2b13a)",
   "license": "UNLICENSED",
   "metadata": {
     "jsii": {
