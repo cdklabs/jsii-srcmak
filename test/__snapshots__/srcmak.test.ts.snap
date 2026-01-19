@@ -565,9 +565,9 @@ exports[`outputJsii can be used to look at the jsii file 1`] = `
     ],
   },
   "description": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
-  "fingerprint": "pEfmFazN86uTd7l2qX0o494o3HU6bm/i/IJC3L4dn+c=",
+  "fingerprint": "ftZicde+FLb8ApnU/Gek26ATDjweh3JX8DYEzC0mkE4=",
   "homepage": "http://generated",
-  "jsiiVersion": "5.9.22 (build b81c634)",
+  "jsiiVersion": "5.9.23 (build 29252a0)",
   "license": "UNLICENSED",
   "metadata": {
     "jsii": {
