@@ -33,7 +33,7 @@ exports[`csharp output 1`] = `
     <EmbeddedResource Include="4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060-0.0.0.tgz" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Amazon.JSII.Runtime" Version="[1.126.0,2.0.0)" />
+    <PackageReference Include="Amazon.JSII.Runtime" Version="[1.127.0,2.0.0)" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -701,9 +701,9 @@ exports[`jsii output 1`] = `
     ],
   },
   "description": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
-  "fingerprint": "ngdhgv6gouIlyg6XR1/fSqxlSJ16PxG5j7FSDkZWy88=",
+  "fingerprint": "s0iUWEOmXfTbXAKvCqaYWoJLKLQpUQAGsF1pt++12GU=",
   "homepage": "http://generated",
-  "jsiiVersion": "5.9.28 (build cbad63d)",
+  "jsiiVersion": "5.9.30 (build 832a54a)",
   "license": "UNLICENSED",
   "metadata": {
     "jsii": {
