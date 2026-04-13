@@ -33,7 +33,7 @@ exports[`csharp + different entrypoint 1`] = `
     <EmbeddedResource Include="csharppackage-0.0.0.tgz" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Amazon.JSII.Runtime" Version="[1.127.0,2.0.0)" />
+    <PackageReference Include="Amazon.JSII.Runtime" Version="[1.128.0,2.0.0)" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -565,9 +565,9 @@ exports[`outputJsii can be used to look at the jsii file 1`] = `
     ],
   },
   "description": "1bc04b5291c26a46d918139138b992d2de976d6851d0893b0476b85bfbdfc6e6",
-  "fingerprint": "lVOiwr2vt5/nlMzXAsD7EOkT6aJf1Evn4F3TRMTU3+4=",
+  "fingerprint": "w5xtbQdgrMIT2c5AjPwaym1TT+doqZwGOE+pRkwTCG8=",
   "homepage": "http://generated",
-  "jsiiVersion": "5.9.36 (build 27873df)",
+  "jsiiVersion": "5.9.37 (build 5176c0d)",
   "license": "UNLICENSED",
   "metadata": {
     "jsii": {
