@@ -59,10 +59,10 @@
   "dependencies": {
     "fs-extra": "^9.1.0",
     "jsii": "~5.9.44",
-    "jsii-pacmak": "^1.135.0",
+    "jsii-pacmak": "^1.137.0",
     "jsii-rosetta": "^5.9.49",
     "ncp": "^2.0.0",
-    "yargs": "^17.7.2"
+    "yargs": "^17.7.3"
   },
   "resolutions": {
     "jackspeak": "2.0.3"
