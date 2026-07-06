@@ -33,7 +33,7 @@ exports[`csharp + different entrypoint 1`] = `
     <EmbeddedResource Include="csharppackage-0.0.0.tgz" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Amazon.JSII.Runtime" Version="[1.137.0,2.0.0)" />
+    <PackageReference Include="Amazon.JSII.Runtime" Version="[1.138.0,2.0.0)" />
   </ItemGroup>
   <PropertyGroup>
     <!-- Silence [Obsolete] warnings -->
@@ -635,7 +635,7 @@ import jsii
 import publication
 import typing_extensions
 
-from jsii._type_checking import check_type
+from jsii._type_checking import cached_type_hints, check_type
 
 
 from ._jsii import *
@@ -668,7 +668,7 @@ class Operands:
         :param rhs: -
         '''
         if __debug__:
-            type_hints = typing.get_type_hints(_typecheckingstub__be3a9403b95ce7f8a86be94c66555dc360ad3231bf31a6ad0030c4198da87142)
+            type_hints = cached_type_hints(_typecheckingstub__be3a9403b95ce7f8a86be94c66555dc360ad3231bf31a6ad0030c4198da87142)
             check_type(argname="argument lhs", value=lhs, expected_type=type_hints["lhs"])
             check_type(argname="argument rhs", value=rhs, expected_type=type_hints["rhs"])
         self._values: typing.Dict[builtins.str, typing.Any] = {
@@ -728,7 +728,7 @@ import jsii
 import publication
 import typing_extensions
 
-from jsii._type_checking import check_type
+from jsii._type_checking import cached_type_hints, check_type
 
 
 __jsii_assembly__ = jsii.JSIIAssembly.load(
