@@ -2423,7 +2423,12 @@ flat-cache@^4.0.0:
     flatted "^3.2.9"
     keyv "^4.5.4"
 
-flatted@^3.2.7, flatted@^3.2.9:
+flatted@^3.2.7:
+  version "3.4.3"
+  resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.4.3.tgz#be5c21e943b2d7a328bb23795ae28c98f0103a9e"
+  integrity sha512-/zipXxyO6rGvuNGDiULY9MvEGSkb2gaG4GGH4ygMi0ZZzyMHdUZBmntJmx5x1G2VuPytCwGN4xsJP6cw+sK+vQ==
+
+flatted@^3.2.9:
   version "3.4.2"
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.4.2.tgz#f5c23c107f0f37de8dbdf24f13722b3b98d52726"
   integrity sha512-PjDse7RzhcPkIJwy5t7KPWQSZ9cAbzQXcafsetQoD7sOJRQlGikNbx7yZp2OotDnJyrDcbyRq3Ttb18iYOqkxA==
@@ -3589,10 +3594,10 @@ jsii-reflect@^1.139.0:
     oo-ascii-tree "^1.139.0"
     yargs "^17.7.3"
 
-jsii-rosetta@^5.9.57:
-  version "5.9.57"
-  resolved "https://registry.yarnpkg.com/jsii-rosetta/-/jsii-rosetta-5.9.57.tgz#5724bf66dbe6b70013b892f823885196fc780b6c"
-  integrity sha512-lkCggx58R7BSQW5bpGfWXOm7vDdpfXNyxnCHDhAFOAVq1ZTH58qUeG8XBt9QiGB8LSV4a2YsAASQ8ZqQRcQrFw==
+jsii-rosetta@^5.9.58:
+  version "5.9.58"
+  resolved "https://registry.yarnpkg.com/jsii-rosetta/-/jsii-rosetta-5.9.58.tgz#61524dcc3b69e8c51471207ca406a97ae48aaf03"
+  integrity sha512-nGvO7AqB6NvSqBJUYIPi/OVIfQu6GQco2NtQPb8bbU2pjPEqy+IaAwwGGNJoIb9eAPj+wbP1lK0msrYZ2ujQIA==
   dependencies:
     "@jsii/check-node" "^1.139.0"
     "@jsii/spec" "^1.139.0"
@@ -4819,9 +4824,9 @@ spdx-license-ids@^3.0.0:
   integrity sha512-CWLcCCH7VLu13TgOH+r8p1O/Znwhqv/dbb6lqWy67G+pT1kHmeD/+V36AVb/vq8QMIQwVShJ6Ssl5FPh0fuSdw==
 
 spdx-license-list@^6.11.0:
-  version "6.11.0"
-  resolved "https://registry.yarnpkg.com/spdx-license-list/-/spdx-license-list-6.11.0.tgz#d040b19967de5ddbdef1b14ec96a218e6c7b80d1"
-  integrity sha512-p5ICd51dSnh7zIMtPgbB9ShBg3HMT77OeI6WVhrFFvxa5KIFYNcqxD4joAE+n1zZ7wlJdEkrOMwC75JUMMmsJA==
+  version "6.12.0"
+  resolved "https://registry.yarnpkg.com/spdx-license-list/-/spdx-license-list-6.12.0.tgz#20b9ae77c3410ad08720bcd5cf562e9d4eeebadb"
+  integrity sha512-+nUYqm3aZMSHbjsthK+i/HHI2okTElCvqwUd4k8QcSk+FTGgjq+fsdFj2wZOaX6XmR2JdWhf/NeflNnvKOjcnQ==
 
 split2@^3.2.2:
   version "3.2.2"
