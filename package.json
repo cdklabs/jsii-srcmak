@@ -59,9 +59,9 @@
   },
   "dependencies": {
     "fs-extra": "^9.1.0",
-    "jsii": "~5.9.52",
+    "jsii": "~5.9.53",
     "jsii-pacmak": "^1.139.0",
-    "jsii-rosetta": "^5.9.62",
+    "jsii-rosetta": "^5.9.63",
     "ncp": "^2.0.0",
     "yargs": "^17.7.3"
   },
