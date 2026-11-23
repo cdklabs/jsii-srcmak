@@ -701,9 +701,9 @@ exports[`jsii output 1`] = `
     ],
   },
   "description": "4c6b576fbe7e27053874813d9754cb2e46811d806c1e0aa9aae8add4c3763060",
-  "fingerprint": "KtNcBWsQjHfElZhiAFzoc0q5k/tdH2S2S8WyhgfyGYc=",
+  "fingerprint": "tQuxdR4vWsvCUh+npeN7y3lhbu0qg8kdAndLvKT9woU=",
   "homepage": "http://generated",
-  "jsiiVersion": "5.9.60 (build 50865f3)",
+  "jsiiVersion": "5.9.62 (build 5266620)",
   "license": "UNLICENSED",
   "metadata": {
     "jsii": {
